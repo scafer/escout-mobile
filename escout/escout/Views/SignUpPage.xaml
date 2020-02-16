@@ -17,6 +17,10 @@
                 <Entry Placeholder="Username" Text="{Binding Username}"/>
                 <Entry Placeholder="E-mail" Text="{Binding Email}"/>
                 <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Notifications:" VerticalOptions="Center"/>
+                    <Switch VerticalOptions="Center"/>
+                </StackLayout>
             </StackLayout>
             <StackLayout>
                 <Button Text="Register" BorderWidth="1" BorderColor="#0A6ED1" BackgroundColor="#0A6ED1" CornerRadius="8" TextColor="White" Command="{Binding SignUpCommand}"/>

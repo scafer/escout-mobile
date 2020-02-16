@@ -93,7 +93,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\user_image.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\escout\escout.csproj">
       <Project>{418F2376-C022-46D0-948D-02C9D98A3657}</Project>
