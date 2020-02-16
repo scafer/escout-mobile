@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="escout.Views.SignUpPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,20,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="5">
+            <StackLayout WidthRequest="300" Margin="0,25">
+                <Entry Placeholder="Username" Text="{Binding Username}"/>
+                <Entry Placeholder="E-mail" Text="{Binding Email}"/>
+                <Entry Placeholder="Password" IsPassword="True" Text="{Binding Password}"/>
+            </StackLayout>
+            <StackLayout>
+                <Button Text="Register" BorderWidth="1" BorderColor="#0A6ED1" BackgroundColor="#0A6ED1" CornerRadius="8" TextColor="White" Command="{Binding SignUpCommand}"/>
+                <Button Text="Cancel" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#0A6ED1" Command="{Binding CancelCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

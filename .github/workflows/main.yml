@@ -1,0 +1,24 @@
+name: Xamarin.Forms
+on: [push]
+
+jobs:   
+  Android:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Android
+      run: |
+        cd escout
+        nuget restore
+        cd escout.Android
+        msbuild escout.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
+        
+  iOS:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: iOS
+      run: |
+        cd escout
+        nuget restore
+        msbuild escout.iOS/escout.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
