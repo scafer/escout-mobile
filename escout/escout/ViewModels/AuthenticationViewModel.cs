@@ -77,8 +77,7 @@ namespace escout.ViewModels
                 if (!string.IsNullOrEmpty(result.Token))
                 {
                     RestConnector.token = result.Token;
-                    //await Navigation.PushAsync(new SplashScreenPage());
-                    App.DisplayMessage("Error", result.Token, "Ok");
+                    await Navigation.PushAsync(new SplashScreenPage());
                 }
                 else
                     App.DisplayMessage("Error", "Invalid username or password.", "Ok");
