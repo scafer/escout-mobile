@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="escout.Views.SignInPage" NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,20,0,0" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="Center" HorizontalOptions="Center">
+            <StackLayout Margin="5">
+                <StackLayout VerticalOptions="Center">
+                    <Image Source="escout_logo.png" WidthRequest="200"  HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout WidthRequest="300" Margin="0,25">
+                    <Entry x:Name="Username" Text="{Binding Username}" Placeholder="Username"/>
+                    <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password" IsPassword="True"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Save:" VerticalOptions="Center"/>
+                        <Switch x:Name="SwSave" Toggled="Save_Toggled" VerticalOptions="Center"/>
+                    </StackLayout>
+                    <Button Text="Sign In" BorderWidth="1" BorderColor="#0A6ED1" BackgroundColor="#0A6ED1" CornerRadius="8" TextColor="White" Command="{Binding SignInCommand}"/>
+                    <Button Text="Sign Up" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#0A6ED1" Command="{Binding SignUpViewCommand}"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Forgot Password?" HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ForgotPasswordViewCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
