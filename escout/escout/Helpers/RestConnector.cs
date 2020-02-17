@@ -9,15 +9,15 @@ namespace escout.Helpers
     class RestConnector
     {
         //Authentication
-        public static string token;
-        public const string SignIn = "/Authentication/signIn";
-        public const string SignUp = "/Authentication/signUp";
+        public static string Token;
+        public const string SignIn = "/api/v1/signIn";
+        public const string SignUp = "/api/v1/signUp";
 
         //User
-        public const string ResetPassword = "/api/User/resetPassword";
-        public const string ChangePassword = "​/api​/User​/changePassword";
-        public const string GetUserInfo = "/api/User/getUserInfo";
-        public const string GetAllUsers = "/api/User/getAllUsers";
+        public const string ResetPassword = "/api/v1/resetPassword";
+        public const string ChangePassword = "​/api/v1/changePassword";
+        public const string GetUserInfo = "/api/v1/user";
+        public const string GetUsers = "/api/v1/users";
 
         private const string ApiAuthenticationMode = "Authorization";
 
@@ -26,7 +26,7 @@ namespace escout.Helpers
             return "https://escout-server.herokuapp.com";
         }
 
-        private static string GetAuthenticationHeader() => "bearer" + " " + token;
+        private static string GetAuthenticationHeader() => "bearer" + " " + Token;
 
         public static async Task<string> GetDataFromApi(string conn)
         {
