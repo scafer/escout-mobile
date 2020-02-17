@@ -18,8 +18,8 @@
                         <TextCell Text="Updated at:" Detail="{Binding Updated}"/>
                     </TableSection>
                     <TableSection Title="Change Password">
-                        <EntryCell Placeholder="Old Password"/>
-                        <EntryCell Placeholder="New Password"/>
+                        <SwitchCell x:Name="IsPwdEnable" Text="Enable:"/>
+                        <EntryCell Placeholder="Password" IsEnabled="{Binding Source={x:Reference IsPwdEnable}}"/>
                     </TableSection>
                 </TableRoot>
             </TableView>

@@ -16,8 +16,10 @@ namespace escout.Models
         public int AccessLevel { get; set; }
         [JsonProperty("notifications")]
         public int Notifications { get; set; }
+        [JsonProperty("status")]
+        public int Status { get; set; }
         [JsonProperty("imageId")]
-        public int ImageId { get; set; }
+        public int? ImageId { get; set; }
         [JsonProperty("created")]
         public string Created { get; set; }
         [JsonProperty("updated")]
@@ -30,6 +32,8 @@ namespace escout.Models
             this.Username = username;
             this.Password = password;
             this.Email = email;
+            this.Created = "";
+            this.Updated = "";
         }
     }
 }
