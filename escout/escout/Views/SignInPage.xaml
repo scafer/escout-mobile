@@ -25,13 +25,18 @@
                         <Label Text="Save:" VerticalOptions="Center"/>
                         <Switch x:Name="SwSave" Toggled="Save_Toggled" VerticalOptions="Center"/>
                     </StackLayout>
-                    <Button Text="Sign In" BorderWidth="1" BorderColor="#0A6ED1" BackgroundColor="#0A6ED1" CornerRadius="8" TextColor="White" Command="{Binding SignInCommand}"/>
-                    <Button Text="Sign Up" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#0A6ED1" Command="{Binding SignUpViewCommand}"/>
+                    <Button Text="Sign In" BorderWidth="1" BorderColor="#262626" BackgroundColor="#262626" CornerRadius="8" TextColor="White" Command="{Binding SignInCommand}"/>
+                    <Button Text="Sign Up" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Command="{Binding SignUpViewCommand}"/>
                 </StackLayout>
                 <StackLayout>
                     <Label Text="Forgot Password?" HorizontalOptions="Center">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ForgotPasswordViewCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="About" HorizontalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding AboutViewCommand}"/>
                         </Label.GestureRecognizers>
                     </Label>
                 </StackLayout>
