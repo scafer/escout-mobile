@@ -1,4 +1,5 @@
-﻿using escout.Helpers;
+﻿using System;
+using escout.Helpers;
 using escout.Models;
 using escout.Views;
 using Newtonsoft.Json;
@@ -21,6 +22,7 @@ namespace escout.ViewModels
         public ICommand ForgotPasswordCommand { get; set; }
         public ICommand SignUpViewCommand { get; set; }
         public ICommand ForgotPasswordViewCommand { get; set; }
+        public ICommand AboutViewCommand { get; set; }
         public ICommand CancelCommand { get; set; }
 
         private User user;
@@ -37,6 +39,7 @@ namespace escout.ViewModels
             ForgotPasswordCommand = new Command(ForgotPasswordExecuted);
             SignUpViewCommand = new Command(SignUpViewExecuted);
             ForgotPasswordViewCommand = new Command(ForgetPasswordViewExecuted);
+            AboutViewCommand = new Command(AboutViewExecuted);
             CancelCommand = new Command(CancelExecuted);
 
             this.user = user;
@@ -71,16 +74,23 @@ namespace escout.ViewModels
         {
             if (!(string.IsNullOrEmpty(Username)) && !(string.IsNullOrEmpty(Password)))
             {
-                var response = RestConnector.PostObjectToApi(new User(Username, GenerateSha256String(Password), Email), RestConnector.SignIn);
-                var result = JsonConvert.DeserializeObject<AuthData>(await response);
-
-                if (!string.IsNullOrEmpty(result.Token))
+                var response = await RestConnector.PostObjectToApi(new User(Username, GenerateSha256String(Password), Email), RestConnector.SignIn);
+                if (!string.IsNullOrEmpty(response))
                 {
-                    RestConnector.Token = result.Token;
-                    await Navigation.PushAsync(new SplashScreenPage());
+                    var result = JsonConvert.DeserializeObject<AuthData>(response);
+
+                    if (!string.IsNullOrEmpty(result.Token))
+                    {
+                        RestConnector.Token = result.Token;
+                        await Navigation.PushAsync(new SplashScreenPage());
+                    }
+                    else
+                        App.DisplayMessage("Error", "Invalid username or password.", "Ok");
                 }
                 else
-                    App.DisplayMessage("Error", "Invalid username or password.", "Ok");
+                {
+                    App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                }
             }
             else
                 App.DisplayMessage("Error", "Invalid username or password.", "Ok");
@@ -90,11 +100,17 @@ namespace escout.ViewModels
         {
             if (!(string.IsNullOrEmpty(Username) && string.IsNullOrEmpty(Email) && string.IsNullOrEmpty(Password)))
             {
-                var response = RestConnector.PostObjectToApi(new User(Username, GenerateSha256String(Password), Email), RestConnector.SignUp);
-                var result = JsonConvert.DeserializeObject<SvcResult>(await response);
+                var response = await RestConnector.PostObjectToApi(new User(Username, GenerateSha256String(Password), Email), RestConnector.SignUp);
 
-                App.DisplayMessage("Result", result.ErrorMessage, "OK");
-                await Navigation.PopModalAsync();
+                if (!string.IsNullOrEmpty(response))
+                {
+                    var result = JsonConvert.DeserializeObject<SvcResult>(response);
+                    App.DisplayMessage("Result", result.ErrorMessage, "OK");
+                }
+                else
+                {
+                    App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                }
             }
             else
                 App.DisplayMessage("Error:", "Something is wrong.", "OK");
@@ -104,11 +120,17 @@ namespace escout.ViewModels
         {
             if (!(string.IsNullOrEmpty(Username)) || !(string.IsNullOrEmpty(Email)))
             {
-                var response = RestConnector.PostObjectToApi(new User(Username, null, Email), RestConnector.ResetPassword);
-                var result = JsonConvert.DeserializeObject<SvcResult>(await response);
-
-                App.DisplayMessage("Message", result.ErrorMessage, "Ok");
-                await Navigation.PopModalAsync();
+                var response = await RestConnector.PostObjectToApi(new User(Username, null, Email), RestConnector.ResetPassword);
+                if (!string.IsNullOrEmpty(response))
+                {
+                    var result = JsonConvert.DeserializeObject<SvcResult>(response);
+                    App.DisplayMessage("Message", result.ErrorMessage, "Ok");
+                    await Navigation.PopModalAsync();
+                }
+                else
+                {
+                    App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                }
             }
             else
                 App.DisplayMessage("Warning", "Invalid username or email.", "Ok");
@@ -122,6 +144,11 @@ namespace escout.ViewModels
         private async void ForgetPasswordViewExecuted()
         {
             await Navigation.PushModalAsync(new ForgotPasswordPage());
+        }
+
+        private async void AboutViewExecuted()
+        {
+            await Navigation.PushModalAsync(new AboutPage());
         }
 
         private async void CancelExecuted()

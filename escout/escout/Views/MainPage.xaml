@@ -7,7 +7,7 @@
              x:Class="escout.Views.MainPage" IsPresented="True" NavigationPage.HasNavigationBar="False">
 
     <MasterDetailPage.Master>
-        <ContentPage Title="Master">
+        <ContentPage Title="Master" BackgroundColor="#262626">
             <StackLayout>
                 <StackLayout>
                     <Image Source="user_image.png" WidthRequest="80"/>
@@ -19,7 +19,7 @@
                                 <StackLayout Orientation="Horizontal" Padding="1">
                                     <Image Source="{Binding ImageUrl}" VerticalOptions="Center" Margin="0,0,10,0"/>
                                     <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
-                                        <Label Text="{Binding Name}" FontSize="Large"/>
+                                        <Label Text="{Binding Name}" FontSize="Large" TextColor="White"/>
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell>

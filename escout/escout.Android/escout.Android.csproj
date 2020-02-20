@@ -123,5 +123,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\escout_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\iscte_logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

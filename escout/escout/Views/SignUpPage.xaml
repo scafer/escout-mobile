@@ -23,8 +23,8 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout>
-                <Button Text="Register" BorderWidth="1" BorderColor="#0A6ED1" BackgroundColor="#0A6ED1" CornerRadius="8" TextColor="White" Command="{Binding SignUpCommand}"/>
-                <Button Text="Cancel" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#0A6ED1" Command="{Binding CancelCommand}"/>
+                <Button Text="Register" BorderWidth="1" BorderColor="#262626" BackgroundColor="#262626" CornerRadius="8" TextColor="White" Command="{Binding SignUpCommand}"/>
+                <Button Text="Cancel" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Command="{Binding CancelCommand}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="escout.Views.AboutPage" Title="About">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Center" Margin="5">
+                <Image x:Name="logoImage" Source="escout_logo.png" WidthRequest="200"  HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Margin="20">
+                <Label Text="Projeto submetido como requisito parcial para a obtenção do grau de Mestre em Engenharia Informática:"/>
+
+                <Label Text="Desenvolvido por:" FontAttributes="Bold" Margin="0, 10"/>
+                <Label Text=" - Sandro Ferreira Camilo Alpoim Ferreira"/>
+
+                <Label Text="Orientadores:" FontAttributes="Bold" Margin="0, 10"/>
+                <Label Text=" - Doutor Carlos José Corredoura Serrão, Professor Auxiliar, ISCTE-IUL "/>
+                <Label Text=" - Doutor Rui Jorge Henriques Calado Lopes, Professor Auxiliar, ISCTE IUL "/>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center">
+                <Image Source="iscte_logo.png" WidthRequest="220"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
