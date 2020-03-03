@@ -18,7 +18,7 @@
                 <Image x:Name="LogoImage" Source="escout_logo.png" WidthRequest="200"  HorizontalOptions="Center"/>
             </StackLayout>
 
-            <Label Text="Version 0.2" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="Center" Margin="5"/>
+            <Label x:Name="Version" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="Center" Margin="5"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

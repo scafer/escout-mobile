@@ -15,6 +15,7 @@ namespace escout.Views
         public SplashScreenPage()
         {
             InitializeComponent();
+            Version.Text = (Application.Current as App).Version;
         }
 
         protected override async void OnAppearing()

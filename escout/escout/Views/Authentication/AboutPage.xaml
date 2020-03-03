@@ -15,7 +15,7 @@
                 <Label Text="Projeto submetido como requisito parcial para a obtenção do grau de Mestre em Engenharia Informática:"/>
 
                 <Label Text="Desenvolvido por:" FontAttributes="Bold" Margin="0, 10"/>
-                <Label Text=" - Sandro Ferreira Camilo Alpoim Ferreira"/>
+                <Label Text=" - Sandro Camilo Alpoim Ferreira"/>
 
                 <Label Text="Orientadores:" FontAttributes="Bold" Margin="0, 10"/>
                 <Label Text=" - Doutor Carlos José Corredoura Serrão, Professor Auxiliar, ISCTE-IUL "/>
