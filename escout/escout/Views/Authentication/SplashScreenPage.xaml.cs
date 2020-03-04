@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace escout.Views
+namespace escout.Views.Authentication
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SplashScreenPage : ContentPage
@@ -15,6 +9,7 @@ namespace escout.Views
         public SplashScreenPage()
         {
             InitializeComponent();
+            Version.Text = (Application.Current as App).Version;
         }
 
         protected override async void OnAppearing()
