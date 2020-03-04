@@ -1,7 +1,6 @@
-﻿using System;
-using escout.Helpers;
+﻿using escout.Helpers;
 using escout.Models;
-using escout.Views;
+using escout.Views.Authentication;
 using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;

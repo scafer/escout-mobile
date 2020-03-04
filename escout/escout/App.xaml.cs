@@ -1,4 +1,4 @@
-﻿using escout.Views;
+﻿using escout.Views.Authentication;
 using Xamarin.Forms;
 
 namespace escout
@@ -52,7 +52,7 @@ namespace escout
 
         public string Version
         {
-            get => Properties[VersionKey].ToString();
+            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "";
             set => Properties[VersionKey] = value;
         }
 
