@@ -30,7 +30,10 @@ namespace escout.Views.Authentication
 
         private void Save_Toggled(object sender, ToggledEventArgs e)
         {
-            Save_Changed();
+            if (string.IsNullOrEmpty(Username.Text) || string.IsNullOrEmpty(Password.Text))
+                (sender as Switch).IsToggled = false;
+            else
+                Save_Changed();
         }
 
         private void Save_Changed()
