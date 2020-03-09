@@ -10,7 +10,11 @@
         <ContentPage Title="Master" BackgroundColor="#262626">
             <StackLayout>
                 <StackLayout>
-                    <Image Source="user_image.png" WidthRequest="80"/>
+                    <Image Source="user_image.png" WidthRequest="80">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="UserSettings_OnTapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
                 </StackLayout>
                 <ListView x:Name="OptionsListView" ItemSelected="OptionsListView_OnItemSelected" Margin="20">
                     <ListView.ItemTemplate>
