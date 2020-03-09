@@ -1,4 +1,5 @@
-﻿using escout.Models;
+﻿using System;
+using escout.Models;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -26,11 +27,21 @@ namespace escout.Views
 
             switch (option.Name)
             {
-                case "User Details":
+                case "Home":
                     Detail = new NavigationPage(new UserDetailsPage())
                     {
                         //BarBackgroundColor = Color.FromHex("#262626")
                     };
+                    break;
+                case "Watching List":
+                    break;
+                case "Games":
+                    break;
+                case "Clubs":
+                    break;
+                case "Competition Boards":
+                    break;
+                case "Athletes":
                     break;
             }
             IsPresented = false;
@@ -40,10 +51,23 @@ namespace escout.Views
         {
             var option = new List<Option>
             {
-                new Option{Name="User Details", ImageUrl=""}
+                new Option{Name = "Home", ImageUrl = ""},
+                new Option{Name = "Watching List", ImageUrl = ""},
+                new Option{Name = "Games", ImageUrl = ""},
+                new Option{Name = "Clubs", ImageUrl = ""},
+                new Option{Name = "Competition Boards", ImageUrl = ""},
+                new Option{Name = "Athletes", ImageUrl = ""}
             };
 
             return option;
+        }
+
+        private void UserSettings_OnTapped(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new UserDetailsPage())
+            {
+                //BarBackgroundColor = Color.FromHex("#262626")
+            };
         }
     }
 }
