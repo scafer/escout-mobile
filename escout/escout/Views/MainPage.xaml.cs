@@ -28,10 +28,7 @@ namespace escout.Views
             switch (option.Name)
             {
                 case "Home":
-                    Detail = new NavigationPage(new UserDetailsPage())
-                    {
-                        //BarBackgroundColor = Color.FromHex("#262626")
-                    };
+                    Detail = new NavigationPage(new UserDetailsPage());
                     break;
                 case "Watching List":
                     break;
@@ -68,6 +65,7 @@ namespace escout.Views
             {
                 //BarBackgroundColor = Color.FromHex("#262626")
             };
+            IsPresented = false;
         }
     }
 }

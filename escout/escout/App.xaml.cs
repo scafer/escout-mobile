@@ -8,7 +8,7 @@ namespace escout
         private const string UsernameKey = "Username";
         private const string PasswordKey = "Password";
         private const string AuthSaveKey = "false";
-        private const string VersionKey = "0.3";
+        private const string VersionKey = "0.4";
 
         public App()
         {
