@@ -1,5 +1,5 @@
-﻿using System;
-using escout.Models;
+﻿using escout.Models;
+using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -30,17 +30,23 @@ namespace escout.Views
                 case "Home":
                     Detail = new NavigationPage(new UserDetailsPage());
                     break;
-                case "Watching List":
+                case "Watching":
+                    Detail = new NavigationPage(new WatchingListPage());
                     break;
                 case "Games":
+                    Detail = new NavigationPage(new GamesPage());
                     break;
                 case "Clubs":
+                    Detail = new NavigationPage(new ClubsPage());
                     break;
-                case "Competition Boards":
+                case "Boards":
+                    Detail = new NavigationPage(new CompetitionBoardsPage());
                     break;
                 case "Athletes":
+                    Detail = new NavigationPage(new AthletesPage());
                     break;
             }
+
             IsPresented = false;
         }
 
@@ -49,10 +55,10 @@ namespace escout.Views
             var option = new List<Option>
             {
                 new Option{Name = "Home", ImageUrl = ""},
-                new Option{Name = "Watching List", ImageUrl = ""},
+                new Option{Name = "Watching", ImageUrl = ""},
                 new Option{Name = "Games", ImageUrl = ""},
                 new Option{Name = "Clubs", ImageUrl = ""},
-                new Option{Name = "Competition Boards", ImageUrl = ""},
+                new Option{Name = "Boards", ImageUrl = ""},
                 new Option{Name = "Athletes", ImageUrl = ""}
             };
 
@@ -61,10 +67,7 @@ namespace escout.Views
 
         private void UserSettings_OnTapped(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new UserDetailsPage())
-            {
-                //BarBackgroundColor = Color.FromHex("#262626")
-            };
+            Detail = new NavigationPage(new UserDetailsPage());
             IsPresented = false;
         }
     }

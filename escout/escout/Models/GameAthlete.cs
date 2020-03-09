@@ -1,16 +1,19 @@
 ﻿using escout.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Newtonsoft.Json;
 
-namespace escout.Models.GameData
+namespace escout.Models
 {
-    class GameAthlete : BaseModel
+    public class GameAthlete : BaseModel
     {
+        [JsonProperty("")]
         public int status { get; set; }
+        [JsonProperty("")]
         public int gameId { get; set; }
+        [JsonProperty("")]
         public int athleteId { get; set; }
+        [JsonProperty("")]
         public string created { get; set; }
+        [JsonProperty("")]
         public string updated { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32.SafeHandles;
+using Newtonsoft.Json;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace escout.Helpers
 {
     public class BaseModel
     {
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey, AutoIncrement, JsonProperty("id")]
         public int id { get; set; }
     }
 
