@@ -1,4 +1,4 @@
-﻿
+﻿using escout.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

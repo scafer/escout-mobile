@@ -2,35 +2,35 @@
 
 namespace escout.Models
 {
-    class CompetitionBoard
+    public class CompetitionBoard
     {
         [JsonProperty("id")]
-        public int id { get; set; }
+        public int Id { get; set; }
         [JsonProperty("position")]
-        public int position { get; set; }
+        public int Position { get; set; }
         [JsonProperty("played")]
-        public int played { get; set; }
+        public int Played { get; set; }
         [JsonProperty("won")]
-        public int won { get; set; }
+        public int Won { get; set; }
         [JsonProperty("drawn")]
-        public int drawn { get; set; }
+        public int Drawn { get; set; }
         [JsonProperty("lost")]
-        public int lost { get; set; }
+        public int Lost { get; set; }
         [JsonProperty("goalsFor")]
-        public int goalsFor { get; set; }
+        public int GoalsFor { get; set; }
         [JsonProperty("goalsAgainst")]
-        public int goalsAgainst { get; set; }
+        public int GoalsAgainst { get; set; }
         [JsonProperty("goalsDifference")]
-        public int goalsDifference { get; set; }
+        public int GoalsDifference { get; set; }
         [JsonProperty("points")]
-        public int points { get; set; }
+        public int Points { get; set; }
         [JsonProperty("clubId")]
-        public int clubId { get; set; }
+        public int ClubId { get; set; }
         [JsonProperty("competitionId")]
-        public int competitionId { get; set; }
+        public int CompetitionId { get; set; }
         [JsonProperty("created")]
-        public string created { get; set; }
+        public string Created { get; set; }
         [JsonProperty("updated")]
-        public string updated { get; set; }
+        public string Updated { get; set; }
     }
 }

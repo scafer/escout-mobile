@@ -6,18 +6,18 @@ namespace escout.Models
     public class Competition : BaseModel
     {
         [JsonProperty("key")]
-        public string key { get; set; }
+        public string Key { get; set; }
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
         [JsonProperty("edition")]
-        public string edition { get; set; }
+        public string Edition { get; set; }
         [JsonProperty("sportId")]
-        public int sportId { get; set; }
+        public int SportId { get; set; }
         [JsonProperty("imageId")]
-        public int? imageId { get; set; }
+        public int? ImageId { get; set; }
         [JsonProperty("created")]
-        public string created { get; set; }
+        public string Created { get; set; }
         [JsonProperty("updated")]
-        public string updated { get; set; }
+        public string Updated { get; set; }
     }
 }

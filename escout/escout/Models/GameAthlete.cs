@@ -6,14 +6,14 @@ namespace escout.Models
     public class GameAthlete : BaseModel
     {
         [JsonProperty("")]
-        public int status { get; set; }
+        public int Status { get; set; }
         [JsonProperty("")]
-        public int gameId { get; set; }
+        public int GameId { get; set; }
         [JsonProperty("")]
-        public int athleteId { get; set; }
+        public int AthleteId { get; set; }
         [JsonProperty("")]
-        public string created { get; set; }
+        public string Created { get; set; }
         [JsonProperty("")]
-        public string updated { get; set; }
+        public string Updated { get; set; }
     }
 }

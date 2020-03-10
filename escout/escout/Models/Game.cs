@@ -6,40 +6,40 @@ namespace escout.Models
     public class Game : BaseModel
     {
         [JsonProperty("timeStart")]
-        public string timeStart { get; set; }
+        public string TimeStart { get; set; }
         [JsonProperty("timeEnd")]
-        public string timeEnd { get; set; }
+        public string TimeEnd { get; set; }
         [JsonProperty("homeColor")]
-        public string homeColor { get; set; }
+        public string HomeColor { get; set; }
         [JsonProperty("visitorColor")]
-        public string visitorColor { get; set; }
+        public string VisitorColor { get; set; }
         [JsonProperty("homeScore")]
-        public int homeScore { get; set; }
+        public int HomeScore { get; set; }
         [JsonProperty("visitorScore")]
-        public int visitorScore { get; set; }
+        public int VisitorScore { get; set; }
         [JsonProperty("homePenaltyScore ")]
-        public int homePenaltyScore { get; set; }
+        public int HomePenaltyScore { get; set; }
         [JsonProperty("visitorPenaltyScore")]
-        public int visitorPenaltyScore { get; set; }
+        public int VisitorPenaltyScore { get; set; }
         [JsonProperty("status")]
-        public int status { get; set; }
+        public int Status { get; set; }
         [JsonProperty("type")]
-        public string type { get; set; }
+        public string Type { get; set; }
         [JsonProperty("location")]
-        public string location { get; set; }
+        public string Location { get; set; }
         [JsonProperty("homeId")]
-        public int homeId { get; set; }
+        public int HomeId { get; set; }
         [JsonProperty("visitorId")]
-        public int visitorId { get; set; }
+        public int VisitorId { get; set; }
         [JsonProperty("competitionId")]
-        public int? competitionId { get; set; }
+        public int? CompetitionId { get; set; }
         [JsonProperty("imageId")]
-        public int? imageId { get; set; }
+        public int? ImageId { get; set; }
         [JsonProperty("")]
-        public int userId { get; set; }
+        public int UserId { get; set; }
         [JsonProperty("")]
-        public string created { get; set; }
+        public string Created { get; set; }
         [JsonProperty("")]
-        public string updated { get; set; }
+        public string Updated { get; set; }
     }
 }

@@ -5,27 +5,27 @@ namespace escout.Models
 {
     public class GameEvent : BaseModel
     {
-        [JsonProperty("")]
-        public string key { get; set; }
-        [JsonProperty("")]
-        public string time { get; set; }
-        [JsonProperty("")]
-        public string gameTime { get; set; }
-        [JsonProperty("")]
-        public string eventDescription { get; set; }
-        [JsonProperty("")]
-        public int gameId { get; set; }
-        [JsonProperty("")]
-        public int eventId { get; set; }
-        [JsonProperty("")]
-        public int? athleteId { get; set; }
-        [JsonProperty("")]
-        public int userId { get; set; }
-        [JsonProperty("")]
-        public string created { get; set; }
-        [JsonProperty("")]
-        public string updated { get; set; }
-        [JsonProperty("")]
-        public string syncronized { get; set; }
+        [JsonProperty("key")]
+        public string Key { get; set; }
+        [JsonProperty("time")]
+        public string Time { get; set; }
+        [JsonProperty("gameTime")]
+        public string GameTime { get; set; }
+        [JsonProperty("eventDescription")]
+        public string EventDescription { get; set; }
+        [JsonProperty("gameId")]
+        public int GameId { get; set; }
+        [JsonProperty("eventId")]
+        public int EventId { get; set; }
+        [JsonProperty("athleteId")]
+        public int? AthleteId { get; set; }
+        [JsonProperty("userId")]
+        public int UserId { get; set; }
+        [JsonProperty("created")]
+        public string Created { get; set; }
+        [JsonProperty("updated")]
+        public string Updated { get; set; }
+        [JsonIgnore]
+        public bool Syncronized { get; set; }
     }
 }

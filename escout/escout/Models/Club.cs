@@ -6,30 +6,30 @@ namespace escout.Models
     public class Club : BaseModel
     {
         [JsonProperty("key")]
-        public string key { get; set; }
+        public string Key { get; set; }
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
         [JsonProperty("fullname")]
-        public string fullname { get; set; }
+        public string Fullname { get; set; }
         [JsonProperty("country")]
-        public string country { get; set; }
+        public string Country { get; set; }
         [JsonProperty("founded")]
-        public string founded { get; set; }
+        public string Founded { get; set; }
         [JsonProperty("colors")]
-        public string colors { get; set; }
+        public string Colors { get; set; }
         [JsonProperty("members")]
-        public string members { get; set; }
+        public string Members { get; set; }
         [JsonProperty("stadium")]
-        public string stadium { get; set; }
+        public string Stadium { get; set; }
         [JsonProperty("address")]
-        public string address { get; set; }
+        public string Address { get; set; }
         [JsonProperty("homepage")]
-        public string homepage { get; set; }
+        public string Homepage { get; set; }
         [JsonProperty("imageId")]
-        public int? imageId { get; set; }
+        public int? ImageId { get; set; }
         [JsonProperty("created")]
-        public string created { get; set; }
+        public string Created { get; set; }
         [JsonProperty("updated")]
-        public string updated { get; set; }
+        public string Updated { get; set; }
     }
 }

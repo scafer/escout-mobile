@@ -6,36 +6,36 @@ namespace escout.Models
     public class Athlete : BaseModel
     {
         [JsonProperty("key")]
-        public string key { get; set; }
+        public string Key { get; set; }
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
         [JsonProperty("fullname")]
-        public string fullname { get; set; }
+        public string Fullname { get; set; }
         [JsonProperty("birthDate")]
-        public string birthDate { get; set; }
+        public string BirthDate { get; set; }
         [JsonProperty("birthPlace")]
-        public string birthPlace { get; set; }
+        public string BirthPlace { get; set; }
         [JsonProperty("citizenship")]
-        public string citizenship { get; set; }
+        public string Citizenship { get; set; }
         [JsonProperty("height")]
-        public double height { get; set; }
+        public double Height { get; set; }
         [JsonProperty("weight")]
-        public double weight { get; set; }
+        public double Weight { get; set; }
         [JsonProperty("position")]
-        public string position { get; set; }
+        public string Position { get; set; }
         [JsonProperty("agent")]
-        public string agent { get; set; }
+        public string Agent { get; set; }
         [JsonProperty("currentInternational")]
-        public string currentInternational { get; set; }
+        public string CurrentInternational { get; set; }
         [JsonProperty("status")]
-        public string status { get; set; }
+        public string Status { get; set; }
         [JsonProperty("clubId")]
-        public int? clubId { get; set; }
+        public int? ClubId { get; set; }
         [JsonProperty("imageId")]
-        public int? imageId { get; set; }
+        public int? ImageId { get; set; }
         [JsonProperty("created")]
-        public string created { get; set; }
+        public string Created { get; set; }
         [JsonProperty("updated")]
-        public string updated { get; set; }
+        public string Updated { get; set; }
     }
 }
