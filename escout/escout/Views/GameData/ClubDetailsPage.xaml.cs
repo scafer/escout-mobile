@@ -10,6 +10,7 @@ namespace escout.Views
         public ClubDetailsPage(Club club)
         {
             InitializeComponent();
+            BindingContext = club;
         }
     }
 }

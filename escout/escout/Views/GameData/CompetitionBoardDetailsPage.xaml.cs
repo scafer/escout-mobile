@@ -10,6 +10,7 @@ namespace escout.Views
         public CompetitionBoardDetailsPage(CompetitionBoard competitionBoard)
         {
             InitializeComponent();
+            BindingContext = competitionBoard;
         }
     }
 }

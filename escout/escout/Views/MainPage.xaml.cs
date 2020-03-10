@@ -28,7 +28,7 @@ namespace escout.Views
             switch (option.Name)
             {
                 case "Home":
-                    Detail = new NavigationPage(new UserDetailsPage());
+                    Detail = new NavigationPage(new HomePage());
                     break;
                 case "Watching":
                     Detail = new NavigationPage(new WatchingListPage());

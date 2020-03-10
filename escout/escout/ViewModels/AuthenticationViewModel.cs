@@ -73,7 +73,7 @@ namespace escout.ViewModels
         {
             if (!(string.IsNullOrEmpty(Username)) && !(string.IsNullOrEmpty(Password)))
             {
-                var response = await RestConnector.PostObjectAsync(new User(Username, GenerateSha256String(Password), Email), RestConnector.SignIn);
+                var response = await RestConnector.PostObjectAsync(RestConnector.SignIn, new User(Username, GenerateSha256String(Password), Email));
                 if (!string.IsNullOrEmpty(response))
                 {
                     var result = JsonConvert.DeserializeObject<AuthData>(response);
@@ -99,7 +99,7 @@ namespace escout.ViewModels
         {
             if (!(string.IsNullOrEmpty(Username) && string.IsNullOrEmpty(Email) && string.IsNullOrEmpty(Password)))
             {
-                var response = await RestConnector.PostObjectAsync(new User(Username, GenerateSha256String(Password), Email), RestConnector.SignUp);
+                var response = await RestConnector.PostObjectAsync(RestConnector.SignUp, new User(Username, GenerateSha256String(Password), Email));
 
                 if (!string.IsNullOrEmpty(response))
                 {
@@ -119,7 +119,7 @@ namespace escout.ViewModels
         {
             if (!(string.IsNullOrEmpty(Username)) || !(string.IsNullOrEmpty(Email)))
             {
-                var response = await RestConnector.PostObjectAsync(new User(Username, null, Email), RestConnector.ResetPassword);
+                var response = await RestConnector.PostObjectAsync(RestConnector.ResetPassword, new User(Username, null, Email));
                 if (!string.IsNullOrEmpty(response))
                 {
                     var result = JsonConvert.DeserializeObject<SvcResult>(response);
