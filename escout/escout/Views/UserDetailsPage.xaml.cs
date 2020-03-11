@@ -23,7 +23,7 @@ namespace escout.Views
 
         private async void GetData()
         {
-            var response = RestConnector.GetDataFromApi(RestConnector.GetUserInfo);
+            var response = RestConnector.GetObjectAsync(RestConnector.User);
             var user = JsonConvert.DeserializeObject<User>(await response);
 
             BindingContext = user;
