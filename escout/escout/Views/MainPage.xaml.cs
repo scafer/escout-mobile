@@ -1,5 +1,5 @@
-﻿using System;
-using escout.Models;
+﻿using escout.Models;
+using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -9,6 +9,13 @@ namespace escout.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : MasterDetailPage
     {
+        private const string HOME = "Home";
+        private const string WATCHING = "Watching";
+        private const string GAMES = "Games";
+        private const string CLUBS = "Clubs";
+        private const string BOARDS = "Boards";
+        private const string ATHLETES = "Athletes";
+
         public MainPage()
         {
             InitializeComponent();
@@ -18,7 +25,7 @@ namespace escout.Views
         {
             base.OnAppearing();
             OptionsListView.ItemsSource = GetOptions();
-            Detail = new NavigationPage(new UserDetailsPage());
+            Detail = new NavigationPage(new HomePage());
         }
 
         private void OptionsListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -27,23 +34,26 @@ namespace escout.Views
 
             switch (option.Name)
             {
-                case "Home":
-                    Detail = new NavigationPage(new UserDetailsPage())
-                    {
-                        //BarBackgroundColor = Color.FromHex("#262626")
-                    };
+                case HOME:
+                    Detail = new NavigationPage(new HomePage());
                     break;
-                case "Watching List":
+                case WATCHING:
+                    Detail = new NavigationPage(new WatchingListPage());
                     break;
-                case "Games":
+                case GAMES:
+                    Detail = new NavigationPage(new GamesPage());
                     break;
-                case "Clubs":
+                case CLUBS:
+                    Detail = new NavigationPage(new ClubsPage());
                     break;
-                case "Competition Boards":
+                case BOARDS:
+                    Detail = new NavigationPage(new CompetitionBoardsPage());
                     break;
-                case "Athletes":
+                case ATHLETES:
+                    Detail = new NavigationPage(new AthletesPage());
                     break;
             }
+
             IsPresented = false;
         }
 
@@ -51,12 +61,12 @@ namespace escout.Views
         {
             var option = new List<Option>
             {
-                new Option{Name = "Home", ImageUrl = ""},
-                new Option{Name = "Watching List", ImageUrl = ""},
-                new Option{Name = "Games", ImageUrl = ""},
-                new Option{Name = "Clubs", ImageUrl = ""},
-                new Option{Name = "Competition Boards", ImageUrl = ""},
-                new Option{Name = "Athletes", ImageUrl = ""}
+                new Option{Name = HOME, ImageUrl = "home_icon.png"},
+                new Option{Name = WATCHING, ImageUrl = "watching_icon.png"},
+                new Option{Name = GAMES, ImageUrl = "games_icon.png"},
+                new Option{Name = CLUBS, ImageUrl = "clubs_icon.png"},
+                new Option{Name = ATHLETES, ImageUrl = "athletes_icon.png"},
+                new Option{Name = BOARDS, ImageUrl = "boards_icon.png"}
             };
 
             return option;
@@ -64,10 +74,8 @@ namespace escout.Views
 
         private void UserSettings_OnTapped(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new UserDetailsPage())
-            {
-                //BarBackgroundColor = Color.FromHex("#262626")
-            };
+            Detail = new NavigationPage(new UserDetailsPage());
+            IsPresented = false;
         }
     }
 }
