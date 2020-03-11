@@ -36,10 +36,7 @@ namespace escout.Helpers
         public static string Token;
         private const string ApiAuthenticationMode = "Authorization";
 
-        private static string GetApiUrl()
-        {
-            return "https://escout-server.herokuapp.com";
-        }
+        private static string GetApiUrl() => "https://escout-server.herokuapp.com";
 
         private static string GetAuthenticationHeader() => "bearer" + " " + Token;
 

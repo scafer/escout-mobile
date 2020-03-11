@@ -1,4 +1,5 @@
-﻿using escout.Views.Authentication;
+﻿using escout.Views;
+using escout.Views.Authentication;
 using Xamarin.Forms;
 
 namespace escout
@@ -8,13 +9,13 @@ namespace escout
         private const string UsernameKey = "Username";
         private const string PasswordKey = "Password";
         private const string AuthSaveKey = "false";
-        private const string VersionKey = "0.4";
+        private const string VersionKey = "0.5";
 
         public App()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new SignInPage());
+             MainPage = new NavigationPage(new SignInPage());
         }
 
         protected override void OnStart()

@@ -6,10 +6,27 @@
              mc:Ignorable="d"
              x:Class="escout.Views.ClubsPage" Title="Clubs">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Filter Criteria:" FontSize="Medium" Margin="15,0"/>
+                <StackLayout Orientation="Horizontal" Margin="20,0">
+                    <Picker x:Name="filter" Title="Filter"/>
+                    <Entry x:Name="key" Placeholder="key" HorizontalOptions="FillAndExpand"/>
+                    <Image Source="search_icon.png" HorizontalOptions="End" HeightRequest="25">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SearchExecuted"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </StackLayout>
+
+                <BoxView HeightRequest="1" Color="Black" Margin="0,10"/>
+                <ActivityIndicator x:Name="activityIndicator"/>
+
+                <StackLayout>
+
+                    <ListView/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

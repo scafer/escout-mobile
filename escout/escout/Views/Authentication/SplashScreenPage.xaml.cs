@@ -9,12 +9,13 @@ namespace escout.Views.Authentication
         public SplashScreenPage()
         {
             InitializeComponent();
-            Version.Text = (Application.Current as App).Version;
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+
+            Version.Text = (Application.Current as App).Version;
 
             await LogoImage.ScaleTo(0.9, 1500, Easing.Linear);
             await LogoImage.ScaleTo(1, 1000, Easing.Linear);

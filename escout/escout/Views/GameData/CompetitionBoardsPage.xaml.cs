@@ -1,4 +1,5 @@
 ﻿
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,6 +11,10 @@ namespace escout.Views
         public CompetitionBoardsPage()
         {
             InitializeComponent();
+        }
+        private void SearchExecuted(object sender, EventArgs e)
+        {
+            activityIndicator.IsRunning = true;
         }
     }
 }
