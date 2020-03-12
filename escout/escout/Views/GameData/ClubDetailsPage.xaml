@@ -7,9 +7,21 @@
              x:Class="escout.Views.ClubDetailsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="user_image.png" WidthRequest="120" HorizontalOptions="Center" Margin="0,20"/>
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <TextCell Text="Name:" Detail="{Binding Name}"/>
+                        <TextCell Text="Fullname:" Detail="{Binding Fullname}"/>
+                        <TextCell Text="Country:" Detail="{Binding Country}"/>
+                        <TextCell Text="Founded:" Detail="{Binding Founded}"/>
+                        <TextCell Text="Colors:" Detail="{Binding Colors}"/>
+                        <TextCell Text="Members:" Detail="{Binding Members}"/>
+                        <TextCell Text="Stadium:" Detail="{Binding Stadium}"/>
+                        <TextCell Text="Home Page:" Detail="{Binding HomePage}"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

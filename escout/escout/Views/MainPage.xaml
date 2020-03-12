@@ -16,7 +16,7 @@
                         </Image.GestureRecognizers>
                     </Image>
                 </StackLayout>
-                <ListView x:Name="OptionsListView" ItemSelected="OptionsListView_OnItemSelected" Margin="20">
+                <ListView x:Name="OptionsListView" ItemSelected="OptionsListView_OnItemSelected" Margin="20" SeparatorVisibility="None">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
