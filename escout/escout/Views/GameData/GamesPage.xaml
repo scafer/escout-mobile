@@ -23,8 +23,7 @@
                 <ActivityIndicator x:Name="activityIndicator"/>
 
                 <StackLayout>
-
-                    <ListView/>
+                    <ListView x:Name="listView" ItemSelected="ItemSelected"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

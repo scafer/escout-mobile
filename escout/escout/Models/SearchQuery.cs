@@ -11,6 +11,8 @@ namespace escout.Models
         [JsonProperty("value")]
         public string Value { get; set; }
 
+        public SearchQuery() { }
+
         public SearchQuery(string fieldName, string condition, string value)
         {
             FieldName = fieldName;
