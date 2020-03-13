@@ -4,12 +4,28 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="escout.Views.AthleteDetailsPage">
+             x:Class="escout.Views.AthleteDetailsPage" Title="Athlete Details">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="user_image.png" WidthRequest="120" HorizontalOptions="Center" Margin="0,20"/>
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <TextCell Text="Name:" Detail="{Binding Name}"/>
+                        <TextCell Text="Fullname:" Detail="{Binding Fullname}"/>
+                        <TextCell Text="Birth Date:" Detail="{Binding BirthDate}"/>
+                        <TextCell Text="Birth Place:" Detail="{Binding BirthPlace}"/>
+                        <TextCell Text="Citizenship:" Detail="{Binding Citizenship}"/>
+                        <TextCell Text="Height:" Detail="{Binding Height}"/>
+                        <TextCell Text="Weight:" Detail="{Binding Weight}"/>
+                        <TextCell Text="Position:" Detail="{Binding Position}"/>
+                        <TextCell Text="Agent:" Detail="{Binding Agent}"/>
+                        <TextCell Text="Current International:" Detail="{Binding CurrentInternational}"/>
+                        <TextCell Text="Status:" Detail="{Binding Status}"/>
+                        <TextCell Text="Current Club:" Detail="{Binding ClubId}"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
