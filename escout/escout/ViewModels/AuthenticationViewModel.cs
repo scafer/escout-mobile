@@ -147,7 +147,7 @@ namespace escout.ViewModels
 
         private async void AboutViewExecuted()
         {
-            await Navigation.PushModalAsync(new AboutPage());
+            await Navigation.PushAsync(new AboutPage());
         }
 
         private async void CancelExecuted()
