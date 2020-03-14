@@ -23,7 +23,13 @@
                 <ActivityIndicator x:Name="activityIndicator"/>
 
                 <StackLayout>
-                    <ListView x:Name="listView" ItemSelected="ItemSelected"/>
+                    <ListView x:Name="listView" ItemSelected="ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="Name:" Detail="{Binding Name}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

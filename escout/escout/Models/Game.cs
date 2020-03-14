@@ -17,7 +17,7 @@ namespace escout.Models
         public int HomeScore { get; set; }
         [JsonProperty("visitorScore")]
         public int VisitorScore { get; set; }
-        [JsonProperty("homePenaltyScore ")]
+        [JsonProperty("homePenaltyScore")]
         public int HomePenaltyScore { get; set; }
         [JsonProperty("visitorPenaltyScore")]
         public int VisitorPenaltyScore { get; set; }
@@ -35,11 +35,11 @@ namespace escout.Models
         public int? CompetitionId { get; set; }
         [JsonProperty("imageId")]
         public int? ImageId { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("userId")]
         public int UserId { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("created")]
         public string Created { get; set; }
-        [JsonProperty("")]
+        [JsonProperty("updated")]
         public string Updated { get; set; }
     }
 }
