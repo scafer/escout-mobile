@@ -16,6 +16,7 @@
                         </Image.GestureRecognizers>
                     </Image>
                 </StackLayout>
+              
                 <ListView x:Name="OptionsListView" ItemSelected="OptionsListView_OnItemSelected" Margin="20" SeparatorVisibility="None" BackgroundColor="#262626">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -30,6 +31,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+              
                 <Image Source="iscte_logo_w.png" WidthRequest="150"/>
             </StackLayout>
         </ContentPage>
@@ -38,5 +40,4 @@
     <MasterDetailPage.Detail>
         <ContentPage></ContentPage>
     </MasterDetailPage.Detail>
-
 </MasterDetailPage>
