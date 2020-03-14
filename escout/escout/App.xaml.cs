@@ -14,9 +14,7 @@ namespace escout
         public App()
         {
             InitializeComponent();
-
-             //MainPage = new NavigationPage(new SignInPage());
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new SignInPage());
         }
 
         protected override void OnStart()

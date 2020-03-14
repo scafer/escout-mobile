@@ -15,7 +15,7 @@ namespace escout.Helpers
         public const string User = "/api/v1/user";
         public const string Users = "/api/v1/users";
         public const string Athlete = "/api/v1/athlete";
-        public const string Athletes = "​/api​/v1​/athletes";
+        public const string Athletes = "/api/v1/athletes";
         public const string Club = "/api/v1/club";
         public const string Clubs = "/api/v1/clubs";
         public const string Competition = "/api/v1/competition";

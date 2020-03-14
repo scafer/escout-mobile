@@ -13,7 +13,7 @@ namespace escout.Helpers
     public class BaseModel
     {
         [PrimaryKey, AutoIncrement, JsonProperty("id")]
-        public int id { get; set; }
+        public int Id { get; set; }
     }
 
     abstract class BaseRepository<T> : IDisposable
@@ -74,7 +74,7 @@ namespace escout.Helpers
         public override Task<T> Select(int id)
         {
             lock (locker)
-                return connection.Table<T>().Where(i => i.id == id).FirstOrDefaultAsync();
+                return connection.Table<T>().Where(i => i.Id == id).FirstOrDefaultAsync();
         }
 
         public override Task<List<T>> Query(string query)
@@ -93,7 +93,7 @@ namespace escout.Helpers
         {
             lock (locker)
             {
-                if (data.id != 0)
+                if (data.Id != 0)
                     return connection.UpdateAsync(data);
                 else
                     return connection.InsertAsync(data);
