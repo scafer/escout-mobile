@@ -37,6 +37,7 @@ namespace escout.Views
                 listView.ItemsSource = await GetAthletes(new SearchQuery(filter.Items[filter.SelectedIndex], "LIKE", key.Text).ToString());
             }
             activityIndicator.IsRunning = false;
+
         }
 
         private void ItemSelected(object sender, SelectedItemChangedEventArgs e)

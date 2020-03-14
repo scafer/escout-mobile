@@ -47,5 +47,10 @@ namespace escout.Views
             }
             return competitionBoards;
         }
+        private void ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var competitionBoard = e.SelectedItem as CompetitionBoard;
+            Navigation.PushAsync(new CompetitionBoardDetailsPage(competitionBoard));
+        }
     }
 }

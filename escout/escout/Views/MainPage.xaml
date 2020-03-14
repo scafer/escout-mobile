@@ -7,8 +7,8 @@
              x:Class="escout.Views.MainPage" IsPresented="True" NavigationPage.HasNavigationBar="False">
 
     <MasterDetailPage.Master>
-        <ContentPage Title="Master" BackgroundColor="#262626">
-            <StackLayout>
+        <ContentPage Title="Menu" BackgroundColor="#262626">
+            <StackLayout Padding="0,50,0,0">
                 <StackLayout>
                     <Image Source="user_image.png" WidthRequest="80" Margin="5">
                         <Image.GestureRecognizers>
@@ -16,7 +16,8 @@
                         </Image.GestureRecognizers>
                     </Image>
                 </StackLayout>
-                <ListView x:Name="OptionsListView" ItemSelected="OptionsListView_OnItemSelected" Margin="20" SeparatorVisibility="None">
+              
+                <ListView x:Name="OptionsListView" ItemSelected="OptionsListView_OnItemSelected" Margin="20" SeparatorVisibility="None" BackgroundColor="#262626">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -30,6 +31,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+              
                 <Image Source="iscte_logo_w.png" WidthRequest="150"/>
             </StackLayout>
         </ContentPage>
@@ -38,5 +40,4 @@
     <MasterDetailPage.Detail>
         <ContentPage></ContentPage>
     </MasterDetailPage.Detail>
-
 </MasterDetailPage>
