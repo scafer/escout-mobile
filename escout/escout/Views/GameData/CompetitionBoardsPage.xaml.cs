@@ -17,6 +17,7 @@ namespace escout.Views
         {
             InitializeComponent();
         }
+
         private async void SearchExecuted(object sender, EventArgs e)
         {
             activityIndicator.IsRunning = true;
@@ -27,10 +28,14 @@ namespace escout.Views
             }
             else
             {
-                listView.ItemsSource = await GetCompetitionBoards(new SearchQuery(filter.Items[filter.SelectedIndex], "LIKE", key.Text).ToString());
+                listView.ItemsSource =
+                    await GetCompetitionBoards(new SearchQuery(filter.Items[filter.SelectedIndex], "LIKE", key.Text)
+                        .ToString());
             }
+
             activityIndicator.IsRunning = false;
         }
+
         private void ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var competitionBoard = e.SelectedItem as CompetitionBoard;
@@ -45,12 +50,8 @@ namespace escout.Views
             {
                 competitionBoards = JsonConvert.DeserializeObject<List<CompetitionBoard>>(response);
             }
+
             return competitionBoards;
-        }
-        private void ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var competitionBoard = e.SelectedItem as CompetitionBoard;
-            Navigation.PushAsync(new CompetitionBoardDetailsPage(competitionBoard));
         }
     }
 }

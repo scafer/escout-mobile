@@ -49,11 +49,5 @@ namespace escout.Views
             }
             return clubs;
         }
-
-        private void ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var club = e.SelectedItem as Club;
-            Navigation.PushAsync(new ClubDetailsPage(club));
-        }
     }
 }

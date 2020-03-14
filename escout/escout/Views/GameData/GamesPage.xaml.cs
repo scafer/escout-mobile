@@ -48,10 +48,5 @@ namespace escout.Views
             }
             return games;
         }
-        private void ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var game = e.SelectedItem as Game;
-            Navigation.PushAsync(new GameDetailsPage(game));
-        }
     }
 }
