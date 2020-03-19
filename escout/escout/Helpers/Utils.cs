@@ -9,7 +9,7 @@ namespace escout.Helpers
 {
     class Utils
     {
-        public static async Task<Image> GetImage(int imageId)
+        public static async Task<Image> GetImage(int? imageId)
         {
             var img = new Image();
             var response = await RestConnector.GetObjectAsync(RestConnector.Image + "?id=" + imageId);

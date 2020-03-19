@@ -14,17 +14,18 @@ namespace escout.Views
             InitializeComponent();
             BindingContext = athlete;
 
-            if (true)
-                LoadImage(1);
-            else
-                Img.Source = "user_image.png";
+            if (athlete.ImageId != null)
+                LoadImage(athlete.ImageId);
         }
 
-        private async void LoadImage(int imageId)
+        private async void LoadImage(int? imageId)
         {
             var img = await Utils.GetImage(imageId);
             if (!String.IsNullOrEmpty(img.ImageUrl))
+            {
                 Img.Source = img.ImageUrl;
+                Img.Aspect = Aspect.AspectFill;
+            }
         }
     }
 }

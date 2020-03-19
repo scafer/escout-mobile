@@ -8388,10 +8388,13 @@ namespace escout.Droid
 			public const int tooltip_frame_light = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int user_image = 2131165312;
+			public const int user_image_negative = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int watching_icon = 2131165313;
+			public const int user_image_positive = 2131165313;
+			
+			// aapt resource value: 0x7F070082
+			public const int watching_icon = 2131165314;
 			
 			static Drawable()
 			{
