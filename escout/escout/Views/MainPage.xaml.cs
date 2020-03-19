@@ -1,6 +1,8 @@
 ﻿using escout.Models;
 using System;
 using System.Collections.Generic;
+using escout.Helpers;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,6 +28,7 @@ namespace escout.Views
             base.OnAppearing();
             OptionsListView.ItemsSource = GetOptions();
             Detail = new NavigationPage(new HomePage());
+            GetData();
         }
 
         private void OptionsListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -76,6 +79,22 @@ namespace escout.Views
         {
             Detail = new NavigationPage(new UserDetailsPage());
             IsPresented = false;
+        }
+
+        private async void GetData()
+        {
+            var response = RestConnector.GetObjectAsync(RestConnector.User);
+            var user = JsonConvert.DeserializeObject<User>(await response);
+
+            if (user.ImageId != null)
+            {
+                var img = await Utils.GetImage(user.ImageId);
+                if (!String.IsNullOrEmpty(img.ImageUrl))
+                {
+                    Img.Source = img.ImageUrl;
+                    Img.Aspect = Aspect.AspectFill;
+                }
+            }
         }
     }
 }
