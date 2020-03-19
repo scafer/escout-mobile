@@ -25,13 +25,25 @@ namespace escout.Views
         {
             var response = RestConnector.GetObjectAsync(RestConnector.User);
             var user = JsonConvert.DeserializeObject<User>(await response);
-
             BindingContext = user;
+
+            if (user.ImageId != null)
+                LoadImage(user.ImageId);
         }
 
         private void Button_OnClicked(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        public async void LoadImage(int? imageId)
+        {
+            var img = await Utils.GetImage(imageId);
+            if (!String.IsNullOrEmpty(img.ImageUrl))
+            {
+                Img.Source = img.ImageUrl;
+                Img.Aspect = Aspect.AspectFill;
+            }
         }
     }
 }

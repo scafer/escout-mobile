@@ -21,7 +21,7 @@ namespace escout.Views
         private async void LoadImage(int? imageId)
         {
             var img = await Utils.GetImage(imageId);
-            if (!String.IsNullOrEmpty(img.ImageUrl))
+            if (!string.IsNullOrEmpty(img.ImageUrl))
             {
                 Img.Source = img.ImageUrl;
                 Img.Aspect = Aspect.AspectFill;
