@@ -1,8 +1,9 @@
-﻿using escout.Models;
+﻿using escout.Helpers;
+using escout.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using escout.Helpers;
-using Newtonsoft.Json;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,7 +29,7 @@ namespace escout.Views
             base.OnAppearing();
             OptionsListView.ItemsSource = GetOptions();
             Detail = new NavigationPage(new HomePage());
-            GetData();
+            _ = GetData();
         }
 
         private void OptionsListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -81,7 +82,7 @@ namespace escout.Views
             IsPresented = false;
         }
 
-        private async void GetData()
+        private async Task GetData()
         {
             var response = RestConnector.GetObjectAsync(RestConnector.User);
             var user = JsonConvert.DeserializeObject<User>(await response);
