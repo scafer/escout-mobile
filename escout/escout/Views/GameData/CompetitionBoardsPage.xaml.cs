@@ -1,10 +1,10 @@
 ﻿
+using escout.Helpers;
 using escout.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using escout.Helpers;
-using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

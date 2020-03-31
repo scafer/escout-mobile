@@ -52,7 +52,7 @@ namespace escout.Views
             var response = await RestConnector.GetObjectAsync(RestConnector.Athletes + query);
             if (!string.IsNullOrEmpty(response))
             {
-                athletes= JsonConvert.DeserializeObject<List<Athlete>>(response);
+                athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);
             }
             return athletes;
         }
