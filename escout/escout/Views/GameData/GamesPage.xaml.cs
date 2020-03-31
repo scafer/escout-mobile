@@ -1,6 +1,5 @@
-﻿
-using escout.Helpers;
-using escout.Models;
+﻿using escout.Helpers;
+using escout.Models.Rest;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace escout.Views
+namespace escout.Views.GameData
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GamesPage : ContentPage

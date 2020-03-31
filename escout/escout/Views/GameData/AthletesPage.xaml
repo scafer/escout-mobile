@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="escout.Views.AthletesPage" Title="Athletes">
+             x:Class="escout.Views.GameData.AthletesPage" Title="Athletes">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>

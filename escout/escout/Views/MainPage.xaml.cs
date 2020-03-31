@@ -1,5 +1,6 @@
 ﻿using escout.Helpers;
-using escout.Models;
+using escout.Models.Rest;
+using escout.Views.GameData;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

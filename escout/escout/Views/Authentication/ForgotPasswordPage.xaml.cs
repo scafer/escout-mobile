@@ -1,4 +1,4 @@
-﻿using escout.Models;
+﻿using escout.Models.Rest;
 using escout.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
