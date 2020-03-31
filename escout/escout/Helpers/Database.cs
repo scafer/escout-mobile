@@ -1,5 +1,4 @@
 ﻿using Microsoft.Win32.SafeHandles;
-using Newtonsoft.Json;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -12,12 +11,13 @@ namespace escout.Helpers
 {
     public class BaseModel
     {
-        [PrimaryKey, AutoIncrement, JsonProperty("id")]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+
     }
 
     abstract class BaseRepository<T> : IDisposable
-    where T : BaseModel, new()
+        where T : BaseModel, new()
     {
         public abstract Task<T> Select(int id);
         public abstract Task<List<T>> Select();
@@ -32,7 +32,6 @@ namespace escout.Helpers
         public abstract Task<int> Delete();
         public abstract void Dispose();
     }
-
     class Database<T> : BaseRepository<T>
         where T : BaseModel, new()
     {

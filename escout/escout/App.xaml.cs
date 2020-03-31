@@ -1,5 +1,4 @@
-﻿using escout.Views;
-using escout.Views.Authentication;
+﻿using escout.Views.Authentication;
 using Xamarin.Forms;
 
 namespace escout

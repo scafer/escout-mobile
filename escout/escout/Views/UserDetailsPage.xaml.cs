@@ -1,5 +1,5 @@
 ﻿using escout.Helpers;
-using escout.Models;
+using escout.Models.Rest;
 using Newtonsoft.Json;
 using System;
 using Xamarin.Forms;

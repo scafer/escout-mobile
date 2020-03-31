@@ -1,8 +1,9 @@
-﻿using escout.Models;
+﻿using escout.Helpers;
+using escout.Models.Rest;
+using escout.Views.GameData;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using escout.Helpers;
-using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

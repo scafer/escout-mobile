@@ -1,5 +1,5 @@
 ﻿using escout.Helpers;
-using escout.Models;
+using escout.Models.Rest;
 using escout.Views.Authentication;
 using Newtonsoft.Json;
 using System.ComponentModel;
