@@ -1,10 +1,13 @@
 ﻿using escout.Helpers;
 using escout.Models.Rest;
+using SQLite;
 
 namespace escout.Models.Db
 {
-    class DbGame : BaseModel
+    class DbGame
     {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public string TimeStart { get; set; }
         public string TimeEnd { get; set; }
         public string HomeColor { get; set; }
@@ -24,7 +27,27 @@ namespace escout.Models.Db
         public string Created { get; set; }
         public string Updated { get; set; }
 
-        public DbGame() { }
+        public DbGame()
+        {
+            TimeStart = "test";
+            TimeEnd = "test";
+            HomeColor = "test";
+            VisitorColor = "test";
+            HomeScore = 1;
+            VisitorScore = 1;
+            HomePenaltyScore = 1;
+            VisitorPenaltyScore = 1;
+            Status = 1;
+            Type = "test";
+            Location = "test";
+            HomeId = 1;
+            VisitorId = 1;
+            CompetitionId = 1;
+            ImageId = 1;
+            UserId = 1;
+            Created = "test";
+            Updated = "test";
+        }
 
         public DbGame(Game game)
         {

@@ -64,6 +64,7 @@
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
+    <Compile Include="Persistence\SQLiteDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -178,4 +179,5 @@
   <ItemGroup>
     <BundleResource Include="Resources\user_image_positive.png" />
   </ItemGroup>
+  <ItemGroup />
 </Project>

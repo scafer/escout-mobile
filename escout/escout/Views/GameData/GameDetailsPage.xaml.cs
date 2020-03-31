@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,6 +15,8 @@ namespace escout.Views.GameData
     public partial class GameDetailsPage : ContentPage
     {
         private Game game;
+
+        private SQLiteAsyncConnection _connection;
 
         public GameDetailsPage(Game game)
         {
@@ -41,6 +44,16 @@ namespace escout.Views.GameData
                 {
                     var gameData = JsonConvert.DeserializeObject<Models.Rest.GameData>(response);
 
+                    _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+                    
+                    await _connection.CreateTableAsync<DbAthlete>();
+                    await _connection.CreateTableAsync<DbClub>();
+                    await _connection.CreateTableAsync<DbCompetition>();
+                    await _connection.CreateTableAsync<DbEvent>();
+                    await _connection.CreateTableAsync<DbGame>();
+                    await _connection.CreateTableAsync<DbGameEvent>(); 
+                    await _connection.CreateTableAsync<DbSport>();
+
                     await AddGameToDb(gameData.game);
                     await AddSportToDb(gameData.sport, gameData.game.Id);
                     await AddClubToDb(gameData.clubs, gameData.game.Id);
@@ -58,55 +71,55 @@ namespace escout.Views.GameData
 
         private async Task AddGameToDb(Game game)
         {
-            using Database<DbGame> database = new Database<DbGame>();
-            await database.Insert(new DbGame(game));
+            var obj = new DbGame(game);
+            await _connection.InsertAsync(obj);
         }
 
         private async Task AddSportToDb(Sport sport, int gameId)
         {
-            using Database<DbSport> database = new Database<DbSport>();
-            await database.Insert(new DbSport(sport, gameId));
+            var obj = new DbSport(sport, gameId);
+            await _connection.InsertAsync(obj);
         }
 
         private async Task AddClubToDb(List<Club> clubs, int gameId)
         {
-            using Database<DbClub> database = new Database<DbClub>();
             foreach (var club in clubs)
             {
-                await database.Insert(new DbClub(club, gameId));
+                var obj = new DbClub(club, gameId);
+                await _connection.InsertAsync(obj);
             }
         }
 
         private async Task AddAthleteToDb(List<Athlete> athletes, int gameId)
         {
-            using Database<DbAthlete> database = new Database<DbAthlete>();
             foreach (var athlete in athletes)
             {
-                await database.Insert(new DbAthlete(athlete, gameId));
+                var obj = new DbAthlete(athlete, gameId);
+                await _connection.InsertAsync(obj);
             }
         }
 
         private async Task AddCompetitionToDb(Competition competition, int gameId)
         {
-            using Database<DbCompetition> database = new Database<DbCompetition>();
-            await database.Insert(new DbCompetition(competition, gameId));
+            var obj = new DbCompetition(competition, gameId);
+            await _connection.InsertAsync(obj);
         }
 
         private async Task AddEventToDb(List<Event> evts, int gameId)
         {
-            using Database<DbEvent> database = new Database<DbEvent>();
             foreach (var e in evts)
             {
-                await database.Insert(new DbEvent(e, gameId));
+                var obj = new DbEvent(e, gameId);
+                await _connection.InsertAsync(obj);
             }
         }
 
         private async Task AddGameEventToDb(List<GameEvent> gameEvents)
         {
-            using Database<DbGameEvent> database = new Database<DbGameEvent>();
             foreach (var e in gameEvents)
             {
-                await database.Insert(new DbGameEvent(e));
+                var obj = new DbGameEvent(e);
+                await _connection.InsertAsync(obj);
             }
         }
     }
