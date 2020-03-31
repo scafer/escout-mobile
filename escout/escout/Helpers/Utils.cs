@@ -1,4 +1,4 @@
-﻿using escout.Models;
+using escout.Models.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Threading.Tasks;

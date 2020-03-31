@@ -1,4 +1,4 @@
-﻿namespace escout.Models
+﻿namespace escout.Models.Rest
 {
     class Option
     {

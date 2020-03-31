@@ -1,5 +1,5 @@
-﻿using escout.Views.Authentication;
 using System.Threading.Tasks;
+using escout.Views.Authentication;
 using Xamarin.Forms;
 
 namespace escout
@@ -49,7 +49,7 @@ namespace escout
             get => Properties.ContainsKey(AuthSaveKey) ? Properties[AuthSaveKey].ToString() : "false";
             set => Properties[AuthSaveKey] = value;
         }
-
+        
         public string Version
         {
             get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "";

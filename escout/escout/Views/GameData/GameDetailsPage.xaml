@@ -4,12 +4,32 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="escout.Views.GameDetailsPage">
+             x:Class="escout.Views.GameData.GameDetailsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="AddGameToWatchList"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <TableView>
+            <TableRoot>
+                <TableSection>
+                    <TextCell Text="Time Start:" Detail="{Binding TimeStart}"/>
+                    <TextCell Text="Time End:" Detail="{Binding TimeEnd}"/>
+                    <TextCell Text="Home Color:" Detail="{Binding HomeColor}"/>
+                    <TextCell Text="Visitor Color:" Detail="{Binding VisitorColor}"/>
+                    <TextCell Text="Home Score:" Detail="{Binding HomeScore}"/>
+                    <TextCell Text="Visitor Score:" Detail="{Binding VisitorScore}"/>
+                    <TextCell Text="Home Penalty Score:" Detail="{Binding HomePenaltyScore}"/>
+                    <TextCell Text="Visitor Penalty Score:" Detail="{Binding VisitorPenaltyScore}"/>
+                    <TextCell Text="Status:" Detail="{Binding Status}"/>
+                    <TextCell Text="Type" Detail="{Binding Type}"/>
+                    <TextCell Text="Location:" Detail="{Binding Location}"/>
+                    <TextCell Text="Home Id:" Detail="{Binding HomeId}"/>
+                    <TextCell Text="Visitor Id:" Detail="{Binding VisitorId}"/>
+                    <TextCell Text="Competition Id:" Detail="{Binding CompetitionId}"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>

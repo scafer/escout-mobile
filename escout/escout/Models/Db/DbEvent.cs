@@ -1,0 +1,29 @@
+﻿using escout.Helpers;
+using escout.Models.Rest;
+
+namespace escout.Models.Db
+{
+    class DbEvent : BaseModel
+    {
+        public int gameId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int SportId { get; set; }
+        public int? ImageId { get; set; }
+        public string Created { get; set; }
+        public string Updated { get; set; }
+
+        public DbEvent() { }
+
+        public DbEvent(Event evt, int gameId)
+        {
+            this.gameId = gameId;
+            Name = evt.Name;
+            Description = evt.Description;
+            SportId = evt.SportId;
+            ImageId = evt.ImageId;
+            Created = evt.Created;
+            Updated = evt.Updated;
+        }
+    }
+}
