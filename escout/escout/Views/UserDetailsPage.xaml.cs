@@ -2,6 +2,7 @@
 using escout.Models.Rest;
 using Newtonsoft.Json;
 using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,17 +19,17 @@ namespace escout.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            GetData();
+            _ = GetData();
         }
 
-        private async void GetData()
+        private async Task GetData()
         {
             var response = RestConnector.GetObjectAsync(RestConnector.User);
             var user = JsonConvert.DeserializeObject<User>(await response);
             BindingContext = user;
 
             if (user.ImageId != null)
-                LoadImage(user.ImageId);
+                _ = LoadImage(user.ImageId);
         }
 
         private void Button_OnClicked(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace escout.Views
             throw new NotImplementedException();
         }
 
-        public async void LoadImage(int? imageId)
+        private async Task LoadImage(int? imageId)
         {
             var img = await Utils.GetImage(imageId);
             if (!String.IsNullOrEmpty(img.ImageUrl))

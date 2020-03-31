@@ -14,10 +14,10 @@ namespace escout.Views.GameData
             BindingContext = club;
 
             if (club.ImageId != null)
-                LoadImage(club.ImageId);
+                _ = LoadImage(club.ImageId);
         }
 
-        private async void LoadImage(int? imageId)
+        private async Task LoadImage(int? imageId)
         {
             var img = await Utils.GetImage(imageId);
             if (!string.IsNullOrEmpty(img.ImageUrl))

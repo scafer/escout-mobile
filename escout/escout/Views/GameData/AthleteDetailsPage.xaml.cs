@@ -1,4 +1,4 @@
-﻿using escout.Helpers;
+using escout.Helpers;
 using escout.Models.Rest;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,10 +14,10 @@ namespace escout.Views.GameData
             BindingContext = athlete;
 
             if (athlete.ImageId != null)
-                LoadImage(athlete.ImageId);
+                _ = LoadImage(athlete.ImageId);
         }
 
-        private async void LoadImage(int? imageId)
+        private async Task LoadImage(int? imageId)
         {
             var img = await Utils.GetImage(imageId);
             if (!string.IsNullOrEmpty(img.ImageUrl))

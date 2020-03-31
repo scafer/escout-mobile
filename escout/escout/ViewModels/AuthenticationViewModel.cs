@@ -84,15 +84,15 @@ namespace escout.ViewModels
                         await Navigation.PushAsync(new SplashScreenPage());
                     }
                     else
-                        App.DisplayMessage("Error", "Invalid username or password.", "Ok");
+                        _ = App.DisplayMessage("Error", "Invalid username or password.", "Ok");
                 }
                 else
                 {
-                    App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                    _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
                 }
             }
             else
-                App.DisplayMessage("Error", "Invalid username or password.", "Ok");
+                _ = App.DisplayMessage("Error", "Invalid username or password.", "Ok");
         }
 
         private async void SignUpExecuted()
@@ -104,15 +104,15 @@ namespace escout.ViewModels
                 if (!string.IsNullOrEmpty(response))
                 {
                     var result = JsonConvert.DeserializeObject<SvcResult>(response);
-                    App.DisplayMessage("Result", result.ErrorMessage, "OK");
+                    _ = App.DisplayMessage("Result", result.ErrorMessage, "OK");
                 }
                 else
                 {
-                    App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                    _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
                 }
             }
             else
-                App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
         }
 
         private async void ForgotPasswordExecuted()
@@ -123,16 +123,16 @@ namespace escout.ViewModels
                 if (!string.IsNullOrEmpty(response))
                 {
                     var result = JsonConvert.DeserializeObject<SvcResult>(response);
-                    App.DisplayMessage("Message", result.ErrorMessage, "Ok");
+                    _ = App.DisplayMessage("Message", result.ErrorMessage, "Ok");
                     await Navigation.PopModalAsync();
                 }
                 else
                 {
-                    App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                    _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
                 }
             }
             else
-                App.DisplayMessage("Warning", "Invalid username or email.", "Ok");
+                _ = App.DisplayMessage("Warning", "Invalid username or email.", "Ok");
         }
 
         private async void SignUpViewExecuted()

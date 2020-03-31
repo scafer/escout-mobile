@@ -1,4 +1,4 @@
-﻿using escout.Views.Authentication;
+using escout.Views.Authentication;
 using Xamarin.Forms;
 
 namespace escout
@@ -48,19 +48,19 @@ namespace escout
             get => Properties.ContainsKey(AuthSaveKey) ? Properties[AuthSaveKey].ToString() : "false";
             set => Properties[AuthSaveKey] = value;
         }
-
+        
         public string Version
         {
             get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "";
             set => Properties[VersionKey] = value;
         }
 
-        public static async void DisplayMessage(string title, string message, string cancel)
+        public static async Task DisplayMessage(string title, string message, string cancel)
         {
             await App.Current.MainPage.DisplayAlert(title, message, cancel);
         }
 
-        public static async void DisplayMessage(string title, string message, string cancel, string accept)
+        public static async Task DisplayMessage(string title, string message, string cancel, string accept)
         {
             await App.Current.MainPage.DisplayAlert(title, message, accept, cancel);
         }
