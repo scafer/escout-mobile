@@ -1,10 +1,12 @@
-﻿using escout.Helpers;
-using escout.Models.Rest;
+﻿using escout.Models.Rest;
+using SQLite;
 
 namespace escout.Models.Db
 {
-    class DbGame : BaseModel
+    public class DbGame
     {
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public string TimeStart { get; set; }
         public string TimeEnd { get; set; }
         public string HomeColor { get; set; }
@@ -23,11 +25,13 @@ namespace escout.Models.Db
         public int UserId { get; set; }
         public string Created { get; set; }
         public string Updated { get; set; }
+        public int DataExt { get; set; }
 
         public DbGame() { }
 
         public DbGame(Game game)
         {
+            DataExt = game.Id;
             TimeStart = game.TimeStart;
             TimeEnd = game.TimeEnd;
             HomeColor = game.HomeColor;

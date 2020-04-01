@@ -1,4 +1,6 @@
-﻿using System;
+﻿using escout.Models.Db;
+using System;
+using escout.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,29 +9,36 @@ namespace escout.Views.GameData
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WatchingListPage : ContentPage
     {
-        public WatchingListPage()
+        public WatchingListPage() => InitializeComponent();
+
+        protected override void OnAppearing()
         {
-            InitializeComponent();
+            base.OnAppearing();
+            LoadData();
         }
 
-        private void ActiveGamesList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void GamesList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            var game = e.SelectedItem as DbGame;
+            Navigation.PushAsync(new GameDetailsPage(game));
         }
 
-        private void PendingGamesList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void RemoveItem_OnClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var menuItem = sender as MenuItem;
+            var game = menuItem.CommandParameter as DbGame;
+
+            var db = new LocalDb();
+            await db.RemoveGameData(game.DataExt);
+            LoadData();
         }
 
-        private void FinishedGamesList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void LoadData()
         {
-            throw new NotImplementedException();
-        }
-
-        private void RemoveItem_OnClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
+            var db = new LocalDb();
+            PendingGamesList.ItemsSource = await db.GetDbGame(0);
+            ActiveGamesList.ItemsSource = await db.GetDbGame(1);
+            FinishedGamesList.ItemsSource = await db.GetDbGame(2);
         }
     }
 }
