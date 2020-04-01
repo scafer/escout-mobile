@@ -1,6 +1,6 @@
-﻿using System;
-using escout.Models.Db;
-using SQLite;
+﻿using escout.Models.Db;
+using System;
+using escout.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,30 +9,12 @@ namespace escout.Views.GameData
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WatchingListPage : ContentPage
     {
-        private SQLiteAsyncConnection _connection;
+        public WatchingListPage() => InitializeComponent();
 
-        public WatchingListPage()
-        {
-            InitializeComponent();
-        }
-
-        protected async override void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-
-            await _connection.CreateTableAsync<DbAthlete>();
-            await _connection.CreateTableAsync<DbClub>();
-            await _connection.CreateTableAsync<DbCompetition>();
-            await _connection.CreateTableAsync<DbEvent>();
-            await _connection.CreateTableAsync<DbGame>();
-            await _connection.CreateTableAsync<DbGameEvent>();
-            await _connection.CreateTableAsync<DbSport>();
-
-            ActiveGamesList.ItemsSource = await _connection.Table<DbGame>().ToListAsync();
-            PendingGamesList.ItemsSource = await _connection.Table<DbGame>().ToListAsync();
-            FinishedGamesList.ItemsSource = await _connection.Table<DbGame>().ToListAsync();
+            LoadData();
         }
 
         private void GamesList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -41,10 +23,22 @@ namespace escout.Views.GameData
             Navigation.PushAsync(new GameDetailsPage(game));
         }
 
-
-        private void RemoveItem_OnClicked(object sender, EventArgs e)
+        private async void RemoveItem_OnClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var menuItem = sender as MenuItem;
+            var game = menuItem.CommandParameter as DbGame;
+
+            var db = new LocalDb();
+            await db.RemoveGameData(game.DataExt);
+            LoadData();
+        }
+
+        private async void LoadData()
+        {
+            var db = new LocalDb();
+            PendingGamesList.ItemsSource = await db.GetDbGame(0);
+            ActiveGamesList.ItemsSource = await db.GetDbGame(1);
+            FinishedGamesList.ItemsSource = await db.GetDbGame(2);
         }
     }
 }

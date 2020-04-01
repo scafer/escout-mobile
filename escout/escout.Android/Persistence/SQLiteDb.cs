@@ -1,14 +1,15 @@
 ﻿using System;
 using System.IO;
-using escout.Droid;
+using escout.Droid.Persistence;
+using escout.Helpers;
 using SQLite;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(SQLiteDb))]
+[assembly: Dependency(typeof(SqLiteDb))]
 
-namespace escout.Droid
+namespace escout.Droid.Persistence
 {
-    public class SQLiteDb : ISQLiteDb
+    public class SqLiteDb : ISqLiteDb
     {
         public SQLiteAsyncConnection GetConnection()
         {

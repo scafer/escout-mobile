@@ -1,14 +1,15 @@
 ﻿using System;
 using System.IO;
-using escout.iOS;
+using escout.Helpers;
+using escout.iOS.Persistence;
 using SQLite;
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(SQLiteDb))]
+[assembly: Dependency(typeof(SqLiteDb))]
 
-namespace escout.iOS
+namespace escout.iOS.Persistence
 {
-    public class SQLiteDb : ISQLiteDb
+    public class SqLiteDb : ISqLiteDb
     {
         public SQLiteAsyncConnection GetConnection()
         {

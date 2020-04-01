@@ -1,5 +1,4 @@
-﻿using escout.Helpers;
-using escout.Models.Rest;
+﻿using escout.Models.Rest;
 using SQLite;
 
 namespace escout.Models.Db
@@ -18,12 +17,14 @@ namespace escout.Models.Db
         public int UserId { get; set; }
         public string Created { get; set; }
         public string Updated { get; set; }
+        public int DataExt { get; set; }
         public bool Syncronized { get; set; }
 
         public DbGameEvent() { }
 
         public DbGameEvent(GameEvent gameEvent)
         {
+            DataExt = gameEvent.GameId;
             Key = gameEvent.Key;
             Time = gameEvent.Time;
             GameTime = gameEvent.GameTime;

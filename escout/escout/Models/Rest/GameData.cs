@@ -2,7 +2,7 @@
 
 namespace escout.Models.Rest
 {
-    class GameData
+    public class GameData
     {
         public Game game { get; set; }
         public Sport sport { get; set; }

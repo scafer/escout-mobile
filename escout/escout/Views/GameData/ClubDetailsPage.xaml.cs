@@ -1,6 +1,6 @@
-﻿using System.Threading.Tasks;
-using escout.Helpers;
+﻿using escout.Helpers;
 using escout.Models.Rest;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
