@@ -1,11 +1,12 @@
-﻿using escout.Helpers;
-using escout.Models.Rest;
+﻿using escout.Models.Rest;
+using SQLite;
 
 namespace escout.Models.Db
 {
-    public class DbAthlete : BaseModel
+    public class DbAthlete
     {
-        public int gameId { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public string Key { get; set; }
         public string Name { get; set; }
         public string Fullname { get; set; }
@@ -22,12 +23,13 @@ namespace escout.Models.Db
         public int? ImageId { get; set; }
         public string Created { get; set; }
         public string Updated { get; set; }
+        public int DataExt { get; set; }
 
         public DbAthlete() { }
 
         public DbAthlete(Athlete athlete, int gameId)
         {
-            this.gameId = gameId;
+            this.DataExt = gameId;
             Key = athlete.Key;
             Name = athlete.Name;
             Fullname = athlete.Fullname;

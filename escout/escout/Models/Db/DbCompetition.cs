@@ -1,11 +1,12 @@
-﻿using escout.Helpers;
-using escout.Models.Rest;
+﻿using escout.Models.Rest;
+using SQLite;
 
 namespace escout.Models.Db
 {
-    class DbCompetition : BaseModel
+    class DbCompetition
     {
-        public int gameId { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public string Key { get; set; }
         public string Name { get; set; }
         public string Edition { get; set; }
@@ -13,12 +14,13 @@ namespace escout.Models.Db
         public int? ImageId { get; set; }
         public string Created { get; set; }
         public string Updated { get; set; }
+        public int DataExt { get; set; }
 
         public DbCompetition() { }
 
         public DbCompetition(Competition competition, int gameId)
         {
-            this.gameId = gameId;
+            this.DataExt = gameId;
             Key = competition.Key;
             Name = competition.Name;
             Edition = competition.Edition;

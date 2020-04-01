@@ -1,5 +1,5 @@
-using System.Threading.Tasks;
 using escout.Views.Authentication;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace escout
@@ -15,6 +15,7 @@ namespace escout
         {
             InitializeComponent();
             MainPage = new NavigationPage(new SignInPage());
+            //MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
@@ -49,7 +50,7 @@ namespace escout
             get => Properties.ContainsKey(AuthSaveKey) ? Properties[AuthSaveKey].ToString() : "false";
             set => Properties[AuthSaveKey] = value;
         }
-        
+
         public string Version
         {
             get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "";

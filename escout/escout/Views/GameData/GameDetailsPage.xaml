@@ -7,7 +7,7 @@
              x:Class="escout.Views.GameData.GameDetailsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddGameToWatchList"/>
+        <ToolbarItem x:Name="AddItem" Text="Add" Clicked="AddGameToWatchList"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
