@@ -4,7 +4,7 @@ using SQLite;
 
 namespace escout.Models.Db
 {
-    class DbGame
+    public class DbGame
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

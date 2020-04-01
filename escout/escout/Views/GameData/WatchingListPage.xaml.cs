@@ -35,20 +35,12 @@ namespace escout.Views.GameData
             FinishedGamesList.ItemsSource = await _connection.Table<DbGame>().ToListAsync();
         }
 
-        private void ActiveGamesList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private void GamesList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            throw new System.NotImplementedException();
+            var game = e.SelectedItem as DbGame;
+            Navigation.PushAsync(new GameDetailsPage(game));
         }
 
-        private void PendingGamesList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void FinishedGamesList_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         private void RemoveItem_OnClicked(object sender, EventArgs e)
         {

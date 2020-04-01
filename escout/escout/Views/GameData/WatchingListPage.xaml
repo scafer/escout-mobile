@@ -17,7 +17,7 @@
             <StackLayout WidthRequest="500" Margin="5">
                 <StackLayout>
                     <Label Text="Active Games" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <ListView x:Name="ActiveGamesList" ItemSelected="ActiveGamesList_OnItemSelected" IsPullToRefreshEnabled="True" HasUnevenRows="True" HeightRequest="300">
+                    <ListView x:Name="ActiveGamesList" ItemSelected="GamesList_OnItemSelected" IsPullToRefreshEnabled="True" HasUnevenRows="True" HeightRequest="300">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -38,7 +38,7 @@
                 </StackLayout>
                 <StackLayout>
                     <Label Text="Pending Games" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <ListView x:Name="PendingGamesList" ItemSelected="PendingGamesList_OnItemSelected" IsPullToRefreshEnabled="True" HasUnevenRows="True" HeightRequest="300">
+                    <ListView x:Name="PendingGamesList" ItemSelected="GamesList_OnItemSelected" IsPullToRefreshEnabled="True" HasUnevenRows="True" HeightRequest="300">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -55,10 +55,11 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
+                    <BoxView HeightRequest="1" Color="Black"/>
                 </StackLayout>
                 <StackLayout>
                     <Label Text="Finished Games" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <ListView x:Name="FinishedGamesList" ItemSelected="FinishedGamesList_OnItemSelected" IsPullToRefreshEnabled="True" HasUnevenRows="True" HeightRequest="300">
+                    <ListView x:Name="FinishedGamesList" ItemSelected="GamesList_OnItemSelected" IsPullToRefreshEnabled="True" HasUnevenRows="True" HeightRequest="300">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>

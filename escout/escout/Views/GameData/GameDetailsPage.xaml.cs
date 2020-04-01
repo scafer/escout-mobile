@@ -25,6 +25,13 @@ namespace escout.Views.GameData
             this.game = game;
         }
 
+        public GameDetailsPage(DbGame dbGame)
+        {
+            InitializeComponent();
+            BindingContext = dbGame;
+            AddItem.IsEnabled = false;
+        }
+
         private async void AddGameToWatchList(object sender, EventArgs e)
         {
             var response = await DisplayAlert("Message", "Add to watch list?", "Ok", "Cancel");
