@@ -3,7 +3,7 @@ using SQLite;
 
 namespace escout.Models.Db
 {
-    class DbGameEvent
+    public class DbGameEvent
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
@@ -35,7 +35,7 @@ namespace escout.Models.Db
             UserId = gameEvent.UserId;
             Created = gameEvent.Created;
             Updated = gameEvent.Updated;
-            Syncronized = false;
+            Syncronized = true;
         }
     }
 }

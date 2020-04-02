@@ -20,6 +20,7 @@ namespace escout.Views.Authentication
             await LogoImage.ScaleTo(0.9, 1500, Easing.Linear);
             await LogoImage.ScaleTo(1, 1000, Easing.Linear);
 
+
             Application.Current.MainPage = new NavigationPage(new MainPage());
             await Navigation.PushAsync(new MainPage());
         }

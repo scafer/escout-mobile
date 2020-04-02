@@ -1,3 +1,4 @@
+using escout.Models.Db;
 using escout.Models.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -5,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace escout.Helpers
 {
-    class Utils
+    public class Utils
     {
+        public static DbGame DbGame;
+
         public static async Task<Image> GetImage(int? imageId)
         {
             var img = new Image();
@@ -21,8 +24,8 @@ namespace escout.Helpers
 
         public static readonly List<string> AthleteFilter = new List<string>
         {
-            {"Name"},
-            {"Age"}
+            {"name"},
+            {"age"}
         };
     }
 }

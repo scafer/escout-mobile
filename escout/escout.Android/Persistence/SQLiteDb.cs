@@ -1,8 +1,8 @@
-﻿using System;
-using System.IO;
-using escout.Droid.Persistence;
+﻿using escout.Droid.Persistence;
 using escout.Helpers;
 using SQLite;
+using System;
+using System.IO;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SqLiteDb))]

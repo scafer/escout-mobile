@@ -20,16 +20,20 @@ namespace escout.Views.GameData
         private async void SearchExecuted(object sender, EventArgs e)
         {
             activityIndicator.IsRunning = true;
+            var clubs = new List<Club>();
             if (string.IsNullOrEmpty(key.Text))
             {
                 if (await DisplayAlert("Info", "Load all data?", "Yes", "Cancel"))
-                    listView.ItemsSource = await GetClubs("");
+                    clubs = await GetClubs("");
             }
             else
-            {
-                listView.ItemsSource = await GetClubs(new SearchQuery(filter.Items[filter.SelectedIndex], "LIKE", key.Text).ToString());
-            }
+                clubs = await GetClubs(new SearchQuery(filter.Items[filter.SelectedIndex], "iLIKE", key.Text + "%").ToString());
+
+            listView.ItemsSource = clubs;
             activityIndicator.IsRunning = false;
+
+            if (Device.RuntimePlatform == Device.Android)
+                DependencyService.Get<IToast>().LongAlert(clubs.Count + " results");
         }
 
         private void ItemSelected(object sender, SelectedItemChangedEventArgs e)

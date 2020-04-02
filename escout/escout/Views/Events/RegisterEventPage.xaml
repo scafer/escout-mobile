@@ -5,11 +5,37 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="escout.Views.Events.RegisterEventPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="LeaveItem" Text="Leave" Clicked="LeaveItem_OnClicked"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid WidthRequest="500" Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.ColumnSpan="2" VerticalOptions="Center">
+                    <Label x:Name="LbStopwatch" FontSize="Large" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                    <Label x:Name="LbMatchpart" FontSize="Small" HorizontalOptions="Center"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="{Binding HomeScore}" FontSize="Large" FontAttributes="Bold"/>
+                        <Label Text="  -  " FontSize="Large" FontAttributes="Bold"/>
+                        <Label Text="{Binding VisitorScore}" FontSize="Large" FontAttributes="Bold"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Pause" Clicked="Pause_Clicked" FontSize="Medium" FontAttributes="Bold"/>
+                    <Button Text="Resume" Clicked="Resume_Clicked" FontSize="Medium" FontAttributes="Bold"/>
+                </StackLayout>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

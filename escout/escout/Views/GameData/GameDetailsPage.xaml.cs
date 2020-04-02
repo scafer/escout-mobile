@@ -1,10 +1,9 @@
 ﻿using escout.Helpers;
 using escout.Models.Db;
 using escout.Models.Rest;
+using escout.Views.Events;
 using Newtonsoft.Json;
-using SQLite;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +14,7 @@ namespace escout.Views.GameData
     public partial class GameDetailsPage : ContentPage
     {
         private readonly Game game;
+        private readonly DbGame dbGame;
 
         public GameDetailsPage(Game game)
         {
@@ -28,6 +28,8 @@ namespace escout.Views.GameData
             InitializeComponent();
             BindingContext = dbGame;
             AddItem.IsEnabled = false;
+            startbt.IsEnabled = true;
+            this.dbGame = dbGame;
         }
 
         private async void AddGameToWatchList(object sender, EventArgs e)
@@ -56,6 +58,13 @@ namespace escout.Views.GameData
                     await DisplayAlert("Error", e.ToString(), "Ok");
                 }
             }
+        }
+
+        private async void Start_OnClicked(object sender, EventArgs e)
+        {
+            Utils.DbGame = dbGame;
+            Application.Current.MainPage = new NavigationPage(new RegisterEventPage());
+            await Navigation.PushAsync(new RegisterEventPage());
         }
     }
 }

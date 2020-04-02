@@ -1,8 +1,8 @@
-﻿using System;
-using System.IO;
-using escout.Helpers;
+﻿using escout.Helpers;
 using escout.iOS.Persistence;
 using SQLite;
+using System;
+using System.IO;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(SqLiteDb))]

@@ -62,9 +62,9 @@ namespace escout
             await App.Current.MainPage.DisplayAlert(title, message, cancel);
         }
 
-        public static async Task DisplayMessage(string title, string message, string cancel, string accept)
+        public static async Task<bool> DisplayMessage(string title, string message, string cancel, string accept)
         {
-            await App.Current.MainPage.DisplayAlert(title, message, accept, cancel);
+            return await App.Current.MainPage.DisplayAlert(title, message, accept, cancel);
         }
     }
 }

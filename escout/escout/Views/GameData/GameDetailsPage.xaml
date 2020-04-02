@@ -11,25 +11,28 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <TableView>
-            <TableRoot>
-                <TableSection>
-                    <TextCell Text="Time Start:" Detail="{Binding TimeStart}"/>
-                    <TextCell Text="Time End:" Detail="{Binding TimeEnd}"/>
-                    <TextCell Text="Home Color:" Detail="{Binding HomeColor}"/>
-                    <TextCell Text="Visitor Color:" Detail="{Binding VisitorColor}"/>
-                    <TextCell Text="Home Score:" Detail="{Binding HomeScore}"/>
-                    <TextCell Text="Visitor Score:" Detail="{Binding VisitorScore}"/>
-                    <TextCell Text="Home Penalty Score:" Detail="{Binding HomePenaltyScore}"/>
-                    <TextCell Text="Visitor Penalty Score:" Detail="{Binding VisitorPenaltyScore}"/>
-                    <TextCell Text="Status:" Detail="{Binding Status}"/>
-                    <TextCell Text="Type" Detail="{Binding Type}"/>
-                    <TextCell Text="Location:" Detail="{Binding Location}"/>
-                    <TextCell Text="Home Id:" Detail="{Binding HomeId}"/>
-                    <TextCell Text="Visitor Id:" Detail="{Binding VisitorId}"/>
-                    <TextCell Text="Competition Id:" Detail="{Binding CompetitionId}"/>
-                </TableSection>
-            </TableRoot>
-        </TableView>
+        <StackLayout>
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <TextCell Text="Time Start:" Detail="{Binding TimeStart}"/>
+                        <TextCell Text="Time End:" Detail="{Binding TimeEnd}"/>
+                        <TextCell Text="Home Color:" Detail="{Binding HomeColor}"/>
+                        <TextCell Text="Visitor Color:" Detail="{Binding VisitorColor}"/>
+                        <TextCell Text="Home Score:" Detail="{Binding HomeScore}"/>
+                        <TextCell Text="Visitor Score:" Detail="{Binding VisitorScore}"/>
+                        <TextCell Text="Home Penalty Score:" Detail="{Binding HomePenaltyScore}"/>
+                        <TextCell Text="Visitor Penalty Score:" Detail="{Binding VisitorPenaltyScore}"/>
+                        <TextCell Text="Status:" Detail="{Binding Status}"/>
+                        <TextCell Text="Type" Detail="{Binding Type}"/>
+                        <TextCell Text="Location:" Detail="{Binding Location}"/>
+                        <TextCell Text="Home Id:" Detail="{Binding HomeId}"/>
+                        <TextCell Text="Visitor Id:" Detail="{Binding VisitorId}"/>
+                        <TextCell Text="Competition Id:" Detail="{Binding CompetitionId}"/>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <Button x:Name="startbt" Text="Start Event Registration" Clicked="Start_OnClicked" IsEnabled="false"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
