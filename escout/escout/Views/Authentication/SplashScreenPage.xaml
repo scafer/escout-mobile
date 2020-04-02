@@ -17,7 +17,6 @@
             <StackLayout VerticalOptions="Center" Margin="5">
                 <Image x:Name="LogoImage" Source="escout_logo.png" WidthRequest="200"  HorizontalOptions="Center"/>
             </StackLayout>
-
             <Label x:Name="Version" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="Center" Margin="5"/>
         </Grid>
     </ContentPage.Content>

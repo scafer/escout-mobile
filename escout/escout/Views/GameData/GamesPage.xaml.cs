@@ -17,20 +17,6 @@ namespace escout.Views.GameData
             InitializeComponent();
         }
 
-        private async void SearchExecuted(object sender, EventArgs e)
-        {
-            activityIndicator.IsRunning = true;
-            if (string.IsNullOrEmpty(key.Text))
-            {
-                if (await DisplayAlert("Info", "Load all data?", "Yes", "Cancel"))
-                    listView.ItemsSource = await GetGames("");
-            }
-            else
-            {
-                listView.ItemsSource = await GetGames(new SearchQuery(filter.Items[filter.SelectedIndex], "LIKE", key.Text).ToString());
-            }
-            activityIndicator.IsRunning = false;
-        }
         private void ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var game = e.SelectedItem as Game;
@@ -46,6 +32,28 @@ namespace escout.Views.GameData
                 games = JsonConvert.DeserializeObject<List<Game>>(response);
             }
             return games;
+        }
+
+        private async void SearchExecuted(object sender, EventArgs e)
+        {
+            activityIndicator.IsRunning = true;
+            var games = new List<Game>();
+
+            if (string.IsNullOrEmpty(key.Text))
+            {
+                if (await DisplayAlert("Info", "Load all data?", "Yes", "Cancel"))
+                    games = await GetGames("");
+            }
+            else
+            {
+                games = await GetGames(new SearchQuery(filter.Items[filter.SelectedIndex], "iLIKE", key.Text + "%").ToString());
+            }
+
+            listView.ItemsSource = games;
+            activityIndicator.IsRunning = false;
+
+            if (Device.RuntimePlatform == Device.Android)
+                DependencyService.Get<IToast>().LongAlert(games.Count + " results");
         }
     }
 }

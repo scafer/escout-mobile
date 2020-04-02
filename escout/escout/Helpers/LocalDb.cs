@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using escout.Models.Db;
+﻿using escout.Models.Db;
 using escout.Models.Rest;
 using SQLite;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace escout.Helpers
@@ -22,17 +22,6 @@ namespace escout.Helpers
             connection = DependencyService.Get<ISqLiteDb>().GetConnection();
         }
 
-        public async Task InitializeDb()
-        {
-            await connection.CreateTableAsync<DbAthlete>();
-            await connection.CreateTableAsync<DbClub>();
-            await connection.CreateTableAsync<DbCompetition>();
-            await connection.CreateTableAsync<DbEvent>();
-            await connection.CreateTableAsync<DbGame>();
-            await connection.CreateTableAsync<DbGameEvent>();
-            await connection.CreateTableAsync<DbSport>();
-        }
-
         public async Task<List<DbGame>> GetDbGame(int status)
         {
             await InitializeDb();
@@ -40,7 +29,7 @@ namespace escout.Helpers
 
             foreach (var game in await connection.Table<DbGame>().ToListAsync())
             {
-                if(game.Status == status)
+                if (game.Status == status)
                     games.Add(game);
             }
 
@@ -62,7 +51,7 @@ namespace escout.Helpers
 
                 await Application.Current.MainPage.DisplayAlert("Message", "Game was successfully saved.", "OK");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ExceptionHandler.GenericException(ex);
             }
@@ -118,6 +107,29 @@ namespace escout.Helpers
             {
                 ExceptionHandler.GenericException(ex);
             }
+        }
+
+        public async Task<int> AddGameEvent(DbGameEvent gameEvent)
+        {
+            await InitializeDb();
+            return await connection.InsertAsync(gameEvent);
+        }
+
+        public async Task UpdateGameEventStatus(DbGameEvent gameEvent)
+        {
+            await InitializeDb();
+            await connection.UpdateAsync(gameEvent);
+        }
+
+        private async Task InitializeDb()
+        {
+            await connection.CreateTableAsync<DbAthlete>();
+            await connection.CreateTableAsync<DbClub>();
+            await connection.CreateTableAsync<DbCompetition>();
+            await connection.CreateTableAsync<DbEvent>();
+            await connection.CreateTableAsync<DbGame>();
+            await connection.CreateTableAsync<DbGameEvent>();
+            await connection.CreateTableAsync<DbSport>();
         }
 
         private async Task AddGameToDb(Game game)

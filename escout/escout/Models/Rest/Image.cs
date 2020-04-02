@@ -2,7 +2,7 @@
 
 namespace escout.Models.Rest
 {
-    class Image
+    public class Image
     {
         [JsonProperty("id")]
         public int Id { get; set; }

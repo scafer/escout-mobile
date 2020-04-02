@@ -1,5 +1,6 @@
 ﻿using escout.Models.Rest;
 using escout.ViewModels;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -54,6 +55,16 @@ namespace escout.Views.Authentication
                 app.Password = string.Empty;
                 app.BasicAuth = (SwSave.IsToggled).ToString();
             }
+        }
+
+        private async void ForgotPasswordViewTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ForgotPasswordPage());
+        }
+
+        private async void AboutViewTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AboutPage());
         }
     }
 }
