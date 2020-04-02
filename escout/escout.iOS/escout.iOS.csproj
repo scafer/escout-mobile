@@ -179,5 +179,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\user_image_positive.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\error_icon.png" />
+  </ItemGroup>
 </Project>

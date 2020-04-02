@@ -41,10 +41,11 @@ namespace escout.Views.GameData
             FinishedGamesList.ItemsSource = await db.GetDbGame(2);
         }
 
-        private void Cell_OnTapped(object sender, EventArgs e)
+        private async void MenuItem_OnClicked(object sender, EventArgs e)
         {
-            var game = sender as DbGame;
-            Navigation.PushAsync(new GameDetailsPage(game));
+            var menuItem = sender as MenuItem;
+            var game = menuItem.CommandParameter as DbGame;
+            await Navigation.PushAsync(new GameDetailsPage(game));
         }
     }
 }

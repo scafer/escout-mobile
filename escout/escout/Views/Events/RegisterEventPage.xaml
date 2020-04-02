@@ -19,7 +19,8 @@
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <StackLayout Grid.ColumnSpan="2" VerticalOptions="Center">
@@ -31,7 +32,13 @@
                         <Label Text="{Binding VisitorScore}" FontSize="Large" FontAttributes="Bold"/>
                     </StackLayout>
                 </StackLayout>
-                <StackLayout Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                <Button x:Name="Event1Button" Text="4" ImageSource="error_icon.png" Grid.Column="0" Grid.Row="1" Clicked="EventExecuted"/>
+                <Button x:Name="Event2Button" Text="3" ImageSource="error_icon.png" Grid.Column="1" Grid.Row="1" Clicked="EventExecuted"/>
+                <Button x:Name="Event3Button" Text="2" ImageSource="error_icon.png" Grid.Column="0" Grid.Row="2" Clicked="EventExecuted"/>
+                <Button x:Name="Event4Button" Text="1" ImageSource="error_icon.png" Grid.Column="1" Grid.Row="2" Clicked="EventExecuted"/>
+
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                     <Button Text="Pause" Clicked="Pause_Clicked" FontSize="Medium" FontAttributes="Bold"/>
                     <Button Text="Resume" Clicked="Resume_Clicked" FontSize="Medium" FontAttributes="Bold"/>
                 </StackLayout>

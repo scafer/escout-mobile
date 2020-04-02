@@ -23,6 +23,7 @@
                                 <ViewCell>
                                     <ViewCell.ContextActions>
                                         <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}" Clicked="RemoveItem_OnClicked"/>
+                                        <MenuItem Text="Start" CommandParameter="{Binding .}" Clicked="MenuItem_OnClicked"/>
                                     </ViewCell.ContextActions>
                                     <StackLayout Orientation="Vertical" Padding="1">
                                         <Label Text="{Binding HomeId, StringFormat='Home Team: {0}'}"/>
