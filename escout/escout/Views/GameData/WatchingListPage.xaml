@@ -14,15 +14,16 @@
 
     <ContentPage.Content>
         <ScrollView HorizontalOptions="Center">
-            <StackLayout WidthRequest="500" Margin="5">
+            <StackLayout WidthRequest="500">
                 <StackLayout>
                     <Label Text="Active Games" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <ListView x:Name="ActiveGamesList" ItemSelected="GamesList_OnItemSelected" IsPullToRefreshEnabled="True" HasUnevenRows="True" HeightRequest="200">
+                    <ListView x:Name="ActiveGamesList" ItemSelected="GamesList_OnItemSelected" HasUnevenRows="True" HeightRequest="200">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
                                     <ViewCell.ContextActions>
                                         <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}" Clicked="RemoveItem_OnClicked"/>
+                                        <MenuItem Text="Start" CommandParameter="{Binding .}" Clicked="MenuItem_OnClicked"/>
                                     </ViewCell.ContextActions>
                                     <StackLayout Orientation="Vertical" Padding="1">
                                         <Label Text="{Binding HomeId, StringFormat='Home Team: {0}'}"/>
@@ -38,18 +39,18 @@
                 </StackLayout>
                 <StackLayout>
                     <Label Text="Pending Games" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <ListView x:Name="PendingGamesList" ItemSelected="GamesList_OnItemSelected" IsPullToRefreshEnabled="True" HasUnevenRows="True" HeightRequest="200">
+                    <ListView x:Name="PendingGamesList" ItemSelected="GamesList_OnItemSelected" HasUnevenRows="True" HeightRequest="200">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <ViewCell>
+                                <!--<TextCell Text="Name:" Detail="{Binding Status, StringFormat='Creation date: {0}'}"/>-->
+                                <ViewCell >
                                     <ViewCell.ContextActions>
                                         <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}" Clicked="RemoveItem_OnClicked"/>
                                     </ViewCell.ContextActions>
-                                    <StackLayout Orientation="Vertical" Padding="1">
+                                    <StackLayout Orientation="Vertical" Padding="1" >
                                         <Label Text="{Binding HomeId, StringFormat='Home Team: {0}'}"/>
                                         <Label Text="{Binding VisitorId, StringFormat='Visitor Team: {0}'}"/>
                                         <Label Text="{Binding Status, StringFormat='Creation date: {0}'}"/>
-                                        <BoxView HeightRequest="1" Color="LightGray"/>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
@@ -59,7 +60,7 @@
                 </StackLayout>
                 <StackLayout>
                     <Label Text="Finished Games" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
-                    <ListView x:Name="FinishedGamesList" ItemSelected="GamesList_OnItemSelected" IsPullToRefreshEnabled="True" HasUnevenRows="True" HeightRequest="200">
+                    <ListView x:Name="FinishedGamesList" ItemSelected="GamesList_OnItemSelected" HasUnevenRows="True"  HeightRequest="200">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>

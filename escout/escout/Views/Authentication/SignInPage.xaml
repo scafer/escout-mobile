@@ -29,16 +29,28 @@
                     <Button Text="Sign Up" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Command="{Binding SignUpViewCommand}"/>
                 </StackLayout>
                 <StackLayout>
-                    <Label Text="Forgot Password?" HorizontalOptions="Center">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding ForgotPasswordViewCommand}"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-                    <Label Text="About" HorizontalOptions="Center">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding AboutViewCommand}"/>
-                        </Label.GestureRecognizers>
-                    </Label>
+                    <OnPlatform x:TypeArguments="View">
+                        <On Platform="iOS">
+                            <StackLayout>
+                                <Button Text="Forgot Password?" TextColor="Black" Command="{Binding ForgotPasswordViewCommand}"/>
+                                <Button Text="About" TextColor="Black" Command="{Binding AboutViewCommand}"/>
+                            </StackLayout>
+                        </On>
+                        <On Platform="Android">
+                            <StackLayout>
+                                <Label Text="Forgot Password?" HorizontalOptions="Center">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding ForgotPasswordViewCommand}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Text="About" HorizontalOptions="Center">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding AboutViewCommand}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </StackLayout>
+                        </On>
+                    </OnPlatform>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

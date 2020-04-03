@@ -3,6 +3,8 @@ using escout.Models.Rest;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -26,11 +28,8 @@ namespace escout.Views.GameData
                     listView.ItemsSource = await GetCompetitionBoards("");
             }
             else
-            {
                 listView.ItemsSource =
-                    await GetCompetitionBoards(new SearchQuery(filter.Items[filter.SelectedIndex], "LIKE", key.Text)
-                        .ToString());
-            }
+                    await GetCompetitionBoards(new SearchQuery(filter.Items[filter.SelectedIndex], "iLIKE", key.Text + "%"));
 
             activityIndicator.IsRunning = false;
         }
@@ -45,6 +44,20 @@ namespace escout.Views.GameData
         {
             List<CompetitionBoard> competitionBoards = new List<CompetitionBoard>();
             var response = await RestConnector.GetObjectAsync(RestConnector.CompetitionBoard + query);
+            if (!string.IsNullOrEmpty(response))
+            {
+                competitionBoards = JsonConvert.DeserializeObject<List<CompetitionBoard>>(response);
+            }
+
+            return competitionBoards;
+        }
+
+        private async Task<List<CompetitionBoard>> GetCompetitionBoards(SearchQuery query)
+        {
+            var q = new StringContent(JsonConvert.SerializeObject(query), Encoding.UTF8, "application/json");
+
+            List<CompetitionBoard> competitionBoards = new List<CompetitionBoard>();
+            var response = await RestConnector.GetObjectAsync(RestConnector.CompetitionBoard + "?query=" + q);
             if (!string.IsNullOrEmpty(response))
             {
                 competitionBoards = JsonConvert.DeserializeObject<List<CompetitionBoard>>(response);

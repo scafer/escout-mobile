@@ -5,11 +5,38 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="escout.Views.Events.RegisterEventPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="LeaveItem" Text="Leave" Clicked="LeaveItem_OnClicked"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid WidthRequest="500" Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.ColumnSpan="2" VerticalOptions="Center">
+                    <Label x:Name="LbStopwatch" FontSize="Large" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <Button x:Name="Event4Button" Text="4" Grid.Column="0" Grid.Row="1" Clicked="EventExecuted"/>
+                <Button x:Name="Event3Button" Text="3" Grid.Column="1" Grid.Row="1" Clicked="EventExecuted"/>
+                <Button x:Name="Event2Button" Text="2" Grid.Column="0" Grid.Row="2" Clicked="EventExecuted"/>
+                <Button x:Name="Event1Button" Text="1" Grid.Column="1" Grid.Row="2" Clicked="EventExecuted"/>
+
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Player" Clicked="Pause_Clicked" FontSize="Medium" FontAttributes="Bold"/>
+                    <Button Text="GoalKeeper" Clicked="Resume_Clicked" FontSize="Medium" FontAttributes="Bold"/>
+                </StackLayout>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

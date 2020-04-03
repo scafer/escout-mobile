@@ -11,18 +11,17 @@
         <ContentPage Title="Menu" BackgroundColor="#262626">
             <StackLayout Padding="0,50,0,0">
                 <StackLayout>
-                    <controls:CircleImage x:Name="Img" Source="user_image_positive.png" WidthRequest="80" HeightRequest="80" Margin="5">
+                    <controls:CircleImage x:Name="Img" Source="user_image_positive.png" WidthRequest="80" HeightRequest="80">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="UserSettings_OnTapped"/>
                         </Image.GestureRecognizers>
                     </controls:CircleImage>
                 </StackLayout>
-              
-                <ListView x:Name="OptionsListView" ItemSelected="OptionsListView_OnItemSelected" Margin="20" SeparatorVisibility="None" BackgroundColor="#262626">
+                <ListView x:Name="OptionsListView" ItemSelected="OptionsListView_OnItemSelected" SeparatorVisibility="None" BackgroundColor="#262626">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Orientation="Horizontal" Padding="1" Margin="5">
+                                <StackLayout Orientation="Horizontal" Padding="1">
                                     <Image Source="{Binding ImageUrl}" VerticalOptions="Center" Margin="0,0,10,0" WidthRequest="40"/>
                                     <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
                                         <Label Text="{Binding Name}" FontSize="Large" TextColor="White"/>
@@ -32,7 +31,6 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-              
                 <Image Source="iscte_logo_w.png" WidthRequest="150"/>
             </StackLayout>
         </ContentPage>
