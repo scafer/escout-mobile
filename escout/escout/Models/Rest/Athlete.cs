@@ -24,6 +24,8 @@ namespace escout.Models.Rest
         public double Weight { get; set; }
         [JsonProperty("position")]
         public string Position { get; set; }
+        [JsonProperty("positionKey")]
+        public int PositionKey { get; set; }
         [JsonProperty("agent")]
         public string Agent { get; set; }
         [JsonProperty("currentInternational")]
