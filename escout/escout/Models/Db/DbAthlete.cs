@@ -16,6 +16,7 @@ namespace escout.Models.Db
         public double Height { get; set; }
         public double Weight { get; set; }
         public string Position { get; set; }
+        public int PositionKey { get; set; }
         public string Agent { get; set; }
         public string CurrentInternational { get; set; }
         public string Status { get; set; }
@@ -39,6 +40,7 @@ namespace escout.Models.Db
             Height = athlete.Height;
             Weight = athlete.Weight;
             Position = athlete.Position;
+            PositionKey = athlete.PositionKey;
             Agent = athlete.Agent;
             CurrentInternational = athlete.CurrentInternational;
             Status = athlete.Status;
