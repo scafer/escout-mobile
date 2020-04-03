@@ -1,6 +1,6 @@
-﻿using escout.Models.Db;
+﻿using escout.Helpers;
+using escout.Models.Db;
 using System;
-using escout.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -39,6 +39,13 @@ namespace escout.Views.GameData
             PendingGamesList.ItemsSource = await db.GetDbGame(0);
             ActiveGamesList.ItemsSource = await db.GetDbGame(1);
             FinishedGamesList.ItemsSource = await db.GetDbGame(2);
+        }
+
+        private async void MenuItem_OnClicked(object sender, EventArgs e)
+        {
+            var menuItem = sender as MenuItem;
+            var game = menuItem.CommandParameter as DbGame;
+            await Navigation.PushAsync(new GameDetailsPage(game));
         }
     }
 }

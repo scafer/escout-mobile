@@ -3,6 +3,8 @@ using escout.Models.Rest;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -26,17 +28,21 @@ namespace escout.Views.GameData
         private async void SearchExecuted(object sender, EventArgs e)
         {
             activityIndicator.IsRunning = true;
+            var athletes = new List<Athlete>();
+
             if (string.IsNullOrEmpty(key.Text))
             {
                 if (await DisplayAlert("Info", "Load all data?", "Yes", "Cancel"))
-                    listView.ItemsSource = await GetAthletes("");
+                    athletes = await GetAthletes("");
             }
             else
-            {
-                listView.ItemsSource = await GetAthletes(new SearchQuery(filter.Items[filter.SelectedIndex], "LIKE", key.Text).ToString());
-            }
+                athletes = await GetAthletes(new SearchQuery(filter.Items[filter.SelectedIndex], "iLIKE", key.Text + "%"));
+
+            listView.ItemsSource = athletes;
             activityIndicator.IsRunning = false;
 
+            if (Device.RuntimePlatform == Device.Android)
+                DependencyService.Get<IToast>().LongAlert(athletes.Count + " results");
         }
 
         private void ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -49,6 +55,19 @@ namespace escout.Views.GameData
         {
             List<Athlete> athletes = new List<Athlete>();
             var response = await RestConnector.GetObjectAsync(RestConnector.Athletes + query);
+            if (!string.IsNullOrEmpty(response))
+            {
+                athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);
+            }
+            return athletes;
+        }
+
+        private async Task<List<Athlete>> GetAthletes(SearchQuery query)
+        {
+            var q = new StringContent(JsonConvert.SerializeObject(query), Encoding.UTF8, "application/json");
+
+            List<Athlete> athletes = new List<Athlete>();
+            var response = await RestConnector.GetObjectAsync(RestConnector.Athletes + "?query=" + q);
             if (!string.IsNullOrEmpty(response))
             {
                 athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);

@@ -1,6 +1,7 @@
 ﻿using escout.Helpers;
 using escout.Models.Rest;
 using escout.Views.Authentication;
+using escout.Views.GameData;
 using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -73,22 +74,34 @@ namespace escout.ViewModels
         {
             if (!(string.IsNullOrEmpty(Username)) && !(string.IsNullOrEmpty(Password)))
             {
-                var response = await RestConnector.PostObjectAsync(RestConnector.SignIn, new User(Username, GenerateSha256String(Password), Email));
-                if (!string.IsNullOrEmpty(response))
+                try
                 {
-                    var result = JsonConvert.DeserializeObject<AuthData>(response);
-
-                    if (!string.IsNullOrEmpty(result.Token))
+                    var response = await RestConnector.PostObjectAsync(RestConnector.SignIn, new User(Username, GenerateSha256String(Password), Email));
+                    if (!string.IsNullOrEmpty(response))
                     {
-                        RestConnector.Token = result.Token;
-                        await Navigation.PushAsync(new SplashScreenPage());
+                        var result = JsonConvert.DeserializeObject<AuthData>(response);
+
+                        if (!string.IsNullOrEmpty(result.Token))
+                        {
+                            RestConnector.Token = result.Token;
+                            await Navigation.PushAsync(new SplashScreenPage());
+                        }
+                        else
+                            _ = App.DisplayMessage("Error", "Invalid username or password.", "Ok");
                     }
                     else
-                        _ = App.DisplayMessage("Error", "Invalid username or password.", "Ok");
+                    {
+                        _ = App.DisplayMessage("Error:", "Something is wrong.", "Ok");
+                    }
                 }
-                else
+                catch
                 {
-                    _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                    var option = await App.DisplayMessage("Error:", "Something is wrong. Do you want to register events offline?", "NO", "YES");
+                    if (option)
+                    {
+                        Application.Current.MainPage = new NavigationPage(new WatchingListPage());
+                        await Navigation.PushAsync(new WatchingListPage());
+                    }
                 }
             }
             else
@@ -105,6 +118,9 @@ namespace escout.ViewModels
                 {
                     var result = JsonConvert.DeserializeObject<SvcResult>(response);
                     _ = App.DisplayMessage("Result", result.ErrorMessage, "OK");
+
+                    if (result.ErrorCode == 0)
+                        await Navigation.PopModalAsync();
                 }
                 else
                 {

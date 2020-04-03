@@ -5,25 +5,35 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="escout.Views.GameData.GamesPage" Title="Games">
+
     <ContentPage.Content>
-        <ScrollView>
+        <AbsoluteLayout>
+            <ActivityIndicator x:Name="activityIndicator" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.5"/>
             <StackLayout>
-                <Label Text="Filter Criteria:" FontSize="Medium" Margin="15,0"/>
-                <StackLayout Orientation="Horizontal" Margin="20,0">
+                <Label Text="Filter Criteria:" FontSize="Medium"/>
+                <StackLayout Orientation="Horizontal">
                     <Picker x:Name="filter" Title="Filter"/>
                     <Entry x:Name="key" Placeholder="key" HorizontalOptions="FillAndExpand"/>
-                    <Image Source="search_icon.png" HorizontalOptions="End" HeightRequest="25">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="SearchExecuted"/>
-                        </Image.GestureRecognizers>
-                    </Image>
+                    <OnPlatform x:TypeArguments="View">
+                        <On Platform="iOS">
+                            <StackLayout>
+                                <Button ImageSource="search_icon.png" HorizontalOptions="End" HeightRequest="25" WidthRequest="25" Clicked="SearchExecuted"/>
+                            </StackLayout>
+                        </On>
+                        <On Platform="Android">
+                            <StackLayout>
+                                <Image Source="search_icon.png" HorizontalOptions="End" HeightRequest="25">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="SearchExecuted"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </StackLayout>
+                        </On>
+                    </OnPlatform>
                 </StackLayout>
-
-                <BoxView HeightRequest="1" Color="Black" Margin="0,10"/>
-                <ActivityIndicator x:Name="activityIndicator"/>
-
+                <BoxView HeightRequest="1" Color="Black"/>
                 <StackLayout>
-                    <ListView x:Name="listView" ItemSelected="ItemSelected">
+                    <ListView x:Name="listView" ItemSelected="ItemSelected" HasUnevenRows="True">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <TextCell Text="Name:" Detail="{Binding TimeStart}"/>
@@ -32,6 +42,6 @@
                     </ListView>
                 </StackLayout>
             </StackLayout>
-        </ScrollView>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
