@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using escout.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -66,12 +67,12 @@ namespace escout.Views
         {
             var option = new List<Option>
             {
-                new Option{Name = HOME, ImageUrl = "home_icon.png"},
-                new Option{Name = WATCHING, ImageUrl = "watching_icon.png"},
-                new Option{Name = GAMES, ImageUrl = "games_icon.png"},
-                new Option{Name = CLUBS, ImageUrl = "clubs_icon.png"},
-                new Option{Name = ATHLETES, ImageUrl = "athletes_icon.png"},
-                new Option{Name = BOARDS, ImageUrl = "boards_icon.png"}
+                new Option(HOME, "home_icon.png"),
+                new Option(WATCHING, "watching_icon.png"),
+                new Option(GAMES, "games_icon.png"),
+                new Option(CLUBS, "clubs_icon.png"),
+                new Option(ATHLETES, "athletes_icon.png"),
+                new Option(BOARDS, "boards_icon.png")
             };
 
             return option;
