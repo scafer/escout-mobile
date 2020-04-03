@@ -11,36 +11,36 @@ namespace escout.Views.Events
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterEventPage : ContentPage
     {
-        const string Soccer001 = "Recuperação de bola";
-        const string Soccer002 = "Interrupção";
-        const string Soccer003 = "Perda de bola";
-        const string Soccer004 = "Remate";
-        const string Soccer005 = "Passe";
-        const string Soccer006 = "Passe falhado";
-        const string Soccer007 = "Passe concretizado";
-        const string Soccer008 = "Assistência Sim";
-        const string Soccer009 = "Assistência Não";
-        const string Soccer010 = "Para fora";
-        const string Soccer011 = "Intercetado";
-        const string Soccer012 = "À baliza";
-        const string Soccer013 = "Bola parada";
-        const string Soccer014 = "Lançamento a favor";
-        const string Soccer015 = "Falta cometida";
-        const string Soccer016 = "Falta sofrida";
-        const string Soccer017 = "Cartão vermelho";
-        const string Soccer018 = "Cartão amarelo";
-        const string Soccer019 = "Ao poste";
-        const string Soccer020 = "Guarda-Redes Defendeu";
-        const string Soccer021 = "Golo";
+        const string Soccer001 = "Ball Recovery";
+        const string Soccer002 = "Interruption";
+        const string Soccer003 = "Ball Loss";
+        const string Soccer004 = "Shot";
+        const string Soccer005 = "Pass";
+        const string Soccer006 = "Missed Pass";
+        const string Soccer007 = "Pass Success";
+        const string Soccer008 = "Assistance - Yes";
+        const string Soccer009 = "Assistance - No";
+        const string Soccer010 = "Out";
+        const string Soccer011 = "Intercepted";
+        const string Soccer012 = "On target";
+        const string Soccer013 = "Ball Stop";
+        const string Soccer014 = "Kick in Favor";
+        const string Soccer015 = "Foul Committed";
+        const string Soccer016 = "Missed Foul";
+        const string Soccer017 = "Red Card";
+        const string Soccer018 = "Yellow Card";
+        const string Soccer019 = "To Post";
+        const string Soccer020 = "Goalkeeper Defended";
+        const string Soccer021 = "Goal";
         const string Soccer022 = "Penalty";
-        const string Soccer023 = "Livre";
-        const string Soccer024 = "Falhou"; 
-        const string Soccer025 = "Defesa";
-        const string Soccer026 = "Pontapé de baliza";
-        const string Soccer027 = "Posse de bola";
-        const string Soccer028 = "Bola na equipa adversaria";
-        const string Soccer029 = "Agarrou a bola";
-        const string Soccer030 = "Não agarrou a bola";
+        const string Soccer023 = "Free Kick";
+        const string Soccer024 = "Missed"; 
+        const string Soccer025 = "Defense";
+        const string Soccer026 = "Goal Kick";
+        const string Soccer027 = "Ball Possession";
+        const string Soccer028 = "Opposing Team Ball Possession";
+        const string Soccer029 = "Grabbed the Ball";
+        const string Soccer030 = "Didn't Grab the Ball";
 
         private int type = 0;
 
