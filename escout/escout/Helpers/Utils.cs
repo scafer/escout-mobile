@@ -1,9 +1,9 @@
+using escout.Models;
 using escout.Models.Db;
 using escout.Models.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using escout.Models;
 
 namespace escout.Helpers
 {
@@ -22,7 +22,7 @@ namespace escout.Helpers
 
             return img;
         }
-        
+
         public static readonly List<string> AthleteFilter = new List<string>
         {
             {"name"},
@@ -35,17 +35,11 @@ namespace escout.Helpers
             {"Soccer004"}, {"Soccer005"}, {"Soccer006"}, {"Soccer007"},
             {"Soccer008"}, {"Soccer009"}, {"Soccer010"}, {"Soccer011"},
             {"Soccer012"}, {"Soccer013"}, {"Soccer014"}, {"Soccer015"},
-            {"Soccer016"}, {"Soccer017"}, {"Soccer018"}, {"Soccer019"}, 
+            {"Soccer016"}, {"Soccer017"}, {"Soccer018"}, {"Soccer019"},
             {"Soccer020"}, {"Soccer021"}, {"Soccer022"}, {"Soccer023"},
             {"Soccer024"}, {"Soccer025"}, {"Soccer026"}, {"Soccer027"},
             {"Soccer028"}, {"Soccer029"}, {"Soccer030"},
         };
-
-
-        public static Option GetSoccerEvent(string id)
-        {
-            return SoccerEvents[id];
-        }
 
         public static readonly Dictionary<string, Option> SoccerEvents = new Dictionary<string, Option>
         {

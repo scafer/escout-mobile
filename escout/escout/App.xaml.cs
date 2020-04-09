@@ -1,11 +1,17 @@
 using escout.Views.Authentication;
 using System.Threading.Tasks;
+using escout.Models.Db;
+using escout.Models.Rest;
 using Xamarin.Forms;
 
 namespace escout
 {
     public partial class App : Application
     {
+        public static User User;
+        public static DbGame DbGame;
+        public static DbAthlete DbAthlete;
+
         private const string UsernameKey = "Username";
         private const string PasswordKey = "Password";
         private const string AuthSaveKey = "false";
@@ -15,7 +21,6 @@ namespace escout
         {
             InitializeComponent();
             MainPage = new NavigationPage(new SignInPage());
-            //MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

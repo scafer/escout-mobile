@@ -3,8 +3,6 @@ using escout.Models.Rest;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -53,25 +51,23 @@ namespace escout.Views.GameData
 
         private async Task<List<Athlete>> GetAthletes(string query)
         {
-            List<Athlete> athletes = new List<Athlete>();
+            var athletes = new List<Athlete>();
             var response = await RestConnector.GetObjectAsync(RestConnector.Athletes + query);
+
             if (!string.IsNullOrEmpty(response))
-            {
                 athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);
-            }
+
             return athletes;
         }
 
         private async Task<List<Athlete>> GetAthletes(SearchQuery query)
         {
-            var q = new StringContent(JsonConvert.SerializeObject(query), Encoding.UTF8, "application/json");
+            var athletes = new List<Athlete>();
+            var response = await RestConnector.GetObjectAsync(RestConnector.Athletes + "?query=" + JsonConvert.SerializeObject(query));
 
-            List<Athlete> athletes = new List<Athlete>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Athletes + "?query=" + q);
             if (!string.IsNullOrEmpty(response))
-            {
                 athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);
-            }
+
             return athletes;
         }
     }

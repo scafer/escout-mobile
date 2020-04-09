@@ -8,19 +8,12 @@ using Xamarin.Forms;
 
 namespace escout.Helpers
 {
-    public interface ISqLiteDb
-    {
-        SQLiteAsyncConnection GetConnection();
-    }
-
     public class LocalDb //TODO: improve this
     {
         private readonly SQLiteAsyncConnection connection;
 
-        public LocalDb()
-        {
-            connection = DependencyService.Get<ISqLiteDb>().GetConnection();
-        }
+        public LocalDb() => connection = DependencyService.Get<ISqLiteDb>().GetConnection();
+
 
         public async Task<List<DbGame>> GetDbGame(int status)
         {
