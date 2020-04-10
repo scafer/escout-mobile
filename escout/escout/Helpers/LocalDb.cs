@@ -42,6 +42,18 @@ namespace escout.Helpers
             return e.Id;
         }
 
+        public async Task<List<DbAthlete>> GetAthletes(int gameId, int clubId)
+        {
+            await InitializeDb();
+            return await connection.Table<DbAthlete>().Where(q => q.DataExt == gameId && q.ClubId == clubId).ToListAsync();
+        }
+
+        public async Task<List<DbClub>> GetClubs(int gameId)
+        {
+            await InitializeDb();
+            return await connection.Table<DbClub>().Where(q => q.DataExt == gameId).ToListAsync();
+        }
+
         public async Task AddGameData(GameData gameData)
         {
             await InitializeDb();

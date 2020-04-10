@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using escout.Helpers;
+﻿using escout.Helpers;
 using escout.Models.Db;
 using escout.Models.Rest;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -40,7 +40,7 @@ namespace escout.ViewModels
                     UserId = dbGameEvent.UserId,
                 };
 
-                var gameEvents = new List<GameEvent> {gameEvent};
+                var gameEvents = new List<GameEvent> { gameEvent };
                 var response = await RestConnector.PostObjectAsync(RestConnector.GameEvent, gameEvents);
                 var result = JsonConvert.DeserializeObject<SvcResult>(response);
 

@@ -1,8 +1,8 @@
 ﻿using escout.Helpers;
 using escout.Models.Db;
+using escout.ViewModels;
 using System;
 using System.Threading.Tasks;
-using escout.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -76,7 +76,7 @@ namespace escout.Views.Events
             DbGameEvent evt = new DbGameEvent()
             {
                 Key = DateTime.UtcNow.Ticks.ToString(),
-                Time = DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"),
+                Time = DateTime.UtcNow.ToLongDateString(),
                 GameTime = LbStopwatch.Text,
                 GameId = dbGame.Id,
                 EventId = await new LocalDb().GetEventId(button.Text),
@@ -130,7 +130,7 @@ namespace escout.Views.Events
             Event3Button.Text = Utils.SoccerEvents[event3].Name;
             Event4Button.Text = Utils.SoccerEvents[event4].Name;
         }
-        
+
         private async Task BackgroundAsync()
         {
             while (true)
