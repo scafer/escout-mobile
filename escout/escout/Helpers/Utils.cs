@@ -10,6 +10,7 @@ namespace escout.Helpers
     public class Utils
     {
         public static DbGame DbGame;
+        public static DbAthlete DbAthlete;
 
         public static async Task<Image> GetImage(int? imageId)
         {

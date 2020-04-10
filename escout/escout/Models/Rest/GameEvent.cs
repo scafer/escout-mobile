@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using escout.Models.Db;
+using Newtonsoft.Json;
 
 namespace escout.Models.Rest
 {
@@ -26,5 +27,19 @@ namespace escout.Models.Rest
         public string Created { get; set; }
         [JsonProperty("updated")]
         public string Updated { get; set; }
+
+        public GameEvent() { }
+
+        public GameEvent(DbGameEvent evt)
+        {
+            Key = evt.Key;
+            Time = evt.Time;
+            GameTime = evt.GameTime;
+            EventDescription = evt.EventDescription;
+            GameId = evt.GameId;
+            EventId = evt.EventId;
+            AthleteId = evt.AthleteId;
+            UserId = evt.UserId;
+        }
     }
 }

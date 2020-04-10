@@ -33,8 +33,8 @@
                 <Button x:Name="Event1Button" Text="1" Grid.Column="1" Grid.Row="2" Clicked="EventExecuted"/>
 
                 <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Button Text="Player" Clicked="Pause_Clicked" FontSize="Medium" FontAttributes="Bold"/>
-                    <Button Text="GoalKeeper" Clicked="Resume_Clicked" FontSize="Medium" FontAttributes="Bold"/>
+                    <Button Text="Pause" Clicked="Pause_Clicked" FontSize="Medium" FontAttributes="Bold"/>
+                    <Button Text="Resume" Clicked="Resume_Clicked" FontSize="Medium" FontAttributes="Bold"/>
                 </StackLayout>
             </Grid>
         </StackLayout>

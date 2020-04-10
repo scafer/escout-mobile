@@ -29,6 +29,19 @@ namespace escout.Helpers
             return games;
         }
 
+        public async Task<DbAthlete> GetAthlete()
+        {
+            await InitializeDb();
+            return await connection.Table<DbAthlete>().FirstOrDefaultAsync();
+        }
+
+        public async Task<int> GetEventId(string name)
+        {
+            await InitializeDb();
+            var e = await connection.Table<DbEvent>().FirstOrDefaultAsync(x => x.Name == name);
+            return e.Id;
+        }
+
         public async Task AddGameData(GameData gameData)
         {
             await InitializeDb();

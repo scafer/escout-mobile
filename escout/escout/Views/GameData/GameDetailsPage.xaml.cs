@@ -63,6 +63,7 @@ namespace escout.Views.GameData
         private async void Start_OnClicked(object sender, EventArgs e)
         {
             Utils.DbGame = dbGame;
+            Utils.DbAthlete = await new LocalDb().GetAthlete();
             Application.Current.MainPage = new NavigationPage(new RegisterEventPage());
             await Navigation.PushAsync(new RegisterEventPage());
         }

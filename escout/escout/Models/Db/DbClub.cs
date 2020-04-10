@@ -6,6 +6,7 @@ namespace escout.Models.Db
     public class DbClub
     {
         [PrimaryKey, AutoIncrement]
+        public int LocalId { get; set; }
         public int Id { get; set; }
         public string Key { get; set; }
         public string Name { get; set; }
@@ -27,6 +28,7 @@ namespace escout.Models.Db
         public DbClub(Club club, int gameId)
         {
             this.DataExt = gameId;
+            Id = club.Id;
             Key = club.Key;
             Name = club.Name;
             Fullname = club.Fullname;

@@ -2,6 +2,7 @@
 using escout.Models.Db;
 using System;
 using System.Threading.Tasks;
+using escout.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -52,6 +53,7 @@ namespace escout.Views.Events
 
             BindingContext = Utils.DbGame;
             this.dbGame = Utils.DbGame;
+            this.dbAthlete = Utils.DbAthlete;
 
             _ = BackgroundAsync();
             SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); //Board01
@@ -67,9 +69,22 @@ namespace escout.Views.Events
             await Navigation.PushAsync(new MainPage());
         }
 
-        private void EventExecuted(object sender, EventArgs e)
+        private async void EventExecuted(object sender, EventArgs e)
         {
             var button = sender as Button;
+
+            DbGameEvent evt = new DbGameEvent()
+            {
+                Key = DateTime.UtcNow.Ticks.ToString(),
+                Time = DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"),
+                GameTime = LbStopwatch.Text,
+                GameId = dbGame.Id,
+                EventId = await new LocalDb().GetEventId(button.Text),
+                AthleteId = dbAthlete.Id,
+                DataExt = dbGame.DataExt
+            };
+
+            _ = GameEventViewModel.RegisterEvent(evt);
 
             switch (button.Text)
             {

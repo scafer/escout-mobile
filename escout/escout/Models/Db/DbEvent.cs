@@ -6,7 +6,9 @@ namespace escout.Models.Db
     class DbEvent
     {
         [PrimaryKey, AutoIncrement]
+        public int LocalId { get; set; }
         public int Id { get; set; }
+        public string Key { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public int SportId { get; set; }
@@ -20,6 +22,8 @@ namespace escout.Models.Db
         public DbEvent(Event evt, int gameId)
         {
             this.DataExt = gameId;
+            Id = evt.Id;
+            Key = evt.Key;
             Name = evt.Name;
             Description = evt.Description;
             SportId = evt.SportId;
