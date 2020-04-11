@@ -6,9 +6,6 @@ namespace escout.Views.Authentication
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AboutPage : ContentPage
     {
-        public AboutPage()
-        {
-            InitializeComponent();
-        }
+        public AboutPage() => InitializeComponent();
     }
 }

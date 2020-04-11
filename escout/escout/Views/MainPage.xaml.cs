@@ -74,7 +74,7 @@ namespace escout.Views
             {
                 new Option(HOME, "home_icon.png"),
                 new Option(WATCHING, "watching_icon.png"),
-                new Option(EVENTS, ""),
+                new Option(EVENTS, "events_icon.png"),
                 new Option(GAMES, "games_icon.png"),
                 new Option(CLUBS, "clubs_icon.png"),
                 new Option(ATHLETES, "athletes_icon.png"),

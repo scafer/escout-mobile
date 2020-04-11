@@ -15,7 +15,7 @@ namespace escout
         private const string UsernameKey = "Username";
         private const string PasswordKey = "Password";
         private const string AuthSaveKey = "false";
-        private const string VersionKey = "0.5";
+        private const string VersionKey = "";
 
         public App()
         {
@@ -58,7 +58,7 @@ namespace escout
 
         public string Version
         {
-            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "";
+            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 0.5.5";
             set => Properties[VersionKey] = value;
         }
 
