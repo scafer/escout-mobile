@@ -23,10 +23,6 @@ namespace escout.Models.Db
 
         public DbGameEvent() { }
 
-        public DbGameEvent(DbGameEvent evt)
-        {
-        }
-
         public DbGameEvent(GameEvent gameEvent)
         {
             DataExt = gameEvent.GameId;

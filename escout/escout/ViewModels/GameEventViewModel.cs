@@ -35,7 +35,7 @@ namespace escout.ViewModels
                     EventId = dbGameEvent.EventId,
                     GameId = dbGameEvent.GameId,
                     GameTime = dbGameEvent.GameTime,
-                    Time = dbGameEvent.GameTime,
+                    Time = dbGameEvent.Time,
                     Key = dbGameEvent.Key,
                     UserId = dbGameEvent.UserId,
                 };

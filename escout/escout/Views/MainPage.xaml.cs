@@ -1,6 +1,7 @@
 ﻿using escout.Helpers;
 using escout.Models;
 using escout.Models.Rest;
+using escout.Views.Events;
 using escout.Views.GameData;
 using Newtonsoft.Json;
 using System;
@@ -16,6 +17,7 @@ namespace escout.Views
     {
         private const string HOME = "Home";
         private const string WATCHING = "Watching";
+        private const string EVENTS = "Events";
         private const string GAMES = "Games";
         private const string CLUBS = "Clubs";
         private const string BOARDS = "Boards";
@@ -46,6 +48,9 @@ namespace escout.Views
                 case WATCHING:
                     Detail = new NavigationPage(new WatchingListPage());
                     break;
+                case EVENTS:
+                    Detail = new NavigationPage(new EventsPage());
+                    break;
                 case GAMES:
                     Detail = new NavigationPage(new GamesPage());
                     break;
@@ -69,6 +74,7 @@ namespace escout.Views
             {
                 new Option(HOME, "home_icon.png"),
                 new Option(WATCHING, "watching_icon.png"),
+                new Option(EVENTS, ""),
                 new Option(GAMES, "games_icon.png"),
                 new Option(CLUBS, "clubs_icon.png"),
                 new Option(ATHLETES, "athletes_icon.png"),
@@ -92,7 +98,7 @@ namespace escout.Views
             if (user.ImageId != null)
             {
                 var img = await Utils.GetImage(user.ImageId);
-                if (!String.IsNullOrEmpty(img.ImageUrl))
+                if (!string.IsNullOrEmpty(img.ImageUrl))
                 {
                     Img.Source = img.ImageUrl;
                     Img.Aspect = Aspect.AspectFill;

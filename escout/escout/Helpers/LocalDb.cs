@@ -35,6 +35,12 @@ namespace escout.Helpers
             return await connection.Table<DbAthlete>().FirstOrDefaultAsync();
         }
 
+        public async Task<List<DbGameEvent>> GetGameEvents()
+        {
+            await InitializeDb();
+            return await connection.Table<DbGameEvent>().ToListAsync();
+        }
+
         public async Task<int> GetEventId(string name)
         {
             await InitializeDb();
