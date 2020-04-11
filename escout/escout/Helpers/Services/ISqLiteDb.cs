@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace escout.Helpers
+namespace escout.Helpers.Services
 {
     public interface ISqLiteDb
     {

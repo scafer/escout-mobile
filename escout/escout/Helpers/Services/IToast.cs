@@ -1,4 +1,4 @@
-﻿namespace escout.Helpers
+﻿namespace escout.Helpers.Services
 {
     public interface IToast
     {
