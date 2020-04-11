@@ -2,7 +2,9 @@
 using escout.Models.Db;
 using escout.Models.Rest;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace escout.ViewModels
@@ -18,9 +20,8 @@ namespace escout.ViewModels
             this.Navigation = navigation;
         }
 
-        public async void RegisterEvent(DbGameEvent dbGameEvent)
+        public static async Task RegisterEvent(DbGameEvent dbGameEvent)
         {
-
             try
             {
                 var db = new LocalDb();
@@ -34,12 +35,13 @@ namespace escout.ViewModels
                     EventId = dbGameEvent.EventId,
                     GameId = dbGameEvent.GameId,
                     GameTime = dbGameEvent.GameTime,
-                    Time = dbGameEvent.GameTime,
+                    Time = dbGameEvent.Time,
                     Key = dbGameEvent.Key,
-                    UserId = dbGameEvent.UserId
+                    UserId = dbGameEvent.UserId,
                 };
 
-                var response = await RestConnector.PostObjectAsync(RestConnector.GameEvent, gameEvent);
+                var gameEvents = new List<GameEvent> { gameEvent };
+                var response = await RestConnector.PostObjectAsync(RestConnector.GameEvent, gameEvents);
                 var result = JsonConvert.DeserializeObject<SvcResult>(response);
 
                 if (result.ErrorCode == 0)

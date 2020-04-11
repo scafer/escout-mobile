@@ -6,6 +6,7 @@ namespace escout.Models.Db
     class DbCompetition
     {
         [PrimaryKey, AutoIncrement]
+        public int LocalId { get; set; }
         public int Id { get; set; }
         public string Key { get; set; }
         public string Name { get; set; }
@@ -21,6 +22,7 @@ namespace escout.Models.Db
         public DbCompetition(Competition competition, int gameId)
         {
             this.DataExt = gameId;
+            Id = competition.Id;
             Key = competition.Key;
             Name = competition.Name;
             Edition = competition.Edition;

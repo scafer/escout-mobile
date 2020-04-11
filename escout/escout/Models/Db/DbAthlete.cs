@@ -6,6 +6,7 @@ namespace escout.Models.Db
     public class DbAthlete
     {
         [PrimaryKey, AutoIncrement]
+        public int LocalId { get; set; }
         public int Id { get; set; }
         public string Key { get; set; }
         public string Name { get; set; }
@@ -31,6 +32,7 @@ namespace escout.Models.Db
         public DbAthlete(Athlete athlete, int gameId)
         {
             this.DataExt = gameId;
+            Id = athlete.Id;
             Key = athlete.Key;
             Name = athlete.Name;
             Fullname = athlete.Fullname;

@@ -4,23 +4,17 @@ using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using escout.Helpers.Services;
 using Xamarin.Forms;
 
 namespace escout.Helpers
 {
-    public interface ISqLiteDb
-    {
-        SQLiteAsyncConnection GetConnection();
-    }
-
     public class LocalDb //TODO: improve this
     {
         private readonly SQLiteAsyncConnection connection;
 
-        public LocalDb()
-        {
-            connection = DependencyService.Get<ISqLiteDb>().GetConnection();
-        }
+        public LocalDb() => connection = DependencyService.Get<ISqLiteDb>().GetConnection();
+
 
         public async Task<List<DbGame>> GetDbGame(int status)
         {
@@ -34,6 +28,37 @@ namespace escout.Helpers
             }
 
             return games;
+        }
+
+        public async Task<DbAthlete> GetAthlete()
+        {
+            await InitializeDb();
+            return await connection.Table<DbAthlete>().FirstOrDefaultAsync();
+        }
+
+        public async Task<List<DbGameEvent>> GetGameEvents()
+        {
+            await InitializeDb();
+            return await connection.Table<DbGameEvent>().ToListAsync();
+        }
+
+        public async Task<int> GetEventId(string name)
+        {
+            await InitializeDb();
+            var e = await connection.Table<DbEvent>().FirstOrDefaultAsync(x => x.Name == name);
+            return e.Id;
+        }
+
+        public async Task<List<DbAthlete>> GetAthletes(int gameId, int clubId)
+        {
+            await InitializeDb();
+            return await connection.Table<DbAthlete>().Where(q => q.DataExt == gameId && q.ClubId == clubId).ToListAsync();
+        }
+
+        public async Task<List<DbClub>> GetClubs(int gameId)
+        {
+            await InitializeDb();
+            return await connection.Table<DbClub>().Where(q => q.DataExt == gameId).ToListAsync();
         }
 
         public async Task AddGameData(GameData gameData)
