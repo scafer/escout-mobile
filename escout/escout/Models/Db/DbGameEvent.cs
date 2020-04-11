@@ -6,6 +6,7 @@ namespace escout.Models.Db
     public class DbGameEvent
     {
         [PrimaryKey, AutoIncrement]
+        public int LocalId { get; set; }
         public int Id { get; set; }
         public string Key { get; set; }
         public string Time { get; set; }

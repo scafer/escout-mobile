@@ -8,7 +8,7 @@ namespace escout.Views.Authentication
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ForgotPasswordPage : ContentPage
     {
-        User user = new User();
+        private User user = new User();
 
         public ForgotPasswordPage()
         {

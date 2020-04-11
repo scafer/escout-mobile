@@ -13,11 +13,12 @@
     </ContentPage.Padding>
 
     <ContentPage.Content>
-        <Grid BackgroundColor="#FFFFFF">
+        <Grid BackgroundColor="#262626">
             <StackLayout VerticalOptions="Center" Margin="5">
                 <Image x:Name="LogoImage" Source="escout_logo.png" WidthRequest="200"  HorizontalOptions="Center"/>
             </StackLayout>
-            <Label x:Name="Version" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="Center" Margin="5"/>
+
+            <Label x:Name="Version" TextColor="White" VerticalOptions="End" HorizontalOptions="Center" Padding="20"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

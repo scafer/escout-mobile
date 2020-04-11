@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace escout.Helpers
 {
-    class RestConnector
+    public static class RestConnector
     {
         //API endpoints
         public const string SignIn = "/api/v1/signIn";

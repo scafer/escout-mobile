@@ -6,6 +6,7 @@ namespace escout.Models.Db
     public class DbGame
     {
         [PrimaryKey, AutoIncrement]
+        public int LocalId { get; set; }
         public int Id { get; set; }
         public string TimeStart { get; set; }
         public string TimeEnd { get; set; }
@@ -32,6 +33,7 @@ namespace escout.Models.Db
         public DbGame(Game game)
         {
             DataExt = game.Id;
+            Id = game.Id;
             TimeStart = game.TimeStart;
             TimeEnd = game.TimeEnd;
             HomeColor = game.HomeColor;

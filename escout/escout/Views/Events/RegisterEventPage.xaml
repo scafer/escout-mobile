@@ -27,14 +27,14 @@
                     <Label x:Name="LbStopwatch" FontSize="Large" FontAttributes="Bold"  HorizontalOptions="Center"/>
                 </StackLayout>
 
-                <Button x:Name="Event4Button" Text="4" Grid.Column="0" Grid.Row="1" Clicked="EventExecuted"/>
-                <Button x:Name="Event3Button" Text="3" Grid.Column="1" Grid.Row="1" Clicked="EventExecuted"/>
-                <Button x:Name="Event2Button" Text="2" Grid.Column="0" Grid.Row="2" Clicked="EventExecuted"/>
-                <Button x:Name="Event1Button" Text="1" Grid.Column="1" Grid.Row="2" Clicked="EventExecuted"/>
+                <Button x:Name="Event4Button" Text="4" Grid.Column="0" Grid.Row="1" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Clicked="EventExecuted"/>
+                <Button x:Name="Event3Button" Text="3" Grid.Column="1" Grid.Row="1" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Clicked="EventExecuted"/>
+                <Button x:Name="Event2Button" Text="2" Grid.Column="0" Grid.Row="2" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Clicked="EventExecuted"/>
+                <Button x:Name="Event1Button" Text="1" Grid.Column="1" Grid.Row="2" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Clicked="EventExecuted"/>
 
                 <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Button Text="Player" Clicked="Pause_Clicked" FontSize="Medium" FontAttributes="Bold"/>
-                    <Button Text="GoalKeeper" Clicked="Resume_Clicked" FontSize="Medium" FontAttributes="Bold"/>
+                    <Button Text="Pause" Clicked="Pause_Clicked" FontSize="Medium" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" FontAttributes="Bold"/>
+                    <Button Text="Resume" Clicked="Resume_Clicked" FontSize="Medium" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" FontAttributes="Bold"/>
                 </StackLayout>
             </Grid>
         </StackLayout>

@@ -1,3 +1,5 @@
+using escout.Models.Db;
+using escout.Models.Rest;
 using escout.Views.Authentication;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -6,16 +8,19 @@ namespace escout
 {
     public partial class App : Application
     {
+        public static User User;
+        public static DbGame DbGame;
+        public static DbAthlete DbAthlete;
+
         private const string UsernameKey = "Username";
         private const string PasswordKey = "Password";
         private const string AuthSaveKey = "false";
-        private const string VersionKey = "0.5";
+        private const string VersionKey = "";
 
         public App()
         {
             InitializeComponent();
             MainPage = new NavigationPage(new SignInPage());
-            //MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
@@ -53,7 +58,7 @@ namespace escout
 
         public string Version
         {
-            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "";
+            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 0.5.5";
             set => Properties[VersionKey] = value;
         }
 

@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using escout.Helpers.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,10 +13,7 @@ namespace escout.Views.GameData
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ClubsPage : ContentPage
     {
-        public ClubsPage()
-        {
-            InitializeComponent();
-        }
+        public ClubsPage() => InitializeComponent();
 
         private async void SearchExecuted(object sender, EventArgs e)
         {
@@ -27,7 +25,7 @@ namespace escout.Views.GameData
                     clubs = await GetClubs("");
             }
             else
-                clubs = await GetClubs(new SearchQuery(filter.Items[filter.SelectedIndex], "iLIKE", key.Text + "%").ToString());
+                clubs = await GetClubs(new SearchQuery(filter.Items[filter.SelectedIndex], "iLIKE", key.Text + "%"));
 
             listView.ItemsSource = clubs;
             activityIndicator.IsRunning = false;
@@ -44,12 +42,23 @@ namespace escout.Views.GameData
 
         private async Task<List<Club>> GetClubs(string query)
         {
-            List<Club> clubs = new List<Club>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Clubs + query);
+            var clubs = new List<Club>();
+            var response = await RestConnector.GetObjectAsync(RestConnector.Clubs);
+
             if (!string.IsNullOrEmpty(response))
-            {
                 clubs = JsonConvert.DeserializeObject<List<Club>>(response);
-            }
+
+            return clubs;
+        }
+
+        private async Task<List<Club>> GetClubs(SearchQuery query)
+        {
+            var clubs = new List<Club>();
+            var response = await RestConnector.GetObjectAsync(RestConnector.Clubs + "?query=" + JsonConvert.SerializeObject(query));
+
+            if (!string.IsNullOrEmpty(response))
+                clubs = JsonConvert.DeserializeObject<List<Club>>(response);
+
             return clubs;
         }
     }

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="escout.Views.Events.SelectAthletePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="bt_home" Clicked="Bt_home_OnClicked"/>
+            <Button x:Name="bt_visitor" Clicked="Bt_visitor_OnClicked"/>
+
+            <BoxView HeightRequest="1" Color="Black"/>
+            <StackLayout>
+                <ListView x:Name="listView">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="Name:" Detail="{Binding Name}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <Button Text="Start" Clicked="Button_OnClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
