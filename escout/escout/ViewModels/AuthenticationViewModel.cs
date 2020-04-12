@@ -15,8 +15,6 @@ namespace escout.ViewModels
 {
     class AuthenticationViewModel : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public INavigation Navigation;
         public ICommand SignInCommand { get; set; }
         public ICommand SignUpCommand { get; set; }
@@ -29,6 +27,8 @@ namespace escout.ViewModels
         private User user;
         private bool isBusy;
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -36,6 +36,9 @@ namespace escout.ViewModels
 
         public AuthenticationViewModel(INavigation navigation, User user)
         {
+            this.user = user;
+            this.Navigation = navigation;
+
             SignInCommand = new Command(SignInExecuted);
             SignUpCommand = new Command(SignUpExecuted);
             ForgotPasswordCommand = new Command(ForgotPasswordExecuted);
@@ -43,9 +46,6 @@ namespace escout.ViewModels
             ForgotPasswordViewCommand = new Command(ForgetPasswordViewExecuted);
             AboutViewCommand = new Command(AboutViewExecuted);
             CancelCommand = new Command(CancelExecuted);
-
-            this.user = user;
-            this.Navigation = navigation;
         }
 
         public int UserId

@@ -8,23 +8,23 @@
 
     <ContentPage.Content>
         <AbsoluteLayout>
-            <ActivityIndicator x:Name="activityIndicator" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.5"/>
+            <ActivityIndicator AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.5" IsRunning="{Binding IsLoadingData}" IsVisible="{Binding IsLoadingData}"/>
             <StackLayout>
                 <Label Text="Filter Criteria:" FontSize="Medium"/>
                 <StackLayout Orientation="Horizontal">
-                    <Picker x:Name="filter" Title="Filter"/>
-                    <Entry x:Name="key" Placeholder="key" HorizontalOptions="FillAndExpand"/>
+                    <Picker x:Name="filter" Title="Filter" SelectedItem="{Binding Key}"/>
+                    <Entry Placeholder="key" HorizontalOptions="FillAndExpand" Text="{Binding Value}"/>
                     <OnPlatform x:TypeArguments="View">
                         <On Platform="iOS">
                             <StackLayout>
-                                <Button ImageSource="search_icon.png" HorizontalOptions="End" HeightRequest="25" WidthRequest="25" Clicked="SearchExecuted"/>
+                                <Button ImageSource="search_icon.png" HorizontalOptions="End" HeightRequest="25" WidthRequest="25" Command="{Binding SearchCommand}"/>
                             </StackLayout>
                         </On>
                         <On Platform="Android">
                             <StackLayout>
                                 <Image Source="search_icon.png" HorizontalOptions="End" HeightRequest="25">
                                     <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="SearchExecuted"/>
+                                        <TapGestureRecognizer Command="{Binding SearchCommand}"/>
                                     </Image.GestureRecognizers>
                                 </Image>
                             </StackLayout>
@@ -33,7 +33,7 @@
                 </StackLayout>
                 <BoxView HeightRequest="1" Color="Black"/>
                 <StackLayout>
-                    <ListView x:Name="listView" ItemSelected="ItemSelected">
+                    <ListView ItemsSource="{Binding Athletes}" ItemSelected="ItemSelected">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <TextCell Text="Name:" Detail="{Binding Name}"/>
