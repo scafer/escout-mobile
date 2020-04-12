@@ -56,15 +56,5 @@ namespace escout.Views.Authentication
                 app.BasicAuth = (SwSave.IsToggled).ToString();
             }
         }
-
-        private async void ForgotPasswordViewTapped(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new ForgotPasswordPage());
-        }
-
-        private async void AboutViewTapped(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new AboutPage());
-        }
     }
 }

@@ -72,7 +72,7 @@ namespace escout.Views.Events
         private async void EventExecuted(object sender, EventArgs e)
         {
             var button = sender as Button;
-            if (string.IsNullOrEmpty(button.Text))
+            if (!string.IsNullOrEmpty(button.Text))
             {
                 var evt = new DbGameEvent()
                 {
