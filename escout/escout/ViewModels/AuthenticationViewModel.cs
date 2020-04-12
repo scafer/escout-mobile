@@ -1,9 +1,9 @@
-﻿using System;
-using escout.Helpers;
+﻿using escout.Helpers;
 using escout.Models.Rest;
 using escout.Views.Authentication;
 using escout.Views.GameData;
 using Newtonsoft.Json;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
@@ -179,6 +179,8 @@ namespace escout.ViewModels
             {
                 try
                 {
+                    IsVisible = true;
+
                     var response = await RestConnector.PostObjectAsync(RestConnector.ResetPassword, new User(Username, null, Email));
                     if (!string.IsNullOrEmpty(response))
                     {
