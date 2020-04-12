@@ -86,7 +86,7 @@ namespace escout.ViewModels
             }
             else
             {
-                Athletes = new ObservableCollection<Athlete>(await GetAthletes(new SearchQuery(Key.ToString(), "iLike", Value + "$")));
+                Athletes = new ObservableCollection<Athlete>(await GetAthletes(new SearchQuery(Key.ToString(), "iLike", Value + "%")));
             }
 
             IsLoadingData = false;
