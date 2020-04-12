@@ -1,4 +1,5 @@
-﻿using escout.Helpers;
+﻿using System;
+using escout.Helpers;
 using escout.Models.Rest;
 using escout.Views.Authentication;
 using escout.Views.GameData;
@@ -26,6 +27,7 @@ namespace escout.ViewModels
         public ICommand CancelCommand { get; set; }
 
         private User user;
+        private bool isBusy;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
@@ -70,13 +72,35 @@ namespace escout.ViewModels
             set => user.Email = value;
         }
 
+        public bool IsBusy
+        {
+            get => isBusy;
+            set
+            {
+                isBusy = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsVisible
+        {
+            get => !IsBusy;
+            set
+            {
+                IsBusy = value;
+                OnPropertyChanged();
+            }
+        }
+
         private async void SignInExecuted()
         {
             if (!(string.IsNullOrEmpty(Username)) && !(string.IsNullOrEmpty(Password)))
             {
                 try
                 {
-                    var response = await RestConnector.PostObjectAsync(RestConnector.SignIn, new User(Username, GenerateSha256String(Password), Email));
+                    IsVisible = true;
+                    var response = await RestConnector.PostObjectAsync(RestConnector.SignIn,
+                        new User(Username, GenerateSha256String(Password), Email));
                     if (!string.IsNullOrEmpty(response))
                     {
                         var result = JsonConvert.DeserializeObject<AuthData>(response);
@@ -96,12 +120,17 @@ namespace escout.ViewModels
                 }
                 catch
                 {
-                    var option = await App.DisplayMessage("Error:", "Something is wrong. Do you want to register events offline?", "NO", "YES");
+                    var option = await App.DisplayMessage("Error:",
+                        "Something is wrong. Do you want to register events offline?", "NO", "YES");
                     if (option)
                     {
                         Application.Current.MainPage = new NavigationPage(new WatchingListPage());
                         await Navigation.PushAsync(new WatchingListPage());
                     }
+                }
+                finally
+                {
+                    IsVisible = false;
                 }
             }
             else
@@ -112,19 +141,32 @@ namespace escout.ViewModels
         {
             if (!(string.IsNullOrEmpty(Username) && string.IsNullOrEmpty(Email) && string.IsNullOrEmpty(Password)))
             {
-                var response = await RestConnector.PostObjectAsync(RestConnector.SignUp, new User(Username, GenerateSha256String(Password), Email));
-
-                if (!string.IsNullOrEmpty(response))
+                try
                 {
-                    var result = JsonConvert.DeserializeObject<SvcResult>(response);
-                    _ = App.DisplayMessage("Result", result.ErrorMessage, "OK");
+                    IsVisible = true;
 
-                    if (result.ErrorCode == 0)
-                        await Navigation.PopModalAsync();
+                    var response = await RestConnector.PostObjectAsync(RestConnector.SignUp,
+                        new User(Username, GenerateSha256String(Password), Email));
+                    if (!string.IsNullOrEmpty(response))
+                    {
+                        var result = JsonConvert.DeserializeObject<SvcResult>(response);
+                        _ = App.DisplayMessage("Result", result.ErrorMessage, "OK");
+
+                        if (result.ErrorCode == 0)
+                            await Navigation.PopModalAsync();
+                    }
+                    else
+                    {
+                        _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                    ExceptionHandler.GenericException(ex);
+                }
+                finally
+                {
+                    IsVisible = false;
                 }
             }
             else
@@ -135,16 +177,27 @@ namespace escout.ViewModels
         {
             if (!(string.IsNullOrEmpty(Username)) || !(string.IsNullOrEmpty(Email)))
             {
-                var response = await RestConnector.PostObjectAsync(RestConnector.ResetPassword, new User(Username, null, Email));
-                if (!string.IsNullOrEmpty(response))
+                try
                 {
-                    var result = JsonConvert.DeserializeObject<SvcResult>(response);
-                    _ = App.DisplayMessage("Message", result.ErrorMessage, "Ok");
-                    await Navigation.PopModalAsync();
+                    var response = await RestConnector.PostObjectAsync(RestConnector.ResetPassword, new User(Username, null, Email));
+                    if (!string.IsNullOrEmpty(response))
+                    {
+                        var result = JsonConvert.DeserializeObject<SvcResult>(response);
+                        _ = App.DisplayMessage("Message", result.ErrorMessage, "Ok");
+                        await Navigation.PopModalAsync();
+                    }
+                    else
+                    {
+                        _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                    ExceptionHandler.GenericException(ex);
+                }
+                finally
+                {
+                    IsVisible = false;
                 }
             }
             else
