@@ -24,12 +24,6 @@ namespace escout.Helpers
             return img;
         }
 
-        public static readonly List<string> AthleteFilter = new List<string>
-        {
-            {"name"},
-            {"age"}
-        };
-
         public static readonly List<string> SoccerEventList = new List<string>
         {
             {string.Empty}, {"Soccer001"}, {"Soccer002"}, {"Soccer003"},

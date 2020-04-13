@@ -2,6 +2,7 @@
 using escout.Helpers.Services;
 using escout.Models.Rest;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace escout.ViewModels
         public ICommand SearchCommand { get; set; }
 
         private bool isLoadingData;
-        private object key;
+        private string key;
         private string pairValue;
         private ObservableCollection<Athlete> athletes;
 
@@ -31,13 +32,13 @@ namespace escout.ViewModels
 
         public AthleteViewModel(INavigation navigation)
         {
-            this.Navigation = navigation;
+            Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
         }
 
         public ObservableCollection<Athlete> Athletes
         {
-            get => this.athletes;
+            get => athletes;
             set
             {
                 athletes = value;
@@ -45,7 +46,18 @@ namespace escout.ViewModels
             }
         }
 
-        public object Key
+        public List<string> Filter
+        {
+            get
+            {
+                return new List<string>
+                {
+                    {"name"}
+                };
+            }
+        }
+
+        public string Key
         {
             get => key;
             set
@@ -67,7 +79,7 @@ namespace escout.ViewModels
 
         public bool IsLoadingData
         {
-            get => this.isLoadingData;
+            get => isLoadingData;
             set
             {
                 isLoadingData = value;
@@ -79,14 +91,14 @@ namespace escout.ViewModels
         {
             IsLoadingData = true;
 
-            if (Key == null || string.IsNullOrEmpty(Value))
+            if (Key == null || String.IsNullOrEmpty(Value))
             {
                 if (await App.DisplayMessage("Info", "Load all data?", "Cancel", "Yes"))
-                    Athletes = new ObservableCollection<Athlete>(await GetAthletes(""));
+                    Athletes = new ObservableCollection<Athlete>(await GetAthletes());
             }
             else
             {
-                Athletes = new ObservableCollection<Athlete>(await GetAthletes(new SearchQuery(Key.ToString(), "iLike", Value + "%")));
+                Athletes = new ObservableCollection<Athlete>(await GetAthletes(new SearchQuery(Key, "iLIKE", Value + "%")));
             }
 
             IsLoadingData = false;
@@ -95,12 +107,12 @@ namespace escout.ViewModels
                 DependencyService.Get<IToast>().LongAlert(Athletes.Count + " results");
         }
 
-        private async Task<List<Athlete>> GetAthletes(string query)
+        private async Task<List<Athlete>> GetAthletes()
         {
             var _athletes = new List<Athlete>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Athletes + query);
+            var response = await RestConnector.GetObjectAsync(RestConnector.Athletes);
 
-            if (!string.IsNullOrEmpty(response))
+            if (!String.IsNullOrEmpty(response))
                 _athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);
 
             return _athletes;
@@ -111,7 +123,7 @@ namespace escout.ViewModels
             var _athletes = new List<Athlete>();
             var response = await RestConnector.GetObjectAsync(RestConnector.Athletes + "?query=" + JsonConvert.SerializeObject(query));
 
-            if (!string.IsNullOrEmpty(response))
+            if (!String.IsNullOrEmpty(response))
                 _athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);
 
             return _athletes;

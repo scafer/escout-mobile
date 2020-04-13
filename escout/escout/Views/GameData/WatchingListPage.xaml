@@ -42,7 +42,6 @@
                     <ListView x:Name="PendingGamesList" ItemSelected="GamesList_OnItemSelected" HasUnevenRows="True" HeightRequest="200">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <!--<TextCell Text="Name:" Detail="{Binding Status, StringFormat='Creation date: {0}'}"/>-->
                                 <ViewCell >
                                     <ViewCell.ContextActions>
                                         <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}" Clicked="RemoveItem_OnClicked"/>

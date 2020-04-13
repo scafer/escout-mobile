@@ -1,5 +1,4 @@
-﻿using escout.Helpers;
-using escout.Models.Rest;
+﻿using escout.Models.Rest;
 using escout.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -18,7 +17,6 @@ namespace escout.Views.GameData
         {
             base.OnAppearing();
             BindingContext = new AthleteViewModel(Navigation);
-            filter.ItemsSource = Utils.AthleteFilter;
         }
 
         private void ItemSelected(object sender, SelectedItemChangedEventArgs e)
