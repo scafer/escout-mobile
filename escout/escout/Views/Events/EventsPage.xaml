@@ -7,7 +7,7 @@
              x:Class="escout.Views.Events.EventsPage" Title="Events">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="listView">
+            <ListView x:Name="listView" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="Name:" Detail="{Binding Key}"/>

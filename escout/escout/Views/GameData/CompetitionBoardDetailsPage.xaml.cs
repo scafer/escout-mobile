@@ -7,10 +7,10 @@ namespace escout.Views.GameData
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CompetitionBoardDetailsPage : ContentPage
     {
-        public CompetitionBoardDetailsPage(CompetitionBoard competitionBoard)
+        public CompetitionBoardDetailsPage(Competition competition)
         {
             InitializeComponent();
-            BindingContext = competitionBoard;
+            BindingContext = competition;
         }
     }
 }
