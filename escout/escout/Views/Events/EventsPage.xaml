@@ -7,10 +7,10 @@
              x:Class="escout.Views.Events.EventsPage" Title="Events">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="listView" HasUnevenRows="True">
+            <ListView ItemsSource="{Binding GameEvents}" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="Name:" Detail="{Binding Key}"/>
+                        <TextCell Text="{Binding Key}" Detail="{Binding Synchronized}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

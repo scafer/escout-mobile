@@ -2,7 +2,6 @@
 using escout.Helpers.Services;
 using escout.Models.Rest;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -91,10 +90,10 @@ namespace escout.ViewModels
         {
             IsLoadingData = true;
 
-            if (Key == null || String.IsNullOrEmpty(Value))
+            if (Key == null || string.IsNullOrEmpty(Value))
             {
                 if (await App.DisplayMessage("Info", "Load all data?", "Cancel", "Yes"))
-                    Athletes = new ObservableCollection<Athlete>(await GetAthletes());
+                    Athletes = new ObservableCollection<Athlete>(await GetAthletes(null));
             }
             else
             {
@@ -107,23 +106,16 @@ namespace escout.ViewModels
                 DependencyService.Get<IToast>().LongAlert(Athletes.Count + " results");
         }
 
-        private async Task<List<Athlete>> GetAthletes()
-        {
-            var _athletes = new List<Athlete>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Athletes);
-
-            if (!String.IsNullOrEmpty(response))
-                _athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);
-
-            return _athletes;
-        }
-
         private async Task<List<Athlete>> GetAthletes(SearchQuery query)
         {
             var _athletes = new List<Athlete>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Athletes + "?query=" + JsonConvert.SerializeObject(query));
+            var request = RestConnector.Athletes;
 
-            if (!String.IsNullOrEmpty(response))
+            if (query != null)
+                request += "?query=" + JsonConvert.SerializeObject(query);
+
+            var response = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(response))
                 _athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);
 
             return _athletes;
