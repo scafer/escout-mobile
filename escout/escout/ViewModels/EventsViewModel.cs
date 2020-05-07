@@ -1,10 +1,10 @@
-﻿using escout.Models.Db;
+﻿using escout.Helpers;
+using escout.Models.Db;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using escout.Helpers;
 using Xamarin.Forms;
 
 namespace escout.ViewModels
@@ -43,13 +43,13 @@ namespace escout.ViewModels
 
         private async Task LoadEvents()
         {
-            LocalDb db = new LocalDb();
+            var db = new LocalDb();
             GameEvents = new ObservableCollection<DbGameEvent>(await db.GetGameEvents());
         }
 
         private async void SyncronizeEventsExecuted()
         {
-
+            await App.DisplayMessage("", "", "");
         }
     }
 }

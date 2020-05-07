@@ -17,5 +17,10 @@ namespace escout.Views.Events
             base.OnAppearing();
             BindingContext = new EventsViewModel(Navigation);
         }
+
+        private void ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
