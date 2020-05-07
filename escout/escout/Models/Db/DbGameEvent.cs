@@ -19,7 +19,7 @@ namespace escout.Models.Db
         public string Created { get; set; }
         public string Updated { get; set; }
         public int DataExt { get; set; }
-        public bool Syncronized { get; set; }
+        public bool Synchronized { get; set; }
 
         public DbGameEvent() { }
 
@@ -36,7 +36,7 @@ namespace escout.Models.Db
             UserId = gameEvent.UserId;
             Created = gameEvent.Created;
             Updated = gameEvent.Updated;
-            Syncronized = true;
+            Synchronized = true;
         }
     }
 }

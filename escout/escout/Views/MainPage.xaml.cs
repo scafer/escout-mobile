@@ -97,7 +97,7 @@ namespace escout.Views
 
             if (user.ImageId != null)
             {
-                var img = await Utils.GetImage(user.ImageId);
+                var img = await RestUtils.GetImage(user.ImageId);
                 if (!string.IsNullOrEmpty(img.ImageUrl))
                 {
                     Img.Source = img.ImageUrl;

@@ -20,7 +20,7 @@ namespace escout.Views.GameData
 
         private async Task LoadImage(int? imageId)
         {
-            var img = await Utils.GetImage(imageId);
+            var img = await RestUtils.GetImage(imageId);
             if (!string.IsNullOrEmpty(img.ImageUrl))
             {
                 Img.Source = img.ImageUrl;

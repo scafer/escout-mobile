@@ -93,11 +93,11 @@ namespace escout.ViewModels
             if (Key == null || string.IsNullOrEmpty(Value))
             {
                 if (await App.DisplayMessage("Info", "Load all data?", "Cancel", "Yes"))
-                    Competitions = new ObservableCollection<Competition>(await GetCompetitionBoards());
+                    Competitions = new ObservableCollection<Competition>(await GetCompetitions(null));
             }
             else
             {
-                Competitions = new ObservableCollection<Competition>(await GetCompetitionBoards(new SearchQuery(Key, "iLIKE", Value + "%")));
+                Competitions = new ObservableCollection<Competition>(await GetCompetitions(new SearchQuery(Key, "iLIKE", Value + "%")));
             }
 
             IsLoadingData = false;
@@ -106,22 +106,15 @@ namespace escout.ViewModels
                 DependencyService.Get<IToast>().LongAlert(Competitions.Count + " results");
         }
 
-        private async Task<List<Competition>> GetCompetitionBoards()
-        {
-            var _competitions = new List<Competition>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Competitions);
-
-            if (!string.IsNullOrEmpty(response))
-                _competitions = JsonConvert.DeserializeObject<List<Competition>>(response);
-
-            return _competitions;
-        }
-
-        private async Task<List<Competition>> GetCompetitionBoards(SearchQuery query)
+        private async Task<List<Competition>> GetCompetitions(SearchQuery query)
         {
             var _competition = new List<Competition>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Competitions + "?query=" + JsonConvert.SerializeObject(query));
+            var request = RestConnector.Competitions;
 
+            if (query != null)
+                request += "?query=" + JsonConvert.SerializeObject(query);
+
+            var response = await RestConnector.GetObjectAsync(request);
             if (!string.IsNullOrEmpty(response))
                 _competition = JsonConvert.DeserializeObject<List<Competition>>(response);
 

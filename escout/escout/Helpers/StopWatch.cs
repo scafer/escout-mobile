@@ -4,35 +4,35 @@ namespace escout.Helpers
 {
     public static class StopWatch
     {
-        private static int Minutes { get; set; }
-        private static int Seconds { get; set; }
-        private static Timer Timer = new Timer(new TimerCallback(Tick));
+        private static int minutes { get; set; }
+        private static int seconds { get; set; }
+        private static Timer timer = new Timer(new TimerCallback(Tick));
 
         private static void Tick(object state)
         {
-            if (Seconds == 59)
+            if (seconds == 59)
             {
-                Seconds = 0;
-                Minutes++;
+                seconds = 0;
+                minutes++;
             }
             else
-                Seconds++;
+                seconds++;
         }
 
         public static void Start()
         {
-            Timer.Change(0, 1000);
+            timer.Change(0, 1000);
         }
 
         public static void Stop()
         {
-            Timer.Change(Timeout.Infinite, 1000);
+            timer.Change(Timeout.Infinite, 1000);
         }
 
         public static void Reset()
         {
-            Minutes = 0;
-            Seconds = 0;
+            minutes = 0;
+            seconds = 0;
         }
 
         public static void Restart()
@@ -43,7 +43,7 @@ namespace escout.Helpers
 
         public static string ShowTime()
         {
-            return Minutes.ToString("D2") + ":" + Seconds.ToString("D2");
+            return minutes.ToString("D2") + ":" + seconds.ToString("D2");
         }
     }
 }

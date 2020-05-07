@@ -31,7 +31,7 @@ namespace escout.ViewModels
 
         public GameViewModel(INavigation navigation)
         {
-            this.Navigation = navigation;
+            Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
         }
 
@@ -93,7 +93,7 @@ namespace escout.ViewModels
             if (Key == null || string.IsNullOrEmpty(Value))
             {
                 if (await App.DisplayMessage("Info", "Load all data?", "Cancel", "Yes"))
-                    Games = new ObservableCollection<Game>(await GetGames());
+                    Games = new ObservableCollection<Game>(await GetGames(null));
             }
             else
             {
@@ -106,22 +106,15 @@ namespace escout.ViewModels
                 DependencyService.Get<IToast>().LongAlert(Games.Count + " results");
         }
 
-        private async Task<List<Game>> GetGames()
-        {
-            var _games = new List<Game>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Games);
-
-            if (!string.IsNullOrEmpty(response))
-                _games = JsonConvert.DeserializeObject<List<Game>>(response);
-
-            return _games;
-        }
-
         private async Task<List<Game>> GetGames(SearchQuery query)
         {
             var _games = new List<Game>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Games + "?query=" + JsonConvert.SerializeObject(query));
+            var request = RestConnector.Games;
 
+            if (query != null)
+                request += "?query=" + JsonConvert.SerializeObject(query);
+
+            var response = await RestConnector.GetObjectAsync(request);
             if (!string.IsNullOrEmpty(response))
                 _games = JsonConvert.DeserializeObject<List<Game>>(response);
 

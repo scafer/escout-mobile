@@ -31,7 +31,7 @@ namespace escout.ViewModels
 
         public ClubViewModel(INavigation navigation)
         {
-            this.Navigation = navigation;
+            Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
         }
 
@@ -93,7 +93,7 @@ namespace escout.ViewModels
             if (Key == null || string.IsNullOrEmpty(Value))
             {
                 if (await App.DisplayMessage("Info", "Load all data?", "Cancel", "Yes"))
-                    Clubs = new ObservableCollection<Club>(await GetClubs());
+                    Clubs = new ObservableCollection<Club>(await GetClubs(null));
             }
             else
             {
@@ -106,22 +106,15 @@ namespace escout.ViewModels
                 DependencyService.Get<IToast>().LongAlert(Clubs.Count + " results");
         }
 
-        private async Task<List<Club>> GetClubs()
-        {
-            var _clubs = new List<Club>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Clubs);
-
-            if (!string.IsNullOrEmpty(response))
-                _clubs = JsonConvert.DeserializeObject<List<Club>>(response);
-
-            return _clubs;
-        }
-
         private async Task<List<Club>> GetClubs(SearchQuery query)
         {
             var _clubs = new List<Club>();
-            var response = await RestConnector.GetObjectAsync(RestConnector.Clubs + "?query=" + JsonConvert.SerializeObject(query));
+            var request = RestConnector.Clubs;
 
+            if (query != null)
+                request += "?query=" + JsonConvert.SerializeObject(query);
+
+            var response = await RestConnector.GetObjectAsync(request);
             if (!string.IsNullOrEmpty(response))
                 _clubs = JsonConvert.DeserializeObject<List<Club>>(response);
 

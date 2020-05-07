@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -13,13 +14,18 @@ namespace escout.ViewModels
 {
     class GameEventViewModel : INotifyPropertyChanged
     {
+        public INavigation Navigation;
+
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public INavigation Navigation;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public GameEventViewModel(INavigation navigation)
         {
-            this.Navigation = navigation;
+            Navigation = navigation;
         }
 
         public static async Task RegisterEvent(DbGameEvent dbGameEvent)
@@ -27,7 +33,7 @@ namespace escout.ViewModels
             try
             {
                 var db = new LocalDb();
-                dbGameEvent.Syncronized = false;
+                dbGameEvent.Synchronized = false;
                 dbGameEvent.Id = await db.AddGameEvent(dbGameEvent);
 
                 var gameEvent = new GameEvent()
@@ -48,7 +54,7 @@ namespace escout.ViewModels
 
                 if (result.ErrorCode == 0)
                 {
-                    dbGameEvent.Syncronized = true;
+                    dbGameEvent.Synchronized = true;
                     _ = db.UpdateGameEventStatus(dbGameEvent);
                 }
             }

@@ -62,7 +62,7 @@ namespace escout.Views.GameData
 
         private async void Start_OnClicked(object sender, EventArgs e)
         {
-            Utils.DbGame = dbGame;
+            App.DbGame = dbGame;
             await Navigation.PushAsync(new SelectAthletePage());
         }
     }

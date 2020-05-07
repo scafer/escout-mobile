@@ -37,7 +37,7 @@ namespace escout.ViewModels
         public AuthenticationViewModel(INavigation navigation, User user)
         {
             this.user = user;
-            this.Navigation = navigation;
+            Navigation = navigation;
 
             SignInCommand = new Command(SignInExecuted);
             SignUpCommand = new Command(SignUpExecuted);

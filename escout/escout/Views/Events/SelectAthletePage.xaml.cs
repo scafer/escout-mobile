@@ -20,24 +20,24 @@ namespace escout.Views.Events
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            dbClubs = await new LocalDb().GetClubs(Utils.DbGame.DataExt);
+            dbClubs = await new LocalDb().GetClubs(App.DbGame.DataExt);
             bt_home.Text = dbClubs[0].Name;
             bt_visitor.Text = dbClubs[1].Name;
         }
 
         private async void Bt_home_OnClicked(object sender, EventArgs e)
         {
-            listView.ItemsSource = await new LocalDb().GetAthletes(Utils.DbGame.DataExt, dbClubs[0].Id);
+            listView.ItemsSource = await new LocalDb().GetAthletes(App.DbGame.DataExt, dbClubs[0].Id);
         }
 
         private async void Bt_visitor_OnClicked(object sender, EventArgs e)
         {
-            listView.ItemsSource = await new LocalDb().GetAthletes(Utils.DbGame.DataExt, dbClubs[1].Id);
+            listView.ItemsSource = await new LocalDb().GetAthletes(App.DbGame.DataExt, dbClubs[1].Id);
         }
 
         private async void Button_OnClicked(object sender, EventArgs e)
         {
-            Utils.DbAthlete = listView.SelectedItem as DbAthlete;
+            App.DbAthlete = listView.SelectedItem as DbAthlete;
             Application.Current.MainPage = new NavigationPage(new RegisterEventPage());
             await Navigation.PushAsync(new RegisterEventPage());
         }
