@@ -7,7 +7,7 @@
              x:Class="escout.Views.Events.EventsPage" Title="Events">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="AddItem" Text="Add" Command="{Binding SyncronizeEventsCommand}"/>
+        <ToolbarItem x:Name="AddItem" Text="Sync" Command="{Binding SynchronizeEventsCommand}"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
