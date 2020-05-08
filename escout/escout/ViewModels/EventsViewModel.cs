@@ -1,7 +1,8 @@
-using System;
-using System.Collections.Generic;
 using escout.Helpers;
 using escout.Models.Db;
+using escout.Models.Rest;
+using Newtonsoft.Json;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -9,8 +10,6 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using escout.Models.Rest;
-using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace escout.ViewModels
