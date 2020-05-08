@@ -5,9 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="escout.Views.Events.EventsPage" Title="Events">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="AddItem" Text="Sync" Command="{Binding SynchronizeEventsCommand}"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemsSource="{Binding GameEvents}" HasUnevenRows="True">
+            <ListView ItemsSource="{Binding GameEvents}" HasUnevenRows="True" ItemSelected="ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding Key}" Detail="{Binding Synchronized}"/>

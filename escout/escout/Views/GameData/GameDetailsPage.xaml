@@ -32,7 +32,7 @@
                     </TableSection>
                 </TableRoot>
             </TableView>
-            <Button x:Name="startbt" Text="Start Event Registration" Clicked="Start_OnClicked" IsEnabled="false"/>
+            <Button x:Name="startbt" Text="Start Event Registration" Clicked="Start_OnClicked" IsVisible="false"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

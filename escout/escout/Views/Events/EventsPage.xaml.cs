@@ -1,4 +1,5 @@
-﻿using escout.ViewModels;
+﻿using escout.Models.Db;
+using escout.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,6 +17,12 @@ namespace escout.Views.Events
         {
             base.OnAppearing();
             BindingContext = new EventsViewModel(Navigation);
+        }
+
+        private async void ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var dbGameEvent = e.SelectedItem as DbGameEvent;
+            await Navigation.PushAsync(new EventDetailsPage(dbGameEvent));
         }
     }
 }
