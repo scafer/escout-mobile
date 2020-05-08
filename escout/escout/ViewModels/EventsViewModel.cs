@@ -1,10 +1,16 @@
-﻿using escout.Models.Db;
+using System;
+using System.Collections.Generic;
+using escout.Helpers;
+using escout.Models.Db;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using escout.Helpers;
+using escout.Models.Rest;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace escout.ViewModels
@@ -12,7 +18,7 @@ namespace escout.ViewModels
     class EventsViewModel : INotifyPropertyChanged
     {
         public INavigation Navigation;
-        public ICommand SyncronizeEventsCommand;
+        public ICommand SynchronizeEventsCommand { get; set; }
 
         private ObservableCollection<DbGameEvent> gameEvents;
 
@@ -26,8 +32,7 @@ namespace escout.ViewModels
         public EventsViewModel(INavigation navigation)
         {
             Navigation = navigation;
-            SyncronizeEventsCommand = new Command(SyncronizeEventsExecuted);
-
+            SynchronizeEventsCommand = new Command(SynchronizeEventsExecuted);
             _ = LoadEvents();
         }
 
@@ -43,13 +48,36 @@ namespace escout.ViewModels
 
         private async Task LoadEvents()
         {
-            LocalDb db = new LocalDb();
+            var db = new LocalDb();
             GameEvents = new ObservableCollection<DbGameEvent>(await db.GetGameEvents());
         }
 
-        private async void SyncronizeEventsExecuted()
+        private async void SynchronizeEventsExecuted()
         {
+            var db = new LocalDb();
+            var unsynchronizedEvents = GameEvents.Where(e => e.Synchronized == false).ToList();
 
+            try
+            {
+                var response = await RestConnector.PostObjectAsync(RestConnector.GameEvent, unsynchronizedEvents);
+                var result = JsonConvert.DeserializeObject<SvcResult>(response);
+
+                if (result.ErrorCode == 0)
+                {
+                    foreach (var e in unsynchronizedEvents)
+                    {
+                        e.Synchronized = true;
+                        _ = db.UpdateGameEventStatus(e);
+                    }
+                    _ = LoadEvents();
+                    await App.DisplayMessage("Result", "Success", "Ok");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                await App.DisplayMessage("Result", ex.Message, "Ok");
+            }
         }
     }
 }

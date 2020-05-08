@@ -27,8 +27,9 @@ namespace escout.Views.GameData
         {
             InitializeComponent();
             BindingContext = dbGame;
+            AddItem.Text = "";
             AddItem.IsEnabled = false;
-            startbt.IsEnabled = true;
+            startbt.IsVisible = true;
             this.dbGame = dbGame;
         }
 

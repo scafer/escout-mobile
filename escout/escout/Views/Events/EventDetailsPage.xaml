@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="escout.Views.Events.EventDetailsPage">
+    <ContentPage.Content>
+        <TableView>
+            <TableRoot>
+                <TableSection>
+                    <TextCell Text="LocalId:" Detail="{Binding LocalId}"/>
+                    <TextCell Text="Id:" Detail="{Binding Id}"/>
+                    <TextCell Text="Key:" Detail="{Binding Key}"/>
+                    <TextCell Text="Time:" Detail="{Binding Time}"/>
+                    <TextCell Text="GameTime:" Detail="{Binding GameTime}"/>
+                    <TextCell Text="EventDescription:" Detail="{Binding EventDescription}"/>
+                    <TextCell Text="GameId:" Detail="{Binding GameId}"/>
+                    <TextCell Text="EventId:" Detail="{Binding EventId}"/>
+                    <TextCell Text="AthleteId:" Detail="{Binding AthleteId}"/>
+                    <TextCell Text="UserId:" Detail="{Binding UserId}"/>
+                    <TextCell Text="Created:" Detail="{Binding Created}"/>
+                    <TextCell Text="Updated:" Detail="{Binding Updated}"/>
+                    <TextCell Text="DataExt:" Detail="{Binding DataExt}"/>
+                    <TextCell Text="Synchronized:" Detail="{Binding Synchronized}"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>
