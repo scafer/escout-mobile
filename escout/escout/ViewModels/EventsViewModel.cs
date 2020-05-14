@@ -56,26 +56,29 @@ namespace escout.ViewModels
             var db = new LocalDb();
             var unsynchronizedEvents = GameEvents.Where(e => e.Synchronized == false).ToList();
 
-            try
+            if (unsynchronizedEvents.Count != 0)
             {
-                var response = await RestConnector.PostObjectAsync(RestConnector.GameEvent, unsynchronizedEvents);
-                var result = JsonConvert.DeserializeObject<SvcResult>(response);
-
-                if (result.ErrorCode == 0)
+                try
                 {
-                    foreach (var e in unsynchronizedEvents)
+                    var response = await RestConnector.PostObjectAsync(RestConnector.GameEvent, unsynchronizedEvents);
+                    var result = JsonConvert.DeserializeObject<SvcResult>(response);
+
+                    if (result.ErrorCode == 0)
                     {
-                        e.Synchronized = true;
-                        _ = db.UpdateGameEventStatus(e);
+                        foreach (var e in unsynchronizedEvents)
+                        {
+                            e.Synchronized = true;
+                            _ = db.UpdateGameEventStatus(e);
+                        }
+                        _ = LoadEvents();
+                        await App.DisplayMessage("Result", "Success", "Ok");
                     }
-                    _ = LoadEvents();
-                    await App.DisplayMessage("Result", "Success", "Ok");
                 }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.ToString());
-                await App.DisplayMessage("Result", ex.Message, "Ok");
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex.ToString());
+                    await App.DisplayMessage("Result", ex.Message, "Ok");
+                }
             }
         }
     }
