@@ -37,9 +37,12 @@ namespace escout.Views.Events
 
         private async void Button_OnClicked(object sender, EventArgs e)
         {
-            App.DbAthlete = listView.SelectedItem as DbAthlete;
-            Application.Current.MainPage = new NavigationPage(new RegisterEventPage());
-            await Navigation.PushAsync(new RegisterEventPage());
+            if (listView.SelectedItem != null)
+            {
+                App.DbAthlete = listView.SelectedItem as DbAthlete;
+                Application.Current.MainPage = new NavigationPage(new RegisterEventPage());
+                await Navigation.PushAsync(new RegisterEventPage());
+            }
         }
     }
 }
