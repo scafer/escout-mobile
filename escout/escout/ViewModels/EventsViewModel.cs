@@ -1,4 +1,4 @@
-using escout.Helpers;
+﻿using escout.Helpers;
 using escout.Models.Db;
 using escout.Models.Rest;
 using Newtonsoft.Json;
