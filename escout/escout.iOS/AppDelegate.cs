@@ -22,8 +22,8 @@ namespace escout.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             ImageCircleRenderer.Init();
+            Plugin.MaterialDesignControls.iOS.Renderer.Init();
             LoadApplication(new App());
-
             return base.FinishedLaunching(app, options);
         }
     }

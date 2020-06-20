@@ -25,6 +25,1969 @@ namespace escout.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.abc_fade_in = global::escout.Droid.Resource.Animation.abc_fade_in;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.abc_fade_out = global::escout.Droid.Resource.Animation.abc_fade_out;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::escout.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.abc_popup_enter = global::escout.Droid.Resource.Animation.abc_popup_enter;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.abc_popup_exit = global::escout.Droid.Resource.Animation.abc_popup_exit;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.abc_shrink_fade_out_from_bottom = global::escout.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.abc_slide_in_bottom = global::escout.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.abc_slide_in_top = global::escout.Droid.Resource.Animation.abc_slide_in_top;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.abc_slide_out_bottom = global::escout.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.abc_slide_out_top = global::escout.Droid.Resource.Animation.abc_slide_out_top;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.design_bottom_sheet_slide_in = global::escout.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.design_bottom_sheet_slide_out = global::escout.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.design_snackbar_in = global::escout.Droid.Resource.Animation.design_snackbar_in;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.design_snackbar_out = global::escout.Droid.Resource.Animation.design_snackbar_out;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.EnterFromLeft = global::escout.Droid.Resource.Animation.EnterFromLeft;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.EnterFromRight = global::escout.Droid.Resource.Animation.EnterFromRight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.ExitToLeft = global::escout.Droid.Resource.Animation.ExitToLeft;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animation.ExitToRight = global::escout.Droid.Resource.Animation.ExitToRight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Animator.design_appbar_state_list_animator = global::escout.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarDivider = global::escout.Droid.Resource.Attribute.actionBarDivider;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarItemBackground = global::escout.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarPopupTheme = global::escout.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarSize = global::escout.Droid.Resource.Attribute.actionBarSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarSplitStyle = global::escout.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarStyle = global::escout.Droid.Resource.Attribute.actionBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarTabBarStyle = global::escout.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarTabStyle = global::escout.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarTabTextStyle = global::escout.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarTheme = global::escout.Droid.Resource.Attribute.actionBarTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionBarWidgetTheme = global::escout.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionButtonStyle = global::escout.Droid.Resource.Attribute.actionButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionDropDownStyle = global::escout.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionLayout = global::escout.Droid.Resource.Attribute.actionLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionMenuTextAppearance = global::escout.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionMenuTextColor = global::escout.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeBackground = global::escout.Droid.Resource.Attribute.actionModeBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeCloseButtonStyle = global::escout.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeCloseDrawable = global::escout.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeCopyDrawable = global::escout.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeCutDrawable = global::escout.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeFindDrawable = global::escout.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModePasteDrawable = global::escout.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModePopupWindowStyle = global::escout.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeSelectAllDrawable = global::escout.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeShareDrawable = global::escout.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeSplitBackground = global::escout.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeStyle = global::escout.Droid.Resource.Attribute.actionModeStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionModeWebSearchDrawable = global::escout.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionOverflowButtonStyle = global::escout.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionOverflowMenuStyle = global::escout.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionProviderClass = global::escout.Droid.Resource.Attribute.actionProviderClass;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.actionViewClass = global::escout.Droid.Resource.Attribute.actionViewClass;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.activityChooserViewStyle = global::escout.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.alertDialogButtonGroupStyle = global::escout.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.alertDialogCenterButtons = global::escout.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.alertDialogStyle = global::escout.Droid.Resource.Attribute.alertDialogStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.alertDialogTheme = global::escout.Droid.Resource.Attribute.alertDialogTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.allowStacking = global::escout.Droid.Resource.Attribute.allowStacking;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.alpha = global::escout.Droid.Resource.Attribute.alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.alphabeticModifiers = global::escout.Droid.Resource.Attribute.alphabeticModifiers;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.arrowHeadLength = global::escout.Droid.Resource.Attribute.arrowHeadLength;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.arrowShaftLength = global::escout.Droid.Resource.Attribute.arrowShaftLength;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.autoCompleteTextViewStyle = global::escout.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.autoSizeMaxTextSize = global::escout.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.autoSizeMinTextSize = global::escout.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.autoSizePresetSizes = global::escout.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.autoSizeStepGranularity = global::escout.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.autoSizeTextType = global::escout.Droid.Resource.Attribute.autoSizeTextType;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.background = global::escout.Droid.Resource.Attribute.background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.backgroundSplit = global::escout.Droid.Resource.Attribute.backgroundSplit;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.backgroundStacked = global::escout.Droid.Resource.Attribute.backgroundStacked;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.backgroundTint = global::escout.Droid.Resource.Attribute.backgroundTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.backgroundTintMode = global::escout.Droid.Resource.Attribute.backgroundTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.barLength = global::escout.Droid.Resource.Attribute.barLength;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.behavior_autoHide = global::escout.Droid.Resource.Attribute.behavior_autoHide;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.behavior_hideable = global::escout.Droid.Resource.Attribute.behavior_hideable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.behavior_overlapTop = global::escout.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.behavior_peekHeight = global::escout.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.behavior_skipCollapsed = global::escout.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.borderlessButtonStyle = global::escout.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.borderWidth = global::escout.Droid.Resource.Attribute.borderWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.bottomSheetDialogTheme = global::escout.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.bottomSheetStyle = global::escout.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonBarButtonStyle = global::escout.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonBarNegativeButtonStyle = global::escout.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonBarNeutralButtonStyle = global::escout.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonBarPositiveButtonStyle = global::escout.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonBarStyle = global::escout.Droid.Resource.Attribute.buttonBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonGravity = global::escout.Droid.Resource.Attribute.buttonGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonPanelSideLayout = global::escout.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonStyle = global::escout.Droid.Resource.Attribute.buttonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonStyleSmall = global::escout.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonTint = global::escout.Droid.Resource.Attribute.buttonTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.buttonTintMode = global::escout.Droid.Resource.Attribute.buttonTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.cardBackgroundColor = global::escout.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.cardCornerRadius = global::escout.Droid.Resource.Attribute.cardCornerRadius;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.cardElevation = global::escout.Droid.Resource.Attribute.cardElevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.cardMaxElevation = global::escout.Droid.Resource.Attribute.cardMaxElevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.cardPreventCornerOverlap = global::escout.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.cardUseCompatPadding = global::escout.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.checkboxStyle = global::escout.Droid.Resource.Attribute.checkboxStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.checkedTextViewStyle = global::escout.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.closeIcon = global::escout.Droid.Resource.Attribute.closeIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.closeItemLayout = global::escout.Droid.Resource.Attribute.closeItemLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.collapseContentDescription = global::escout.Droid.Resource.Attribute.collapseContentDescription;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.collapsedTitleGravity = global::escout.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.collapsedTitleTextAppearance = global::escout.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.collapseIcon = global::escout.Droid.Resource.Attribute.collapseIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.color = global::escout.Droid.Resource.Attribute.color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.colorAccent = global::escout.Droid.Resource.Attribute.colorAccent;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.colorBackgroundFloating = global::escout.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.colorButtonNormal = global::escout.Droid.Resource.Attribute.colorButtonNormal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.colorControlActivated = global::escout.Droid.Resource.Attribute.colorControlActivated;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.colorControlHighlight = global::escout.Droid.Resource.Attribute.colorControlHighlight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.colorControlNormal = global::escout.Droid.Resource.Attribute.colorControlNormal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.colorError = global::escout.Droid.Resource.Attribute.colorError;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.colorPrimary = global::escout.Droid.Resource.Attribute.colorPrimary;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.colorPrimaryDark = global::escout.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.colorSwitchThumbNormal = global::escout.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.commitIcon = global::escout.Droid.Resource.Attribute.commitIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentDescription = global::escout.Droid.Resource.Attribute.contentDescription;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentInsetEnd = global::escout.Droid.Resource.Attribute.contentInsetEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentInsetEndWithActions = global::escout.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentInsetLeft = global::escout.Droid.Resource.Attribute.contentInsetLeft;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentInsetRight = global::escout.Droid.Resource.Attribute.contentInsetRight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentInsetStart = global::escout.Droid.Resource.Attribute.contentInsetStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentInsetStartWithNavigation = global::escout.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentPadding = global::escout.Droid.Resource.Attribute.contentPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentPaddingBottom = global::escout.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentPaddingLeft = global::escout.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentPaddingRight = global::escout.Droid.Resource.Attribute.contentPaddingRight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentPaddingTop = global::escout.Droid.Resource.Attribute.contentPaddingTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.contentScrim = global::escout.Droid.Resource.Attribute.contentScrim;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.controlBackground = global::escout.Droid.Resource.Attribute.controlBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.counterEnabled = global::escout.Droid.Resource.Attribute.counterEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.counterMaxLength = global::escout.Droid.Resource.Attribute.counterMaxLength;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.counterOverflowTextAppearance = global::escout.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.counterTextAppearance = global::escout.Droid.Resource.Attribute.counterTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.customNavigationLayout = global::escout.Droid.Resource.Attribute.customNavigationLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.defaultQueryHint = global::escout.Droid.Resource.Attribute.defaultQueryHint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.dialogPreferredPadding = global::escout.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.dialogTheme = global::escout.Droid.Resource.Attribute.dialogTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.displayOptions = global::escout.Droid.Resource.Attribute.displayOptions;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.divider = global::escout.Droid.Resource.Attribute.divider;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.dividerHorizontal = global::escout.Droid.Resource.Attribute.dividerHorizontal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.dividerPadding = global::escout.Droid.Resource.Attribute.dividerPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.dividerVertical = global::escout.Droid.Resource.Attribute.dividerVertical;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.drawableSize = global::escout.Droid.Resource.Attribute.drawableSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.drawerArrowStyle = global::escout.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.dropdownListPreferredItemHeight = global::escout.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.dropDownListViewStyle = global::escout.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.editTextBackground = global::escout.Droid.Resource.Attribute.editTextBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.editTextColor = global::escout.Droid.Resource.Attribute.editTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.editTextStyle = global::escout.Droid.Resource.Attribute.editTextStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.elevation = global::escout.Droid.Resource.Attribute.elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.errorEnabled = global::escout.Droid.Resource.Attribute.errorEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.errorTextAppearance = global::escout.Droid.Resource.Attribute.errorTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.expandActivityOverflowButtonDrawable = global::escout.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.expanded = global::escout.Droid.Resource.Attribute.expanded;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.expandedTitleGravity = global::escout.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.expandedTitleMargin = global::escout.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.expandedTitleMarginBottom = global::escout.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.expandedTitleMarginEnd = global::escout.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.expandedTitleMarginStart = global::escout.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.expandedTitleMarginTop = global::escout.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.expandedTitleTextAppearance = global::escout.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fabSize = global::escout.Droid.Resource.Attribute.fabSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fastScrollEnabled = global::escout.Droid.Resource.Attribute.fastScrollEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::escout.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::escout.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fastScrollVerticalThumbDrawable = global::escout.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fastScrollVerticalTrackDrawable = global::escout.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.font = global::escout.Droid.Resource.Attribute.font;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fontFamily = global::escout.Droid.Resource.Attribute.fontFamily;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fontProviderAuthority = global::escout.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fontProviderCerts = global::escout.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fontProviderFetchStrategy = global::escout.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fontProviderFetchTimeout = global::escout.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fontProviderPackage = global::escout.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fontProviderQuery = global::escout.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fontStyle = global::escout.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.fontWeight = global::escout.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.foregroundInsidePadding = global::escout.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.gapBetweenBars = global::escout.Droid.Resource.Attribute.gapBetweenBars;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.goIcon = global::escout.Droid.Resource.Attribute.goIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.headerLayout = global::escout.Droid.Resource.Attribute.headerLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.height = global::escout.Droid.Resource.Attribute.height;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.hideOnContentScroll = global::escout.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.hintAnimationEnabled = global::escout.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.hintEnabled = global::escout.Droid.Resource.Attribute.hintEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.hintTextAppearance = global::escout.Droid.Resource.Attribute.hintTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.homeAsUpIndicator = global::escout.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.homeLayout = global::escout.Droid.Resource.Attribute.homeLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.icon = global::escout.Droid.Resource.Attribute.icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.iconifiedByDefault = global::escout.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.iconTint = global::escout.Droid.Resource.Attribute.iconTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.iconTintMode = global::escout.Droid.Resource.Attribute.iconTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.imageButtonStyle = global::escout.Droid.Resource.Attribute.imageButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.indeterminateProgressStyle = global::escout.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.initialActivityCount = global::escout.Droid.Resource.Attribute.initialActivityCount;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.insetForeground = global::escout.Droid.Resource.Attribute.insetForeground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.isLightTheme = global::escout.Droid.Resource.Attribute.isLightTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.itemBackground = global::escout.Droid.Resource.Attribute.itemBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.itemIconTint = global::escout.Droid.Resource.Attribute.itemIconTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.itemPadding = global::escout.Droid.Resource.Attribute.itemPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.itemTextAppearance = global::escout.Droid.Resource.Attribute.itemTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.itemTextColor = global::escout.Droid.Resource.Attribute.itemTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.keylines = global::escout.Droid.Resource.Attribute.keylines;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout = global::escout.Droid.Resource.Attribute.layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layoutManager = global::escout.Droid.Resource.Attribute.layoutManager;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout_anchor = global::escout.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout_anchorGravity = global::escout.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout_behavior = global::escout.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout_collapseMode = global::escout.Droid.Resource.Attribute.layout_collapseMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout_collapseParallaxMultiplier = global::escout.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout_dodgeInsetEdges = global::escout.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout_insetEdge = global::escout.Droid.Resource.Attribute.layout_insetEdge;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout_keyline = global::escout.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout_scrollFlags = global::escout.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.layout_scrollInterpolator = global::escout.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listChoiceBackgroundIndicator = global::escout.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listDividerAlertDialog = global::escout.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listItemLayout = global::escout.Droid.Resource.Attribute.listItemLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listLayout = global::escout.Droid.Resource.Attribute.listLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listMenuViewStyle = global::escout.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listPopupWindowStyle = global::escout.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listPreferredItemHeight = global::escout.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listPreferredItemHeightLarge = global::escout.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listPreferredItemHeightSmall = global::escout.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listPreferredItemPaddingLeft = global::escout.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.listPreferredItemPaddingRight = global::escout.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.logo = global::escout.Droid.Resource.Attribute.logo;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.logoDescription = global::escout.Droid.Resource.Attribute.logoDescription;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.maxActionInlineWidth = global::escout.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.maxButtonHeight = global::escout.Droid.Resource.Attribute.maxButtonHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.measureWithLargestChild = global::escout.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.menu = global::escout.Droid.Resource.Attribute.menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.multiChoiceItemLayout = global::escout.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.navigationContentDescription = global::escout.Droid.Resource.Attribute.navigationContentDescription;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.navigationIcon = global::escout.Droid.Resource.Attribute.navigationIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.navigationMode = global::escout.Droid.Resource.Attribute.navigationMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.numericModifiers = global::escout.Droid.Resource.Attribute.numericModifiers;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.overlapAnchor = global::escout.Droid.Resource.Attribute.overlapAnchor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.paddingBottomNoButtons = global::escout.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.paddingEnd = global::escout.Droid.Resource.Attribute.paddingEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.paddingStart = global::escout.Droid.Resource.Attribute.paddingStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.paddingTopNoTitle = global::escout.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.panelBackground = global::escout.Droid.Resource.Attribute.panelBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.panelMenuListTheme = global::escout.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.panelMenuListWidth = global::escout.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.passwordToggleContentDescription = global::escout.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.passwordToggleDrawable = global::escout.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.passwordToggleEnabled = global::escout.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.passwordToggleTint = global::escout.Droid.Resource.Attribute.passwordToggleTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.passwordToggleTintMode = global::escout.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.popupMenuStyle = global::escout.Droid.Resource.Attribute.popupMenuStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.popupTheme = global::escout.Droid.Resource.Attribute.popupTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.popupWindowStyle = global::escout.Droid.Resource.Attribute.popupWindowStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.preserveIconSpacing = global::escout.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.pressedTranslationZ = global::escout.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.progressBarPadding = global::escout.Droid.Resource.Attribute.progressBarPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.progressBarStyle = global::escout.Droid.Resource.Attribute.progressBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.queryBackground = global::escout.Droid.Resource.Attribute.queryBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.queryHint = global::escout.Droid.Resource.Attribute.queryHint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.radioButtonStyle = global::escout.Droid.Resource.Attribute.radioButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.ratingBarStyle = global::escout.Droid.Resource.Attribute.ratingBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.ratingBarStyleIndicator = global::escout.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.ratingBarStyleSmall = global::escout.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.reverseLayout = global::escout.Droid.Resource.Attribute.reverseLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.rippleColor = global::escout.Droid.Resource.Attribute.rippleColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.scrimAnimationDuration = global::escout.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.scrimVisibleHeightTrigger = global::escout.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.searchHintIcon = global::escout.Droid.Resource.Attribute.searchHintIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.searchIcon = global::escout.Droid.Resource.Attribute.searchIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.searchViewStyle = global::escout.Droid.Resource.Attribute.searchViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.seekBarStyle = global::escout.Droid.Resource.Attribute.seekBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.selectableItemBackground = global::escout.Droid.Resource.Attribute.selectableItemBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.selectableItemBackgroundBorderless = global::escout.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.showAsAction = global::escout.Droid.Resource.Attribute.showAsAction;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.showDividers = global::escout.Droid.Resource.Attribute.showDividers;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.showText = global::escout.Droid.Resource.Attribute.showText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.showTitle = global::escout.Droid.Resource.Attribute.showTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.singleChoiceItemLayout = global::escout.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.spanCount = global::escout.Droid.Resource.Attribute.spanCount;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.spinBars = global::escout.Droid.Resource.Attribute.spinBars;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.spinnerDropDownItemStyle = global::escout.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.spinnerStyle = global::escout.Droid.Resource.Attribute.spinnerStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.splitTrack = global::escout.Droid.Resource.Attribute.splitTrack;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.srcCompat = global::escout.Droid.Resource.Attribute.srcCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.stackFromEnd = global::escout.Droid.Resource.Attribute.stackFromEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.state_above_anchor = global::escout.Droid.Resource.Attribute.state_above_anchor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.state_collapsed = global::escout.Droid.Resource.Attribute.state_collapsed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.state_collapsible = global::escout.Droid.Resource.Attribute.state_collapsible;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.statusBarBackground = global::escout.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.statusBarScrim = global::escout.Droid.Resource.Attribute.statusBarScrim;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.subMenuArrow = global::escout.Droid.Resource.Attribute.subMenuArrow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.submitBackground = global::escout.Droid.Resource.Attribute.submitBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.subtitle = global::escout.Droid.Resource.Attribute.subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.subtitleTextAppearance = global::escout.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.subtitleTextColor = global::escout.Droid.Resource.Attribute.subtitleTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.subtitleTextStyle = global::escout.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.suggestionRowLayout = global::escout.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.switchMinWidth = global::escout.Droid.Resource.Attribute.switchMinWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.switchPadding = global::escout.Droid.Resource.Attribute.switchPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.switchStyle = global::escout.Droid.Resource.Attribute.switchStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.switchTextAppearance = global::escout.Droid.Resource.Attribute.switchTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabBackground = global::escout.Droid.Resource.Attribute.tabBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabContentStart = global::escout.Droid.Resource.Attribute.tabContentStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabGravity = global::escout.Droid.Resource.Attribute.tabGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabIndicatorColor = global::escout.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabIndicatorHeight = global::escout.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabMaxWidth = global::escout.Droid.Resource.Attribute.tabMaxWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabMinWidth = global::escout.Droid.Resource.Attribute.tabMinWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabMode = global::escout.Droid.Resource.Attribute.tabMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabPadding = global::escout.Droid.Resource.Attribute.tabPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabPaddingBottom = global::escout.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabPaddingEnd = global::escout.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabPaddingStart = global::escout.Droid.Resource.Attribute.tabPaddingStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabPaddingTop = global::escout.Droid.Resource.Attribute.tabPaddingTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabSelectedTextColor = global::escout.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabTextAppearance = global::escout.Droid.Resource.Attribute.tabTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tabTextColor = global::escout.Droid.Resource.Attribute.tabTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textAllCaps = global::escout.Droid.Resource.Attribute.textAllCaps;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textAppearanceLargePopupMenu = global::escout.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textAppearanceListItem = global::escout.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textAppearanceListItemSecondary = global::escout.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textAppearanceListItemSmall = global::escout.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textAppearancePopupMenuHeader = global::escout.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textAppearanceSearchResultSubtitle = global::escout.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textAppearanceSearchResultTitle = global::escout.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textAppearanceSmallPopupMenu = global::escout.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textColorAlertDialogListItem = global::escout.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.textColorSearchUrl = global::escout.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.theme = global::escout.Droid.Resource.Attribute.theme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.thickness = global::escout.Droid.Resource.Attribute.thickness;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.thumbTextPadding = global::escout.Droid.Resource.Attribute.thumbTextPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.thumbTint = global::escout.Droid.Resource.Attribute.thumbTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.thumbTintMode = global::escout.Droid.Resource.Attribute.thumbTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tickMark = global::escout.Droid.Resource.Attribute.tickMark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tickMarkTint = global::escout.Droid.Resource.Attribute.tickMarkTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tickMarkTintMode = global::escout.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tint = global::escout.Droid.Resource.Attribute.tint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tintMode = global::escout.Droid.Resource.Attribute.tintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.title = global::escout.Droid.Resource.Attribute.title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.titleEnabled = global::escout.Droid.Resource.Attribute.titleEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.titleMargin = global::escout.Droid.Resource.Attribute.titleMargin;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.titleMarginBottom = global::escout.Droid.Resource.Attribute.titleMarginBottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.titleMarginEnd = global::escout.Droid.Resource.Attribute.titleMarginEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.titleMargins = global::escout.Droid.Resource.Attribute.titleMargins;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.titleMarginStart = global::escout.Droid.Resource.Attribute.titleMarginStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.titleMarginTop = global::escout.Droid.Resource.Attribute.titleMarginTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.titleTextAppearance = global::escout.Droid.Resource.Attribute.titleTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.titleTextColor = global::escout.Droid.Resource.Attribute.titleTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.titleTextStyle = global::escout.Droid.Resource.Attribute.titleTextStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.toolbarId = global::escout.Droid.Resource.Attribute.toolbarId;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.toolbarNavigationButtonStyle = global::escout.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.toolbarStyle = global::escout.Droid.Resource.Attribute.toolbarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tooltipForegroundColor = global::escout.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tooltipFrameBackground = global::escout.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.tooltipText = global::escout.Droid.Resource.Attribute.tooltipText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.track = global::escout.Droid.Resource.Attribute.track;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.trackTint = global::escout.Droid.Resource.Attribute.trackTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.trackTintMode = global::escout.Droid.Resource.Attribute.trackTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.useCompatPadding = global::escout.Droid.Resource.Attribute.useCompatPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.voiceIcon = global::escout.Droid.Resource.Attribute.voiceIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.windowActionBar = global::escout.Droid.Resource.Attribute.windowActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.windowActionBarOverlay = global::escout.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.windowActionModeOverlay = global::escout.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.windowFixedHeightMajor = global::escout.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.windowFixedHeightMinor = global::escout.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.windowFixedWidthMajor = global::escout.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.windowFixedWidthMinor = global::escout.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.windowMinWidthMajor = global::escout.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.windowMinWidthMinor = global::escout.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Attribute.windowNoTitle = global::escout.Droid.Resource.Attribute.windowNoTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Boolean.abc_action_bar_embed_tabs = global::escout.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Plugin.MaterialDesignControls.Android.Resource.Boolean.abc_allow_stacked_button_bar = global::escout.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::escout.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_background_cache_hint_selector_material_dark = global::escout.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_background_cache_hint_selector_material_light = global::escout.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_btn_colored_borderless_text_material = global::escout.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_btn_colored_text_material = global::escout.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_color_highlight_material = global::escout.Droid.Resource.Color.abc_color_highlight_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_hint_foreground_material_dark = global::escout.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_hint_foreground_material_light = global::escout.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_input_method_navigation_guard = global::escout.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_primary_text_disable_only_material_dark = global::escout.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_primary_text_disable_only_material_light = global::escout.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_primary_text_material_dark = global::escout.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_primary_text_material_light = global::escout.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_search_url_text = global::escout.Droid.Resource.Color.abc_search_url_text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_search_url_text_normal = global::escout.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_search_url_text_pressed = global::escout.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_search_url_text_selected = global::escout.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_secondary_text_material_dark = global::escout.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_secondary_text_material_light = global::escout.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_tint_btn_checkable = global::escout.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_tint_default = global::escout.Droid.Resource.Color.abc_tint_default;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_tint_edittext = global::escout.Droid.Resource.Color.abc_tint_edittext;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_tint_seek_thumb = global::escout.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_tint_spinner = global::escout.Droid.Resource.Color.abc_tint_spinner;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.abc_tint_switch_track = global::escout.Droid.Resource.Color.abc_tint_switch_track;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.accent_material_dark = global::escout.Droid.Resource.Color.accent_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.accent_material_light = global::escout.Droid.Resource.Color.accent_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.background_floating_material_dark = global::escout.Droid.Resource.Color.background_floating_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.background_floating_material_light = global::escout.Droid.Resource.Color.background_floating_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.background_material_dark = global::escout.Droid.Resource.Color.background_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.background_material_light = global::escout.Droid.Resource.Color.background_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.bright_foreground_disabled_material_dark = global::escout.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.bright_foreground_disabled_material_light = global::escout.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.bright_foreground_inverse_material_dark = global::escout.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.bright_foreground_inverse_material_light = global::escout.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.bright_foreground_material_dark = global::escout.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.bright_foreground_material_light = global::escout.Droid.Resource.Color.bright_foreground_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.button_material_dark = global::escout.Droid.Resource.Color.button_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.button_material_light = global::escout.Droid.Resource.Color.button_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.cardview_dark_background = global::escout.Droid.Resource.Color.cardview_dark_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.cardview_light_background = global::escout.Droid.Resource.Color.cardview_light_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.cardview_shadow_end_color = global::escout.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.cardview_shadow_start_color = global::escout.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_bottom_navigation_shadow_color = global::escout.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_error = global::escout.Droid.Resource.Color.design_error;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_fab_shadow_end_color = global::escout.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_fab_shadow_mid_color = global::escout.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_fab_shadow_start_color = global::escout.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_fab_stroke_end_inner_color = global::escout.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_fab_stroke_end_outer_color = global::escout.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_fab_stroke_top_inner_color = global::escout.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_fab_stroke_top_outer_color = global::escout.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_snackbar_background_color = global::escout.Droid.Resource.Color.design_snackbar_background_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.design_tint_password_toggle = global::escout.Droid.Resource.Color.design_tint_password_toggle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.dim_foreground_disabled_material_dark = global::escout.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.dim_foreground_disabled_material_light = global::escout.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.dim_foreground_material_dark = global::escout.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.dim_foreground_material_light = global::escout.Droid.Resource.Color.dim_foreground_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.foreground_material_dark = global::escout.Droid.Resource.Color.foreground_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.foreground_material_light = global::escout.Droid.Resource.Color.foreground_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.highlighted_text_material_dark = global::escout.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.highlighted_text_material_light = global::escout.Droid.Resource.Color.highlighted_text_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_blue_grey_800 = global::escout.Droid.Resource.Color.material_blue_grey_800;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_blue_grey_900 = global::escout.Droid.Resource.Color.material_blue_grey_900;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_blue_grey_950 = global::escout.Droid.Resource.Color.material_blue_grey_950;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_deep_teal_200 = global::escout.Droid.Resource.Color.material_deep_teal_200;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_deep_teal_500 = global::escout.Droid.Resource.Color.material_deep_teal_500;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_grey_100 = global::escout.Droid.Resource.Color.material_grey_100;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_grey_300 = global::escout.Droid.Resource.Color.material_grey_300;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_grey_50 = global::escout.Droid.Resource.Color.material_grey_50;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_grey_600 = global::escout.Droid.Resource.Color.material_grey_600;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_grey_800 = global::escout.Droid.Resource.Color.material_grey_800;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_grey_850 = global::escout.Droid.Resource.Color.material_grey_850;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.material_grey_900 = global::escout.Droid.Resource.Color.material_grey_900;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.notification_action_color_filter = global::escout.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.notification_icon_bg_color = global::escout.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.notification_material_background_media_default_color = global::escout.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.primary_dark_material_dark = global::escout.Droid.Resource.Color.primary_dark_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.primary_dark_material_light = global::escout.Droid.Resource.Color.primary_dark_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.primary_material_dark = global::escout.Droid.Resource.Color.primary_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.primary_material_light = global::escout.Droid.Resource.Color.primary_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.primary_text_default_material_dark = global::escout.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.primary_text_default_material_light = global::escout.Droid.Resource.Color.primary_text_default_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.primary_text_disabled_material_dark = global::escout.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.primary_text_disabled_material_light = global::escout.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.ripple_material_dark = global::escout.Droid.Resource.Color.ripple_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.ripple_material_light = global::escout.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.secondary_text_default_material_dark = global::escout.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.secondary_text_default_material_light = global::escout.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.secondary_text_disabled_material_dark = global::escout.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.secondary_text_disabled_material_light = global::escout.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.switch_thumb_disabled_material_dark = global::escout.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.switch_thumb_disabled_material_light = global::escout.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.switch_thumb_material_dark = global::escout.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.switch_thumb_material_light = global::escout.Droid.Resource.Color.switch_thumb_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.switch_thumb_normal_material_dark = global::escout.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.switch_thumb_normal_material_light = global::escout.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.tooltip_background_dark = global::escout.Droid.Resource.Color.tooltip_background_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Color.tooltip_background_light = global::escout.Droid.Resource.Color.tooltip_background_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_content_inset_material = global::escout.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::escout.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_default_height_material = global::escout.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_default_padding_end_material = global::escout.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_default_padding_start_material = global::escout.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_elevation_material = global::escout.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::escout.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::escout.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::escout.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_stacked_max_height = global::escout.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::escout.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::escout.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::escout.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_button_min_height_material = global::escout.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_button_min_width_material = global::escout.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_action_button_min_width_overflow_material = global::escout.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_alert_dialog_button_bar_height = global::escout.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_button_inset_horizontal_material = global::escout.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_button_inset_vertical_material = global::escout.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_button_padding_horizontal_material = global::escout.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_button_padding_vertical_material = global::escout.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::escout.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_config_prefDialogWidth = global::escout.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_control_corner_material = global::escout.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_control_inset_material = global::escout.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_control_padding_material = global::escout.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_fixed_height_major = global::escout.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_fixed_height_minor = global::escout.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_fixed_width_major = global::escout.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_fixed_width_minor = global::escout.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::escout.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::escout.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_min_width_major = global::escout.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_min_width_minor = global::escout.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_padding_material = global::escout.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_padding_top_material = global::escout.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dialog_title_divider_material = global::escout.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_disabled_alpha_material_dark = global::escout.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_disabled_alpha_material_light = global::escout.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dropdownitem_icon_width = global::escout.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dropdownitem_text_padding_left = global::escout.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_dropdownitem_text_padding_right = global::escout.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_edit_text_inset_bottom_material = global::escout.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::escout.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_edit_text_inset_top_material = global::escout.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_floating_window_z = global::escout.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_list_item_padding_horizontal_material = global::escout.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_panel_menu_list_width = global::escout.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_progress_bar_height_material = global::escout.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_search_view_preferred_height = global::escout.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_search_view_preferred_width = global::escout.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_seekbar_track_background_height_material = global::escout.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_seekbar_track_progress_height_material = global::escout.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_select_dialog_padding_start_material = global::escout.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_switch_padding = global::escout.Droid.Resource.Dimension.abc_switch_padding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_body_1_material = global::escout.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_body_2_material = global::escout.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_button_material = global::escout.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_caption_material = global::escout.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_display_1_material = global::escout.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_display_2_material = global::escout.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_display_3_material = global::escout.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_display_4_material = global::escout.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_headline_material = global::escout.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_large_material = global::escout.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_medium_material = global::escout.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_menu_header_material = global::escout.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_menu_material = global::escout.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_small_material = global::escout.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_subhead_material = global::escout.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::escout.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_title_material = global::escout.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.abc_text_size_title_material_toolbar = global::escout.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.cardview_compat_inset_shadow = global::escout.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.cardview_default_elevation = global::escout.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.cardview_default_radius = global::escout.Droid.Resource.Dimension.cardview_default_radius;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.compat_button_inset_horizontal_material = global::escout.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.compat_button_inset_vertical_material = global::escout.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.compat_button_padding_horizontal_material = global::escout.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.compat_button_padding_vertical_material = global::escout.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.compat_control_corner_material = global::escout.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_appbar_elevation = global::escout.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::escout.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_navigation_active_text_size = global::escout.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_navigation_elevation = global::escout.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_navigation_height = global::escout.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_navigation_item_max_width = global::escout.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_navigation_item_min_width = global::escout.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_navigation_margin = global::escout.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_navigation_shadow_height = global::escout.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_navigation_text_size = global::escout.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_sheet_modal_elevation = global::escout.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_bottom_sheet_peek_height_min = global::escout.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_fab_border_width = global::escout.Droid.Resource.Dimension.design_fab_border_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_fab_elevation = global::escout.Droid.Resource.Dimension.design_fab_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_fab_image_size = global::escout.Droid.Resource.Dimension.design_fab_image_size;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_fab_size_mini = global::escout.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_fab_size_normal = global::escout.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_fab_translation_z_pressed = global::escout.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_navigation_elevation = global::escout.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_navigation_icon_padding = global::escout.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_navigation_icon_size = global::escout.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_navigation_max_width = global::escout.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_navigation_padding_bottom = global::escout.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_navigation_separator_vertical_padding = global::escout.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_snackbar_action_inline_max_width = global::escout.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_snackbar_background_corner_radius = global::escout.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_snackbar_elevation = global::escout.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::escout.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_snackbar_max_width = global::escout.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_snackbar_min_width = global::escout.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_snackbar_padding_horizontal = global::escout.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_snackbar_padding_vertical = global::escout.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::escout.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_snackbar_text_size = global::escout.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_tab_max_width = global::escout.Droid.Resource.Dimension.design_tab_max_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_tab_scrollable_min_width = global::escout.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_tab_text_size = global::escout.Droid.Resource.Dimension.design_tab_text_size;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.design_tab_text_size_2line = global::escout.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.disabled_alpha_material_dark = global::escout.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.disabled_alpha_material_light = global::escout.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.fastscroll_default_thickness = global::escout.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.fastscroll_margin = global::escout.Droid.Resource.Dimension.fastscroll_margin;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.fastscroll_minimum_range = global::escout.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.highlight_alpha_material_colored = global::escout.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.highlight_alpha_material_dark = global::escout.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.highlight_alpha_material_light = global::escout.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.hint_alpha_material_dark = global::escout.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.hint_alpha_material_light = global::escout.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.hint_pressed_alpha_material_dark = global::escout.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.hint_pressed_alpha_material_light = global::escout.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::escout.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::escout.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::escout.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_action_icon_size = global::escout.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_action_text_size = global::escout.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_big_circle_margin = global::escout.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_content_margin_start = global::escout.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_large_icon_height = global::escout.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_large_icon_width = global::escout.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_main_column_padding_top = global::escout.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_media_narrow_margin = global::escout.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_right_icon_size = global::escout.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_right_side_padding_top = global::escout.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_small_icon_background_padding = global::escout.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_small_icon_size_as_large = global::escout.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_subtext_size = global::escout.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_top_pad = global::escout.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.notification_top_pad_large_text = global::escout.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.tooltip_corner_radius = global::escout.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.tooltip_horizontal_padding = global::escout.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.tooltip_margin = global::escout.Droid.Resource.Dimension.tooltip_margin;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::escout.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.tooltip_precise_anchor_threshold = global::escout.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.tooltip_vertical_padding = global::escout.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.tooltip_y_offset_non_touch = global::escout.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Plugin.MaterialDesignControls.Android.Resource.Dimension.tooltip_y_offset_touch = global::escout.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_action_bar_item_background_material = global::escout.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_borderless_material = global::escout.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_check_material = global::escout.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::escout.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::escout.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_colored_material = global::escout.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_default_mtrl_shape = global::escout.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_radio_material = global::escout.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::escout.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::escout.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::escout.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::escout.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_cab_background_internal_bg = global::escout.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_cab_background_top_material = global::escout.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_control_background_material = global::escout.Droid.Resource.Drawable.abc_control_background_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_dialog_material_background = global::escout.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_edit_text_material = global::escout.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_ab_back_material = global::escout.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::escout.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_clear_material = global::escout.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_go_search_api_material = global::escout.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::escout.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_menu_overflow_material = global::escout.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::escout.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_search_api_material = global::escout.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_star_black_16dp = global::escout.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_star_black_36dp = global::escout.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_star_black_48dp = global::escout.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_star_half_black_16dp = global::escout.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_star_half_black_36dp = global::escout.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_star_half_black_48dp = global::escout.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ic_voice_search_api_material = global::escout.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_item_background_holo_dark = global::escout.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_item_background_holo_light = global::escout.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_divider_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_focused_holo = global::escout.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_longpressed_holo = global::escout.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_pressed_holo_dark = global::escout.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_pressed_holo_light = global::escout.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::escout.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::escout.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::escout.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_selector_disabled_holo_light = global::escout.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_selector_holo_dark = global::escout.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_list_selector_holo_light = global::escout.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::escout.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_popup_background_mtrl_mult = global::escout.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ratingbar_indicator_material = global::escout.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ratingbar_material = global::escout.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_ratingbar_small_material = global::escout.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::escout.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::escout.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_seekbar_thumb_material = global::escout.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_seekbar_tick_mark_material = global::escout.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_seekbar_track_material = global::escout.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::escout.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_spinner_textfield_background_material = global::escout.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_switch_thumb_material = global::escout.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_switch_track_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_tab_indicator_material = global::escout.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::escout.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_textfield_search_material = global::escout.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_text_cursor_material = global::escout.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::escout.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::escout.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::escout.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::escout.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::escout.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::escout.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.abc_vector_test = global::escout.Droid.Resource.Drawable.abc_vector_test;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.avd_hide_password = global::escout.Droid.Resource.Drawable.avd_hide_password;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.avd_show_password = global::escout.Droid.Resource.Drawable.avd_show_password;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.design_bottom_navigation_item_background = global::escout.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.design_fab_background = global::escout.Droid.Resource.Drawable.design_fab_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.design_ic_visibility = global::escout.Droid.Resource.Drawable.design_ic_visibility;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.design_ic_visibility_off = global::escout.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.design_password_eye = global::escout.Droid.Resource.Drawable.design_password_eye;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.design_snackbar_background = global::escout.Droid.Resource.Drawable.design_snackbar_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.navigation_empty_icon = global::escout.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_action_background = global::escout.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_bg = global::escout.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_bg_low = global::escout.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_bg_low_normal = global::escout.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_bg_low_pressed = global::escout.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_bg_normal = global::escout.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_bg_normal_pressed = global::escout.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_icon_background = global::escout.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_template_icon_bg = global::escout.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_template_icon_low_bg = global::escout.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notification_tile_bg = global::escout.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::escout.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.tooltip_frame_dark = global::escout.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Drawable.tooltip_frame_light = global::escout.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action0 = global::escout.Droid.Resource.Id.action0;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.actions = global::escout.Droid.Resource.Id.actions;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_bar = global::escout.Droid.Resource.Id.action_bar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_bar_activity_content = global::escout.Droid.Resource.Id.action_bar_activity_content;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_bar_container = global::escout.Droid.Resource.Id.action_bar_container;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_bar_root = global::escout.Droid.Resource.Id.action_bar_root;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_bar_spinner = global::escout.Droid.Resource.Id.action_bar_spinner;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_bar_subtitle = global::escout.Droid.Resource.Id.action_bar_subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_bar_title = global::escout.Droid.Resource.Id.action_bar_title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_container = global::escout.Droid.Resource.Id.action_container;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_context_bar = global::escout.Droid.Resource.Id.action_context_bar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_divider = global::escout.Droid.Resource.Id.action_divider;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_image = global::escout.Droid.Resource.Id.action_image;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_menu_divider = global::escout.Droid.Resource.Id.action_menu_divider;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_menu_presenter = global::escout.Droid.Resource.Id.action_menu_presenter;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_mode_bar = global::escout.Droid.Resource.Id.action_mode_bar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_mode_bar_stub = global::escout.Droid.Resource.Id.action_mode_bar_stub;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_mode_close_button = global::escout.Droid.Resource.Id.action_mode_close_button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.action_text = global::escout.Droid.Resource.Id.action_text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.activity_chooser_view_content = global::escout.Droid.Resource.Id.activity_chooser_view_content;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.add = global::escout.Droid.Resource.Id.add;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.alertTitle = global::escout.Droid.Resource.Id.alertTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.all = global::escout.Droid.Resource.Id.all;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.ALT = global::escout.Droid.Resource.Id.ALT;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.always = global::escout.Droid.Resource.Id.always;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.async = global::escout.Droid.Resource.Id.async;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.auto = global::escout.Droid.Resource.Id.auto;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.beginning = global::escout.Droid.Resource.Id.beginning;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.blocking = global::escout.Droid.Resource.Id.blocking;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.bottom = global::escout.Droid.Resource.Id.bottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.bottomtab_navarea = global::escout.Droid.Resource.Id.bottomtab_navarea;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.bottomtab_tabbar = global::escout.Droid.Resource.Id.bottomtab_tabbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.buttonPanel = global::escout.Droid.Resource.Id.buttonPanel;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.cancel_action = global::escout.Droid.Resource.Id.cancel_action;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.center = global::escout.Droid.Resource.Id.center;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.center_horizontal = global::escout.Droid.Resource.Id.center_horizontal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.center_vertical = global::escout.Droid.Resource.Id.center_vertical;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.checkbox = global::escout.Droid.Resource.Id.checkbox;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.chronometer = global::escout.Droid.Resource.Id.chronometer;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.clip_horizontal = global::escout.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.clip_vertical = global::escout.Droid.Resource.Id.clip_vertical;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.collapseActionView = global::escout.Droid.Resource.Id.collapseActionView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.container = global::escout.Droid.Resource.Id.container;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.contentPanel = global::escout.Droid.Resource.Id.contentPanel;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.coordinator = global::escout.Droid.Resource.Id.coordinator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.CTRL = global::escout.Droid.Resource.Id.CTRL;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.custom = global::escout.Droid.Resource.Id.custom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.customPanel = global::escout.Droid.Resource.Id.customPanel;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.decor_content_parent = global::escout.Droid.Resource.Id.decor_content_parent;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.default_activity_button = global::escout.Droid.Resource.Id.default_activity_button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.design_bottom_sheet = global::escout.Droid.Resource.Id.design_bottom_sheet;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.design_menu_item_action_area = global::escout.Droid.Resource.Id.design_menu_item_action_area;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.design_menu_item_action_area_stub = global::escout.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.design_menu_item_text = global::escout.Droid.Resource.Id.design_menu_item_text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.design_navigation_view = global::escout.Droid.Resource.Id.design_navigation_view;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.disableHome = global::escout.Droid.Resource.Id.disableHome;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.edit_query = global::escout.Droid.Resource.Id.edit_query;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.end = global::escout.Droid.Resource.Id.end;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.end_padder = global::escout.Droid.Resource.Id.end_padder;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.enterAlways = global::escout.Droid.Resource.Id.enterAlways;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.enterAlwaysCollapsed = global::escout.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.exitUntilCollapsed = global::escout.Droid.Resource.Id.exitUntilCollapsed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.expanded_menu = global::escout.Droid.Resource.Id.expanded_menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.expand_activities_button = global::escout.Droid.Resource.Id.expand_activities_button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.fill = global::escout.Droid.Resource.Id.fill;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.fill_horizontal = global::escout.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.fill_vertical = global::escout.Droid.Resource.Id.fill_vertical;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.@fixed = global::escout.Droid.Resource.Id.@fixed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.flyoutcontent_appbar = global::escout.Droid.Resource.Id.flyoutcontent_appbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.flyoutcontent_recycler = global::escout.Droid.Resource.Id.flyoutcontent_recycler;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.forever = global::escout.Droid.Resource.Id.forever;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.FUNCTION = global::escout.Droid.Resource.Id.FUNCTION;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.ghost_view = global::escout.Droid.Resource.Id.ghost_view;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.home = global::escout.Droid.Resource.Id.home;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.homeAsUp = global::escout.Droid.Resource.Id.homeAsUp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.icon = global::escout.Droid.Resource.Id.icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.icon_group = global::escout.Droid.Resource.Id.icon_group;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.ifRoom = global::escout.Droid.Resource.Id.ifRoom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.image = global::escout.Droid.Resource.Id.image;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.info = global::escout.Droid.Resource.Id.info;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.italic = global::escout.Droid.Resource.Id.italic;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.item_touch_helper_previous_elevation = global::escout.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.largeLabel = global::escout.Droid.Resource.Id.largeLabel;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.left = global::escout.Droid.Resource.Id.left;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.line1 = global::escout.Droid.Resource.Id.line1;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.line3 = global::escout.Droid.Resource.Id.line3;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.listMode = global::escout.Droid.Resource.Id.listMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.list_item = global::escout.Droid.Resource.Id.list_item;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.main_appbar = global::escout.Droid.Resource.Id.main_appbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.main_tablayout = global::escout.Droid.Resource.Id.main_tablayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.main_toolbar = global::escout.Droid.Resource.Id.main_toolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.main_viewpager = global::escout.Droid.Resource.Id.main_viewpager;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.masked = global::escout.Droid.Resource.Id.masked;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.media_actions = global::escout.Droid.Resource.Id.media_actions;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.message = global::escout.Droid.Resource.Id.message;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.META = global::escout.Droid.Resource.Id.META;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.middle = global::escout.Droid.Resource.Id.middle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.mini = global::escout.Droid.Resource.Id.mini;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.multiply = global::escout.Droid.Resource.Id.multiply;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.navigation_header_container = global::escout.Droid.Resource.Id.navigation_header_container;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.never = global::escout.Droid.Resource.Id.never;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.none = global::escout.Droid.Resource.Id.none;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.normal = global::escout.Droid.Resource.Id.normal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.notification_background = global::escout.Droid.Resource.Id.notification_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.notification_main_column = global::escout.Droid.Resource.Id.notification_main_column;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.notification_main_column_container = global::escout.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.parallax = global::escout.Droid.Resource.Id.parallax;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.parentPanel = global::escout.Droid.Resource.Id.parentPanel;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.parent_matrix = global::escout.Droid.Resource.Id.parent_matrix;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.pin = global::escout.Droid.Resource.Id.pin;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.progress_circular = global::escout.Droid.Resource.Id.progress_circular;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.progress_horizontal = global::escout.Droid.Resource.Id.progress_horizontal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.radio = global::escout.Droid.Resource.Id.radio;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.right = global::escout.Droid.Resource.Id.right;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.right_icon = global::escout.Droid.Resource.Id.right_icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.right_side = global::escout.Droid.Resource.Id.right_side;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.save_image_matrix = global::escout.Droid.Resource.Id.save_image_matrix;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.save_non_transition_alpha = global::escout.Droid.Resource.Id.save_non_transition_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.save_scale_type = global::escout.Droid.Resource.Id.save_scale_type;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.screen = global::escout.Droid.Resource.Id.screen;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.scroll = global::escout.Droid.Resource.Id.scroll;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.scrollable = global::escout.Droid.Resource.Id.scrollable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.scrollIndicatorDown = global::escout.Droid.Resource.Id.scrollIndicatorDown;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.scrollIndicatorUp = global::escout.Droid.Resource.Id.scrollIndicatorUp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.scrollView = global::escout.Droid.Resource.Id.scrollView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.search_badge = global::escout.Droid.Resource.Id.search_badge;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.search_bar = global::escout.Droid.Resource.Id.search_bar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.search_button = global::escout.Droid.Resource.Id.search_button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.search_close_btn = global::escout.Droid.Resource.Id.search_close_btn;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.search_edit_frame = global::escout.Droid.Resource.Id.search_edit_frame;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.search_go_btn = global::escout.Droid.Resource.Id.search_go_btn;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.search_mag_icon = global::escout.Droid.Resource.Id.search_mag_icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.search_plate = global::escout.Droid.Resource.Id.search_plate;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.search_src_text = global::escout.Droid.Resource.Id.search_src_text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.search_voice_btn = global::escout.Droid.Resource.Id.search_voice_btn;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.select_dialog_listview = global::escout.Droid.Resource.Id.select_dialog_listview;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.shellcontent_appbar = global::escout.Droid.Resource.Id.shellcontent_appbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.shellcontent_toolbar = global::escout.Droid.Resource.Id.shellcontent_toolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.SHIFT = global::escout.Droid.Resource.Id.SHIFT;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.shortcut = global::escout.Droid.Resource.Id.shortcut;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.showCustom = global::escout.Droid.Resource.Id.showCustom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.showHome = global::escout.Droid.Resource.Id.showHome;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.showTitle = global::escout.Droid.Resource.Id.showTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.smallLabel = global::escout.Droid.Resource.Id.smallLabel;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.snackbar_action = global::escout.Droid.Resource.Id.snackbar_action;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.snackbar_text = global::escout.Droid.Resource.Id.snackbar_text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.snap = global::escout.Droid.Resource.Id.snap;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.spacer = global::escout.Droid.Resource.Id.spacer;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.split_action_bar = global::escout.Droid.Resource.Id.split_action_bar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.src_atop = global::escout.Droid.Resource.Id.src_atop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.src_in = global::escout.Droid.Resource.Id.src_in;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.src_over = global::escout.Droid.Resource.Id.src_over;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.start = global::escout.Droid.Resource.Id.start;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.status_bar_latest_event_content = global::escout.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.submenuarrow = global::escout.Droid.Resource.Id.submenuarrow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.submit_area = global::escout.Droid.Resource.Id.submit_area;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.SYM = global::escout.Droid.Resource.Id.SYM;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.tabMode = global::escout.Droid.Resource.Id.tabMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.tag_transition_group = global::escout.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.text = global::escout.Droid.Resource.Id.text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.text2 = global::escout.Droid.Resource.Id.text2;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.textinput_counter = global::escout.Droid.Resource.Id.textinput_counter;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.textinput_error = global::escout.Droid.Resource.Id.textinput_error;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.textSpacerNoButtons = global::escout.Droid.Resource.Id.textSpacerNoButtons;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.textSpacerNoTitle = global::escout.Droid.Resource.Id.textSpacerNoTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.text_input_password_toggle = global::escout.Droid.Resource.Id.text_input_password_toggle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.time = global::escout.Droid.Resource.Id.time;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.title = global::escout.Droid.Resource.Id.title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.titleDividerNoCustom = global::escout.Droid.Resource.Id.titleDividerNoCustom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.title_template = global::escout.Droid.Resource.Id.title_template;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.top = global::escout.Droid.Resource.Id.top;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.topPanel = global::escout.Droid.Resource.Id.topPanel;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.touch_outside = global::escout.Droid.Resource.Id.touch_outside;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.transition_current_scene = global::escout.Droid.Resource.Id.transition_current_scene;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.transition_layout_save = global::escout.Droid.Resource.Id.transition_layout_save;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.transition_position = global::escout.Droid.Resource.Id.transition_position;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.transition_scene_layoutid_cache = global::escout.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.transition_transform = global::escout.Droid.Resource.Id.transition_transform;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.uniform = global::escout.Droid.Resource.Id.uniform;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.up = global::escout.Droid.Resource.Id.up;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.useLogo = global::escout.Droid.Resource.Id.useLogo;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.view_offset_helper = global::escout.Droid.Resource.Id.view_offset_helper;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.visible = global::escout.Droid.Resource.Id.visible;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.withText = global::escout.Droid.Resource.Id.withText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Id.wrap_content = global::escout.Droid.Resource.Id.wrap_content;
+			global::Plugin.MaterialDesignControls.Android.Resource.Integer.abc_config_activityDefaultDur = global::escout.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Plugin.MaterialDesignControls.Android.Resource.Integer.abc_config_activityShortDur = global::escout.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Plugin.MaterialDesignControls.Android.Resource.Integer.app_bar_elevation_anim_duration = global::escout.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Plugin.MaterialDesignControls.Android.Resource.Integer.bottom_sheet_slide_duration = global::escout.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Plugin.MaterialDesignControls.Android.Resource.Integer.cancel_button_image_alpha = global::escout.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Integer.config_tooltipAnimTime = global::escout.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::Plugin.MaterialDesignControls.Android.Resource.Integer.design_snackbar_text_max_lines = global::escout.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Plugin.MaterialDesignControls.Android.Resource.Integer.hide_password_duration = global::escout.Droid.Resource.Integer.hide_password_duration;
+			global::Plugin.MaterialDesignControls.Android.Resource.Integer.show_password_duration = global::escout.Droid.Resource.Integer.show_password_duration;
+			global::Plugin.MaterialDesignControls.Android.Resource.Integer.status_bar_notification_info_maxnum = global::escout.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_action_bar_title_item = global::escout.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_action_bar_up_container = global::escout.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_action_menu_item_layout = global::escout.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_action_menu_layout = global::escout.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_action_mode_bar = global::escout.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_action_mode_close_item_material = global::escout.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_activity_chooser_view = global::escout.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_activity_chooser_view_list_item = global::escout.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_alert_dialog_button_bar_material = global::escout.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_alert_dialog_material = global::escout.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_alert_dialog_title_material = global::escout.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_dialog_title_material = global::escout.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_expanded_menu_layout = global::escout.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_list_menu_item_checkbox = global::escout.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_list_menu_item_icon = global::escout.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_list_menu_item_layout = global::escout.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_list_menu_item_radio = global::escout.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_popup_menu_header_item_layout = global::escout.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_popup_menu_item_layout = global::escout.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_screen_content_include = global::escout.Droid.Resource.Layout.abc_screen_content_include;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_screen_simple = global::escout.Droid.Resource.Layout.abc_screen_simple;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_screen_simple_overlay_action_mode = global::escout.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_screen_toolbar = global::escout.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_search_dropdown_item_icons_2line = global::escout.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_search_view = global::escout.Droid.Resource.Layout.abc_search_view;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.abc_select_dialog_material = global::escout.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.BottomTabLayout = global::escout.Droid.Resource.Layout.BottomTabLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_bottom_navigation_item = global::escout.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_bottom_sheet_dialog = global::escout.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_layout_snackbar = global::escout.Droid.Resource.Layout.design_layout_snackbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_layout_snackbar_include = global::escout.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_layout_tab_icon = global::escout.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_layout_tab_text = global::escout.Droid.Resource.Layout.design_layout_tab_text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_menu_item_action_area = global::escout.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_navigation_item = global::escout.Droid.Resource.Layout.design_navigation_item;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_navigation_item_header = global::escout.Droid.Resource.Layout.design_navigation_item_header;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_navigation_item_separator = global::escout.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_navigation_item_subheader = global::escout.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_navigation_menu = global::escout.Droid.Resource.Layout.design_navigation_menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_navigation_menu_item = global::escout.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.design_text_input_password_icon = global::escout.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.FlyoutContent = global::escout.Droid.Resource.Layout.FlyoutContent;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_action = global::escout.Droid.Resource.Layout.notification_action;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_action_tombstone = global::escout.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_media_action = global::escout.Droid.Resource.Layout.notification_media_action;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_media_cancel_action = global::escout.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_big_media = global::escout.Droid.Resource.Layout.notification_template_big_media;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_big_media_custom = global::escout.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_big_media_narrow = global::escout.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_big_media_narrow_custom = global::escout.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_custom_big = global::escout.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_icon_group = global::escout.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_lines_media = global::escout.Droid.Resource.Layout.notification_template_lines_media;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_media = global::escout.Droid.Resource.Layout.notification_template_media;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_media_custom = global::escout.Droid.Resource.Layout.notification_template_media_custom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_part_chronometer = global::escout.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.notification_template_part_time = global::escout.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.RootLayout = global::escout.Droid.Resource.Layout.RootLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.select_dialog_item_material = global::escout.Droid.Resource.Layout.select_dialog_item_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.select_dialog_multichoice_material = global::escout.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.select_dialog_singlechoice_material = global::escout.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.ShellContent = global::escout.Droid.Resource.Layout.ShellContent;
+			global::Plugin.MaterialDesignControls.Android.Resource.Layout.support_simple_spinner_dropdown_item = global::escout.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_action_bar_home_description = global::escout.Droid.Resource.String.abc_action_bar_home_description;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_action_bar_up_description = global::escout.Droid.Resource.String.abc_action_bar_up_description;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_action_menu_overflow_description = global::escout.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_action_mode_done = global::escout.Droid.Resource.String.abc_action_mode_done;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_activitychooserview_choose_application = global::escout.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_activity_chooser_view_see_all = global::escout.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_capital_off = global::escout.Droid.Resource.String.abc_capital_off;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_capital_on = global::escout.Droid.Resource.String.abc_capital_on;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_body_1_material = global::escout.Droid.Resource.String.abc_font_family_body_1_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_body_2_material = global::escout.Droid.Resource.String.abc_font_family_body_2_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_button_material = global::escout.Droid.Resource.String.abc_font_family_button_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_caption_material = global::escout.Droid.Resource.String.abc_font_family_caption_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_display_1_material = global::escout.Droid.Resource.String.abc_font_family_display_1_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_display_2_material = global::escout.Droid.Resource.String.abc_font_family_display_2_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_display_3_material = global::escout.Droid.Resource.String.abc_font_family_display_3_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_display_4_material = global::escout.Droid.Resource.String.abc_font_family_display_4_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_headline_material = global::escout.Droid.Resource.String.abc_font_family_headline_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_menu_material = global::escout.Droid.Resource.String.abc_font_family_menu_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_subhead_material = global::escout.Droid.Resource.String.abc_font_family_subhead_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_font_family_title_material = global::escout.Droid.Resource.String.abc_font_family_title_material;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_searchview_description_clear = global::escout.Droid.Resource.String.abc_searchview_description_clear;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_searchview_description_query = global::escout.Droid.Resource.String.abc_searchview_description_query;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_searchview_description_search = global::escout.Droid.Resource.String.abc_searchview_description_search;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_searchview_description_submit = global::escout.Droid.Resource.String.abc_searchview_description_submit;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_searchview_description_voice = global::escout.Droid.Resource.String.abc_searchview_description_voice;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_search_hint = global::escout.Droid.Resource.String.abc_search_hint;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_shareactionprovider_share_with = global::escout.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_shareactionprovider_share_with_application = global::escout.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.abc_toolbar_collapse_description = global::escout.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.appbar_scrolling_view_behavior = global::escout.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.bottom_sheet_behavior = global::escout.Droid.Resource.String.bottom_sheet_behavior;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.character_counter_pattern = global::escout.Droid.Resource.String.character_counter_pattern;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.library_name = global::escout.Droid.Resource.String.library_name;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.password_toggle_content_description = global::escout.Droid.Resource.String.password_toggle_content_description;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.path_password_eye = global::escout.Droid.Resource.String.path_password_eye;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.path_password_eye_mask_strike_through = global::escout.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.path_password_eye_mask_visible = global::escout.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.path_password_strike_through = global::escout.Droid.Resource.String.path_password_strike_through;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.search_menu_title = global::escout.Droid.Resource.String.search_menu_title;
+			global::Plugin.MaterialDesignControls.Android.Resource.String.status_bar_notification_info_overflow = global::escout.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.AlertDialog_AppCompat = global::escout.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.AlertDialog_AppCompat_Light = global::escout.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Animation_AppCompat_Dialog = global::escout.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Animation_AppCompat_DropDownUp = global::escout.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Animation_AppCompat_Tooltip = global::escout.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Animation_Design_BottomSheetDialog = global::escout.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_AlertDialog_AppCompat = global::escout.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_AlertDialog_AppCompat_Light = global::escout.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Animation_AppCompat_Dialog = global::escout.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::escout.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Animation_AppCompat_Tooltip = global::escout.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_CardView = global::escout.Droid.Resource.Style.Base_CardView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::escout.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_DialogWindowTitle_AppCompat = global::escout.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Button = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Large = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Small = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Title = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::escout.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::escout.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::escout.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::escout.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_ThemeOverlay_AppCompat = global::escout.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::escout.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::escout.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::escout.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::escout.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::escout.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::escout.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat = global::escout.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Dialog = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Light = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::escout.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::escout.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V21_Theme_AppCompat = global::escout.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::escout.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V21_Theme_AppCompat_Light = global::escout.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::escout.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V22_Theme_AppCompat = global::escout.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V22_Theme_AppCompat_Light = global::escout.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V23_Theme_AppCompat = global::escout.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V23_Theme_AppCompat_Light = global::escout.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V26_Theme_AppCompat = global::escout.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V26_Theme_AppCompat_Light = global::escout.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::escout.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::escout.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V7_Theme_AppCompat = global::escout.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::escout.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V7_Theme_AppCompat_Light = global::escout.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::escout.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::escout.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::escout.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::escout.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ActionBar = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ActionButton = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ActionMode = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Button = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Button_Small = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_EditText = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ImageButton = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ListView = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_RatingBar = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_SearchView = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_SeekBar = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Spinner = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Toolbar = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::escout.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Base_Widget_Design_TabLayout = global::escout.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.CardView = global::escout.Droid.Resource.Style.CardView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.CardView_Dark = global::escout.Droid.Resource.Style.CardView_Dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.CardView_Light = global::escout.Droid.Resource.Style.CardView_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Platform_AppCompat = global::escout.Droid.Resource.Style.Platform_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Platform_AppCompat_Light = global::escout.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Platform_ThemeOverlay_AppCompat = global::escout.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::escout.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::escout.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Platform_V21_AppCompat = global::escout.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Platform_V21_AppCompat_Light = global::escout.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Platform_V25_AppCompat = global::escout.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Platform_V25_AppCompat_Light = global::escout.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Platform_Widget_AppCompat_Spinner = global::escout.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::escout.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::escout.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::escout.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::escout.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat = global::escout.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Body1 = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Body2 = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Button = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Caption = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Display1 = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Display2 = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Display3 = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Display4 = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Headline = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Large = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Medium = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Menu = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Small = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Subhead = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Title = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Tooltip = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::escout.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Compat_Notification = global::escout.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Compat_Notification_Info = global::escout.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::escout.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::escout.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::escout.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Compat_Notification_Media = global::escout.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Compat_Notification_Time = global::escout.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::escout.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Compat_Notification_Title = global::escout.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::escout.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::escout.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Design_Counter = global::escout.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Design_Counter_Overflow = global::escout.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Design_Error = global::escout.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Design_Hint = global::escout.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Design_Snackbar_Message = global::escout.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Design_Tab = global::escout.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::escout.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::escout.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::escout.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.ThemeOverlay_AppCompat = global::escout.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::escout.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.ThemeOverlay_AppCompat_Dark = global::escout.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::escout.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::escout.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::escout.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.ThemeOverlay_AppCompat_Light = global::escout.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat = global::escout.Droid.Resource.Style.Theme_AppCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_CompactMenu = global::escout.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_DayNight = global::escout.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::escout.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::escout.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::escout.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::escout.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::escout.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::escout.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_Dialog = global::escout.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::escout.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_Dialog_Alert = global::escout.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::escout.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_Light = global::escout.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::escout.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_Light_Dialog = global::escout.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::escout.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::escout.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::escout.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::escout.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_AppCompat_NoActionBar = global::escout.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_Design = global::escout.Droid.Resource.Style.Theme_Design;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_Design_BottomSheetDialog = global::escout.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_Design_Light = global::escout.Droid.Resource.Style.Theme_Design_Light;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::escout.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_Design_Light_NoActionBar = global::escout.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Theme_Design_NoActionBar = global::escout.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ActionBar = global::escout.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::escout.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::escout.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::escout.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::escout.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ActionButton = global::escout.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::escout.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::escout.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ActionMode = global::escout.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ActivityChooserView = global::escout.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::escout.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Button = global::escout.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ButtonBar = global::escout.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::escout.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Button_Borderless = global::escout.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::escout.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::escout.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Button_Colored = global::escout.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Button_Small = global::escout.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::escout.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::escout.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::escout.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::escout.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::escout.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_EditText = global::escout.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ImageButton = global::escout.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionBar = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionButton = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_SearchView = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::escout.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ListMenuView = global::escout.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ListPopupWindow = global::escout.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ListView = global::escout.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ListView_DropDown = global::escout.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ListView_Menu = global::escout.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_PopupMenu = global::escout.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::escout.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_PopupWindow = global::escout.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ProgressBar = global::escout.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::escout.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_RatingBar = global::escout.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::escout.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_RatingBar_Small = global::escout.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_SearchView = global::escout.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::escout.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_SeekBar = global::escout.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::escout.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Spinner = global::escout.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::escout.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::escout.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::escout.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::escout.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Toolbar = global::escout.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::escout.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Compat_NotificationActionContainer = global::escout.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Compat_NotificationActionText = global::escout.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Design_AppBarLayout = global::escout.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Design_BottomNavigationView = global::escout.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Design_BottomSheet_Modal = global::escout.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Design_CollapsingToolbar = global::escout.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Design_FloatingActionButton = global::escout.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Design_NavigationView = global::escout.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::escout.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Design_Snackbar = global::escout.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Design_TabLayout = global::escout.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Style.Widget_Design_TextInputLayout = global::escout.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar = global::escout.Droid.Resource.Styleable.ActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBarLayout = global::escout.Droid.Resource.Styleable.ActionBarLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::escout.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_background = global::escout.Droid.Resource.Styleable.ActionBar_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_backgroundSplit = global::escout.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_backgroundStacked = global::escout.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_contentInsetEnd = global::escout.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::escout.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_contentInsetLeft = global::escout.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_contentInsetRight = global::escout.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_contentInsetStart = global::escout.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::escout.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_customNavigationLayout = global::escout.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_displayOptions = global::escout.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_divider = global::escout.Droid.Resource.Styleable.ActionBar_divider;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_elevation = global::escout.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_height = global::escout.Droid.Resource.Styleable.ActionBar_height;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_hideOnContentScroll = global::escout.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_homeAsUpIndicator = global::escout.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_homeLayout = global::escout.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_icon = global::escout.Droid.Resource.Styleable.ActionBar_icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::escout.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_itemPadding = global::escout.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_logo = global::escout.Droid.Resource.Styleable.ActionBar_logo;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_navigationMode = global::escout.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_popupTheme = global::escout.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_progressBarPadding = global::escout.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_progressBarStyle = global::escout.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_subtitle = global::escout.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_subtitleTextStyle = global::escout.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_title = global::escout.Droid.Resource.Styleable.ActionBar_title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionBar_titleTextStyle = global::escout.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionMenuItemView = global::escout.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionMenuItemView_android_minWidth = global::escout.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionMenuView = global::escout.Droid.Resource.Styleable.ActionMenuView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionMode = global::escout.Droid.Resource.Styleable.ActionMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionMode_background = global::escout.Droid.Resource.Styleable.ActionMode_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionMode_backgroundSplit = global::escout.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionMode_closeItemLayout = global::escout.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionMode_height = global::escout.Droid.Resource.Styleable.ActionMode_height;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionMode_subtitleTextStyle = global::escout.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActionMode_titleTextStyle = global::escout.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActivityChooserView = global::escout.Droid.Resource.Styleable.ActivityChooserView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::escout.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ActivityChooserView_initialActivityCount = global::escout.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AlertDialog = global::escout.Droid.Resource.Styleable.AlertDialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AlertDialog_android_layout = global::escout.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::escout.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AlertDialog_listItemLayout = global::escout.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AlertDialog_listLayout = global::escout.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::escout.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AlertDialog_showTitle = global::escout.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::escout.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayout = global::escout.Droid.Resource.Styleable.AppBarLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayoutStates = global::escout.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::escout.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::escout.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayout_android_background = global::escout.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::escout.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::escout.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayout_elevation = global::escout.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayout_expanded = global::escout.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayout_Layout = global::escout.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::escout.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::escout.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatImageView = global::escout.Droid.Resource.Styleable.AppCompatImageView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatImageView_android_src = global::escout.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatImageView_srcCompat = global::escout.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatImageView_tint = global::escout.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatImageView_tintMode = global::escout.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatSeekBar = global::escout.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatSeekBar_android_thumb = global::escout.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatSeekBar_tickMark = global::escout.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::escout.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::escout.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextHelper = global::escout.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::escout.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::escout.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::escout.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::escout.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::escout.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::escout.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::escout.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextView = global::escout.Droid.Resource.Styleable.AppCompatTextView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextView_android_textAppearance = global::escout.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::escout.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::escout.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::escout.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::escout.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::escout.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextView_fontFamily = global::escout.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTextView_textAllCaps = global::escout.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme = global::escout.Droid.Resource.Styleable.AppCompatTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarDivider = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarSize = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarTheme = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeBackground = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::escout.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::escout.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::escout.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_buttonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::escout.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_checkboxStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_colorAccent = global::escout.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::escout.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::escout.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_colorControlActivated = global::escout.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::escout.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_colorControlNormal = global::escout.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_colorError = global::escout.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_colorPrimary = global::escout.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::escout.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::escout.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_controlBackground = global::escout.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::escout.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_dialogTheme = global::escout.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::escout.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_dividerVertical = global::escout.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::escout.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_editTextBackground = global::escout.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_editTextColor = global::escout.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_editTextStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::escout.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::escout.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::escout.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::escout.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::escout.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::escout.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::escout.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::escout.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_panelBackground = global::escout.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::escout.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::escout.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::escout.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::escout.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_searchViewStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_seekBarStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::escout.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::escout.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_spinnerStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_switchStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::escout.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::escout.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::escout.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::escout.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::escout.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::escout.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::escout.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::escout.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::escout.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::escout.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_toolbarStyle = global::escout.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::escout.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::escout.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_windowActionBar = global::escout.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::escout.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::escout.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::escout.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::escout.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::escout.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::escout.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::escout.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::escout.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.AppCompatTheme_windowNoTitle = global::escout.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.BottomNavigationView = global::escout.Droid.Resource.Styleable.BottomNavigationView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.BottomNavigationView_elevation = global::escout.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.BottomNavigationView_itemBackground = global::escout.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.BottomNavigationView_itemIconTint = global::escout.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.BottomNavigationView_itemTextColor = global::escout.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.BottomNavigationView_menu = global::escout.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.BottomSheetBehavior_Layout = global::escout.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::escout.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::escout.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::escout.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ButtonBarLayout = global::escout.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ButtonBarLayout_allowStacking = global::escout.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView = global::escout.Droid.Resource.Styleable.CardView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_android_minHeight = global::escout.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_android_minWidth = global::escout.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_cardBackgroundColor = global::escout.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_cardCornerRadius = global::escout.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_cardElevation = global::escout.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_cardMaxElevation = global::escout.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_cardPreventCornerOverlap = global::escout.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_cardUseCompatPadding = global::escout.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_contentPadding = global::escout.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_contentPaddingBottom = global::escout.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_contentPaddingLeft = global::escout.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_contentPaddingRight = global::escout.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CardView_contentPaddingTop = global::escout.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_Layout = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_title = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::escout.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ColorStateListItem = global::escout.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ColorStateListItem_alpha = global::escout.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ColorStateListItem_android_alpha = global::escout.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ColorStateListItem_android_color = global::escout.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CompoundButton = global::escout.Droid.Resource.Styleable.CompoundButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CompoundButton_android_button = global::escout.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CompoundButton_buttonTint = global::escout.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CompoundButton_buttonTintMode = global::escout.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout = global::escout.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout_keylines = global::escout.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout_Layout = global::escout.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::escout.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::escout.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::escout.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::escout.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::escout.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::escout.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::escout.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::escout.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DesignTheme = global::escout.Droid.Resource.Styleable.DesignTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::escout.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DesignTheme_bottomSheetStyle = global::escout.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DrawerArrowToggle = global::escout.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::escout.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::escout.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DrawerArrowToggle_barLength = global::escout.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DrawerArrowToggle_color = global::escout.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DrawerArrowToggle_drawableSize = global::escout.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::escout.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DrawerArrowToggle_spinBars = global::escout.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.DrawerArrowToggle_thickness = global::escout.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton = global::escout.Droid.Resource.Styleable.FloatingActionButton;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton_backgroundTint = global::escout.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::escout.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::escout.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::escout.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton_borderWidth = global::escout.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton_elevation = global::escout.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton_fabSize = global::escout.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::escout.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton_rippleColor = global::escout.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FloatingActionButton_useCompatPadding = global::escout.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamily = global::escout.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamilyFont = global::escout.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamilyFont_android_font = global::escout.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamilyFont_android_fontStyle = global::escout.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamilyFont_android_fontWeight = global::escout.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamilyFont_font = global::escout.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamilyFont_fontStyle = global::escout.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamilyFont_fontWeight = global::escout.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamily_fontProviderAuthority = global::escout.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamily_fontProviderCerts = global::escout.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::escout.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::escout.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamily_fontProviderPackage = global::escout.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.FontFamily_fontProviderQuery = global::escout.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ForegroundLinearLayout = global::escout.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::escout.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::escout.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::escout.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat = global::escout.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_android_gravity = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_android_orientation = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_divider = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_Layout = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.LinearLayoutCompat_showDividers = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ListPopupWindow = global::escout.Droid.Resource.Styleable.ListPopupWindow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::escout.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::escout.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuGroup = global::escout.Droid.Resource.Styleable.MenuGroup;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuGroup_android_checkableBehavior = global::escout.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuGroup_android_enabled = global::escout.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuGroup_android_id = global::escout.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuGroup_android_menuCategory = global::escout.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuGroup_android_orderInCategory = global::escout.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuGroup_android_visible = global::escout.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem = global::escout.Droid.Resource.Styleable.MenuItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_actionLayout = global::escout.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_actionProviderClass = global::escout.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_actionViewClass = global::escout.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_alphabeticModifiers = global::escout.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::escout.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_checkable = global::escout.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_checked = global::escout.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_enabled = global::escout.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_icon = global::escout.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_id = global::escout.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_menuCategory = global::escout.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_numericShortcut = global::escout.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_onClick = global::escout.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_orderInCategory = global::escout.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_title = global::escout.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_titleCondensed = global::escout.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_android_visible = global::escout.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_contentDescription = global::escout.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_iconTint = global::escout.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_iconTintMode = global::escout.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_numericModifiers = global::escout.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_showAsAction = global::escout.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuItem_tooltipText = global::escout.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuView = global::escout.Droid.Resource.Styleable.MenuView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuView_android_headerBackground = global::escout.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuView_android_horizontalDivider = global::escout.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuView_android_itemBackground = global::escout.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::escout.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuView_android_itemTextAppearance = global::escout.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuView_android_verticalDivider = global::escout.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuView_android_windowAnimationStyle = global::escout.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuView_preserveIconSpacing = global::escout.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.MenuView_subMenuArrow = global::escout.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView = global::escout.Droid.Resource.Styleable.NavigationView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView_android_background = global::escout.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::escout.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView_android_maxWidth = global::escout.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView_elevation = global::escout.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView_headerLayout = global::escout.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView_itemBackground = global::escout.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView_itemIconTint = global::escout.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView_itemTextAppearance = global::escout.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView_itemTextColor = global::escout.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.NavigationView_menu = global::escout.Droid.Resource.Styleable.NavigationView_menu;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.PopupWindow = global::escout.Droid.Resource.Styleable.PopupWindow;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.PopupWindowBackgroundState = global::escout.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::escout.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::escout.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.PopupWindow_android_popupBackground = global::escout.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.PopupWindow_overlapAnchor = global::escout.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecycleListView = global::escout.Droid.Resource.Styleable.RecycleListView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::escout.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::escout.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView = global::escout.Droid.Resource.Styleable.RecyclerView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::escout.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_android_orientation = global::escout.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_fastScrollEnabled = global::escout.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::escout.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::escout.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::escout.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::escout.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_layoutManager = global::escout.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_reverseLayout = global::escout.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_spanCount = global::escout.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.RecyclerView_stackFromEnd = global::escout.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ScrimInsetsFrameLayout = global::escout.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::escout.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ScrollingViewBehavior_Layout = global::escout.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::escout.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView = global::escout.Droid.Resource.Styleable.SearchView;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_android_focusable = global::escout.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_android_imeOptions = global::escout.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_android_inputType = global::escout.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_android_maxWidth = global::escout.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_closeIcon = global::escout.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_commitIcon = global::escout.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_defaultQueryHint = global::escout.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_goIcon = global::escout.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_iconifiedByDefault = global::escout.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_layout = global::escout.Droid.Resource.Styleable.SearchView_layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_queryBackground = global::escout.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_queryHint = global::escout.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_searchHintIcon = global::escout.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_searchIcon = global::escout.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_submitBackground = global::escout.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_suggestionRowLayout = global::escout.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SearchView_voiceIcon = global::escout.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SnackbarLayout = global::escout.Droid.Resource.Styleable.SnackbarLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SnackbarLayout_android_maxWidth = global::escout.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SnackbarLayout_elevation = global::escout.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::escout.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Spinner = global::escout.Droid.Resource.Styleable.Spinner;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Spinner_android_dropDownWidth = global::escout.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Spinner_android_entries = global::escout.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Spinner_android_popupBackground = global::escout.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Spinner_android_prompt = global::escout.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Spinner_popupTheme = global::escout.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat = global::escout.Droid.Resource.Styleable.SwitchCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_android_textOff = global::escout.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_android_textOn = global::escout.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_android_thumb = global::escout.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_showText = global::escout.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_splitTrack = global::escout.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_switchMinWidth = global::escout.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_switchPadding = global::escout.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_switchTextAppearance = global::escout.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_thumbTextPadding = global::escout.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_thumbTint = global::escout.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_thumbTintMode = global::escout.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_track = global::escout.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_trackTint = global::escout.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.SwitchCompat_trackTintMode = global::escout.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabItem = global::escout.Droid.Resource.Styleable.TabItem;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabItem_android_icon = global::escout.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabItem_android_layout = global::escout.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabItem_android_text = global::escout.Droid.Resource.Styleable.TabItem_android_text;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout = global::escout.Droid.Resource.Styleable.TabLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabBackground = global::escout.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabContentStart = global::escout.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabGravity = global::escout.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabIndicatorColor = global::escout.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabIndicatorHeight = global::escout.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabMaxWidth = global::escout.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabMinWidth = global::escout.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabMode = global::escout.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabPadding = global::escout.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabPaddingBottom = global::escout.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabPaddingEnd = global::escout.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabPaddingStart = global::escout.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabPaddingTop = global::escout.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabSelectedTextColor = global::escout.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabTextAppearance = global::escout.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TabLayout_tabTextColor = global::escout.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance = global::escout.Droid.Resource.Styleable.TextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_fontFamily = global::escout.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_shadowColor = global::escout.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_shadowDx = global::escout.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_shadowDy = global::escout.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_shadowRadius = global::escout.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_textColor = global::escout.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_textColorHint = global::escout.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_textColorLink = global::escout.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_textSize = global::escout.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_textStyle = global::escout.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_android_typeface = global::escout.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_fontFamily = global::escout.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextAppearance_textAllCaps = global::escout.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout = global::escout.Droid.Resource.Styleable.TextInputLayout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_android_hint = global::escout.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_android_textColorHint = global::escout.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_counterEnabled = global::escout.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_counterMaxLength = global::escout.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::escout.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_counterTextAppearance = global::escout.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_errorEnabled = global::escout.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_errorTextAppearance = global::escout.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::escout.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_hintEnabled = global::escout.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_hintTextAppearance = global::escout.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::escout.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::escout.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::escout.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_passwordToggleTint = global::escout.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::escout.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar = global::escout.Droid.Resource.Styleable.Toolbar;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_android_gravity = global::escout.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_android_minHeight = global::escout.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_buttonGravity = global::escout.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_collapseContentDescription = global::escout.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_collapseIcon = global::escout.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_contentInsetEnd = global::escout.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::escout.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_contentInsetLeft = global::escout.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_contentInsetRight = global::escout.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_contentInsetStart = global::escout.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::escout.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_logo = global::escout.Droid.Resource.Styleable.Toolbar_logo;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_logoDescription = global::escout.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_maxButtonHeight = global::escout.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_navigationContentDescription = global::escout.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_navigationIcon = global::escout.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_popupTheme = global::escout.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_subtitle = global::escout.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_subtitleTextAppearance = global::escout.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_subtitleTextColor = global::escout.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_title = global::escout.Droid.Resource.Styleable.Toolbar_title;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_titleMargin = global::escout.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_titleMarginBottom = global::escout.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_titleMarginEnd = global::escout.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_titleMargins = global::escout.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_titleMarginStart = global::escout.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_titleMarginTop = global::escout.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_titleTextAppearance = global::escout.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.Toolbar_titleTextColor = global::escout.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.View = global::escout.Droid.Resource.Styleable.View;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ViewBackgroundHelper = global::escout.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ViewBackgroundHelper_android_background = global::escout.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::escout.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::escout.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ViewStubCompat = global::escout.Droid.Resource.Styleable.ViewStubCompat;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ViewStubCompat_android_id = global::escout.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ViewStubCompat_android_inflatedId = global::escout.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.ViewStubCompat_android_layout = global::escout.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.View_android_focusable = global::escout.Droid.Resource.Styleable.View_android_focusable;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.View_android_theme = global::escout.Droid.Resource.Styleable.View_android_theme;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.View_paddingEnd = global::escout.Droid.Resource.Styleable.View_paddingEnd;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.View_paddingStart = global::escout.Droid.Resource.Styleable.View_paddingStart;
+			global::Plugin.MaterialDesignControls.Android.Resource.Styleable.View_theme = global::escout.Droid.Resource.Styleable.View_theme;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::escout.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::escout.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::escout.Droid.Resource.Attribute.font;
@@ -368,6 +2331,7 @@ namespace escout.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.collapsedTitleGravity = global::escout.Droid.Resource.Attribute.collapsedTitleGravity;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.collapsedTitleTextAppearance = global::escout.Droid.Resource.Attribute.collapsedTitleTextAppearance;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.collapseIcon = global::escout.Droid.Resource.Attribute.collapseIcon;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.collectionViewStyle = global::escout.Droid.Resource.Attribute.collectionViewStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.color = global::escout.Droid.Resource.Attribute.color;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.colorAccent = global::escout.Droid.Resource.Attribute.colorAccent;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.colorBackgroundFloating = global::escout.Droid.Resource.Attribute.colorBackgroundFloating;
@@ -1715,7 +3679,8 @@ namespace escout.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.CardView = global::escout.Droid.Resource.Style.CardView;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.CardView_Dark = global::escout.Droid.Resource.Style.CardView_Dark;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.CardView_Light = global::escout.Droid.Resource.Style.CardView_Light;
-			global::Xamarin.Forms.Platform.Android.Resource.Style.collectionViewStyle = global::escout.Droid.Resource.Style.collectionViewStyle;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.collectionViewScrollBars = global::escout.Droid.Resource.Style.collectionViewScrollBars;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.collectionViewTheme = global::escout.Droid.Resource.Style.collectionViewTheme;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.MainTheme = global::escout.Droid.Resource.Style.MainTheme;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.MainTheme_Base = global::escout.Droid.Resource.Style.MainTheme_Base;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Platform_AppCompat = global::escout.Droid.Resource.Style.Platform_AppCompat;
@@ -2446,6 +4411,8 @@ namespace escout.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.GradientColor_android_startY = global::escout.Droid.Resource.Styleable.GradientColor_android_startY;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.GradientColor_android_tileMode = global::escout.Droid.Resource.Styleable.GradientColor_android_tileMode;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.GradientColor_android_type = global::escout.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ItemsViewRendererTheme = global::escout.Droid.Resource.Styleable.ItemsViewRendererTheme;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle = global::escout.Droid.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.LinearLayoutCompat = global::escout.Droid.Resource.Styleable.LinearLayoutCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
@@ -2933,6 +4900,7 @@ namespace escout.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.collapsedTitleGravity = global::escout.Droid.Resource.Attribute.collapsedTitleGravity;
 			global::Xamarin.Forms.Platform.Resource.Attribute.collapsedTitleTextAppearance = global::escout.Droid.Resource.Attribute.collapsedTitleTextAppearance;
 			global::Xamarin.Forms.Platform.Resource.Attribute.collapseIcon = global::escout.Droid.Resource.Attribute.collapseIcon;
+			global::Xamarin.Forms.Platform.Resource.Attribute.collectionViewStyle = global::escout.Droid.Resource.Attribute.collectionViewStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.color = global::escout.Droid.Resource.Attribute.color;
 			global::Xamarin.Forms.Platform.Resource.Attribute.colorAccent = global::escout.Droid.Resource.Attribute.colorAccent;
 			global::Xamarin.Forms.Platform.Resource.Attribute.colorBackgroundFloating = global::escout.Droid.Resource.Attribute.colorBackgroundFloating;
@@ -4280,7 +6248,8 @@ namespace escout.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.CardView = global::escout.Droid.Resource.Style.CardView;
 			global::Xamarin.Forms.Platform.Resource.Style.CardView_Dark = global::escout.Droid.Resource.Style.CardView_Dark;
 			global::Xamarin.Forms.Platform.Resource.Style.CardView_Light = global::escout.Droid.Resource.Style.CardView_Light;
-			global::Xamarin.Forms.Platform.Resource.Style.collectionViewStyle = global::escout.Droid.Resource.Style.collectionViewStyle;
+			global::Xamarin.Forms.Platform.Resource.Style.collectionViewScrollBars = global::escout.Droid.Resource.Style.collectionViewScrollBars;
+			global::Xamarin.Forms.Platform.Resource.Style.collectionViewTheme = global::escout.Droid.Resource.Style.collectionViewTheme;
 			global::Xamarin.Forms.Platform.Resource.Style.MainTheme = global::escout.Droid.Resource.Style.MainTheme;
 			global::Xamarin.Forms.Platform.Resource.Style.MainTheme_Base = global::escout.Droid.Resource.Style.MainTheme_Base;
 			global::Xamarin.Forms.Platform.Resource.Style.Platform_AppCompat = global::escout.Droid.Resource.Style.Platform_AppCompat;
@@ -5011,6 +6980,8 @@ namespace escout.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.GradientColor_android_startY = global::escout.Droid.Resource.Styleable.GradientColor_android_startY;
 			global::Xamarin.Forms.Platform.Resource.Styleable.GradientColor_android_tileMode = global::escout.Droid.Resource.Styleable.GradientColor_android_tileMode;
 			global::Xamarin.Forms.Platform.Resource.Styleable.GradientColor_android_type = global::escout.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Xamarin.Forms.Platform.Resource.Styleable.ItemsViewRendererTheme = global::escout.Droid.Resource.Styleable.ItemsViewRendererTheme;
+			global::Xamarin.Forms.Platform.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle = global::escout.Droid.Resource.Styleable.ItemsViewRendererTheme_collectionViewStyle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.LinearLayoutCompat = global::escout.Droid.Resource.Styleable.LinearLayoutCompat;
 			global::Xamarin.Forms.Platform.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
 			global::Xamarin.Forms.Platform.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::escout.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
@@ -5852,1042 +7823,1045 @@ namespace escout.Droid
 			public const int collapseIcon = 2130903168;
 			
 			// aapt resource value: 0x7F030083
-			public const int color = 2130903171;
+			public const int collectionViewStyle = 2130903171;
 			
 			// aapt resource value: 0x7F030084
-			public const int colorAccent = 2130903172;
+			public const int color = 2130903172;
 			
 			// aapt resource value: 0x7F030085
-			public const int colorBackgroundFloating = 2130903173;
+			public const int colorAccent = 2130903173;
 			
 			// aapt resource value: 0x7F030086
-			public const int colorButtonNormal = 2130903174;
+			public const int colorBackgroundFloating = 2130903174;
 			
 			// aapt resource value: 0x7F030087
-			public const int colorControlActivated = 2130903175;
+			public const int colorButtonNormal = 2130903175;
 			
 			// aapt resource value: 0x7F030088
-			public const int colorControlHighlight = 2130903176;
+			public const int colorControlActivated = 2130903176;
 			
 			// aapt resource value: 0x7F030089
-			public const int colorControlNormal = 2130903177;
+			public const int colorControlHighlight = 2130903177;
 			
 			// aapt resource value: 0x7F03008A
-			public const int colorError = 2130903178;
+			public const int colorControlNormal = 2130903178;
 			
 			// aapt resource value: 0x7F03008B
-			public const int colorPrimary = 2130903179;
+			public const int colorError = 2130903179;
 			
 			// aapt resource value: 0x7F03008C
-			public const int colorPrimaryDark = 2130903180;
+			public const int colorPrimary = 2130903180;
 			
 			// aapt resource value: 0x7F03008D
-			public const int colorSecondary = 2130903181;
+			public const int colorPrimaryDark = 2130903181;
 			
 			// aapt resource value: 0x7F03008E
-			public const int colorSwitchThumbNormal = 2130903182;
+			public const int colorSecondary = 2130903182;
 			
 			// aapt resource value: 0x7F03008F
-			public const int commitIcon = 2130903183;
+			public const int colorSwitchThumbNormal = 2130903183;
 			
 			// aapt resource value: 0x7F030090
-			public const int contentDescription = 2130903184;
+			public const int commitIcon = 2130903184;
 			
 			// aapt resource value: 0x7F030091
-			public const int contentInsetEnd = 2130903185;
+			public const int contentDescription = 2130903185;
 			
 			// aapt resource value: 0x7F030092
-			public const int contentInsetEndWithActions = 2130903186;
+			public const int contentInsetEnd = 2130903186;
 			
 			// aapt resource value: 0x7F030093
-			public const int contentInsetLeft = 2130903187;
+			public const int contentInsetEndWithActions = 2130903187;
 			
 			// aapt resource value: 0x7F030094
-			public const int contentInsetRight = 2130903188;
+			public const int contentInsetLeft = 2130903188;
 			
 			// aapt resource value: 0x7F030095
-			public const int contentInsetStart = 2130903189;
+			public const int contentInsetRight = 2130903189;
 			
 			// aapt resource value: 0x7F030096
-			public const int contentInsetStartWithNavigation = 2130903190;
+			public const int contentInsetStart = 2130903190;
 			
 			// aapt resource value: 0x7F030097
-			public const int contentPadding = 2130903191;
+			public const int contentInsetStartWithNavigation = 2130903191;
 			
 			// aapt resource value: 0x7F030098
-			public const int contentPaddingBottom = 2130903192;
+			public const int contentPadding = 2130903192;
 			
 			// aapt resource value: 0x7F030099
-			public const int contentPaddingLeft = 2130903193;
+			public const int contentPaddingBottom = 2130903193;
 			
 			// aapt resource value: 0x7F03009A
-			public const int contentPaddingRight = 2130903194;
+			public const int contentPaddingLeft = 2130903194;
 			
 			// aapt resource value: 0x7F03009B
-			public const int contentPaddingTop = 2130903195;
+			public const int contentPaddingRight = 2130903195;
 			
 			// aapt resource value: 0x7F03009C
-			public const int contentScrim = 2130903196;
+			public const int contentPaddingTop = 2130903196;
 			
 			// aapt resource value: 0x7F03009D
-			public const int controlBackground = 2130903197;
+			public const int contentScrim = 2130903197;
 			
 			// aapt resource value: 0x7F03009E
-			public const int coordinatorLayoutStyle = 2130903198;
+			public const int controlBackground = 2130903198;
 			
 			// aapt resource value: 0x7F03009F
-			public const int cornerRadius = 2130903199;
+			public const int coordinatorLayoutStyle = 2130903199;
 			
 			// aapt resource value: 0x7F0300A0
-			public const int counterEnabled = 2130903200;
+			public const int cornerRadius = 2130903200;
 			
 			// aapt resource value: 0x7F0300A1
-			public const int counterMaxLength = 2130903201;
+			public const int counterEnabled = 2130903201;
 			
 			// aapt resource value: 0x7F0300A2
-			public const int counterOverflowTextAppearance = 2130903202;
+			public const int counterMaxLength = 2130903202;
 			
 			// aapt resource value: 0x7F0300A3
-			public const int counterTextAppearance = 2130903203;
+			public const int counterOverflowTextAppearance = 2130903203;
 			
 			// aapt resource value: 0x7F0300A4
-			public const int customNavigationLayout = 2130903204;
+			public const int counterTextAppearance = 2130903204;
 			
 			// aapt resource value: 0x7F0300A5
-			public const int defaultQueryHint = 2130903205;
+			public const int customNavigationLayout = 2130903205;
 			
 			// aapt resource value: 0x7F0300A6
-			public const int dialogCornerRadius = 2130903206;
+			public const int defaultQueryHint = 2130903206;
 			
 			// aapt resource value: 0x7F0300A7
-			public const int dialogPreferredPadding = 2130903207;
+			public const int dialogCornerRadius = 2130903207;
 			
 			// aapt resource value: 0x7F0300A8
-			public const int dialogTheme = 2130903208;
+			public const int dialogPreferredPadding = 2130903208;
 			
 			// aapt resource value: 0x7F0300A9
-			public const int displayOptions = 2130903209;
+			public const int dialogTheme = 2130903209;
 			
 			// aapt resource value: 0x7F0300AA
-			public const int divider = 2130903210;
+			public const int displayOptions = 2130903210;
 			
 			// aapt resource value: 0x7F0300AB
-			public const int dividerHorizontal = 2130903211;
+			public const int divider = 2130903211;
 			
 			// aapt resource value: 0x7F0300AC
-			public const int dividerPadding = 2130903212;
+			public const int dividerHorizontal = 2130903212;
 			
 			// aapt resource value: 0x7F0300AD
-			public const int dividerVertical = 2130903213;
+			public const int dividerPadding = 2130903213;
 			
 			// aapt resource value: 0x7F0300AE
-			public const int drawableSize = 2130903214;
+			public const int dividerVertical = 2130903214;
 			
 			// aapt resource value: 0x7F0300AF
-			public const int drawerArrowStyle = 2130903215;
-			
-			// aapt resource value: 0x7F0300B1
-			public const int dropdownListPreferredItemHeight = 2130903217;
+			public const int drawableSize = 2130903215;
 			
 			// aapt resource value: 0x7F0300B0
-			public const int dropDownListViewStyle = 2130903216;
+			public const int drawerArrowStyle = 2130903216;
 			
 			// aapt resource value: 0x7F0300B2
-			public const int editTextBackground = 2130903218;
+			public const int dropdownListPreferredItemHeight = 2130903218;
+			
+			// aapt resource value: 0x7F0300B1
+			public const int dropDownListViewStyle = 2130903217;
 			
 			// aapt resource value: 0x7F0300B3
-			public const int editTextColor = 2130903219;
+			public const int editTextBackground = 2130903219;
 			
 			// aapt resource value: 0x7F0300B4
-			public const int editTextStyle = 2130903220;
+			public const int editTextColor = 2130903220;
 			
 			// aapt resource value: 0x7F0300B5
-			public const int elevation = 2130903221;
+			public const int editTextStyle = 2130903221;
 			
 			// aapt resource value: 0x7F0300B6
-			public const int enforceMaterialTheme = 2130903222;
+			public const int elevation = 2130903222;
 			
 			// aapt resource value: 0x7F0300B7
-			public const int enforceTextAppearance = 2130903223;
+			public const int enforceMaterialTheme = 2130903223;
 			
 			// aapt resource value: 0x7F0300B8
-			public const int errorEnabled = 2130903224;
+			public const int enforceTextAppearance = 2130903224;
 			
 			// aapt resource value: 0x7F0300B9
-			public const int errorTextAppearance = 2130903225;
+			public const int errorEnabled = 2130903225;
 			
 			// aapt resource value: 0x7F0300BA
-			public const int expandActivityOverflowButtonDrawable = 2130903226;
+			public const int errorTextAppearance = 2130903226;
 			
 			// aapt resource value: 0x7F0300BB
-			public const int expanded = 2130903227;
+			public const int expandActivityOverflowButtonDrawable = 2130903227;
 			
 			// aapt resource value: 0x7F0300BC
-			public const int expandedTitleGravity = 2130903228;
+			public const int expanded = 2130903228;
 			
 			// aapt resource value: 0x7F0300BD
-			public const int expandedTitleMargin = 2130903229;
+			public const int expandedTitleGravity = 2130903229;
 			
 			// aapt resource value: 0x7F0300BE
-			public const int expandedTitleMarginBottom = 2130903230;
+			public const int expandedTitleMargin = 2130903230;
 			
 			// aapt resource value: 0x7F0300BF
-			public const int expandedTitleMarginEnd = 2130903231;
+			public const int expandedTitleMarginBottom = 2130903231;
 			
 			// aapt resource value: 0x7F0300C0
-			public const int expandedTitleMarginStart = 2130903232;
+			public const int expandedTitleMarginEnd = 2130903232;
 			
 			// aapt resource value: 0x7F0300C1
-			public const int expandedTitleMarginTop = 2130903233;
+			public const int expandedTitleMarginStart = 2130903233;
 			
 			// aapt resource value: 0x7F0300C2
-			public const int expandedTitleTextAppearance = 2130903234;
+			public const int expandedTitleMarginTop = 2130903234;
 			
 			// aapt resource value: 0x7F0300C3
-			public const int fabAlignmentMode = 2130903235;
+			public const int expandedTitleTextAppearance = 2130903235;
 			
 			// aapt resource value: 0x7F0300C4
-			public const int fabCradleMargin = 2130903236;
+			public const int fabAlignmentMode = 2130903236;
 			
 			// aapt resource value: 0x7F0300C5
-			public const int fabCradleRoundedCornerRadius = 2130903237;
+			public const int fabCradleMargin = 2130903237;
 			
 			// aapt resource value: 0x7F0300C6
-			public const int fabCradleVerticalOffset = 2130903238;
+			public const int fabCradleRoundedCornerRadius = 2130903238;
 			
 			// aapt resource value: 0x7F0300C7
-			public const int fabCustomSize = 2130903239;
+			public const int fabCradleVerticalOffset = 2130903239;
 			
 			// aapt resource value: 0x7F0300C8
-			public const int fabSize = 2130903240;
+			public const int fabCustomSize = 2130903240;
 			
 			// aapt resource value: 0x7F0300C9
-			public const int fastScrollEnabled = 2130903241;
+			public const int fabSize = 2130903241;
 			
 			// aapt resource value: 0x7F0300CA
-			public const int fastScrollHorizontalThumbDrawable = 2130903242;
+			public const int fastScrollEnabled = 2130903242;
 			
 			// aapt resource value: 0x7F0300CB
-			public const int fastScrollHorizontalTrackDrawable = 2130903243;
+			public const int fastScrollHorizontalThumbDrawable = 2130903243;
 			
 			// aapt resource value: 0x7F0300CC
-			public const int fastScrollVerticalThumbDrawable = 2130903244;
+			public const int fastScrollHorizontalTrackDrawable = 2130903244;
 			
 			// aapt resource value: 0x7F0300CD
-			public const int fastScrollVerticalTrackDrawable = 2130903245;
+			public const int fastScrollVerticalThumbDrawable = 2130903245;
 			
 			// aapt resource value: 0x7F0300CE
-			public const int firstBaselineToTopHeight = 2130903246;
+			public const int fastScrollVerticalTrackDrawable = 2130903246;
 			
 			// aapt resource value: 0x7F0300CF
-			public const int floatingActionButtonStyle = 2130903247;
+			public const int firstBaselineToTopHeight = 2130903247;
 			
 			// aapt resource value: 0x7F0300D0
-			public const int font = 2130903248;
+			public const int floatingActionButtonStyle = 2130903248;
 			
 			// aapt resource value: 0x7F0300D1
-			public const int fontFamily = 2130903249;
+			public const int font = 2130903249;
 			
 			// aapt resource value: 0x7F0300D2
-			public const int fontProviderAuthority = 2130903250;
+			public const int fontFamily = 2130903250;
 			
 			// aapt resource value: 0x7F0300D3
-			public const int fontProviderCerts = 2130903251;
+			public const int fontProviderAuthority = 2130903251;
 			
 			// aapt resource value: 0x7F0300D4
-			public const int fontProviderFetchStrategy = 2130903252;
+			public const int fontProviderCerts = 2130903252;
 			
 			// aapt resource value: 0x7F0300D5
-			public const int fontProviderFetchTimeout = 2130903253;
+			public const int fontProviderFetchStrategy = 2130903253;
 			
 			// aapt resource value: 0x7F0300D6
-			public const int fontProviderPackage = 2130903254;
+			public const int fontProviderFetchTimeout = 2130903254;
 			
 			// aapt resource value: 0x7F0300D7
-			public const int fontProviderQuery = 2130903255;
+			public const int fontProviderPackage = 2130903255;
 			
 			// aapt resource value: 0x7F0300D8
-			public const int fontStyle = 2130903256;
+			public const int fontProviderQuery = 2130903256;
 			
 			// aapt resource value: 0x7F0300D9
-			public const int fontVariationSettings = 2130903257;
+			public const int fontStyle = 2130903257;
 			
 			// aapt resource value: 0x7F0300DA
-			public const int fontWeight = 2130903258;
+			public const int fontVariationSettings = 2130903258;
 			
 			// aapt resource value: 0x7F0300DB
-			public const int foregroundInsidePadding = 2130903259;
+			public const int fontWeight = 2130903259;
 			
 			// aapt resource value: 0x7F0300DC
-			public const int gapBetweenBars = 2130903260;
+			public const int foregroundInsidePadding = 2130903260;
 			
 			// aapt resource value: 0x7F0300DD
-			public const int goIcon = 2130903261;
+			public const int gapBetweenBars = 2130903261;
 			
 			// aapt resource value: 0x7F0300DE
-			public const int headerLayout = 2130903262;
+			public const int goIcon = 2130903262;
 			
 			// aapt resource value: 0x7F0300DF
-			public const int height = 2130903263;
+			public const int headerLayout = 2130903263;
 			
 			// aapt resource value: 0x7F0300E0
-			public const int helperText = 2130903264;
+			public const int height = 2130903264;
 			
 			// aapt resource value: 0x7F0300E1
-			public const int helperTextEnabled = 2130903265;
+			public const int helperText = 2130903265;
 			
 			// aapt resource value: 0x7F0300E2
-			public const int helperTextTextAppearance = 2130903266;
+			public const int helperTextEnabled = 2130903266;
 			
 			// aapt resource value: 0x7F0300E3
-			public const int hideMotionSpec = 2130903267;
+			public const int helperTextTextAppearance = 2130903267;
 			
 			// aapt resource value: 0x7F0300E4
-			public const int hideOnContentScroll = 2130903268;
+			public const int hideMotionSpec = 2130903268;
 			
 			// aapt resource value: 0x7F0300E5
-			public const int hideOnScroll = 2130903269;
+			public const int hideOnContentScroll = 2130903269;
 			
 			// aapt resource value: 0x7F0300E6
-			public const int hintAnimationEnabled = 2130903270;
+			public const int hideOnScroll = 2130903270;
 			
 			// aapt resource value: 0x7F0300E7
-			public const int hintEnabled = 2130903271;
+			public const int hintAnimationEnabled = 2130903271;
 			
 			// aapt resource value: 0x7F0300E8
-			public const int hintTextAppearance = 2130903272;
+			public const int hintEnabled = 2130903272;
 			
 			// aapt resource value: 0x7F0300E9
-			public const int homeAsUpIndicator = 2130903273;
+			public const int hintTextAppearance = 2130903273;
 			
 			// aapt resource value: 0x7F0300EA
-			public const int homeLayout = 2130903274;
+			public const int homeAsUpIndicator = 2130903274;
 			
 			// aapt resource value: 0x7F0300EB
-			public const int hoveredFocusedTranslationZ = 2130903275;
+			public const int homeLayout = 2130903275;
 			
 			// aapt resource value: 0x7F0300EC
-			public const int icon = 2130903276;
+			public const int hoveredFocusedTranslationZ = 2130903276;
 			
 			// aapt resource value: 0x7F0300ED
-			public const int iconEndPadding = 2130903277;
+			public const int icon = 2130903277;
 			
 			// aapt resource value: 0x7F0300EE
-			public const int iconGravity = 2130903278;
-			
-			// aapt resource value: 0x7F0300F4
-			public const int iconifiedByDefault = 2130903284;
+			public const int iconEndPadding = 2130903278;
 			
 			// aapt resource value: 0x7F0300EF
-			public const int iconPadding = 2130903279;
-			
-			// aapt resource value: 0x7F0300F0
-			public const int iconSize = 2130903280;
-			
-			// aapt resource value: 0x7F0300F1
-			public const int iconStartPadding = 2130903281;
-			
-			// aapt resource value: 0x7F0300F2
-			public const int iconTint = 2130903282;
-			
-			// aapt resource value: 0x7F0300F3
-			public const int iconTintMode = 2130903283;
+			public const int iconGravity = 2130903279;
 			
 			// aapt resource value: 0x7F0300F5
-			public const int imageButtonStyle = 2130903285;
+			public const int iconifiedByDefault = 2130903285;
+			
+			// aapt resource value: 0x7F0300F0
+			public const int iconPadding = 2130903280;
+			
+			// aapt resource value: 0x7F0300F1
+			public const int iconSize = 2130903281;
+			
+			// aapt resource value: 0x7F0300F2
+			public const int iconStartPadding = 2130903282;
+			
+			// aapt resource value: 0x7F0300F3
+			public const int iconTint = 2130903283;
+			
+			// aapt resource value: 0x7F0300F4
+			public const int iconTintMode = 2130903284;
 			
 			// aapt resource value: 0x7F0300F6
-			public const int indeterminateProgressStyle = 2130903286;
+			public const int imageButtonStyle = 2130903286;
 			
 			// aapt resource value: 0x7F0300F7
-			public const int initialActivityCount = 2130903287;
+			public const int indeterminateProgressStyle = 2130903287;
 			
 			// aapt resource value: 0x7F0300F8
-			public const int insetForeground = 2130903288;
+			public const int initialActivityCount = 2130903288;
 			
 			// aapt resource value: 0x7F0300F9
-			public const int isLightTheme = 2130903289;
+			public const int insetForeground = 2130903289;
 			
 			// aapt resource value: 0x7F0300FA
-			public const int itemBackground = 2130903290;
+			public const int isLightTheme = 2130903290;
 			
 			// aapt resource value: 0x7F0300FB
-			public const int itemHorizontalPadding = 2130903291;
+			public const int itemBackground = 2130903291;
 			
 			// aapt resource value: 0x7F0300FC
-			public const int itemHorizontalTranslationEnabled = 2130903292;
+			public const int itemHorizontalPadding = 2130903292;
 			
 			// aapt resource value: 0x7F0300FD
-			public const int itemIconPadding = 2130903293;
+			public const int itemHorizontalTranslationEnabled = 2130903293;
 			
 			// aapt resource value: 0x7F0300FE
-			public const int itemIconSize = 2130903294;
+			public const int itemIconPadding = 2130903294;
 			
 			// aapt resource value: 0x7F0300FF
-			public const int itemIconTint = 2130903295;
+			public const int itemIconSize = 2130903295;
 			
 			// aapt resource value: 0x7F030100
-			public const int itemPadding = 2130903296;
+			public const int itemIconTint = 2130903296;
 			
 			// aapt resource value: 0x7F030101
-			public const int itemSpacing = 2130903297;
+			public const int itemPadding = 2130903297;
 			
 			// aapt resource value: 0x7F030102
-			public const int itemTextAppearance = 2130903298;
+			public const int itemSpacing = 2130903298;
 			
 			// aapt resource value: 0x7F030103
-			public const int itemTextAppearanceActive = 2130903299;
+			public const int itemTextAppearance = 2130903299;
 			
 			// aapt resource value: 0x7F030104
-			public const int itemTextAppearanceInactive = 2130903300;
+			public const int itemTextAppearanceActive = 2130903300;
 			
 			// aapt resource value: 0x7F030105
-			public const int itemTextColor = 2130903301;
+			public const int itemTextAppearanceInactive = 2130903301;
 			
 			// aapt resource value: 0x7F030106
-			public const int keylines = 2130903302;
+			public const int itemTextColor = 2130903302;
 			
 			// aapt resource value: 0x7F030107
-			public const int labelVisibilityMode = 2130903303;
+			public const int keylines = 2130903303;
 			
 			// aapt resource value: 0x7F030108
-			public const int lastBaselineToBottomHeight = 2130903304;
+			public const int labelVisibilityMode = 2130903304;
 			
 			// aapt resource value: 0x7F030109
-			public const int layout = 2130903305;
+			public const int lastBaselineToBottomHeight = 2130903305;
 			
 			// aapt resource value: 0x7F03010A
-			public const int layoutManager = 2130903306;
+			public const int layout = 2130903306;
 			
 			// aapt resource value: 0x7F03010B
-			public const int layout_anchor = 2130903307;
+			public const int layoutManager = 2130903307;
 			
 			// aapt resource value: 0x7F03010C
-			public const int layout_anchorGravity = 2130903308;
+			public const int layout_anchor = 2130903308;
 			
 			// aapt resource value: 0x7F03010D
-			public const int layout_behavior = 2130903309;
+			public const int layout_anchorGravity = 2130903309;
 			
 			// aapt resource value: 0x7F03010E
-			public const int layout_collapseMode = 2130903310;
+			public const int layout_behavior = 2130903310;
 			
 			// aapt resource value: 0x7F03010F
-			public const int layout_collapseParallaxMultiplier = 2130903311;
+			public const int layout_collapseMode = 2130903311;
 			
 			// aapt resource value: 0x7F030110
-			public const int layout_dodgeInsetEdges = 2130903312;
+			public const int layout_collapseParallaxMultiplier = 2130903312;
 			
 			// aapt resource value: 0x7F030111
-			public const int layout_insetEdge = 2130903313;
+			public const int layout_dodgeInsetEdges = 2130903313;
 			
 			// aapt resource value: 0x7F030112
-			public const int layout_keyline = 2130903314;
+			public const int layout_insetEdge = 2130903314;
 			
 			// aapt resource value: 0x7F030113
-			public const int layout_scrollFlags = 2130903315;
+			public const int layout_keyline = 2130903315;
 			
 			// aapt resource value: 0x7F030114
-			public const int layout_scrollInterpolator = 2130903316;
+			public const int layout_scrollFlags = 2130903316;
 			
 			// aapt resource value: 0x7F030115
-			public const int liftOnScroll = 2130903317;
+			public const int layout_scrollInterpolator = 2130903317;
 			
 			// aapt resource value: 0x7F030116
-			public const int lineHeight = 2130903318;
+			public const int liftOnScroll = 2130903318;
 			
 			// aapt resource value: 0x7F030117
-			public const int lineSpacing = 2130903319;
+			public const int lineHeight = 2130903319;
 			
 			// aapt resource value: 0x7F030118
-			public const int listChoiceBackgroundIndicator = 2130903320;
+			public const int lineSpacing = 2130903320;
 			
 			// aapt resource value: 0x7F030119
-			public const int listDividerAlertDialog = 2130903321;
+			public const int listChoiceBackgroundIndicator = 2130903321;
 			
 			// aapt resource value: 0x7F03011A
-			public const int listItemLayout = 2130903322;
+			public const int listDividerAlertDialog = 2130903322;
 			
 			// aapt resource value: 0x7F03011B
-			public const int listLayout = 2130903323;
+			public const int listItemLayout = 2130903323;
 			
 			// aapt resource value: 0x7F03011C
-			public const int listMenuViewStyle = 2130903324;
+			public const int listLayout = 2130903324;
 			
 			// aapt resource value: 0x7F03011D
-			public const int listPopupWindowStyle = 2130903325;
+			public const int listMenuViewStyle = 2130903325;
 			
 			// aapt resource value: 0x7F03011E
-			public const int listPreferredItemHeight = 2130903326;
+			public const int listPopupWindowStyle = 2130903326;
 			
 			// aapt resource value: 0x7F03011F
-			public const int listPreferredItemHeightLarge = 2130903327;
+			public const int listPreferredItemHeight = 2130903327;
 			
 			// aapt resource value: 0x7F030120
-			public const int listPreferredItemHeightSmall = 2130903328;
+			public const int listPreferredItemHeightLarge = 2130903328;
 			
 			// aapt resource value: 0x7F030121
-			public const int listPreferredItemPaddingLeft = 2130903329;
+			public const int listPreferredItemHeightSmall = 2130903329;
 			
 			// aapt resource value: 0x7F030122
-			public const int listPreferredItemPaddingRight = 2130903330;
+			public const int listPreferredItemPaddingLeft = 2130903330;
 			
 			// aapt resource value: 0x7F030123
-			public const int logo = 2130903331;
+			public const int listPreferredItemPaddingRight = 2130903331;
 			
 			// aapt resource value: 0x7F030124
-			public const int logoDescription = 2130903332;
+			public const int logo = 2130903332;
 			
 			// aapt resource value: 0x7F030125
-			public const int materialButtonStyle = 2130903333;
+			public const int logoDescription = 2130903333;
 			
 			// aapt resource value: 0x7F030126
-			public const int materialCardViewStyle = 2130903334;
+			public const int materialButtonStyle = 2130903334;
 			
 			// aapt resource value: 0x7F030127
-			public const int maxActionInlineWidth = 2130903335;
+			public const int materialCardViewStyle = 2130903335;
 			
 			// aapt resource value: 0x7F030128
-			public const int maxButtonHeight = 2130903336;
+			public const int maxActionInlineWidth = 2130903336;
 			
 			// aapt resource value: 0x7F030129
-			public const int maxImageSize = 2130903337;
+			public const int maxButtonHeight = 2130903337;
 			
 			// aapt resource value: 0x7F03012A
-			public const int measureWithLargestChild = 2130903338;
+			public const int maxImageSize = 2130903338;
 			
 			// aapt resource value: 0x7F03012B
-			public const int menu = 2130903339;
+			public const int measureWithLargestChild = 2130903339;
 			
 			// aapt resource value: 0x7F03012C
-			public const int multiChoiceItemLayout = 2130903340;
+			public const int menu = 2130903340;
 			
 			// aapt resource value: 0x7F03012D
-			public const int navigationContentDescription = 2130903341;
+			public const int multiChoiceItemLayout = 2130903341;
 			
 			// aapt resource value: 0x7F03012E
-			public const int navigationIcon = 2130903342;
+			public const int navigationContentDescription = 2130903342;
 			
 			// aapt resource value: 0x7F03012F
-			public const int navigationMode = 2130903343;
+			public const int navigationIcon = 2130903343;
 			
 			// aapt resource value: 0x7F030130
-			public const int navigationViewStyle = 2130903344;
+			public const int navigationMode = 2130903344;
 			
 			// aapt resource value: 0x7F030131
-			public const int numericModifiers = 2130903345;
+			public const int navigationViewStyle = 2130903345;
 			
 			// aapt resource value: 0x7F030132
-			public const int overlapAnchor = 2130903346;
+			public const int numericModifiers = 2130903346;
 			
 			// aapt resource value: 0x7F030133
-			public const int paddingBottomNoButtons = 2130903347;
+			public const int overlapAnchor = 2130903347;
 			
 			// aapt resource value: 0x7F030134
-			public const int paddingEnd = 2130903348;
+			public const int paddingBottomNoButtons = 2130903348;
 			
 			// aapt resource value: 0x7F030135
-			public const int paddingStart = 2130903349;
+			public const int paddingEnd = 2130903349;
 			
 			// aapt resource value: 0x7F030136
-			public const int paddingTopNoTitle = 2130903350;
+			public const int paddingStart = 2130903350;
 			
 			// aapt resource value: 0x7F030137
-			public const int panelBackground = 2130903351;
+			public const int paddingTopNoTitle = 2130903351;
 			
 			// aapt resource value: 0x7F030138
-			public const int panelMenuListTheme = 2130903352;
+			public const int panelBackground = 2130903352;
 			
 			// aapt resource value: 0x7F030139
-			public const int panelMenuListWidth = 2130903353;
+			public const int panelMenuListTheme = 2130903353;
 			
 			// aapt resource value: 0x7F03013A
-			public const int passwordToggleContentDescription = 2130903354;
+			public const int panelMenuListWidth = 2130903354;
 			
 			// aapt resource value: 0x7F03013B
-			public const int passwordToggleDrawable = 2130903355;
+			public const int passwordToggleContentDescription = 2130903355;
 			
 			// aapt resource value: 0x7F03013C
-			public const int passwordToggleEnabled = 2130903356;
+			public const int passwordToggleDrawable = 2130903356;
 			
 			// aapt resource value: 0x7F03013D
-			public const int passwordToggleTint = 2130903357;
+			public const int passwordToggleEnabled = 2130903357;
 			
 			// aapt resource value: 0x7F03013E
-			public const int passwordToggleTintMode = 2130903358;
+			public const int passwordToggleTint = 2130903358;
 			
 			// aapt resource value: 0x7F03013F
-			public const int popupMenuStyle = 2130903359;
+			public const int passwordToggleTintMode = 2130903359;
 			
 			// aapt resource value: 0x7F030140
-			public const int popupTheme = 2130903360;
+			public const int popupMenuStyle = 2130903360;
 			
 			// aapt resource value: 0x7F030141
-			public const int popupWindowStyle = 2130903361;
+			public const int popupTheme = 2130903361;
 			
 			// aapt resource value: 0x7F030142
-			public const int preserveIconSpacing = 2130903362;
+			public const int popupWindowStyle = 2130903362;
 			
 			// aapt resource value: 0x7F030143
-			public const int pressedTranslationZ = 2130903363;
+			public const int preserveIconSpacing = 2130903363;
 			
 			// aapt resource value: 0x7F030144
-			public const int progressBarPadding = 2130903364;
+			public const int pressedTranslationZ = 2130903364;
 			
 			// aapt resource value: 0x7F030145
-			public const int progressBarStyle = 2130903365;
+			public const int progressBarPadding = 2130903365;
 			
 			// aapt resource value: 0x7F030146
-			public const int queryBackground = 2130903366;
+			public const int progressBarStyle = 2130903366;
 			
 			// aapt resource value: 0x7F030147
-			public const int queryHint = 2130903367;
+			public const int queryBackground = 2130903367;
 			
 			// aapt resource value: 0x7F030148
-			public const int radioButtonStyle = 2130903368;
+			public const int queryHint = 2130903368;
 			
 			// aapt resource value: 0x7F030149
-			public const int ratingBarStyle = 2130903369;
+			public const int radioButtonStyle = 2130903369;
 			
 			// aapt resource value: 0x7F03014A
-			public const int ratingBarStyleIndicator = 2130903370;
+			public const int ratingBarStyle = 2130903370;
 			
 			// aapt resource value: 0x7F03014B
-			public const int ratingBarStyleSmall = 2130903371;
+			public const int ratingBarStyleIndicator = 2130903371;
 			
 			// aapt resource value: 0x7F03014C
-			public const int reverseLayout = 2130903372;
+			public const int ratingBarStyleSmall = 2130903372;
 			
 			// aapt resource value: 0x7F03014D
-			public const int rippleColor = 2130903373;
+			public const int reverseLayout = 2130903373;
 			
 			// aapt resource value: 0x7F03014E
-			public const int scrimAnimationDuration = 2130903374;
+			public const int rippleColor = 2130903374;
 			
 			// aapt resource value: 0x7F03014F
-			public const int scrimBackground = 2130903375;
+			public const int scrimAnimationDuration = 2130903375;
 			
 			// aapt resource value: 0x7F030150
-			public const int scrimVisibleHeightTrigger = 2130903376;
+			public const int scrimBackground = 2130903376;
 			
 			// aapt resource value: 0x7F030151
-			public const int searchHintIcon = 2130903377;
+			public const int scrimVisibleHeightTrigger = 2130903377;
 			
 			// aapt resource value: 0x7F030152
-			public const int searchIcon = 2130903378;
+			public const int searchHintIcon = 2130903378;
 			
 			// aapt resource value: 0x7F030153
-			public const int searchViewStyle = 2130903379;
+			public const int searchIcon = 2130903379;
 			
 			// aapt resource value: 0x7F030154
-			public const int seekBarStyle = 2130903380;
+			public const int searchViewStyle = 2130903380;
 			
 			// aapt resource value: 0x7F030155
-			public const int selectableItemBackground = 2130903381;
+			public const int seekBarStyle = 2130903381;
 			
 			// aapt resource value: 0x7F030156
-			public const int selectableItemBackgroundBorderless = 2130903382;
+			public const int selectableItemBackground = 2130903382;
 			
 			// aapt resource value: 0x7F030157
-			public const int showAsAction = 2130903383;
+			public const int selectableItemBackgroundBorderless = 2130903383;
 			
 			// aapt resource value: 0x7F030158
-			public const int showDividers = 2130903384;
+			public const int showAsAction = 2130903384;
 			
 			// aapt resource value: 0x7F030159
-			public const int showMotionSpec = 2130903385;
+			public const int showDividers = 2130903385;
 			
 			// aapt resource value: 0x7F03015A
-			public const int showText = 2130903386;
+			public const int showMotionSpec = 2130903386;
 			
 			// aapt resource value: 0x7F03015B
-			public const int showTitle = 2130903387;
+			public const int showText = 2130903387;
 			
 			// aapt resource value: 0x7F03015C
-			public const int singleChoiceItemLayout = 2130903388;
+			public const int showTitle = 2130903388;
 			
 			// aapt resource value: 0x7F03015D
-			public const int singleLine = 2130903389;
+			public const int singleChoiceItemLayout = 2130903389;
 			
 			// aapt resource value: 0x7F03015E
-			public const int singleSelection = 2130903390;
+			public const int singleLine = 2130903390;
 			
 			// aapt resource value: 0x7F03015F
-			public const int snackbarButtonStyle = 2130903391;
+			public const int singleSelection = 2130903391;
 			
 			// aapt resource value: 0x7F030160
-			public const int snackbarStyle = 2130903392;
+			public const int snackbarButtonStyle = 2130903392;
 			
 			// aapt resource value: 0x7F030161
-			public const int spanCount = 2130903393;
+			public const int snackbarStyle = 2130903393;
 			
 			// aapt resource value: 0x7F030162
-			public const int spinBars = 2130903394;
+			public const int spanCount = 2130903394;
 			
 			// aapt resource value: 0x7F030163
-			public const int spinnerDropDownItemStyle = 2130903395;
+			public const int spinBars = 2130903395;
 			
 			// aapt resource value: 0x7F030164
-			public const int spinnerStyle = 2130903396;
+			public const int spinnerDropDownItemStyle = 2130903396;
 			
 			// aapt resource value: 0x7F030165
-			public const int splitTrack = 2130903397;
+			public const int spinnerStyle = 2130903397;
 			
 			// aapt resource value: 0x7F030166
-			public const int srcCompat = 2130903398;
+			public const int splitTrack = 2130903398;
 			
 			// aapt resource value: 0x7F030167
-			public const int stackFromEnd = 2130903399;
+			public const int srcCompat = 2130903399;
 			
 			// aapt resource value: 0x7F030168
-			public const int state_above_anchor = 2130903400;
+			public const int stackFromEnd = 2130903400;
 			
 			// aapt resource value: 0x7F030169
-			public const int state_collapsed = 2130903401;
+			public const int state_above_anchor = 2130903401;
 			
 			// aapt resource value: 0x7F03016A
-			public const int state_collapsible = 2130903402;
+			public const int state_collapsed = 2130903402;
 			
 			// aapt resource value: 0x7F03016B
-			public const int state_liftable = 2130903403;
+			public const int state_collapsible = 2130903403;
 			
 			// aapt resource value: 0x7F03016C
-			public const int state_lifted = 2130903404;
+			public const int state_liftable = 2130903404;
 			
 			// aapt resource value: 0x7F03016D
-			public const int statusBarBackground = 2130903405;
+			public const int state_lifted = 2130903405;
 			
 			// aapt resource value: 0x7F03016E
-			public const int statusBarScrim = 2130903406;
+			public const int statusBarBackground = 2130903406;
 			
 			// aapt resource value: 0x7F03016F
-			public const int strokeColor = 2130903407;
+			public const int statusBarScrim = 2130903407;
 			
 			// aapt resource value: 0x7F030170
-			public const int strokeWidth = 2130903408;
+			public const int strokeColor = 2130903408;
 			
 			// aapt resource value: 0x7F030171
-			public const int subMenuArrow = 2130903409;
+			public const int strokeWidth = 2130903409;
 			
 			// aapt resource value: 0x7F030172
-			public const int submitBackground = 2130903410;
+			public const int subMenuArrow = 2130903410;
 			
 			// aapt resource value: 0x7F030173
-			public const int subtitle = 2130903411;
+			public const int submitBackground = 2130903411;
 			
 			// aapt resource value: 0x7F030174
-			public const int subtitleTextAppearance = 2130903412;
+			public const int subtitle = 2130903412;
 			
 			// aapt resource value: 0x7F030175
-			public const int subtitleTextColor = 2130903413;
+			public const int subtitleTextAppearance = 2130903413;
 			
 			// aapt resource value: 0x7F030176
-			public const int subtitleTextStyle = 2130903414;
+			public const int subtitleTextColor = 2130903414;
 			
 			// aapt resource value: 0x7F030177
-			public const int suggestionRowLayout = 2130903415;
+			public const int subtitleTextStyle = 2130903415;
 			
 			// aapt resource value: 0x7F030178
-			public const int switchMinWidth = 2130903416;
+			public const int suggestionRowLayout = 2130903416;
 			
 			// aapt resource value: 0x7F030179
-			public const int switchPadding = 2130903417;
+			public const int switchMinWidth = 2130903417;
 			
 			// aapt resource value: 0x7F03017A
-			public const int switchStyle = 2130903418;
+			public const int switchPadding = 2130903418;
 			
 			// aapt resource value: 0x7F03017B
-			public const int switchTextAppearance = 2130903419;
+			public const int switchStyle = 2130903419;
 			
 			// aapt resource value: 0x7F03017C
-			public const int tabBackground = 2130903420;
+			public const int switchTextAppearance = 2130903420;
 			
 			// aapt resource value: 0x7F03017D
-			public const int tabContentStart = 2130903421;
+			public const int tabBackground = 2130903421;
 			
 			// aapt resource value: 0x7F03017E
-			public const int tabGravity = 2130903422;
+			public const int tabContentStart = 2130903422;
 			
 			// aapt resource value: 0x7F03017F
-			public const int tabIconTint = 2130903423;
+			public const int tabGravity = 2130903423;
 			
 			// aapt resource value: 0x7F030180
-			public const int tabIconTintMode = 2130903424;
+			public const int tabIconTint = 2130903424;
 			
 			// aapt resource value: 0x7F030181
-			public const int tabIndicator = 2130903425;
+			public const int tabIconTintMode = 2130903425;
 			
 			// aapt resource value: 0x7F030182
-			public const int tabIndicatorAnimationDuration = 2130903426;
+			public const int tabIndicator = 2130903426;
 			
 			// aapt resource value: 0x7F030183
-			public const int tabIndicatorColor = 2130903427;
+			public const int tabIndicatorAnimationDuration = 2130903427;
 			
 			// aapt resource value: 0x7F030184
-			public const int tabIndicatorFullWidth = 2130903428;
+			public const int tabIndicatorColor = 2130903428;
 			
 			// aapt resource value: 0x7F030185
-			public const int tabIndicatorGravity = 2130903429;
+			public const int tabIndicatorFullWidth = 2130903429;
 			
 			// aapt resource value: 0x7F030186
-			public const int tabIndicatorHeight = 2130903430;
+			public const int tabIndicatorGravity = 2130903430;
 			
 			// aapt resource value: 0x7F030187
-			public const int tabInlineLabel = 2130903431;
+			public const int tabIndicatorHeight = 2130903431;
 			
 			// aapt resource value: 0x7F030188
-			public const int tabMaxWidth = 2130903432;
+			public const int tabInlineLabel = 2130903432;
 			
 			// aapt resource value: 0x7F030189
-			public const int tabMinWidth = 2130903433;
+			public const int tabMaxWidth = 2130903433;
 			
 			// aapt resource value: 0x7F03018A
-			public const int tabMode = 2130903434;
+			public const int tabMinWidth = 2130903434;
 			
 			// aapt resource value: 0x7F03018B
-			public const int tabPadding = 2130903435;
+			public const int tabMode = 2130903435;
 			
 			// aapt resource value: 0x7F03018C
-			public const int tabPaddingBottom = 2130903436;
+			public const int tabPadding = 2130903436;
 			
 			// aapt resource value: 0x7F03018D
-			public const int tabPaddingEnd = 2130903437;
+			public const int tabPaddingBottom = 2130903437;
 			
 			// aapt resource value: 0x7F03018E
-			public const int tabPaddingStart = 2130903438;
+			public const int tabPaddingEnd = 2130903438;
 			
 			// aapt resource value: 0x7F03018F
-			public const int tabPaddingTop = 2130903439;
+			public const int tabPaddingStart = 2130903439;
 			
 			// aapt resource value: 0x7F030190
-			public const int tabRippleColor = 2130903440;
+			public const int tabPaddingTop = 2130903440;
 			
 			// aapt resource value: 0x7F030191
-			public const int tabSelectedTextColor = 2130903441;
+			public const int tabRippleColor = 2130903441;
 			
 			// aapt resource value: 0x7F030192
-			public const int tabStyle = 2130903442;
+			public const int tabSelectedTextColor = 2130903442;
 			
 			// aapt resource value: 0x7F030193
-			public const int tabTextAppearance = 2130903443;
+			public const int tabStyle = 2130903443;
 			
 			// aapt resource value: 0x7F030194
-			public const int tabTextColor = 2130903444;
+			public const int tabTextAppearance = 2130903444;
 			
 			// aapt resource value: 0x7F030195
-			public const int tabUnboundedRipple = 2130903445;
+			public const int tabTextColor = 2130903445;
 			
 			// aapt resource value: 0x7F030196
-			public const int textAllCaps = 2130903446;
+			public const int tabUnboundedRipple = 2130903446;
 			
 			// aapt resource value: 0x7F030197
-			public const int textAppearanceBody1 = 2130903447;
+			public const int textAllCaps = 2130903447;
 			
 			// aapt resource value: 0x7F030198
-			public const int textAppearanceBody2 = 2130903448;
+			public const int textAppearanceBody1 = 2130903448;
 			
 			// aapt resource value: 0x7F030199
-			public const int textAppearanceButton = 2130903449;
+			public const int textAppearanceBody2 = 2130903449;
 			
 			// aapt resource value: 0x7F03019A
-			public const int textAppearanceCaption = 2130903450;
+			public const int textAppearanceButton = 2130903450;
 			
 			// aapt resource value: 0x7F03019B
-			public const int textAppearanceHeadline1 = 2130903451;
+			public const int textAppearanceCaption = 2130903451;
 			
 			// aapt resource value: 0x7F03019C
-			public const int textAppearanceHeadline2 = 2130903452;
+			public const int textAppearanceHeadline1 = 2130903452;
 			
 			// aapt resource value: 0x7F03019D
-			public const int textAppearanceHeadline3 = 2130903453;
+			public const int textAppearanceHeadline2 = 2130903453;
 			
 			// aapt resource value: 0x7F03019E
-			public const int textAppearanceHeadline4 = 2130903454;
+			public const int textAppearanceHeadline3 = 2130903454;
 			
 			// aapt resource value: 0x7F03019F
-			public const int textAppearanceHeadline5 = 2130903455;
+			public const int textAppearanceHeadline4 = 2130903455;
 			
 			// aapt resource value: 0x7F0301A0
-			public const int textAppearanceHeadline6 = 2130903456;
+			public const int textAppearanceHeadline5 = 2130903456;
 			
 			// aapt resource value: 0x7F0301A1
-			public const int textAppearanceLargePopupMenu = 2130903457;
+			public const int textAppearanceHeadline6 = 2130903457;
 			
 			// aapt resource value: 0x7F0301A2
-			public const int textAppearanceListItem = 2130903458;
+			public const int textAppearanceLargePopupMenu = 2130903458;
 			
 			// aapt resource value: 0x7F0301A3
-			public const int textAppearanceListItemSecondary = 2130903459;
+			public const int textAppearanceListItem = 2130903459;
 			
 			// aapt resource value: 0x7F0301A4
-			public const int textAppearanceListItemSmall = 2130903460;
+			public const int textAppearanceListItemSecondary = 2130903460;
 			
 			// aapt resource value: 0x7F0301A5
-			public const int textAppearanceOverline = 2130903461;
+			public const int textAppearanceListItemSmall = 2130903461;
 			
 			// aapt resource value: 0x7F0301A6
-			public const int textAppearancePopupMenuHeader = 2130903462;
+			public const int textAppearanceOverline = 2130903462;
 			
 			// aapt resource value: 0x7F0301A7
-			public const int textAppearanceSearchResultSubtitle = 2130903463;
+			public const int textAppearancePopupMenuHeader = 2130903463;
 			
 			// aapt resource value: 0x7F0301A8
-			public const int textAppearanceSearchResultTitle = 2130903464;
+			public const int textAppearanceSearchResultSubtitle = 2130903464;
 			
 			// aapt resource value: 0x7F0301A9
-			public const int textAppearanceSmallPopupMenu = 2130903465;
+			public const int textAppearanceSearchResultTitle = 2130903465;
 			
 			// aapt resource value: 0x7F0301AA
-			public const int textAppearanceSubtitle1 = 2130903466;
+			public const int textAppearanceSmallPopupMenu = 2130903466;
 			
 			// aapt resource value: 0x7F0301AB
-			public const int textAppearanceSubtitle2 = 2130903467;
+			public const int textAppearanceSubtitle1 = 2130903467;
 			
 			// aapt resource value: 0x7F0301AC
-			public const int textColorAlertDialogListItem = 2130903468;
+			public const int textAppearanceSubtitle2 = 2130903468;
 			
 			// aapt resource value: 0x7F0301AD
-			public const int textColorSearchUrl = 2130903469;
+			public const int textColorAlertDialogListItem = 2130903469;
 			
 			// aapt resource value: 0x7F0301AE
-			public const int textEndPadding = 2130903470;
+			public const int textColorSearchUrl = 2130903470;
 			
 			// aapt resource value: 0x7F0301AF
-			public const int textInputStyle = 2130903471;
+			public const int textEndPadding = 2130903471;
 			
 			// aapt resource value: 0x7F0301B0
-			public const int textStartPadding = 2130903472;
+			public const int textInputStyle = 2130903472;
 			
 			// aapt resource value: 0x7F0301B1
-			public const int theme = 2130903473;
+			public const int textStartPadding = 2130903473;
 			
 			// aapt resource value: 0x7F0301B2
-			public const int thickness = 2130903474;
+			public const int theme = 2130903474;
 			
 			// aapt resource value: 0x7F0301B3
-			public const int thumbTextPadding = 2130903475;
+			public const int thickness = 2130903475;
 			
 			// aapt resource value: 0x7F0301B4
-			public const int thumbTint = 2130903476;
+			public const int thumbTextPadding = 2130903476;
 			
 			// aapt resource value: 0x7F0301B5
-			public const int thumbTintMode = 2130903477;
+			public const int thumbTint = 2130903477;
 			
 			// aapt resource value: 0x7F0301B6
-			public const int tickMark = 2130903478;
+			public const int thumbTintMode = 2130903478;
 			
 			// aapt resource value: 0x7F0301B7
-			public const int tickMarkTint = 2130903479;
+			public const int tickMark = 2130903479;
 			
 			// aapt resource value: 0x7F0301B8
-			public const int tickMarkTintMode = 2130903480;
+			public const int tickMarkTint = 2130903480;
 			
 			// aapt resource value: 0x7F0301B9
-			public const int tint = 2130903481;
+			public const int tickMarkTintMode = 2130903481;
 			
 			// aapt resource value: 0x7F0301BA
-			public const int tintMode = 2130903482;
+			public const int tint = 2130903482;
 			
 			// aapt resource value: 0x7F0301BB
-			public const int title = 2130903483;
+			public const int tintMode = 2130903483;
 			
 			// aapt resource value: 0x7F0301BC
-			public const int titleEnabled = 2130903484;
+			public const int title = 2130903484;
 			
 			// aapt resource value: 0x7F0301BD
-			public const int titleMargin = 2130903485;
+			public const int titleEnabled = 2130903485;
 			
 			// aapt resource value: 0x7F0301BE
-			public const int titleMarginBottom = 2130903486;
+			public const int titleMargin = 2130903486;
 			
 			// aapt resource value: 0x7F0301BF
-			public const int titleMarginEnd = 2130903487;
-			
-			// aapt resource value: 0x7F0301C2
-			public const int titleMargins = 2130903490;
+			public const int titleMarginBottom = 2130903487;
 			
 			// aapt resource value: 0x7F0301C0
-			public const int titleMarginStart = 2130903488;
-			
-			// aapt resource value: 0x7F0301C1
-			public const int titleMarginTop = 2130903489;
+			public const int titleMarginEnd = 2130903488;
 			
 			// aapt resource value: 0x7F0301C3
-			public const int titleTextAppearance = 2130903491;
+			public const int titleMargins = 2130903491;
+			
+			// aapt resource value: 0x7F0301C1
+			public const int titleMarginStart = 2130903489;
+			
+			// aapt resource value: 0x7F0301C2
+			public const int titleMarginTop = 2130903490;
 			
 			// aapt resource value: 0x7F0301C4
-			public const int titleTextColor = 2130903492;
+			public const int titleTextAppearance = 2130903492;
 			
 			// aapt resource value: 0x7F0301C5
-			public const int titleTextStyle = 2130903493;
+			public const int titleTextColor = 2130903493;
 			
 			// aapt resource value: 0x7F0301C6
-			public const int toolbarId = 2130903494;
+			public const int titleTextStyle = 2130903494;
 			
 			// aapt resource value: 0x7F0301C7
-			public const int toolbarNavigationButtonStyle = 2130903495;
+			public const int toolbarId = 2130903495;
 			
 			// aapt resource value: 0x7F0301C8
-			public const int toolbarStyle = 2130903496;
+			public const int toolbarNavigationButtonStyle = 2130903496;
 			
 			// aapt resource value: 0x7F0301C9
-			public const int tooltipForegroundColor = 2130903497;
+			public const int toolbarStyle = 2130903497;
 			
 			// aapt resource value: 0x7F0301CA
-			public const int tooltipFrameBackground = 2130903498;
+			public const int tooltipForegroundColor = 2130903498;
 			
 			// aapt resource value: 0x7F0301CB
-			public const int tooltipText = 2130903499;
+			public const int tooltipFrameBackground = 2130903499;
 			
 			// aapt resource value: 0x7F0301CC
-			public const int track = 2130903500;
+			public const int tooltipText = 2130903500;
 			
 			// aapt resource value: 0x7F0301CD
-			public const int trackTint = 2130903501;
+			public const int track = 2130903501;
 			
 			// aapt resource value: 0x7F0301CE
-			public const int trackTintMode = 2130903502;
+			public const int trackTint = 2130903502;
 			
 			// aapt resource value: 0x7F0301CF
-			public const int ttcIndex = 2130903503;
+			public const int trackTintMode = 2130903503;
 			
 			// aapt resource value: 0x7F0301D0
-			public const int useCompatPadding = 2130903504;
+			public const int ttcIndex = 2130903504;
 			
 			// aapt resource value: 0x7F0301D1
-			public const int viewInflaterClass = 2130903505;
+			public const int useCompatPadding = 2130903505;
 			
 			// aapt resource value: 0x7F0301D2
-			public const int voiceIcon = 2130903506;
+			public const int viewInflaterClass = 2130903506;
 			
 			// aapt resource value: 0x7F0301D3
-			public const int windowActionBar = 2130903507;
+			public const int voiceIcon = 2130903507;
 			
 			// aapt resource value: 0x7F0301D4
-			public const int windowActionBarOverlay = 2130903508;
+			public const int windowActionBar = 2130903508;
 			
 			// aapt resource value: 0x7F0301D5
-			public const int windowActionModeOverlay = 2130903509;
+			public const int windowActionBarOverlay = 2130903509;
 			
 			// aapt resource value: 0x7F0301D6
-			public const int windowFixedHeightMajor = 2130903510;
+			public const int windowActionModeOverlay = 2130903510;
 			
 			// aapt resource value: 0x7F0301D7
-			public const int windowFixedHeightMinor = 2130903511;
+			public const int windowFixedHeightMajor = 2130903511;
 			
 			// aapt resource value: 0x7F0301D8
-			public const int windowFixedWidthMajor = 2130903512;
+			public const int windowFixedHeightMinor = 2130903512;
 			
 			// aapt resource value: 0x7F0301D9
-			public const int windowFixedWidthMinor = 2130903513;
+			public const int windowFixedWidthMajor = 2130903513;
 			
 			// aapt resource value: 0x7F0301DA
-			public const int windowMinWidthMajor = 2130903514;
+			public const int windowFixedWidthMinor = 2130903514;
 			
 			// aapt resource value: 0x7F0301DB
-			public const int windowMinWidthMinor = 2130903515;
+			public const int windowMinWidthMajor = 2130903515;
 			
 			// aapt resource value: 0x7F0301DC
-			public const int windowNoTitle = 2130903516;
+			public const int windowMinWidthMinor = 2130903516;
+			
+			// aapt resource value: 0x7F0301DD
+			public const int windowNoTitle = 2130903517;
 			
 			static Attribute()
 			{
@@ -9519,28 +11493,31 @@ namespace escout.Droid
 			public const int hide_bottom_view_on_scroll_behavior = 2131558445;
 			
 			// aapt resource value: 0x7F0D002E
-			public const int mtrl_chip_close_icon_content_description = 2131558446;
+			public const int library_name = 2131558446;
 			
 			// aapt resource value: 0x7F0D002F
-			public const int password_toggle_content_description = 2131558447;
+			public const int mtrl_chip_close_icon_content_description = 2131558447;
 			
 			// aapt resource value: 0x7F0D0030
-			public const int path_password_eye = 2131558448;
+			public const int password_toggle_content_description = 2131558448;
 			
 			// aapt resource value: 0x7F0D0031
-			public const int path_password_eye_mask_strike_through = 2131558449;
+			public const int path_password_eye = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int path_password_eye_mask_visible = 2131558450;
+			public const int path_password_eye_mask_strike_through = 2131558450;
 			
 			// aapt resource value: 0x7F0D0033
-			public const int path_password_strike_through = 2131558451;
+			public const int path_password_eye_mask_visible = 2131558451;
 			
 			// aapt resource value: 0x7F0D0034
-			public const int search_menu_title = 2131558452;
+			public const int path_password_strike_through = 2131558452;
 			
 			// aapt resource value: 0x7F0D0035
-			public const int status_bar_notification_info_overflow = 2131558453;
+			public const int search_menu_title = 2131558453;
+			
+			// aapt resource value: 0x7F0D0036
+			public const int status_bar_notification_info_overflow = 2131558454;
 			
 			static String()
 			{
@@ -10150,7 +12127,10 @@ namespace escout.Droid
 			public const int CardView_Light = 2131624133;
 			
 			// aapt resource value: 0x7F0E01F7
-			public const int collectionViewStyle = 2131624439;
+			public const int collectionViewScrollBars = 2131624439;
+			
+			// aapt resource value: 0x7F0E01F8
+			public const int collectionViewTheme = 2131624440;
 			
 			// aapt resource value: 0x7F0E00C6
 			public const int MainTheme = 2131624134;
@@ -11080,37 +13060,37 @@ namespace escout.Droid
 		public partial class Styleable
 		{
 			
-			// aapt resource value: { 0x7F030031,0x7F030032,0x7F030033,0x7F030091,0x7F030092,0x7F030093,0x7F030094,0x7F030095,0x7F030096,0x7F0300A4,0x7F0300A9,0x7F0300AA,0x7F0300B5,0x7F0300DF,0x7F0300E4,0x7F0300E9,0x7F0300EA,0x7F0300EC,0x7F0300F6,0x7F030100,0x7F030123,0x7F03012F,0x7F030140,0x7F030144,0x7F030145,0x7F030173,0x7F030176,0x7F0301BB,0x7F0301C5 }
+			// aapt resource value: { 0x7F030031,0x7F030032,0x7F030033,0x7F030092,0x7F030093,0x7F030094,0x7F030095,0x7F030096,0x7F030097,0x7F0300A5,0x7F0300AA,0x7F0300AB,0x7F0300B6,0x7F0300E0,0x7F0300E5,0x7F0300EA,0x7F0300EB,0x7F0300ED,0x7F0300F7,0x7F030101,0x7F030124,0x7F030130,0x7F030141,0x7F030145,0x7F030146,0x7F030174,0x7F030177,0x7F0301BC,0x7F0301C6 }
 			public static int[] ActionBar = new int[] {
 					2130903089,
 					2130903090,
 					2130903091,
-					2130903185,
 					2130903186,
 					2130903187,
 					2130903188,
 					2130903189,
 					2130903190,
-					2130903204,
-					2130903209,
+					2130903191,
+					2130903205,
 					2130903210,
-					2130903221,
-					2130903263,
-					2130903268,
-					2130903273,
+					2130903211,
+					2130903222,
+					2130903264,
+					2130903269,
 					2130903274,
-					2130903276,
-					2130903286,
-					2130903296,
-					2130903331,
-					2130903343,
-					2130903360,
-					2130903364,
+					2130903275,
+					2130903277,
+					2130903287,
+					2130903297,
+					2130903332,
+					2130903344,
+					2130903361,
 					2130903365,
-					2130903411,
-					2130903414,
-					2130903483,
-					2130903493};
+					2130903366,
+					2130903412,
+					2130903415,
+					2130903484,
+					2130903494};
 			
 			// aapt resource value: { 0x10100B3 }
 			public static int[] ActionBarLayout = new int[] {
@@ -11217,14 +13197,14 @@ namespace escout.Droid
 			public static int[] ActionMenuView = new int[] {
 					-1};
 			
-			// aapt resource value: { 0x7F030031,0x7F030032,0x7F03007E,0x7F0300DF,0x7F030176,0x7F0301C5 }
+			// aapt resource value: { 0x7F030031,0x7F030032,0x7F03007E,0x7F0300E0,0x7F030177,0x7F0301C6 }
 			public static int[] ActionMode = new int[] {
 					2130903089,
 					2130903090,
 					2130903166,
-					2130903263,
-					2130903414,
-					2130903493};
+					2130903264,
+					2130903415,
+					2130903494};
 			
 			// aapt resource value: 0
 			public const int ActionMode_background = 0;
@@ -11244,10 +13224,10 @@ namespace escout.Droid
 			// aapt resource value: 5
 			public const int ActionMode_titleTextStyle = 5;
 			
-			// aapt resource value: { 0x7F0300BA,0x7F0300F7 }
+			// aapt resource value: { 0x7F0300BB,0x7F0300F8 }
 			public static int[] ActivityChooserView = new int[] {
-					2130903226,
-					2130903287};
+					2130903227,
+					2130903288};
 			
 			// aapt resource value: 0
 			public const int ActivityChooserView_expandActivityOverflowButtonDrawable = 0;
@@ -11255,16 +13235,16 @@ namespace escout.Droid
 			// aapt resource value: 1
 			public const int ActivityChooserView_initialActivityCount = 1;
 			
-			// aapt resource value: { 0x10100F2,0x7F030052,0x7F030053,0x7F03011A,0x7F03011B,0x7F03012C,0x7F03015B,0x7F03015C }
+			// aapt resource value: { 0x10100F2,0x7F030052,0x7F030053,0x7F03011B,0x7F03011C,0x7F03012D,0x7F03015C,0x7F03015D }
 			public static int[] AlertDialog = new int[] {
 					16842994,
 					2130903122,
 					2130903123,
-					2130903322,
 					2130903323,
-					2130903340,
-					2130903387,
-					2130903388};
+					2130903324,
+					2130903341,
+					2130903388,
+					2130903389};
 			
 			// aapt resource value: 0
 			public const int AlertDialog_android_layout = 0;
@@ -11347,21 +13327,21 @@ namespace escout.Droid
 			// aapt resource value: 1
 			public const int AnimatedStateListDrawableTransition_android_toId = 1;
 			
-			// aapt resource value: { 0x10100D4,0x101048F,0x1010540,0x7F0300B5,0x7F0300BB,0x7F030115 }
+			// aapt resource value: { 0x10100D4,0x101048F,0x1010540,0x7F0300B6,0x7F0300BC,0x7F030116 }
 			public static int[] AppBarLayout = new int[] {
 					16842964,
 					16843919,
 					16844096,
-					2130903221,
-					2130903227,
-					2130903317};
+					2130903222,
+					2130903228,
+					2130903318};
 			
-			// aapt resource value: { 0x7F030169,0x7F03016A,0x7F03016B,0x7F03016C }
+			// aapt resource value: { 0x7F03016A,0x7F03016B,0x7F03016C,0x7F03016D }
 			public static int[] AppBarLayoutStates = new int[] {
-					2130903401,
 					2130903402,
 					2130903403,
-					2130903404};
+					2130903404,
+					2130903405};
 			
 			// aapt resource value: 0
 			public const int AppBarLayoutStates_state_collapsed = 0;
@@ -11390,10 +13370,10 @@ namespace escout.Droid
 			// aapt resource value: 4
 			public const int AppBarLayout_expanded = 4;
 			
-			// aapt resource value: { 0x7F030113,0x7F030114 }
+			// aapt resource value: { 0x7F030114,0x7F030115 }
 			public static int[] AppBarLayout_Layout = new int[] {
-					2130903315,
-					2130903316};
+					2130903316,
+					2130903317};
 			
 			// aapt resource value: 0
 			public const int AppBarLayout_Layout_layout_scrollFlags = 0;
@@ -11404,12 +13384,12 @@ namespace escout.Droid
 			// aapt resource value: 5
 			public const int AppBarLayout_liftOnScroll = 5;
 			
-			// aapt resource value: { 0x1010119,0x7F030166,0x7F0301B9,0x7F0301BA }
+			// aapt resource value: { 0x1010119,0x7F030167,0x7F0301BA,0x7F0301BB }
 			public static int[] AppCompatImageView = new int[] {
 					16843033,
-					2130903398,
-					2130903481,
-					2130903482};
+					2130903399,
+					2130903482,
+					2130903483};
 			
 			// aapt resource value: 0
 			public const int AppCompatImageView_android_src = 0;
@@ -11423,12 +13403,12 @@ namespace escout.Droid
 			// aapt resource value: 3
 			public const int AppCompatImageView_tintMode = 3;
 			
-			// aapt resource value: { 0x1010142,0x7F0301B6,0x7F0301B7,0x7F0301B8 }
+			// aapt resource value: { 0x1010142,0x7F0301B7,0x7F0301B8,0x7F0301B9 }
 			public static int[] AppCompatSeekBar = new int[] {
 					16843074,
-					2130903478,
 					2130903479,
-					2130903480};
+					2130903480,
+					2130903481};
 			
 			// aapt resource value: 0
 			public const int AppCompatSeekBar_android_thumb = 0;
@@ -11473,7 +13453,7 @@ namespace escout.Droid
 			// aapt resource value: 0
 			public const int AppCompatTextHelper_android_textAppearance = 0;
 			
-			// aapt resource value: { 0x1010034,0x7F03002C,0x7F03002D,0x7F03002E,0x7F03002F,0x7F030030,0x7F0300CE,0x7F0300D1,0x7F030108,0x7F030116,0x7F030196 }
+			// aapt resource value: { 0x1010034,0x7F03002C,0x7F03002D,0x7F03002E,0x7F03002F,0x7F030030,0x7F0300CF,0x7F0300D2,0x7F030109,0x7F030117,0x7F030197 }
 			public static int[] AppCompatTextView = new int[] {
 					16842804,
 					2130903084,
@@ -11481,11 +13461,11 @@ namespace escout.Droid
 					2130903086,
 					2130903087,
 					2130903088,
-					2130903246,
-					2130903249,
-					2130903304,
-					2130903318,
-					2130903446};
+					2130903247,
+					2130903250,
+					2130903305,
+					2130903319,
+					2130903447};
 			
 			// aapt resource value: 0
 			public const int AppCompatTextView_android_textAppearance = 0;
@@ -11520,7 +13500,7 @@ namespace escout.Droid
 			// aapt resource value: 10
 			public const int AppCompatTextView_textAllCaps = 10;
 			
-			// aapt resource value: { 0x1010057,0x10100AE,0x7F030000,0x7F030001,0x7F030002,0x7F030003,0x7F030004,0x7F030005,0x7F030006,0x7F030007,0x7F030008,0x7F030009,0x7F03000A,0x7F03000B,0x7F03000C,0x7F03000E,0x7F03000F,0x7F030010,0x7F030011,0x7F030012,0x7F030013,0x7F030014,0x7F030015,0x7F030016,0x7F030017,0x7F030018,0x7F030019,0x7F03001A,0x7F03001B,0x7F03001C,0x7F03001D,0x7F03001E,0x7F030021,0x7F030022,0x7F030023,0x7F030024,0x7F030025,0x7F03002B,0x7F03003E,0x7F03004C,0x7F03004D,0x7F03004E,0x7F03004F,0x7F030050,0x7F030054,0x7F030055,0x7F03005F,0x7F030064,0x7F030084,0x7F030085,0x7F030086,0x7F030087,0x7F030088,0x7F030089,0x7F03008A,0x7F03008B,0x7F03008C,0x7F03008E,0x7F03009D,0x7F0300A6,0x7F0300A7,0x7F0300A8,0x7F0300AB,0x7F0300AD,0x7F0300B0,0x7F0300B1,0x7F0300B2,0x7F0300B3,0x7F0300B4,0x7F0300E9,0x7F0300F5,0x7F030118,0x7F030119,0x7F03011C,0x7F03011D,0x7F03011E,0x7F03011F,0x7F030120,0x7F030121,0x7F030122,0x7F030137,0x7F030138,0x7F030139,0x7F03013F,0x7F030141,0x7F030148,0x7F030149,0x7F03014A,0x7F03014B,0x7F030153,0x7F030154,0x7F030155,0x7F030156,0x7F030163,0x7F030164,0x7F03017A,0x7F0301A1,0x7F0301A2,0x7F0301A3,0x7F0301A4,0x7F0301A6,0x7F0301A7,0x7F0301A8,0x7F0301A9,0x7F0301AC,0x7F0301AD,0x7F0301C7,0x7F0301C8,0x7F0301C9,0x7F0301CA,0x7F0301D1,0x7F0301D3,0x7F0301D4,0x7F0301D5,0x7F0301D6,0x7F0301D7,0x7F0301D8,0x7F0301D9,0x7F0301DA,0x7F0301DB,0x7F0301DC }
+			// aapt resource value: { 0x1010057,0x10100AE,0x7F030000,0x7F030001,0x7F030002,0x7F030003,0x7F030004,0x7F030005,0x7F030006,0x7F030007,0x7F030008,0x7F030009,0x7F03000A,0x7F03000B,0x7F03000C,0x7F03000E,0x7F03000F,0x7F030010,0x7F030011,0x7F030012,0x7F030013,0x7F030014,0x7F030015,0x7F030016,0x7F030017,0x7F030018,0x7F030019,0x7F03001A,0x7F03001B,0x7F03001C,0x7F03001D,0x7F03001E,0x7F030021,0x7F030022,0x7F030023,0x7F030024,0x7F030025,0x7F03002B,0x7F03003E,0x7F03004C,0x7F03004D,0x7F03004E,0x7F03004F,0x7F030050,0x7F030054,0x7F030055,0x7F03005F,0x7F030064,0x7F030085,0x7F030086,0x7F030087,0x7F030088,0x7F030089,0x7F03008A,0x7F03008B,0x7F03008C,0x7F03008D,0x7F03008F,0x7F03009E,0x7F0300A7,0x7F0300A8,0x7F0300A9,0x7F0300AC,0x7F0300AE,0x7F0300B1,0x7F0300B2,0x7F0300B3,0x7F0300B4,0x7F0300B5,0x7F0300EA,0x7F0300F6,0x7F030119,0x7F03011A,0x7F03011D,0x7F03011E,0x7F03011F,0x7F030120,0x7F030121,0x7F030122,0x7F030123,0x7F030138,0x7F030139,0x7F03013A,0x7F030140,0x7F030142,0x7F030149,0x7F03014A,0x7F03014B,0x7F03014C,0x7F030154,0x7F030155,0x7F030156,0x7F030157,0x7F030164,0x7F030165,0x7F03017B,0x7F0301A2,0x7F0301A3,0x7F0301A4,0x7F0301A5,0x7F0301A7,0x7F0301A8,0x7F0301A9,0x7F0301AA,0x7F0301AD,0x7F0301AE,0x7F0301C8,0x7F0301C9,0x7F0301CA,0x7F0301CB,0x7F0301D2,0x7F0301D4,0x7F0301D5,0x7F0301D6,0x7F0301D7,0x7F0301D8,0x7F0301D9,0x7F0301DA,0x7F0301DB,0x7F0301DC,0x7F0301DD }
 			public static int[] AppCompatTheme = new int[] {
 					16842839,
 					16842926,
@@ -11570,7 +13550,6 @@ namespace escout.Droid
 					2130903125,
 					2130903135,
 					2130903140,
-					2130903172,
 					2130903173,
 					2130903174,
 					2130903175,
@@ -11579,61 +13558,61 @@ namespace escout.Droid
 					2130903178,
 					2130903179,
 					2130903180,
-					2130903182,
-					2130903197,
-					2130903206,
+					2130903181,
+					2130903183,
+					2130903198,
 					2130903207,
 					2130903208,
-					2130903211,
-					2130903213,
-					2130903216,
+					2130903209,
+					2130903212,
+					2130903214,
 					2130903217,
 					2130903218,
 					2130903219,
 					2130903220,
-					2130903273,
-					2130903285,
-					2130903320,
+					2130903221,
+					2130903274,
+					2130903286,
 					2130903321,
-					2130903324,
+					2130903322,
 					2130903325,
 					2130903326,
 					2130903327,
 					2130903328,
 					2130903329,
 					2130903330,
-					2130903351,
+					2130903331,
 					2130903352,
 					2130903353,
-					2130903359,
-					2130903361,
-					2130903368,
+					2130903354,
+					2130903360,
+					2130903362,
 					2130903369,
 					2130903370,
 					2130903371,
-					2130903379,
+					2130903372,
 					2130903380,
 					2130903381,
 					2130903382,
-					2130903395,
+					2130903383,
 					2130903396,
-					2130903418,
-					2130903457,
+					2130903397,
+					2130903419,
 					2130903458,
 					2130903459,
 					2130903460,
-					2130903462,
+					2130903461,
 					2130903463,
 					2130903464,
 					2130903465,
-					2130903468,
+					2130903466,
 					2130903469,
-					2130903495,
+					2130903470,
 					2130903496,
 					2130903497,
 					2130903498,
-					2130903505,
-					2130903507,
+					2130903499,
+					2130903506,
 					2130903508,
 					2130903509,
 					2130903510,
@@ -11642,7 +13621,8 @@ namespace escout.Droid
 					2130903513,
 					2130903514,
 					2130903515,
-					2130903516};
+					2130903516,
+					2130903517};
 			
 			// aapt resource value: 2
 			public const int AppCompatTheme_actionBarDivider = 2;
@@ -12007,14 +13987,14 @@ namespace escout.Droid
 			// aapt resource value: 120
 			public const int AppCompatTheme_windowNoTitle = 120;
 			
-			// aapt resource value: { 0x7F030034,0x7F0300C3,0x7F0300C4,0x7F0300C5,0x7F0300C6,0x7F0300E5 }
+			// aapt resource value: { 0x7F030034,0x7F0300C4,0x7F0300C5,0x7F0300C6,0x7F0300C7,0x7F0300E6 }
 			public static int[] BottomAppBar = new int[] {
 					2130903092,
-					2130903235,
 					2130903236,
 					2130903237,
 					2130903238,
-					2130903269};
+					2130903239,
+					2130903270};
 			
 			// aapt resource value: 0
 			public const int BottomAppBar_backgroundTint = 0;
@@ -12034,18 +14014,18 @@ namespace escout.Droid
 			// aapt resource value: 5
 			public const int BottomAppBar_hideOnScroll = 5;
 			
-			// aapt resource value: { 0x7F0300B5,0x7F0300FA,0x7F0300FC,0x7F0300FE,0x7F0300FF,0x7F030103,0x7F030104,0x7F030105,0x7F030107,0x7F03012B }
+			// aapt resource value: { 0x7F0300B6,0x7F0300FB,0x7F0300FD,0x7F0300FF,0x7F030100,0x7F030104,0x7F030105,0x7F030106,0x7F030108,0x7F03012C }
 			public static int[] BottomNavigationView = new int[] {
-					2130903221,
-					2130903290,
-					2130903292,
-					2130903294,
+					2130903222,
+					2130903291,
+					2130903293,
 					2130903295,
-					2130903299,
+					2130903296,
 					2130903300,
 					2130903301,
-					2130903303,
-					2130903339};
+					2130903302,
+					2130903304,
+					2130903340};
 			
 			// aapt resource value: 0
 			public const int BottomNavigationView_elevation = 0;
@@ -12103,7 +14083,7 @@ namespace escout.Droid
 			// aapt resource value: 0
 			public const int ButtonBarLayout_allowStacking = 0;
 			
-			// aapt resource value: { 0x101013F,0x1010140,0x7F030058,0x7F030059,0x7F03005A,0x7F03005B,0x7F03005C,0x7F03005D,0x7F030097,0x7F030098,0x7F030099,0x7F03009A,0x7F03009B }
+			// aapt resource value: { 0x101013F,0x1010140,0x7F030058,0x7F030059,0x7F03005A,0x7F03005B,0x7F03005C,0x7F03005D,0x7F030098,0x7F030099,0x7F03009A,0x7F03009B,0x7F03009C }
 			public static int[] CardView = new int[] {
 					16843071,
 					16843072,
@@ -12113,11 +14093,11 @@ namespace escout.Droid
 					2130903131,
 					2130903132,
 					2130903133,
-					2130903191,
 					2130903192,
 					2130903193,
 					2130903194,
-					2130903195};
+					2130903195,
+					2130903196};
 			
 			// aapt resource value: 1
 			public const int CardView_android_minHeight = 1;
@@ -12158,7 +14138,7 @@ namespace escout.Droid
 			// aapt resource value: 12
 			public const int CardView_contentPaddingTop = 12;
 			
-			// aapt resource value: { 0x1010034,0x10100AB,0x101011F,0x101014F,0x10101E5,0x7F030061,0x7F030062,0x7F030063,0x7F030065,0x7F030066,0x7F030067,0x7F030069,0x7F03006A,0x7F03006B,0x7F03006C,0x7F03006D,0x7F03006E,0x7F030073,0x7F030074,0x7F030075,0x7F030077,0x7F030078,0x7F030079,0x7F03007A,0x7F03007B,0x7F03007C,0x7F03007D,0x7F0300E3,0x7F0300ED,0x7F0300F1,0x7F03014D,0x7F030159,0x7F0301AE,0x7F0301B0 }
+			// aapt resource value: { 0x1010034,0x10100AB,0x101011F,0x101014F,0x10101E5,0x7F030061,0x7F030062,0x7F030063,0x7F030065,0x7F030066,0x7F030067,0x7F030069,0x7F03006A,0x7F03006B,0x7F03006C,0x7F03006D,0x7F03006E,0x7F030073,0x7F030074,0x7F030075,0x7F030077,0x7F030078,0x7F030079,0x7F03007A,0x7F03007B,0x7F03007C,0x7F03007D,0x7F0300E4,0x7F0300EE,0x7F0300F2,0x7F03014E,0x7F03015A,0x7F0301AF,0x7F0301B1 }
 			public static int[] Chip = new int[] {
 					16842804,
 					16842923,
@@ -12187,22 +14167,22 @@ namespace escout.Droid
 					2130903163,
 					2130903164,
 					2130903165,
-					2130903267,
-					2130903277,
-					2130903281,
-					2130903373,
-					2130903385,
-					2130903470,
-					2130903472};
+					2130903268,
+					2130903278,
+					2130903282,
+					2130903374,
+					2130903386,
+					2130903471,
+					2130903473};
 			
-			// aapt resource value: { 0x7F030060,0x7F03006F,0x7F030070,0x7F030071,0x7F03015D,0x7F03015E }
+			// aapt resource value: { 0x7F030060,0x7F03006F,0x7F030070,0x7F030071,0x7F03015E,0x7F03015F }
 			public static int[] ChipGroup = new int[] {
 					2130903136,
 					2130903151,
 					2130903152,
 					2130903153,
-					2130903389,
-					2130903390};
+					2130903390,
+					2130903391};
 			
 			// aapt resource value: 0
 			public const int ChipGroup_checkedChip = 0;
@@ -12324,24 +14304,24 @@ namespace escout.Droid
 			// aapt resource value: 33
 			public const int Chip_textStartPadding = 33;
 			
-			// aapt resource value: { 0x7F030081,0x7F030082,0x7F03009C,0x7F0300BC,0x7F0300BD,0x7F0300BE,0x7F0300BF,0x7F0300C0,0x7F0300C1,0x7F0300C2,0x7F03014E,0x7F030150,0x7F03016E,0x7F0301BB,0x7F0301BC,0x7F0301C6 }
+			// aapt resource value: { 0x7F030081,0x7F030082,0x7F03009D,0x7F0300BD,0x7F0300BE,0x7F0300BF,0x7F0300C0,0x7F0300C1,0x7F0300C2,0x7F0300C3,0x7F03014F,0x7F030151,0x7F03016F,0x7F0301BC,0x7F0301BD,0x7F0301C7 }
 			public static int[] CollapsingToolbarLayout = new int[] {
 					2130903169,
 					2130903170,
-					2130903196,
-					2130903228,
+					2130903197,
 					2130903229,
 					2130903230,
 					2130903231,
 					2130903232,
 					2130903233,
 					2130903234,
-					2130903374,
-					2130903376,
-					2130903406,
-					2130903483,
+					2130903235,
+					2130903375,
+					2130903377,
+					2130903407,
 					2130903484,
-					2130903494};
+					2130903485,
+					2130903495};
 			
 			// aapt resource value: 0
 			public const int CollapsingToolbarLayout_collapsedTitleGravity = 0;
@@ -12373,10 +14353,10 @@ namespace escout.Droid
 			// aapt resource value: 9
 			public const int CollapsingToolbarLayout_expandedTitleTextAppearance = 9;
 			
-			// aapt resource value: { 0x7F03010E,0x7F03010F }
+			// aapt resource value: { 0x7F03010F,0x7F030110 }
 			public static int[] CollapsingToolbarLayout_Layout = new int[] {
-					2130903310,
-					2130903311};
+					2130903311,
+					2130903312};
 			
 			// aapt resource value: 0
 			public const int CollapsingToolbarLayout_Layout_layout_collapseMode = 0;
@@ -12432,23 +14412,23 @@ namespace escout.Droid
 			// aapt resource value: 2
 			public const int CompoundButton_buttonTintMode = 2;
 			
-			// aapt resource value: { 0x7F030106,0x7F03016D }
+			// aapt resource value: { 0x7F030107,0x7F03016E }
 			public static int[] CoordinatorLayout = new int[] {
-					2130903302,
-					2130903405};
+					2130903303,
+					2130903406};
 			
 			// aapt resource value: 0
 			public const int CoordinatorLayout_keylines = 0;
 			
-			// aapt resource value: { 0x10100B3,0x7F03010B,0x7F03010C,0x7F03010D,0x7F030110,0x7F030111,0x7F030112 }
+			// aapt resource value: { 0x10100B3,0x7F03010C,0x7F03010D,0x7F03010E,0x7F030111,0x7F030112,0x7F030113 }
 			public static int[] CoordinatorLayout_Layout = new int[] {
 					16842931,
-					2130903307,
 					2130903308,
 					2130903309,
-					2130903312,
+					2130903310,
 					2130903313,
-					2130903314};
+					2130903314,
+					2130903315};
 			
 			// aapt resource value: 0
 			public const int CoordinatorLayout_Layout_android_layout_gravity = 0;
@@ -12485,16 +14465,16 @@ namespace escout.Droid
 			// aapt resource value: 1
 			public const int DesignTheme_bottomSheetStyle = 1;
 			
-			// aapt resource value: { 0x7F030029,0x7F03002A,0x7F030036,0x7F030083,0x7F0300AE,0x7F0300DC,0x7F030162,0x7F0301B2 }
+			// aapt resource value: { 0x7F030029,0x7F03002A,0x7F030036,0x7F030084,0x7F0300AF,0x7F0300DD,0x7F030163,0x7F0301B3 }
 			public static int[] DrawerArrowToggle = new int[] {
 					2130903081,
 					2130903082,
 					2130903094,
-					2130903171,
-					2130903214,
-					2130903260,
-					2130903394,
-					2130903474};
+					2130903172,
+					2130903215,
+					2130903261,
+					2130903395,
+					2130903475};
 			
 			// aapt resource value: 0
 			public const int DrawerArrowToggle_arrowHeadLength = 0;
@@ -12520,21 +14500,21 @@ namespace escout.Droid
 			// aapt resource value: 7
 			public const int DrawerArrowToggle_thickness = 7;
 			
-			// aapt resource value: { 0x7F030034,0x7F030035,0x7F03003D,0x7F0300B5,0x7F0300C7,0x7F0300C8,0x7F0300E3,0x7F0300EB,0x7F030129,0x7F030143,0x7F03014D,0x7F030159,0x7F0301D0 }
+			// aapt resource value: { 0x7F030034,0x7F030035,0x7F03003D,0x7F0300B6,0x7F0300C8,0x7F0300C9,0x7F0300E4,0x7F0300EC,0x7F03012A,0x7F030144,0x7F03014E,0x7F03015A,0x7F0301D1 }
 			public static int[] FloatingActionButton = new int[] {
 					2130903092,
 					2130903093,
 					2130903101,
-					2130903221,
-					2130903239,
+					2130903222,
 					2130903240,
-					2130903267,
-					2130903275,
-					2130903337,
-					2130903363,
-					2130903373,
-					2130903385,
-					2130903504};
+					2130903241,
+					2130903268,
+					2130903276,
+					2130903338,
+					2130903364,
+					2130903374,
+					2130903386,
+					2130903505};
 			
 			// aapt resource value: 0
 			public const int FloatingActionButton_backgroundTint = 0;
@@ -12582,10 +14562,10 @@ namespace escout.Droid
 			// aapt resource value: 12
 			public const int FloatingActionButton_useCompatPadding = 12;
 			
-			// aapt resource value: { 0x7F030101,0x7F030117 }
+			// aapt resource value: { 0x7F030102,0x7F030118 }
 			public static int[] FlowLayout = new int[] {
-					2130903297,
-					2130903319};
+					2130903298,
+					2130903320};
 			
 			// aapt resource value: 0
 			public const int FlowLayout_itemSpacing = 0;
@@ -12593,27 +14573,27 @@ namespace escout.Droid
 			// aapt resource value: 1
 			public const int FlowLayout_lineSpacing = 1;
 			
-			// aapt resource value: { 0x7F0300D2,0x7F0300D3,0x7F0300D4,0x7F0300D5,0x7F0300D6,0x7F0300D7 }
+			// aapt resource value: { 0x7F0300D3,0x7F0300D4,0x7F0300D5,0x7F0300D6,0x7F0300D7,0x7F0300D8 }
 			public static int[] FontFamily = new int[] {
-					2130903250,
 					2130903251,
 					2130903252,
 					2130903253,
 					2130903254,
-					2130903255};
+					2130903255,
+					2130903256};
 			
-			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F0300D0,0x7F0300D8,0x7F0300D9,0x7F0300DA,0x7F0301CF }
+			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F0300D1,0x7F0300D9,0x7F0300DA,0x7F0300DB,0x7F0301D0 }
 			public static int[] FontFamilyFont = new int[] {
 					16844082,
 					16844083,
 					16844095,
 					16844143,
 					16844144,
-					2130903248,
-					2130903256,
+					2130903249,
 					2130903257,
 					2130903258,
-					2130903503};
+					2130903259,
+					2130903504};
 			
 			// aapt resource value: 0
 			public const int FontFamilyFont_android_font = 0;
@@ -12663,11 +14643,11 @@ namespace escout.Droid
 			// aapt resource value: 5
 			public const int FontFamily_fontProviderQuery = 5;
 			
-			// aapt resource value: { 0x1010109,0x1010200,0x7F0300DB }
+			// aapt resource value: { 0x1010109,0x1010200,0x7F0300DC }
 			public static int[] ForegroundLinearLayout = new int[] {
 					16843017,
 					16843264,
-					2130903259};
+					2130903260};
 			
 			// aapt resource value: 0
 			public const int ForegroundLinearLayout_android_foreground = 0;
@@ -12740,17 +14720,24 @@ namespace escout.Droid
 			// aapt resource value: 2
 			public const int GradientColor_android_type = 2;
 			
-			// aapt resource value: { 0x10100AF,0x10100C4,0x1010126,0x1010127,0x1010128,0x7F0300AA,0x7F0300AC,0x7F03012A,0x7F030158 }
+			// aapt resource value: { 0x7F030083 }
+			public static int[] ItemsViewRendererTheme = new int[] {
+					2130903171};
+			
+			// aapt resource value: 0
+			public const int ItemsViewRendererTheme_collectionViewStyle = 0;
+			
+			// aapt resource value: { 0x10100AF,0x10100C4,0x1010126,0x1010127,0x1010128,0x7F0300AB,0x7F0300AD,0x7F03012B,0x7F030159 }
 			public static int[] LinearLayoutCompat = new int[] {
 					16842927,
 					16842948,
 					16843046,
 					16843047,
 					16843048,
-					2130903210,
-					2130903212,
-					2130903338,
-					2130903384};
+					2130903211,
+					2130903213,
+					2130903339,
+					2130903385};
 			
 			// aapt resource value: 2
 			public const int LinearLayoutCompat_android_baselineAligned = 2;
@@ -12809,7 +14796,7 @@ namespace escout.Droid
 			// aapt resource value: 1
 			public const int ListPopupWindow_android_dropDownVerticalOffset = 1;
 			
-			// aapt resource value: { 0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x7F030034,0x7F030035,0x7F03009F,0x7F0300EC,0x7F0300EE,0x7F0300EF,0x7F0300F0,0x7F0300F2,0x7F0300F3,0x7F03014D,0x7F03016F,0x7F030170 }
+			// aapt resource value: { 0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x7F030034,0x7F030035,0x7F0300A0,0x7F0300ED,0x7F0300EF,0x7F0300F0,0x7F0300F1,0x7F0300F3,0x7F0300F4,0x7F03014E,0x7F030170,0x7F030171 }
 			public static int[] MaterialButton = new int[] {
 					16843191,
 					16843192,
@@ -12817,16 +14804,16 @@ namespace escout.Droid
 					16843194,
 					2130903092,
 					2130903093,
-					2130903199,
-					2130903276,
-					2130903278,
+					2130903200,
+					2130903277,
 					2130903279,
 					2130903280,
-					2130903282,
+					2130903281,
 					2130903283,
-					2130903373,
-					2130903407,
-					2130903408};
+					2130903284,
+					2130903374,
+					2130903408,
+					2130903409};
 			
 			// aapt resource value: 3
 			public const int MaterialButton_android_insetBottom = 3;
@@ -12876,10 +14863,10 @@ namespace escout.Droid
 			// aapt resource value: 15
 			public const int MaterialButton_strokeWidth = 15;
 			
-			// aapt resource value: { 0x7F03016F,0x7F030170 }
+			// aapt resource value: { 0x7F030170,0x7F030171 }
 			public static int[] MaterialCardView = new int[] {
-					2130903407,
-					2130903408};
+					2130903408,
+					2130903409};
 			
 			// aapt resource value: 0
 			public const int MaterialCardView_strokeColor = 0;
@@ -12887,27 +14874,26 @@ namespace escout.Droid
 			// aapt resource value: 1
 			public const int MaterialCardView_strokeWidth = 1;
 			
-			// aapt resource value: { 0x7F030041,0x7F030042,0x7F030068,0x7F030072,0x7F030076,0x7F030084,0x7F030085,0x7F03008B,0x7F03008C,0x7F03008D,0x7F0300B4,0x7F0300CF,0x7F030125,0x7F030126,0x7F030130,0x7F03014F,0x7F03015F,0x7F030192,0x7F030197,0x7F030198,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03019E,0x7F03019F,0x7F0301A0,0x7F0301A5,0x7F0301AA,0x7F0301AB,0x7F0301AF }
+			// aapt resource value: { 0x7F030041,0x7F030042,0x7F030068,0x7F030072,0x7F030076,0x7F030085,0x7F030086,0x7F03008C,0x7F03008D,0x7F03008E,0x7F0300B5,0x7F0300D0,0x7F030126,0x7F030127,0x7F030131,0x7F030150,0x7F030160,0x7F030193,0x7F030198,0x7F030199,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03019E,0x7F03019F,0x7F0301A0,0x7F0301A1,0x7F0301A6,0x7F0301AB,0x7F0301AC,0x7F0301B0 }
 			public static int[] MaterialComponentsTheme = new int[] {
 					2130903105,
 					2130903106,
 					2130903144,
 					2130903154,
 					2130903158,
-					2130903172,
 					2130903173,
-					2130903179,
+					2130903174,
 					2130903180,
 					2130903181,
-					2130903220,
-					2130903247,
-					2130903333,
+					2130903182,
+					2130903221,
+					2130903248,
 					2130903334,
-					2130903344,
-					2130903375,
-					2130903391,
-					2130903442,
-					2130903447,
+					2130903335,
+					2130903345,
+					2130903376,
+					2130903392,
+					2130903443,
 					2130903448,
 					2130903449,
 					2130903450,
@@ -12917,10 +14903,11 @@ namespace escout.Droid
 					2130903454,
 					2130903455,
 					2130903456,
-					2130903461,
-					2130903466,
+					2130903457,
+					2130903462,
 					2130903467,
-					2130903471};
+					2130903468,
+					2130903472};
 			
 			// aapt resource value: 0
 			public const int MaterialComponentsTheme_bottomSheetDialogTheme = 0;
@@ -13045,7 +15032,7 @@ namespace escout.Droid
 			// aapt resource value: 2
 			public const int MenuGroup_android_visible = 2;
 			
-			// aapt resource value: { 0x1010002,0x101000E,0x10100D0,0x1010106,0x1010194,0x10101DE,0x10101DF,0x10101E1,0x10101E2,0x10101E3,0x10101E4,0x10101E5,0x101026F,0x7F03000D,0x7F03001F,0x7F030020,0x7F030028,0x7F030090,0x7F0300F2,0x7F0300F3,0x7F030131,0x7F030157,0x7F0301CB }
+			// aapt resource value: { 0x1010002,0x101000E,0x10100D0,0x1010106,0x1010194,0x10101DE,0x10101DF,0x10101E1,0x10101E2,0x10101E3,0x10101E4,0x10101E5,0x101026F,0x7F03000D,0x7F03001F,0x7F030020,0x7F030028,0x7F030091,0x7F0300F3,0x7F0300F4,0x7F030132,0x7F030158,0x7F0301CC }
 			public static int[] MenuItem = new int[] {
 					16842754,
 					16842766,
@@ -13064,12 +15051,12 @@ namespace escout.Droid
 					2130903071,
 					2130903072,
 					2130903080,
-					2130903184,
-					2130903282,
+					2130903185,
 					2130903283,
-					2130903345,
-					2130903383,
-					2130903499};
+					2130903284,
+					2130903346,
+					2130903384,
+					2130903500};
 			
 			// aapt resource value: 13
 			public const int MenuItem_actionLayout = 13;
@@ -13140,7 +15127,7 @@ namespace escout.Droid
 			// aapt resource value: 22
 			public const int MenuItem_tooltipText = 22;
 			
-			// aapt resource value: { 0x10100AE,0x101012C,0x101012D,0x101012E,0x101012F,0x1010130,0x1010131,0x7F030142,0x7F030171 }
+			// aapt resource value: { 0x10100AE,0x101012C,0x101012D,0x101012E,0x101012F,0x1010130,0x1010131,0x7F030143,0x7F030172 }
 			public static int[] MenuView = new int[] {
 					16842926,
 					16843052,
@@ -13149,8 +15136,8 @@ namespace escout.Droid
 					16843055,
 					16843056,
 					16843057,
-					2130903362,
-					2130903409};
+					2130903363,
+					2130903410};
 			
 			// aapt resource value: 4
 			public const int MenuView_android_headerBackground = 4;
@@ -13179,20 +15166,20 @@ namespace escout.Droid
 			// aapt resource value: 8
 			public const int MenuView_subMenuArrow = 8;
 			
-			// aapt resource value: { 0x10100D4,0x10100DD,0x101011F,0x7F0300B5,0x7F0300DE,0x7F0300FA,0x7F0300FB,0x7F0300FD,0x7F0300FF,0x7F030102,0x7F030105,0x7F03012B }
+			// aapt resource value: { 0x10100D4,0x10100DD,0x101011F,0x7F0300B6,0x7F0300DF,0x7F0300FB,0x7F0300FC,0x7F0300FE,0x7F030100,0x7F030103,0x7F030106,0x7F03012C }
 			public static int[] NavigationView = new int[] {
 					16842964,
 					16842973,
 					16843039,
-					2130903221,
-					2130903262,
-					2130903290,
+					2130903222,
+					2130903263,
 					2130903291,
-					2130903293,
-					2130903295,
-					2130903298,
-					2130903301,
-					2130903339};
+					2130903292,
+					2130903294,
+					2130903296,
+					2130903299,
+					2130903302,
+					2130903340};
 			
 			// aapt resource value: 0
 			public const int NavigationView_android_background = 0;
@@ -13230,15 +15217,15 @@ namespace escout.Droid
 			// aapt resource value: 11
 			public const int NavigationView_menu = 11;
 			
-			// aapt resource value: { 0x1010176,0x10102C9,0x7F030132 }
+			// aapt resource value: { 0x1010176,0x10102C9,0x7F030133 }
 			public static int[] PopupWindow = new int[] {
 					16843126,
 					16843465,
-					2130903346};
+					2130903347};
 			
-			// aapt resource value: { 0x7F030168 }
+			// aapt resource value: { 0x7F030169 }
 			public static int[] PopupWindowBackgroundState = new int[] {
-					2130903400};
+					2130903401};
 			
 			// aapt resource value: 0
 			public const int PopupWindowBackgroundState_state_above_anchor = 0;
@@ -13252,10 +15239,10 @@ namespace escout.Droid
 			// aapt resource value: 2
 			public const int PopupWindow_overlapAnchor = 2;
 			
-			// aapt resource value: { 0x7F030133,0x7F030136 }
+			// aapt resource value: { 0x7F030134,0x7F030137 }
 			public static int[] RecycleListView = new int[] {
-					2130903347,
-					2130903350};
+					2130903348,
+					2130903351};
 			
 			// aapt resource value: 0
 			public const int RecycleListView_paddingBottomNoButtons = 0;
@@ -13263,19 +15250,19 @@ namespace escout.Droid
 			// aapt resource value: 1
 			public const int RecycleListView_paddingTopNoTitle = 1;
 			
-			// aapt resource value: { 0x10100C4,0x10100F1,0x7F0300C9,0x7F0300CA,0x7F0300CB,0x7F0300CC,0x7F0300CD,0x7F03010A,0x7F03014C,0x7F030161,0x7F030167 }
+			// aapt resource value: { 0x10100C4,0x10100F1,0x7F0300CA,0x7F0300CB,0x7F0300CC,0x7F0300CD,0x7F0300CE,0x7F03010B,0x7F03014D,0x7F030162,0x7F030168 }
 			public static int[] RecyclerView = new int[] {
 					16842948,
 					16842993,
-					2130903241,
 					2130903242,
 					2130903243,
 					2130903244,
 					2130903245,
-					2130903306,
-					2130903372,
-					2130903393,
-					2130903399};
+					2130903246,
+					2130903307,
+					2130903373,
+					2130903394,
+					2130903400};
 			
 			// aapt resource value: 1
 			public const int RecyclerView_android_descendantFocusability = 1;
@@ -13310,9 +15297,9 @@ namespace escout.Droid
 			// aapt resource value: 10
 			public const int RecyclerView_stackFromEnd = 10;
 			
-			// aapt resource value: { 0x7F0300F8 }
+			// aapt resource value: { 0x7F0300F9 }
 			public static int[] ScrimInsetsFrameLayout = new int[] {
-					2130903288};
+					2130903289};
 			
 			// aapt resource value: 0
 			public const int ScrimInsetsFrameLayout_insetForeground = 0;
@@ -13324,25 +15311,25 @@ namespace escout.Droid
 			// aapt resource value: 0
 			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 0;
 			
-			// aapt resource value: { 0x10100DA,0x101011F,0x1010220,0x1010264,0x7F030077,0x7F03008F,0x7F0300A5,0x7F0300DD,0x7F0300F4,0x7F030109,0x7F030146,0x7F030147,0x7F030151,0x7F030152,0x7F030172,0x7F030177,0x7F0301D2 }
+			// aapt resource value: { 0x10100DA,0x101011F,0x1010220,0x1010264,0x7F030077,0x7F030090,0x7F0300A6,0x7F0300DE,0x7F0300F5,0x7F03010A,0x7F030147,0x7F030148,0x7F030152,0x7F030153,0x7F030173,0x7F030178,0x7F0301D3 }
 			public static int[] SearchView = new int[] {
 					16842970,
 					16843039,
 					16843296,
 					16843364,
 					2130903159,
-					2130903183,
-					2130903205,
-					2130903261,
-					2130903284,
-					2130903305,
-					2130903366,
+					2130903184,
+					2130903206,
+					2130903262,
+					2130903285,
+					2130903306,
 					2130903367,
-					2130903377,
+					2130903368,
 					2130903378,
-					2130903410,
-					2130903415,
-					2130903506};
+					2130903379,
+					2130903411,
+					2130903416,
+					2130903507};
 			
 			// aapt resource value: 0
 			public const int SearchView_android_focusable = 0;
@@ -13395,16 +15382,16 @@ namespace escout.Droid
 			// aapt resource value: 16
 			public const int SearchView_voiceIcon = 16;
 			
-			// aapt resource value: { 0x7F03015F,0x7F030160 }
+			// aapt resource value: { 0x7F030160,0x7F030161 }
 			public static int[] Snackbar = new int[] {
-					2130903391,
-					2130903392};
+					2130903392,
+					2130903393};
 			
-			// aapt resource value: { 0x101011F,0x7F0300B5,0x7F030127 }
+			// aapt resource value: { 0x101011F,0x7F0300B6,0x7F030128 }
 			public static int[] SnackbarLayout = new int[] {
 					16843039,
-					2130903221,
-					2130903335};
+					2130903222,
+					2130903336};
 			
 			// aapt resource value: 0
 			public const int SnackbarLayout_android_maxWidth = 0;
@@ -13421,13 +15408,13 @@ namespace escout.Droid
 			// aapt resource value: 1
 			public const int Snackbar_snackbarStyle = 1;
 			
-			// aapt resource value: { 0x10100B2,0x1010176,0x101017B,0x1010262,0x7F030140 }
+			// aapt resource value: { 0x10100B2,0x1010176,0x101017B,0x1010262,0x7F030141 }
 			public static int[] Spinner = new int[] {
 					16842930,
 					16843126,
 					16843131,
 					16843362,
-					2130903360};
+					2130903361};
 			
 			// aapt resource value: 3
 			public const int Spinner_android_dropDownWidth = 3;
@@ -13478,22 +15465,22 @@ namespace escout.Droid
 			// aapt resource value: 1
 			public const int StateListDrawable_android_visible = 1;
 			
-			// aapt resource value: { 0x1010124,0x1010125,0x1010142,0x7F03015A,0x7F030165,0x7F030178,0x7F030179,0x7F03017B,0x7F0301B3,0x7F0301B4,0x7F0301B5,0x7F0301CC,0x7F0301CD,0x7F0301CE }
+			// aapt resource value: { 0x1010124,0x1010125,0x1010142,0x7F03015B,0x7F030166,0x7F030179,0x7F03017A,0x7F03017C,0x7F0301B4,0x7F0301B5,0x7F0301B6,0x7F0301CD,0x7F0301CE,0x7F0301CF }
 			public static int[] SwitchCompat = new int[] {
 					16843044,
 					16843045,
 					16843074,
-					2130903386,
-					2130903397,
-					2130903416,
+					2130903387,
+					2130903398,
 					2130903417,
-					2130903419,
-					2130903475,
+					2130903418,
+					2130903420,
 					2130903476,
 					2130903477,
-					2130903500,
+					2130903478,
 					2130903501,
-					2130903502};
+					2130903502,
+					2130903503};
 			
 			// aapt resource value: 1
 			public const int SwitchCompat_android_textOff = 1;
@@ -13552,9 +15539,8 @@ namespace escout.Droid
 			// aapt resource value: 2
 			public const int TabItem_android_text = 2;
 			
-			// aapt resource value: { 0x7F03017C,0x7F03017D,0x7F03017E,0x7F03017F,0x7F030180,0x7F030181,0x7F030182,0x7F030183,0x7F030184,0x7F030185,0x7F030186,0x7F030187,0x7F030188,0x7F030189,0x7F03018A,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190,0x7F030191,0x7F030193,0x7F030194,0x7F030195 }
+			// aapt resource value: { 0x7F03017D,0x7F03017E,0x7F03017F,0x7F030180,0x7F030181,0x7F030182,0x7F030183,0x7F030184,0x7F030185,0x7F030186,0x7F030187,0x7F030188,0x7F030189,0x7F03018A,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190,0x7F030191,0x7F030192,0x7F030194,0x7F030195,0x7F030196 }
 			public static int[] TabLayout = new int[] {
-					2130903420,
 					2130903421,
 					2130903422,
 					2130903423,
@@ -13576,9 +15562,10 @@ namespace escout.Droid
 					2130903439,
 					2130903440,
 					2130903441,
-					2130903443,
+					2130903442,
 					2130903444,
-					2130903445};
+					2130903445,
+					2130903446};
 			
 			// aapt resource value: 0
 			public const int TabLayout_tabBackground = 0;
@@ -13655,7 +15642,7 @@ namespace escout.Droid
 			// aapt resource value: 24
 			public const int TabLayout_tabUnboundedRipple = 24;
 			
-			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x101009A,0x101009B,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x7F0300D1,0x7F030196 }
+			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x101009A,0x101009B,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x7F0300D2,0x7F030197 }
 			public static int[] TextAppearance = new int[] {
 					16842901,
 					16842902,
@@ -13668,8 +15655,8 @@ namespace escout.Droid
 					16843107,
 					16843108,
 					16843692,
-					2130903249,
-					2130903446};
+					2130903250,
+					2130903447};
 			
 			// aapt resource value: 10
 			public const int TextAppearance_android_fontFamily = 10;
@@ -13710,7 +15697,7 @@ namespace escout.Droid
 			// aapt resource value: 12
 			public const int TextAppearance_textAllCaps = 12;
 			
-			// aapt resource value: { 0x101009A,0x1010150,0x7F030043,0x7F030044,0x7F030045,0x7F030046,0x7F030047,0x7F030048,0x7F030049,0x7F03004A,0x7F03004B,0x7F0300A0,0x7F0300A1,0x7F0300A2,0x7F0300A3,0x7F0300B8,0x7F0300B9,0x7F0300E0,0x7F0300E1,0x7F0300E2,0x7F0300E6,0x7F0300E7,0x7F0300E8,0x7F03013A,0x7F03013B,0x7F03013C,0x7F03013D,0x7F03013E }
+			// aapt resource value: { 0x101009A,0x1010150,0x7F030043,0x7F030044,0x7F030045,0x7F030046,0x7F030047,0x7F030048,0x7F030049,0x7F03004A,0x7F03004B,0x7F0300A1,0x7F0300A2,0x7F0300A3,0x7F0300A4,0x7F0300B9,0x7F0300BA,0x7F0300E1,0x7F0300E2,0x7F0300E3,0x7F0300E7,0x7F0300E8,0x7F0300E9,0x7F03013B,0x7F03013C,0x7F03013D,0x7F03013E,0x7F03013F }
 			public static int[] TextInputLayout = new int[] {
 					16842906,
 					16843088,
@@ -13723,23 +15710,23 @@ namespace escout.Droid
 					2130903113,
 					2130903114,
 					2130903115,
-					2130903200,
 					2130903201,
 					2130903202,
 					2130903203,
-					2130903224,
+					2130903204,
 					2130903225,
-					2130903264,
+					2130903226,
 					2130903265,
 					2130903266,
-					2130903270,
+					2130903267,
 					2130903271,
 					2130903272,
-					2130903354,
+					2130903273,
 					2130903355,
 					2130903356,
 					2130903357,
-					2130903358};
+					2130903358,
+					2130903359};
 			
 			// aapt resource value: 1
 			public const int TextInputLayout_android_hint = 1;
@@ -13825,11 +15812,11 @@ namespace escout.Droid
 			// aapt resource value: 27
 			public const int TextInputLayout_passwordToggleTintMode = 27;
 			
-			// aapt resource value: { 0x1010034,0x7F0300B6,0x7F0300B7 }
+			// aapt resource value: { 0x1010034,0x7F0300B7,0x7F0300B8 }
 			public static int[] ThemeEnforcement = new int[] {
 					16842804,
-					2130903222,
-					2130903223};
+					2130903223,
+					2130903224};
 			
 			// aapt resource value: 0
 			public const int ThemeEnforcement_android_textAppearance = 0;
@@ -13840,37 +15827,37 @@ namespace escout.Droid
 			// aapt resource value: 2
 			public const int ThemeEnforcement_enforceTextAppearance = 2;
 			
-			// aapt resource value: { 0x10100AF,0x1010140,0x7F030051,0x7F03007F,0x7F030080,0x7F030091,0x7F030092,0x7F030093,0x7F030094,0x7F030095,0x7F030096,0x7F030123,0x7F030124,0x7F030128,0x7F03012D,0x7F03012E,0x7F030140,0x7F030173,0x7F030174,0x7F030175,0x7F0301BB,0x7F0301BD,0x7F0301BE,0x7F0301BF,0x7F0301C0,0x7F0301C1,0x7F0301C2,0x7F0301C3,0x7F0301C4 }
+			// aapt resource value: { 0x10100AF,0x1010140,0x7F030051,0x7F03007F,0x7F030080,0x7F030092,0x7F030093,0x7F030094,0x7F030095,0x7F030096,0x7F030097,0x7F030124,0x7F030125,0x7F030129,0x7F03012E,0x7F03012F,0x7F030141,0x7F030174,0x7F030175,0x7F030176,0x7F0301BC,0x7F0301BE,0x7F0301BF,0x7F0301C0,0x7F0301C1,0x7F0301C2,0x7F0301C3,0x7F0301C4,0x7F0301C5 }
 			public static int[] Toolbar = new int[] {
 					16842927,
 					16843072,
 					2130903121,
 					2130903167,
 					2130903168,
-					2130903185,
 					2130903186,
 					2130903187,
 					2130903188,
 					2130903189,
 					2130903190,
-					2130903331,
+					2130903191,
 					2130903332,
-					2130903336,
-					2130903341,
+					2130903333,
+					2130903337,
 					2130903342,
-					2130903360,
-					2130903411,
+					2130903343,
+					2130903361,
 					2130903412,
 					2130903413,
-					2130903483,
-					2130903485,
+					2130903414,
+					2130903484,
 					2130903486,
 					2130903487,
 					2130903488,
 					2130903489,
 					2130903490,
 					2130903491,
-					2130903492};
+					2130903492,
+					2130903493};
 			
 			// aapt resource value: 0
 			public const int Toolbar_android_gravity = 0;
@@ -13959,13 +15946,13 @@ namespace escout.Droid
 			// aapt resource value: 28
 			public const int Toolbar_titleTextColor = 28;
 			
-			// aapt resource value: { 0x1010000,0x10100DA,0x7F030134,0x7F030135,0x7F0301B1 }
+			// aapt resource value: { 0x1010000,0x10100DA,0x7F030135,0x7F030136,0x7F0301B2 }
 			public static int[] View = new int[] {
 					16842752,
 					16842970,
-					2130903348,
 					2130903349,
-					2130903473};
+					2130903350,
+					2130903474};
 			
 			// aapt resource value: { 0x10100D4,0x7F030034,0x7F030035 }
 			public static int[] ViewBackgroundHelper = new int[] {
