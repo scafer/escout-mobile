@@ -21,6 +21,8 @@ namespace escout.Models.Rest
         public int EventId { get; set; }
         [JsonProperty("athleteId")]
         public int? AthleteId { get; set; }
+        [JsonProperty("clubId")]
+        public int? ClubId { get; set; }
         [JsonProperty("userId")]
         public int UserId { get; set; }
         [JsonProperty("created")]
@@ -39,6 +41,7 @@ namespace escout.Models.Rest
             GameId = evt.GameId;
             EventId = evt.EventId;
             AthleteId = evt.AthleteId;
+            ClubId = evt.ClubId;
             UserId = evt.UserId;
         }
     }

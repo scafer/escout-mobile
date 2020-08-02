@@ -15,6 +15,7 @@ namespace escout.Models.Db
         public int GameId { get; set; }
         public int EventId { get; set; }
         public int? AthleteId { get; set; }
+        public int? ClubId { get; set; }
         public int UserId { get; set; }
         public string Created { get; set; }
         public string Updated { get; set; }
@@ -33,6 +34,7 @@ namespace escout.Models.Db
             GameId = gameEvent.GameId;
             EventId = gameEvent.EventId;
             AthleteId = gameEvent.AthleteId;
+            ClubId = gameEvent.ClubId;
             UserId = gameEvent.UserId;
             Created = gameEvent.Created;
             Updated = gameEvent.Updated;

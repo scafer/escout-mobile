@@ -18,6 +18,7 @@
                     <TextCell Text="GameId:" Detail="{Binding GameId}"/>
                     <TextCell Text="EventId:" Detail="{Binding EventId}"/>
                     <TextCell Text="AthleteId:" Detail="{Binding AthleteId}"/>
+                    <TextCell Text="ClubId:" Detail="{Binding ClubId}"/>
                     <TextCell Text="UserId:" Detail="{Binding UserId}"/>
                     <TextCell Text="Created:" Detail="{Binding Created}"/>
                     <TextCell Text="Updated:" Detail="{Binding Updated}"/>
