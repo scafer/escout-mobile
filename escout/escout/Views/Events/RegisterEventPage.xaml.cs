@@ -84,6 +84,7 @@ namespace escout.Views.Events
                     GameId = dbGame.Id,
                     EventId = await new LocalDb().GetEventId(button.Text),
                     AthleteId = dbAthlete.Id,
+                    ClubId = dbAthlete.ClubId,
                     DataExt = dbGame.DataExt
                 };
 

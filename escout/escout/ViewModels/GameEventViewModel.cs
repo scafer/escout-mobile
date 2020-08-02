@@ -39,6 +39,7 @@ namespace escout.ViewModels
                 var gameEvent = new GameEvent()
                 {
                     AthleteId = dbGameEvent.AthleteId,
+                    ClubId = dbGameEvent.ClubId,
                     EventDescription = dbGameEvent.EventDescription,
                     EventId = dbGameEvent.EventId,
                     GameId = dbGameEvent.GameId,
