@@ -27,7 +27,7 @@ namespace escout.Models.Db
 
         public DbClub(Club club, int gameId)
         {
-            this.DataExt = gameId;
+            DataExt = gameId;
             Id = club.Id;
             Key = club.Key;
             Name = club.Name;
