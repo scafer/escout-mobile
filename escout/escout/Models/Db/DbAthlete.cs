@@ -31,7 +31,7 @@ namespace escout.Models.Db
 
         public DbAthlete(Athlete athlete, int gameId)
         {
-            this.DataExt = gameId;
+            DataExt = gameId;
             Id = athlete.Id;
             Key = athlete.Key;
             Name = athlete.Name;

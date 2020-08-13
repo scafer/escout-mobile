@@ -21,7 +21,7 @@ namespace escout.Models.Db
 
         public DbCompetition(Competition competition, int gameId)
         {
-            this.DataExt = gameId;
+            DataExt = gameId;
             Id = competition.Id;
             Key = competition.Key;
             Name = competition.Name;
