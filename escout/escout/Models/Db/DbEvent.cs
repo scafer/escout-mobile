@@ -21,7 +21,7 @@ namespace escout.Models.Db
 
         public DbEvent(Event evt, int gameId)
         {
-            this.DataExt = gameId;
+            DataExt = gameId;
             Id = evt.Id;
             Key = evt.Key;
             Name = evt.Name;

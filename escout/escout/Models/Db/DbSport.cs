@@ -18,7 +18,7 @@ namespace escout.Models.Db
 
         public DbSport(Sport sport, int gameId)
         {
-            this.DataExt = gameId;
+            DataExt = gameId;
             Id = sport.Id;
             Name = sport.Name;
             ImageId = sport.ImageId;

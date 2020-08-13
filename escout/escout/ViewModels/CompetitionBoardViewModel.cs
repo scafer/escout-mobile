@@ -33,6 +33,7 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
+            SearchExecuted();
         }
 
         public ObservableCollection<Competition> Competitions
