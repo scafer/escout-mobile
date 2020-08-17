@@ -19,7 +19,7 @@
 
                 <Label Text="Orientadores:" FontAttributes="Bold" Margin="0, 10"/>
                 <Label Text=" - Doutor Carlos José Corredoura Serrão, Professor Auxiliar, ISCTE-IUL "/>
-                <Label Text=" - Doutor Rui Jorge Henriques Calado Lopes, Professor Auxiliar, ISCTE IUL "/>
+                <Label Text=" - Doutor Rui Jorge Henriques Calado Lopes, Professor Auxiliar, ISCTE-IUL "/>
             </StackLayout>
             <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="Center">
                 <Image Source="iscte_logo.png" WidthRequest="220"/>
