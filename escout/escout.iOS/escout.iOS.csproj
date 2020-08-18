@@ -144,13 +144,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\athletes_icon.png" />
+    <BundleResource Include="Resources\athletes_fill.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\boards_icon.png" />
+    <BundleResource Include="Resources\boards_fill.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\clubs_icon.png" />
+    <BundleResource Include="Resources\clubs_fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\email_outline.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\escout_icon.png" />
@@ -159,10 +162,13 @@
     <BundleResource Include="Resources\escout_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\games_icon.png" />
+    <BundleResource Include="Resources\escout_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\home_icon.png" />
+    <BundleResource Include="Resources\games_fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\home_fill.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\iscte_logo.png" />
@@ -171,10 +177,16 @@
     <BundleResource Include="Resources\iscte_logo_w.png" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\password_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pwd_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
     <BundleResource Include="Resources\search_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\watching_icon.png" />
+    <BundleResource Include="Resources\sync_fill.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\user_image_negative.png" />
@@ -183,7 +195,10 @@
     <BundleResource Include="Resources\user_image_positive.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\events_icon.png" />
+    <BundleResource Include="Resources\username_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\watching_fill.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\wip_logo.png" />
