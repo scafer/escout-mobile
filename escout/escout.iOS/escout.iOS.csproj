@@ -296,4 +296,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\timeline_Soccer029.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer015.png" />
+  </ItemGroup>
 </Project>
