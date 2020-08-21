@@ -144,13 +144,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\athletes_icon.png" />
+    <BundleResource Include="Resources\athletes_fill.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\boards_icon.png" />
+    <BundleResource Include="Resources\boards_fill.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\clubs_icon.png" />
+    <BundleResource Include="Resources\clubs_fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\email_outline.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\escout_icon.png" />
@@ -159,10 +162,13 @@
     <BundleResource Include="Resources\escout_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\games_icon.png" />
+    <BundleResource Include="Resources\escout_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\home_icon.png" />
+    <BundleResource Include="Resources\games_fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\home_fill.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\iscte_logo.png" />
@@ -171,10 +177,16 @@
     <BundleResource Include="Resources\iscte_logo_w.png" />
   </ItemGroup>
   <ItemGroup>
+    <BundleResource Include="Resources\password_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pwd_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
     <BundleResource Include="Resources\search_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\watching_icon.png" />
+    <BundleResource Include="Resources\sync_fill.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\user_image_negative.png" />
@@ -183,9 +195,105 @@
     <BundleResource Include="Resources\user_image_positive.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\events_icon.png" />
+    <BundleResource Include="Resources\username_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\watching_fill.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\wip_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\down_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clear_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer002.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer005.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer014.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer026.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer007.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer008.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer010.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer023.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer025.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer027.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer028.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\timeline_Soccer029.png" />
   </ItemGroup>
 </Project>

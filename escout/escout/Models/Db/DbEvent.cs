@@ -3,7 +3,7 @@ using SQLite;
 
 namespace escout.Models.Db
 {
-    class DbEvent
+    public class DbEvent
     {
         [PrimaryKey, AutoIncrement]
         public int LocalId { get; set; }

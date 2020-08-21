@@ -72,13 +72,13 @@ namespace escout.Views
         {
             var option = new List<Option>
             {
-                new Option(HOME, "home_icon.png"),
-                new Option(WATCHING, "watching_icon.png"),
-                new Option(EVENTS, "events_icon.png"),
-                new Option(GAMES, "games_icon.png"),
-                new Option(CLUBS, "clubs_icon.png"),
-                new Option(ATHLETES, "athletes_icon.png"),
-                new Option(BOARDS, "boards_icon.png")
+                new Option(HOME, "home_fill.png"),
+                new Option(WATCHING, "watching_fill.png"),
+                new Option(GAMES, "games_fill.png"),
+                new Option(CLUBS, "clubs_fill.png"),
+                new Option(ATHLETES, "athletes_fill.png"),
+                new Option(BOARDS, "boards_fill.png"),
+                new Option(EVENTS, "sync_fill.png")
             };
 
             return option;

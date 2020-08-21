@@ -9,7 +9,7 @@
              IsPresented="True" NavigationPage.HasNavigationBar="False">
 
     <MasterDetailPage.Master>
-        <ContentPage Title="Menu" BackgroundColor="#262626">
+        <ContentPage Title="Menu" BackgroundColor="#407DF4">
             <StackLayout Padding="0,50,0,0">
                 <StackLayout>
                     <controls:CircleImage x:Name="Img" Source="user_image_positive.png" WidthRequest="80" HeightRequest="80">
@@ -19,14 +19,14 @@
                     </controls:CircleImage>
                 </StackLayout>
 
-                <ListView x:Name="OptionsListView" ItemSelected="OptionsListView_OnItemSelected" Margin="20" SeparatorVisibility="None" BackgroundColor="#262626">
+                <ListView x:Name="OptionsListView" ItemSelected="OptionsListView_OnItemSelected" Margin="20" SeparatorVisibility="None" BackgroundColor="#407DF4">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Horizontal" Padding="1" Margin="5">
-                                    <Image Source="{Binding ImageUrl}" VerticalOptions="Center" Margin="0,0,10,0" WidthRequest="25"/>
+                                    <Image Source="{Binding ImageUrl}" VerticalOptions="Center" Margin="0,0,10,0" WidthRequest="30"/>
                                     <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="Center">
-                                        <Label Text="{Binding Name}" FontSize="Large" TextColor="White"/>
+                                        <Label Text="{Binding Name}" VerticalOptions="Center" FontSize="Large" TextColor="White"/>
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell>
