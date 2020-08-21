@@ -17,7 +17,7 @@ namespace escout.ViewModels
         public INavigation Navigation;
         public ICommand SearchCommand { get; set; }
 
-        private bool isLoadingData;
+        private bool isBusy;
         private string key;
         private string pairValue;
         private ObservableCollection<Club> clubs;
@@ -33,7 +33,6 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
-            SearchExecuted();
         }
 
         public ObservableCollection<Club> Clubs
@@ -77,23 +76,33 @@ namespace escout.ViewModels
             }
         }
 
-        public bool IsLoadingData
+        public bool IsBusy
         {
-            get => this.isLoadingData;
+            get => isBusy;
             set
             {
-                isLoadingData = value;
+                isBusy = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsVisible
+        {
+            get => !IsBusy;
+            set
+            {
+                IsBusy = value;
                 OnPropertyChanged();
             }
         }
 
         private async void SearchExecuted()
         {
-            IsLoadingData = true;
+            IsVisible = true;
 
             if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage("Info", "Load all data?", "Cancel", "Yes"))
+                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Clubs = new ObservableCollection<Club>(await GetClubs(null));
             }
             else
@@ -101,10 +110,10 @@ namespace escout.ViewModels
                 Clubs = new ObservableCollection<Club>(await GetClubs(new SearchQuery(Key, "iLIKE", Value + "%")));
             }
 
-            IsLoadingData = false;
+            IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Clubs != null)
-                DependencyService.Get<IToast>().LongAlert(Clubs.Count + " results");
+                DependencyService.Get<IToast>().LongAlert(Clubs.Count + Message.TOAST_RESULTS);
         }
 
         private async Task<List<Club>> GetClubs(SearchQuery query)

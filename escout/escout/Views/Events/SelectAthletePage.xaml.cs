@@ -2,6 +2,7 @@
 using escout.Models.Db;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -23,6 +24,24 @@ namespace escout.Views.Events
             dbClubs = await new LocalDb().GetClubs(App.DbGame.DataExt);
             bt_home.Text = dbClubs[0].Name;
             bt_visitor.Text = dbClubs[1].Name;
+            _ = LoadImages(dbClubs[0].ImageId, dbClubs[1].ImageId);
+        }
+
+        private async Task LoadImages(int? homeImageId, int? visitorImageId)
+        {
+            if (homeImageId != null)
+            {
+                var img1 = await RestUtils.GetImage(homeImageId);
+                if (!string.IsNullOrEmpty(img1.ImageUrl))
+                    img_home.Source = img1.ImageUrl;
+            }
+
+            if (visitorImageId != null)
+            {
+                var img2 = await RestUtils.GetImage(visitorImageId);
+                if (!string.IsNullOrEmpty(img2.ImageUrl))
+                    img_visitor.Source = img2.ImageUrl;
+            }
         }
 
         private async void Bt_home_OnClicked(object sender, EventArgs e)

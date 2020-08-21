@@ -9,25 +9,21 @@ using Xamarin.Forms;
 
 namespace escout.Helpers
 {
-    public class LocalDb //TODO: improve this
+    public class LocalDb
     {
         private readonly SQLiteAsyncConnection connection;
 
         public LocalDb() => connection = DependencyService.Get<ISqLiteDb>().GetConnection();
 
-
-        public async Task<List<DbGame>> GetDbGame(int status)
+        private async Task InitializeDb()
         {
-            await InitializeDb();
-            var games = new List<DbGame>();
-
-            foreach (var game in await connection.Table<DbGame>().ToListAsync())
-            {
-                if (game.Status == status)
-                    games.Add(game);
-            }
-
-            return games;
+            await connection.CreateTableAsync<DbAthlete>();
+            await connection.CreateTableAsync<DbClub>();
+            await connection.CreateTableAsync<DbCompetition>();
+            await connection.CreateTableAsync<DbEvent>();
+            await connection.CreateTableAsync<DbGame>();
+            await connection.CreateTableAsync<DbGameEvent>();
+            await connection.CreateTableAsync<DbSport>();
         }
 
         public async Task<DbAthlete> GetAthlete()
@@ -45,20 +41,50 @@ namespace escout.Helpers
         public async Task<int> GetEventId(string name)
         {
             await InitializeDb();
-            var e = await connection.Table<DbEvent>().FirstOrDefaultAsync(x => x.Name == name);
-            return e.Id;
+            var evt = await connection.Table<DbEvent>().FirstOrDefaultAsync(e => e.Name == name);
+            return evt.Id;
         }
 
         public async Task<List<DbAthlete>> GetAthletes(int gameId, int clubId)
         {
             await InitializeDb();
-            return await connection.Table<DbAthlete>().Where(q => q.DataExt == gameId && q.ClubId == clubId).ToListAsync();
+            return await connection.Table<DbAthlete>().Where(x => x.DataExt == gameId && x.ClubId == clubId).ToListAsync();
         }
 
         public async Task<List<DbClub>> GetClubs(int gameId)
         {
             await InitializeDb();
-            return await connection.Table<DbClub>().Where(q => q.DataExt == gameId).ToListAsync();
+            return await connection.Table<DbClub>().Where(x => x.DataExt == gameId).ToListAsync();
+        }
+
+        public async Task<List<DbEvent>> GetEvents()
+        {
+            await InitializeDb();
+            return await connection.Table<DbEvent>().ToListAsync();
+        }
+
+        public async Task<int> AddGameEvent(DbGameEvent gameEvent)
+        {
+            await InitializeDb();
+            return await connection.InsertAsync(gameEvent);
+        }
+
+        public async Task UpdateGameEventStatus(DbGameEvent gameEvent)
+        {
+            await InitializeDb();
+            await connection.UpdateAsync(gameEvent);
+        }
+
+        public async Task<List<DbGame>> GetDbGame(int status)
+        {
+            await InitializeDb();
+            var games = new List<DbGame>();
+
+            foreach (var game in await connection.Table<DbGame>().ToListAsync())
+                if (game.Status == status)
+                    games.Add(game);
+
+            return games;
         }
 
         public async Task AddGameData(GameData gameData)
@@ -74,12 +100,10 @@ namespace escout.Helpers
                 await AddEventToDb(gameData.events, gameData.game.Id);
                 await AddGameEventToDb(gameData.gameEvents);
 
-                await Application.Current.MainPage.DisplayAlert("Message", "Game was successfully saved.", "OK");
+                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_INFO, Message.GAME_SAVE, Message.OPTION_OK);
             }
-            catch (Exception ex)
-            {
-                ExceptionHandler.GenericException(ex);
-            }
+
+            catch (Exception ex) { ExceptionHandler.GenericException(ex); }
         }
 
         public async Task RemoveGameData(int dataExt)
@@ -89,72 +113,37 @@ namespace escout.Helpers
             try
             {
                 foreach (var e in await connection.Table<DbGame>().ToListAsync())
-                {
                     if (e.DataExt == dataExt)
                         await connection.DeleteAsync(e);
-                }
 
                 foreach (var e in await connection.Table<DbAthlete>().ToListAsync())
-                {
                     if (e.DataExt == dataExt)
                         await connection.DeleteAsync(e);
-                }
 
                 foreach (var e in await connection.Table<DbClub>().ToListAsync())
-                {
                     if (e.DataExt == dataExt)
                         await connection.DeleteAsync(e);
-                }
+
                 foreach (var e in await connection.Table<DbCompetition>().ToListAsync())
-                {
                     if (e.DataExt == dataExt)
                         await connection.DeleteAsync(e);
-                }
+
                 foreach (var e in await connection.Table<DbEvent>().ToListAsync())
-                {
                     if (e.DataExt == dataExt)
                         await connection.DeleteAsync(e);
-                }
+
                 foreach (var e in await connection.Table<DbGameEvent>().ToListAsync())
-                {
                     if (e.DataExt == dataExt)
                         await connection.DeleteAsync(e);
-                }
+
                 foreach (var e in await connection.Table<DbSport>().ToListAsync())
-                {
                     if (e.DataExt == dataExt)
                         await connection.DeleteAsync(e);
-                }
 
-                await Application.Current.MainPage.DisplayAlert("Message", "Game was successfully removed.", "OK");
+                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_INFO, Message.GAME_REMOVE, Message.OPTION_OK);
             }
-            catch (Exception ex)
-            {
-                ExceptionHandler.GenericException(ex);
-            }
-        }
 
-        public async Task<int> AddGameEvent(DbGameEvent gameEvent)
-        {
-            await InitializeDb();
-            return await connection.InsertAsync(gameEvent);
-        }
-
-        public async Task UpdateGameEventStatus(DbGameEvent gameEvent)
-        {
-            await InitializeDb();
-            await connection.UpdateAsync(gameEvent);
-        }
-
-        private async Task InitializeDb()
-        {
-            await connection.CreateTableAsync<DbAthlete>();
-            await connection.CreateTableAsync<DbClub>();
-            await connection.CreateTableAsync<DbCompetition>();
-            await connection.CreateTableAsync<DbEvent>();
-            await connection.CreateTableAsync<DbGame>();
-            await connection.CreateTableAsync<DbGameEvent>();
-            await connection.CreateTableAsync<DbSport>();
+            catch (Exception ex) { ExceptionHandler.GenericException(ex); }
         }
 
         private async Task AddGameToDb(Game game)
@@ -193,9 +182,9 @@ namespace escout.Helpers
             await connection.InsertAsync(obj);
         }
 
-        private async Task AddEventToDb(List<Event> evts, int gameId)
+        private async Task AddEventToDb(List<Event> events, int gameId)
         {
-            foreach (var e in evts)
+            foreach (var e in events)
             {
                 var obj = new DbEvent(e, gameId);
                 await connection.InsertAsync(obj);

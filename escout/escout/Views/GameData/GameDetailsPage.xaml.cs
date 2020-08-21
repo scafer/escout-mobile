@@ -35,7 +35,7 @@ namespace escout.Views.GameData
 
         private async void AddGameToWatchList(object sender, EventArgs e)
         {
-            var response = await DisplayAlert("Message", "Add to watch list?", "Ok", "Cancel");
+            var response = await DisplayAlert(Message.TITLE_STATUS_INFO, Message.ADD_TO_WATCHING, Message.OPTION_YES, Message.OPTION_NO);
 
             if (response)
             {
@@ -56,7 +56,7 @@ namespace escout.Views.GameData
                 }
                 catch (Exception e)
                 {
-                    await DisplayAlert("Error", e.ToString(), "Ok");
+                    await DisplayAlert(Message.TITLE_STATUS_ERROR, e.ToString(), Message.OPTION_OK);
                 }
             }
         }

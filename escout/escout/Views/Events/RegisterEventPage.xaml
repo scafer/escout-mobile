@@ -5,38 +5,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="escout.Views.Events.RegisterEventPage">
-
+    
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="LeaveItem" Text="Leave" Clicked="LeaveItem_OnClicked"/>
     </ContentPage.ToolbarItems>
-
+    
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Grid WidthRequest="500" Margin="5">
+        <StackLayout Margin="5" VerticalOptions="EndAndExpand">
+            <StackLayout VerticalOptions="Center">
+                <Label Text="TIMER" HorizontalOptions="Center" TextColor="Black"/>
+                <Label x:Name="LbStopwatch" FontSize="Title" FontAttributes="Bold" TextColor="Black"  HorizontalOptions="Center"/>
+            </StackLayout>
+            <Grid WidthRequest="500" HorizontalOptions="Center" VerticalOptions="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="3*"/>
-                    <RowDefinition Height="3*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="9*"/>
+                    <RowDefinition Height="4*"/>
                 </Grid.RowDefinitions>
-                <StackLayout Grid.ColumnSpan="2" VerticalOptions="Center">
-                    <Label x:Name="LbStopwatch" FontSize="Large" FontAttributes="Bold"  HorizontalOptions="Center"/>
-                </StackLayout>
-
-                <Button x:Name="Event4Button" Text="4" Grid.Column="0" Grid.Row="1" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Clicked="EventExecuted"/>
-                <Button x:Name="Event3Button" Text="3" Grid.Column="1" Grid.Row="1" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Clicked="EventExecuted"/>
-                <Button x:Name="Event2Button" Text="2" Grid.Column="0" Grid.Row="2" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Clicked="EventExecuted"/>
-                <Button x:Name="Event1Button" Text="1" Grid.Column="1" Grid.Row="2" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" Clicked="EventExecuted"/>
-
-                <StackLayout Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                    <Button Text="Pause" Clicked="Pause_Clicked" FontSize="Medium" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" FontAttributes="Bold"/>
-                    <Button Text="Resume" Clicked="Resume_Clicked" FontSize="Medium" BorderWidth="1" BorderColor="Silver" BackgroundColor="White" CornerRadius="8" TextColor="#262626" FontAttributes="Bold"/>
-                </StackLayout>
+                <Label x:Name="PreviousEvent" Grid.Row="0" Text=" "/>
+                <Button x:Name="Event4Button" Grid.Column="0" Grid.Row="1" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" Clicked="EventExecuted"/>
+                <Button x:Name="Event3Button" Grid.Column="1" Grid.Row="1" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" Clicked="EventExecuted"/>
+                <Button x:Name="Event2Button" Grid.Column="0" Grid.Row="2" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" Clicked="EventExecuted"/>
+                <Button x:Name="Event1Button" Grid.Column="1" Grid.Row="2" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" Clicked="EventExecuted"/>
             </Grid>
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button x:Name="btn_pause" Text="Pause" Clicked="Pause_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
+                <Button x:Name="btn_resume" Text="Resume" Clicked="Resume_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
+                <Button Text="Events Timeline" Clicked="Button_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

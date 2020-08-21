@@ -5,7 +5,6 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
@@ -19,6 +18,7 @@ namespace escout.ViewModels
         public INavigation Navigation;
         public ICommand SynchronizeEventsCommand { get; set; }
 
+        private bool isBusy;
         private ObservableCollection<DbGameEvent> gameEvents;
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -45,6 +45,26 @@ namespace escout.ViewModels
             }
         }
 
+        public bool IsBusy
+        {
+            get => isBusy;
+            set
+            {
+                isBusy = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsVisible
+        {
+            get => !IsBusy;
+            set
+            {
+                IsBusy = value;
+                OnPropertyChanged();
+            }
+        }
+
         private async Task LoadEvents()
         {
             var db = new LocalDb();
@@ -60,6 +80,7 @@ namespace escout.ViewModels
             {
                 try
                 {
+                    IsVisible = true;
                     var response = await RestConnector.PostObjectAsync(RestConnector.GameEvent, unsynchronizedEvents);
                     var result = JsonConvert.DeserializeObject<SvcResult>(response);
 
@@ -71,14 +92,11 @@ namespace escout.ViewModels
                             _ = db.UpdateGameEventStatus(e);
                         }
                         _ = LoadEvents();
-                        await App.DisplayMessage("Result", "Success", "Ok");
+                        await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.EVENTS_SYNCRONIZED, Message.OPTION_OK);
                     }
                 }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex.ToString());
-                    await App.DisplayMessage("Result", ex.Message, "Ok");
-                }
+                catch (Exception ex) { await App.DisplayMessage(Message.TITLE_STATUS_INFO, ex.Message, Message.OPTION_OK); }
+                finally { IsVisible = false; }
             }
         }
     }
