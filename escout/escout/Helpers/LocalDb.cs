@@ -1,11 +1,11 @@
-﻿using SQLite;
-using System;
-using Xamarin.Forms;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using escout.Helpers.Services;
 using escout.Models.Db;
 using escout.Models.Rest;
-using escout.Helpers.Services;
+using SQLite;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace escout.Helpers
 {
@@ -94,7 +94,7 @@ namespace escout.Helpers
                 await AddEventToDb(gameData.events, gameData.game.Id);
                 await AddGameEventToDb(gameData.gameEvents);
 
-                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS, Message.GAME_SAVE, Message.OPTION_OK);
+                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_RESULT, Message.GAME_SAVE, Message.OPTION_OK);
             }
 
             catch (Exception ex) { ExceptionHandler.GenericException(ex); }
@@ -134,7 +134,7 @@ namespace escout.Helpers
                     if (e.DataExt == dataExt)
                         await connection.DeleteAsync(e);
 
-                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS, Message.GAME_REMOVE, Message.OPTION_OK);
+                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_RESULT, Message.GAME_REMOVE, Message.OPTION_OK);
             }
 
             catch (Exception ex) { ExceptionHandler.GenericException(ex); }

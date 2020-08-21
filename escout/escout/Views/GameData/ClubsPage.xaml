@@ -3,45 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls"
              mc:Ignorable="d"
              x:Class="escout.Views.GameData.ClubsPage" Title="Clubs">
-
+    
     <ContentPage.Content>
-        <AbsoluteLayout>
-            <ActivityIndicator AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.5" IsRunning="{Binding IsLoadingData}" IsVisible="{Binding IsLoadingData}"/>
+        <StackLayout Margin="10">
+            <material:MaterialEntry Placeholder="Search..." Text="{Binding Value}" LeadingIcon="search_icon.png" ClearIcon="clear_icon.png"  Type="Filled" BackgroundColor="White" BorderColor="Black" HorizontalOptions="FillAndExpand"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <material:MaterialPicker Placeholder="Option" ItemsSource="{Binding Filter}" SelectedItem="{Binding Key}" Type="Filled" BackgroundColor="White" BorderColor="Black" Grid.Column="0" TrailingIcon="down_icon.png"/>
+                <Button Command="{Binding SearchCommand}" IsVisible="{Binding IsVisible}" Text="Search" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" Grid.Column="1"/>
+                <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="#407DF4" Grid.Column="1">
+                    <ActivityIndicator.Scale>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">1</On>
+                            <On Platform="Android">0.7</On>
+                        </OnPlatform>
+                    </ActivityIndicator.Scale>
+                </ActivityIndicator>
+            </Grid>
+            <BoxView HeightRequest="1" Color="Black"/>
             <StackLayout>
-                <Label Text="Filter Criteria:" FontSize="Medium"/>
-                <StackLayout Orientation="Horizontal">
-                    <Picker Title="Filter" ItemsSource="{Binding Filter}" SelectedItem="{Binding Key}"/>
-                    <Entry Placeholder="key" HorizontalOptions="FillAndExpand" Text="{Binding Value}"/>
-                    <OnPlatform x:TypeArguments="View">
-                        <On Platform="iOS">
-                            <StackLayout>
-                                <Button ImageSource="search_icon.png" HorizontalOptions="End" HeightRequest="25" WidthRequest="25" Command="{Binding SearchCommand}"/>
-                            </StackLayout>
-                        </On>
-                        <On Platform="Android">
-                            <StackLayout>
-                                <Image Source="search_icon.png" HorizontalOptions="End" HeightRequest="25">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding SearchCommand}"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                            </StackLayout>
-                        </On>
-                    </OnPlatform>
-                </StackLayout>
-                <BoxView HeightRequest="1" Color="Black"/>
-                <StackLayout>
-                    <ListView ItemsSource="{Binding Clubs}" ItemSelected="ItemSelected" HasUnevenRows="True">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <TextCell Text="Name:" Detail="{Binding Name}"/>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </StackLayout>
+                <ListView ItemsSource="{Binding Clubs}" ItemSelected="ItemSelected" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Name}" Detail="{Binding Country}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
-        </AbsoluteLayout>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

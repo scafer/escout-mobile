@@ -203,4 +203,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\wip_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\down_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\clear_icon.png" />
+  </ItemGroup>
 </Project>

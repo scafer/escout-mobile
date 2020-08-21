@@ -7,11 +7,12 @@
              x:Class="escout.Views.Events.EventsPage" Title="Events">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem x:Name="AddItem" Text="Sync" Command="{Binding SynchronizeEventsCommand}"/>
+        <ToolbarItem x:Name="AddItem" IconImageSource="sync_fill.png" Command="{Binding SynchronizeEventsCommand}"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout>
+        <AbsoluteLayout>
+            <ActivityIndicator AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.5" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
             <ListView ItemsSource="{Binding GameEvents}" HasUnevenRows="True" ItemSelected="ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -19,6 +20,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
+    

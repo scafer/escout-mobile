@@ -6,13 +6,13 @@
              xmlns:material="clr-namespace:Plugin.MaterialDesignControls;assembly=Plugin.MaterialDesignControls"
              mc:Ignorable="d"
              x:Class="escout.Views.Authentication.SignInPage" NavigationPage.HasNavigationBar="False">
-
+    
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS" Value="0,20,0,0" />
         </OnPlatform>
     </ContentPage.Padding>
-
+    
     <ContentPage.Content>
         <ScrollView VerticalOptions="Center" HorizontalOptions="Center">
             <StackLayout Margin="5">
@@ -26,8 +26,7 @@
                         <Label Text="Save details?" VerticalOptions="Center"/>
                         <Switch x:Name="SwSave" Toggled="Save_Toggled" VerticalOptions="Center"/>
                     </StackLayout>
-
-                    <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="Black">
+                    <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="#407DF4">
                         <ActivityIndicator.Scale>
                             <OnPlatform x:TypeArguments="x:Double">
                                 <On Platform="iOS">1</On>
@@ -35,7 +34,6 @@
                             </OnPlatform>
                         </ActivityIndicator.Scale>
                     </ActivityIndicator>
-
                     <Button Text="Sign In" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" IsVisible="{Binding IsVisible}" Command="{Binding SignInCommand}"/>
                     <Button Text="Sign Up" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4" Command="{Binding SignUpViewCommand}"/>
                 </StackLayout>

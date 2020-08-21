@@ -17,7 +17,7 @@ namespace escout.ViewModels
         public INavigation Navigation;
         public ICommand SearchCommand { get; set; }
 
-        private bool isLoadingData;
+        private bool isBusy;
         private string key;
         private string pairValue;
         private ObservableCollection<Athlete> athletes;
@@ -33,7 +33,6 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
-            SearchExecuted();
         }
 
         public ObservableCollection<Athlete> Athletes
@@ -52,7 +51,7 @@ namespace escout.ViewModels
             {
                 return new List<string>
                 {
-                    {"name"}
+                    "name", "fullname"
                 };
             }
         }
@@ -77,31 +76,39 @@ namespace escout.ViewModels
             }
         }
 
-        public bool IsLoadingData
+        public bool IsBusy
         {
-            get => isLoadingData;
+            get => isBusy;
             set
             {
-                isLoadingData = value;
+                isBusy = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsVisible
+        {
+            get => !IsBusy;
+            set
+            {
+                IsBusy = value;
                 OnPropertyChanged();
             }
         }
 
         private async void SearchExecuted()
         {
-            IsLoadingData = true;
+            IsVisible = true;
 
             if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage("Info", "Load all data?", "Cancel", "Yes"))
+                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Athletes = new ObservableCollection<Athlete>(await GetAthletes(null));
             }
             else
-            {
                 Athletes = new ObservableCollection<Athlete>(await GetAthletes(new SearchQuery(Key, "iLIKE", Value + "%")));
-            }
 
-            IsLoadingData = false;
+            IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Athletes != null)
                 DependencyService.Get<IToast>().LongAlert(Athletes.Count + " results");

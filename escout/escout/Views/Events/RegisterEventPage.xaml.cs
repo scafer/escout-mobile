@@ -27,12 +27,25 @@ namespace escout.Views.Events
             dbAthlete = App.DbAthlete;
 
             _ = BackgroundAsync();
-            SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); //Board01
+            btn_pause.IsVisible = false;
         }
 
-        private void Pause_Clicked(object sender, EventArgs e) => StopWatch.Stop();
+        private void Pause_Clicked(object sender, EventArgs e)
+        {
+            StopWatch.Stop();
+            btn_resume.IsVisible = true;
+            btn_pause.IsVisible = false;
+        }
 
-        private void Resume_Clicked(object sender, EventArgs e) => StopWatch.Start();
+        private void Resume_Clicked(object sender, EventArgs e)
+        {
+            if (StopWatch.ShowTime() == "00:00")
+                SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); //Board01}
+
+            StopWatch.Start();
+            btn_resume.IsVisible = false;
+            btn_pause.IsVisible = true;
+        }
 
         private async void LeaveItem_OnClicked(object sender, EventArgs e)
         {
@@ -42,12 +55,16 @@ namespace escout.Views.Events
 
         private async void EventExecuted(object sender, EventArgs e)
         {
-            if(StopWatch.ShowTime() == "00:00")
-                if (await DisplayAlert("Alert", "Start StopWatch", "Yes", "No"))
+            if (StopWatch.ShowTime() == "00:00")
+            {
+                if (await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.GAME_START, Message.OPTION_YES, Message.OPTION_NO))
                     StopWatch.Start();
+            }
             else
             {
                 var button = sender as Button;
+                PreviousEvent.Text = "Previous Event: " + button.Text;
+
                 if (!string.IsNullOrEmpty(button.Text))
                 {
                     var evt = new DbGameEvent()
@@ -187,5 +204,10 @@ namespace escout.Views.Events
         const string Soccer028 = "Opposing Team Ball Possession";
         const string Soccer029 = "Grabbed the Ball";
         const string Soccer030 = "Didn't Grab the Ball";
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new EventsTimeLinePage());
+        }
     }
 }

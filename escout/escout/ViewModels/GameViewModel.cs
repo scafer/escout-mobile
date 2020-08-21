@@ -17,7 +17,7 @@ namespace escout.ViewModels
         public INavigation Navigation;
         public ICommand SearchCommand { get; set; }
 
-        private bool isLoadingData;
+        private bool isBusy;
         private string key;
         private string pairValue;
         private ObservableCollection<Game> games;
@@ -33,7 +33,6 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
-            SearchExecuted();
         }
 
         public ObservableCollection<Game> Games
@@ -77,19 +76,29 @@ namespace escout.ViewModels
             }
         }
 
-        public bool IsLoadingData
+        public bool IsBusy
         {
-            get => this.isLoadingData;
+            get => isBusy;
             set
             {
-                isLoadingData = value;
+                isBusy = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsVisible
+        {
+            get => !IsBusy;
+            set
+            {
+                IsBusy = value;
                 OnPropertyChanged();
             }
         }
 
         private async void SearchExecuted()
         {
-            IsLoadingData = true;
+            IsVisible = true;
 
             if (Key == null || string.IsNullOrEmpty(Value))
             {
@@ -97,11 +106,9 @@ namespace escout.ViewModels
                     Games = new ObservableCollection<Game>(await GetGames(null));
             }
             else
-            {
                 Games = new ObservableCollection<Game>(await GetGames(new SearchQuery(Key, "iLIKE", Value + "%")));
-            }
 
-            IsLoadingData = false;
+            IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Games != null)
                 DependencyService.Get<IToast>().LongAlert(Games.Count + " results");
