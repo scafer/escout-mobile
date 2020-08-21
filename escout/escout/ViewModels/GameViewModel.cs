@@ -102,7 +102,7 @@ namespace escout.ViewModels
 
             if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage("Info", "Load all data?", "Cancel", "Yes"))
+                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Games = new ObservableCollection<Game>(await GetGames(null));
             }
             else
@@ -111,7 +111,7 @@ namespace escout.ViewModels
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Games != null)
-                DependencyService.Get<IToast>().LongAlert(Games.Count + " results");
+                DependencyService.Get<IToast>().LongAlert(Games.Count + Message.TOAST_RESULTS);
         }
 
         private async Task<List<Game>> GetGames(SearchQuery query)

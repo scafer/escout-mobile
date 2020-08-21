@@ -111,17 +111,16 @@ namespace escout.ViewModels
                             await Navigation.PushAsync(new SplashScreenPage());
                         }
                         else
-                            _ = App.DisplayMessage("Error", "Invalid username or password.", "Ok");
+                            _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.AUTHENTICATION_INVALID, Message.OPTION_OK);
                     }
                     else
                     {
-                        _ = App.DisplayMessage("Error:", "Something is wrong.", "Ok");
+                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.GENERIC_ERROR, Message.OPTION_OK);
                     }
                 }
                 catch
                 {
-                    var option = await App.DisplayMessage("Error:",
-                        "Something is wrong. Do you want to register events offline?", "NO", "YES");
+                    var option = await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.OFFLINE, Message.OPTION_NO, Message.OPTION_YES);
                     if (option)
                     {
                         Application.Current.MainPage = new NavigationPage(new WatchingListPage());
@@ -134,7 +133,7 @@ namespace escout.ViewModels
                 }
             }
             else
-                _ = App.DisplayMessage("Error", "Invalid username or password.", "Ok");
+                _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.AUTHENTICATION_INVALID, Message.OPTION_OK);
         }
 
         private async void SignUpExecuted()
@@ -150,14 +149,14 @@ namespace escout.ViewModels
                     if (!string.IsNullOrEmpty(response))
                     {
                         var result = JsonConvert.DeserializeObject<SvcResult>(response);
-                        _ = App.DisplayMessage("Result", result.ErrorMessage, "OK");
+                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, result.ErrorMessage, Message.OPTION_OK);
 
                         if (result.ErrorCode == 0)
                             await Navigation.PopModalAsync();
                     }
                     else
                     {
-                        _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.GENERIC_ERROR, Message.OPTION_OK);
                     }
                 }
                 catch (Exception ex)
@@ -170,7 +169,7 @@ namespace escout.ViewModels
                 }
             }
             else
-                _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.GENERIC_ERROR, Message.OPTION_OK);
         }
 
         private async void ForgotPasswordExecuted()
@@ -185,12 +184,12 @@ namespace escout.ViewModels
                     if (!string.IsNullOrEmpty(response))
                     {
                         var result = JsonConvert.DeserializeObject<SvcResult>(response);
-                        _ = App.DisplayMessage("Message", result.ErrorMessage, "Ok");
+                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, result.ErrorMessage, Message.OPTION_OK);
                         await Navigation.PopModalAsync();
                     }
                     else
                     {
-                        _ = App.DisplayMessage("Error:", "Something is wrong.", "OK");
+                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.GENERIC_ERROR, Message.OPTION_OK);
                     }
                 }
                 catch (Exception ex)
@@ -203,7 +202,7 @@ namespace escout.ViewModels
                 }
             }
             else
-                _ = App.DisplayMessage("Warning", "Invalid username or email.", "Ok");
+                _ = App.DisplayMessage(Message.GENERIC_ERROR, Message.AUTHENTICATION_INVALID_2, Message.OPTION_OK);
         }
 
         private async void SignUpViewExecuted()

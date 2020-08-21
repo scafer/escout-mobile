@@ -102,7 +102,7 @@ namespace escout.ViewModels
 
             if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage("Info", "Load all data?", "Cancel", "Yes"))
+                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Clubs = new ObservableCollection<Club>(await GetClubs(null));
             }
             else
@@ -113,7 +113,7 @@ namespace escout.ViewModels
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Clubs != null)
-                DependencyService.Get<IToast>().LongAlert(Clubs.Count + " results");
+                DependencyService.Get<IToast>().LongAlert(Clubs.Count + Message.TOAST_RESULTS);
         }
 
         private async Task<List<Club>> GetClubs(SearchQuery query)

@@ -39,8 +39,8 @@ namespace escout.Views.Events
 
         private void Resume_Clicked(object sender, EventArgs e)
         {
-            if (StopWatch.ShowTime() == "00:00")
-                SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); //Board01}
+            if (Event1Button.Text == "" && Event2Button.Text == "" && Event3Button.Text == "" && Event4Button.Text == "")
+                SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); //Board01
 
             StopWatch.Start();
             btn_resume.IsVisible = false;

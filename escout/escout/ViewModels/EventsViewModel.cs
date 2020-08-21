@@ -92,10 +92,10 @@ namespace escout.ViewModels
                             _ = db.UpdateGameEventStatus(e);
                         }
                         _ = LoadEvents();
-                        await App.DisplayMessage(Message.TITLE_STATUS_RESULT, Message.EVENTS_SYNCRONIZED, Message.OPTION_OK);
+                        await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.EVENTS_SYNCRONIZED, Message.OPTION_OK);
                     }
                 }
-                catch (Exception ex) { await App.DisplayMessage(Message.TITLE_STATUS_RESULT, ex.Message, Message.OPTION_OK); }
+                catch (Exception ex) { await App.DisplayMessage(Message.TITLE_STATUS_INFO, ex.Message, Message.OPTION_OK); }
                 finally { IsVisible = false; }
             }
         }

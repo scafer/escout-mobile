@@ -111,7 +111,7 @@ namespace escout.ViewModels
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Athletes != null)
-                DependencyService.Get<IToast>().LongAlert(Athletes.Count + " results");
+                DependencyService.Get<IToast>().LongAlert(Athletes.Count + Message.TOAST_RESULTS);
         }
 
         private async Task<List<Athlete>> GetAthletes(SearchQuery query)

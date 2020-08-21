@@ -57,6 +57,12 @@ namespace escout.Helpers
             return await connection.Table<DbClub>().Where(x => x.DataExt == gameId).ToListAsync();
         }
 
+        public async Task<List<DbEvent>> GetEvents()
+        {
+            await InitializeDb();
+            return await connection.Table<DbEvent>().ToListAsync();
+        }
+
         public async Task<int> AddGameEvent(DbGameEvent gameEvent)
         {
             await InitializeDb();
@@ -94,7 +100,7 @@ namespace escout.Helpers
                 await AddEventToDb(gameData.events, gameData.game.Id);
                 await AddGameEventToDb(gameData.gameEvents);
 
-                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_RESULT, Message.GAME_SAVE, Message.OPTION_OK);
+                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_INFO, Message.GAME_SAVE, Message.OPTION_OK);
             }
 
             catch (Exception ex) { ExceptionHandler.GenericException(ex); }
@@ -134,7 +140,7 @@ namespace escout.Helpers
                     if (e.DataExt == dataExt)
                         await connection.DeleteAsync(e);
 
-                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_RESULT, Message.GAME_REMOVE, Message.OPTION_OK);
+                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_INFO, Message.GAME_REMOVE, Message.OPTION_OK);
             }
 
             catch (Exception ex) { ExceptionHandler.GenericException(ex); }

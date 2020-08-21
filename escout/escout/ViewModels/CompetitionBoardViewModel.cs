@@ -102,7 +102,7 @@ namespace escout.ViewModels
 
             if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage("Info", "Load all data?", "Cancel", "Yes"))
+                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Competitions = new ObservableCollection<Competition>(await GetCompetitions(null));
             }
             else
@@ -111,7 +111,7 @@ namespace escout.ViewModels
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Competitions != null)
-                DependencyService.Get<IToast>().LongAlert(Competitions.Count + " results");
+                DependencyService.Get<IToast>().LongAlert(Competitions.Count + Message.TOAST_RESULTS);
         }
 
         private async Task<List<Competition>> GetCompetitions(SearchQuery query)

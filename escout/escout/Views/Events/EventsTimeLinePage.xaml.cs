@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using escout.Helpers;
+using escout.Models;
+using escout.Models.Db;
+using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,31 +14,44 @@ namespace escout.Views.Events
         public EventsTimeLinePage()
         {
             InitializeComponent();
-
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            var list = new List<obj>();
-            list.Add(new obj { Name = "Test", ImageUrl = "escout_icon.png", Timer = "00:00" });
-            list.Add(new obj { Name = "Test", ImageUrl = "escout_icon.png", Timer = "00:00" });
-            list.Add(new obj { Name = "Test", ImageUrl = "escout_icon.png", Timer = "00:00" });
-            list.Add(new obj { Name = "Test", ImageUrl = "escout_icon.png", Timer = "00:00" });
-            list.Add(new obj { Name = "Test", ImageUrl = "escout_icon.png", Timer = "00:00" });
-            timelineListView.ItemsSource = list;
+            LoadTimeLineEvents();
         }
 
-        private void timelineListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void ItemTapped(object sender, ItemTappedEventArgs e)
         {
             timelineListView.SelectedItem = null;
         }
-    }
 
-    public class obj
-    {
-        public string Name { get; set; }
-        public string ImageUrl { get; set; }
-        public string Timer { get; set; }
+        private async void LoadTimeLineEvents()
+        {
+            var db = new LocalDb();
+            var timeLine = new ObservableCollection<TimeLineElement>();
+            var events = new ObservableCollection<DbEvent>(await db.GetEvents());
+            var gameEvents = new ObservableCollection<DbGameEvent>(await db.GetGameEvents()).
+                Where(e => e.GameId == App.DbGame.Id && e.AthleteId == App.DbAthlete.Id).ToList();
+
+            foreach (DbGameEvent gameEvent in gameEvents)
+            {
+                foreach (DbEvent e in events)
+                {
+                    if (gameEvent.EventId == e.Id)
+                    {
+                        var timeLineElement = new TimeLineElement
+                        {
+                            Name = e.Name,
+                            ImageUrl = "timeline_" + e.Key + ".png",
+                            Timer = gameEvent.GameTime
+                        };
+                        timeLine.Add(timeLineElement);
+                    }
+                }
+            }
+            timelineListView.ItemsSource = timeLine.OrderByDescending(e => e.Timer);
+        }
     }
 }
