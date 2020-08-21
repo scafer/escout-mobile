@@ -2,9 +2,11 @@
 using escout.Models;
 using escout.Models.Db;
 using escout.ViewModels;
+using Plugin.MaterialDesignControls;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,7 +18,10 @@ namespace escout.Views.Events
         private DbGame dbGame;
         private DbAthlete dbAthlete;
 
-        public RegisterEventPage() => InitializeComponent();
+        public RegisterEventPage()
+        {
+            InitializeComponent();
+        }
 
         protected override void OnAppearing()
         {
@@ -39,9 +44,11 @@ namespace escout.Views.Events
 
         private void Resume_Clicked(object sender, EventArgs e)
         {
-            if (Event1Button.Text == "" && Event2Button.Text == "" && Event3Button.Text == "" && Event4Button.Text == "")
+            if (string.IsNullOrEmpty(Event1Button.Text) && string.IsNullOrEmpty(Event2Button.Text) &&
+                string.IsNullOrEmpty(Event3Button.Text) && string.IsNullOrEmpty(Event4Button.Text))
+            {
                 SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); //Board01
-
+            }
             StopWatch.Start();
             btn_resume.IsVisible = false;
             btn_pause.IsVisible = true;
@@ -58,11 +65,14 @@ namespace escout.Views.Events
             if (StopWatch.ShowTime() == "00:00")
             {
                 if (await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.GAME_START, Message.OPTION_YES, Message.OPTION_NO))
+                {
                     StopWatch.Start();
+                    SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); //Board01
+                }
             }
             else
             {
-                var button = sender as Button;
+                var button = sender as MaterialButton;
                 PreviousEvent.Text = "Previous Event: " + button.Text;
 
                 if (!string.IsNullOrEmpty(button.Text))
