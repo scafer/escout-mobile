@@ -72,7 +72,7 @@ namespace escout.Views.Events
             }
             else
             {
-                var button = sender as MaterialButton;
+                var button = sender as Button;
                 PreviousEvent.Text = "Previous Event: " + button.Text;
 
                 if (!string.IsNullOrEmpty(button.Text))
