@@ -12,6 +12,7 @@ namespace escout.ViewModels
     {
         public INavigation Navigation;
         public ICommand RemoveGameCommand { get; set; }
+        public ICommand UpdateViewCommand { get; set; }
 
         private DbGame selectedGame;
         private ObservableCollection<DbGame> activeGames;
@@ -28,6 +29,7 @@ namespace escout.ViewModels
         public WatchingListViewModel(INavigation navigation)
         {
             Navigation = navigation;
+            UpdateViewCommand = new Command(GetGames);
             GetGames();
         }
 

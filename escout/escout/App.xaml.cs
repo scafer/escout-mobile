@@ -8,7 +8,7 @@ namespace escout
 {
     public partial class App : Application
     {
-        public static User User;
+        public static string UserId;
         public static DbGame DbGame;
         public static DbAthlete DbAthlete;
 

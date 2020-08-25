@@ -12,6 +12,10 @@
         </OnPlatform>
     </ContentPage.Padding>
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="AddItem" IconImageSource="sync_fill.png" Command="{Binding UpdateViewCommand}"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <ScrollView HorizontalOptions="Center">
             <StackLayout WidthRequest="500">
