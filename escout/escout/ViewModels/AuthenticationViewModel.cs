@@ -108,6 +108,7 @@ namespace escout.ViewModels
                         if (!string.IsNullOrEmpty(result.Token))
                         {
                             RestConnector.Token = result.Token;
+                            App.UserId = result.Id;
                             await Navigation.PushAsync(new SplashScreenPage());
                         }
                         else

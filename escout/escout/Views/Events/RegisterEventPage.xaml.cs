@@ -31,6 +31,8 @@ namespace escout.Views.Events
             dbGame = App.DbGame;
             dbAthlete = App.DbAthlete;
 
+            Title = dbAthlete.Name;
+
             _ = BackgroundAsync();
             btn_pause.IsVisible = false;
         }
@@ -56,8 +58,11 @@ namespace escout.Views.Events
 
         private async void LeaveItem_OnClicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new MainPage());
-            await Navigation.PushAsync(new MainPage());
+            if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.LEAVE, Message.OPTION_NO, Message.OPTION_YES))
+            {
+                Application.Current.MainPage = new NavigationPage(new MainPage());
+                await Navigation.PushAsync(new MainPage());
+            }
         }
 
         private async void EventExecuted(object sender, EventArgs e)

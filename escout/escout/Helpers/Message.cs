@@ -21,6 +21,9 @@
         public const string GENERIC_ERROR = "Something is wrong.";
         public const string OFFLINE = "Something is wrong. Do you want to register events offline?";
         public const string ADD_TO_WATCHING = "Add to watch list?";
+        public const string SELECT_ATHLETE = "Select one athlete";
+        public const string EVENT_PAGE = "Continue to event registration page?";
+        public const string LEAVE = "Leave current game?";
 
         public const string TOAST_RESULTS = " results";
     }
