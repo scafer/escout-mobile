@@ -25,6 +25,7 @@ namespace escout.Helpers
         public const string Events = "/api/v1/events";
         public const string Game = "/api/v1/game";
         public const string Games = "/api/v1/games";
+        public const string GameUser = "/api/v1/gameUser";
         public const string GameEvent = "/api/v1/gameEvent";
         public const string GameEvents = "/api/v1/gameEvents";
         public const string GameAthlete = "/api/v1/gameAthlete";
