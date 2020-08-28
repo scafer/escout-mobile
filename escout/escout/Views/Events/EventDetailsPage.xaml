@@ -7,7 +7,7 @@
              x:Class="escout.Views.Events.EventDetailsPage">
     
     <ContentPage.Content>
-        <TableView>
+        <TableView Margin="5">
             <TableRoot>
                 <TableSection>
                     <TextCell Text="LocalId:" Detail="{Binding LocalId}"/>

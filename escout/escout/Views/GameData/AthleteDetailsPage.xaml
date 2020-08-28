@@ -8,7 +8,7 @@
              x:Class="escout.Views.GameData.AthleteDetailsPage" Title="Athlete Details">
 
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="5">
             <controls:CircleImage x:Name="Img" Source="user_image_negative.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="Center"/>
             <TableView>
                 <TableRoot>

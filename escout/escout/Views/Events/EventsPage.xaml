@@ -11,7 +11,7 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <AbsoluteLayout>
+        <AbsoluteLayout Margin="5">
             <ActivityIndicator AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds=".5,.5" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"/>
             <ListView ItemsSource="{Binding GameEvents}" HasUnevenRows="True" ItemSelected="ItemSelected">
                 <ListView.ItemTemplate>
