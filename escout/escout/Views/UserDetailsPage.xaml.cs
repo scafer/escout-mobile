@@ -35,7 +35,7 @@ namespace escout.Views
         private void UserCell_Tapped(object sender, EventArgs e)
         {
             var swt = sender as SwitchCell;
-            if(swt.On == true)
+            if (swt.On == true)
             {
                 PasswordCell.On = false;
                 PasswordButton.IsVisible = false;

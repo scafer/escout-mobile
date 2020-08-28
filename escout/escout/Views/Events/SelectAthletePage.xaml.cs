@@ -58,7 +58,7 @@ namespace escout.Views.Events
         {
             if (listView.SelectedItem != null)
             {
-                if(await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.EVENT_PAGE, Message.OPTION_NO, Message.OPTION_YES))
+                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.EVENT_PAGE, Message.OPTION_NO, Message.OPTION_YES))
                 {
                     App.DbAthlete = listView.SelectedItem as DbAthlete;
                     _ = RestUtils.AddGameUser(App.DbGame.Id, App.DbAthlete.Id);
