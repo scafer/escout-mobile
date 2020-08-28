@@ -8,7 +8,7 @@
              x:Class="escout.Views.GameData.AthletesPage" Title="Athletes">
     
     <ContentPage.Content>
-        <StackLayout Margin="10">
+        <StackLayout Margin="5">
             <material:MaterialEntry Placeholder="Search..." Text="{Binding Value}" LeadingIcon="search_icon.png" ClearIcon="clear_icon.png"  Type="Filled" BackgroundColor="White" BorderColor="Black" HorizontalOptions="FillAndExpand"/>
             <Grid>
                 <Grid.ColumnDefinitions>

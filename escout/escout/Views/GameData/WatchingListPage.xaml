@@ -17,7 +17,7 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <ScrollView HorizontalOptions="Center">
+        <ScrollView HorizontalOptions="Center" Margin="5">
             <StackLayout WidthRequest="500">
                 <StackLayout>
                     <Label Text="Active Games" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>

@@ -4,8 +4,8 @@
              x:Class="escout.Views.Events.EventsTimeLinePage">
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Margin="10" Text="Events Timeline:" FontSize="Medium" FontAttributes="Bold"/>
+        <StackLayout Margin="5">
+            <Label Text="Events Timeline:" FontSize="Medium" FontAttributes="Bold"/>
             <ListView x:Name="timelineListView" ItemTapped="ItemTapped" ItemsSource="{Binding .}" RowHeight="75" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -24,7 +24,7 @@
                                 <Label HorizontalOptions="Center" VerticalOptions="Center"  Text="#" FontAttributes="Bold" />
                                 <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" Text="{Binding Name}" />
                                 <Label HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="3" Text="{Binding Timer}" />
-                                <BoxView Grid.RowSpan="2" Grid.Column="1" BackgroundColor="#407DF4" HorizontalOptions="Center" VerticalOptions="Fill" WidthRequest="3" />
+                                <BoxView Grid.RowSpan="2" Grid.Column="1" BackgroundColor="#407DF4" HorizontalOptions="Center" VerticalOptions="Fill" WidthRequest="5" />
                                 <Image Grid.Column="1" VerticalOptions="Center" Source="{Binding ImageUrl}"/>
                             </Grid>
                         </ViewCell>

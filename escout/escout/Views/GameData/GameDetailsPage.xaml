@@ -11,7 +11,7 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="5">
             <TableView>
                 <TableRoot>
                     <TableSection>
