@@ -10382,115 +10382,127 @@ namespace escout.Droid
 			public const int sync_fill = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int timeline_Soccer001 = 2131165317;
+			public const int timeline_end = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int timeline_Soccer002 = 2131165318;
+			public const int timeline_pause = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int timeline_Soccer003 = 2131165319;
+			public const int timeline_play = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int timeline_Soccer004 = 2131165320;
+			public const int timeline_Soccer001 = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int timeline_Soccer005 = 2131165321;
+			public const int timeline_Soccer002 = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int timeline_Soccer006 = 2131165322;
+			public const int timeline_Soccer003 = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int timeline_Soccer007 = 2131165323;
+			public const int timeline_Soccer004 = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int timeline_Soccer008 = 2131165324;
+			public const int timeline_Soccer005 = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int timeline_Soccer009 = 2131165325;
+			public const int timeline_Soccer006 = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int timeline_Soccer010 = 2131165326;
+			public const int timeline_Soccer007 = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int timeline_Soccer011 = 2131165327;
+			public const int timeline_Soccer008 = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int timeline_Soccer012 = 2131165328;
+			public const int timeline_Soccer009 = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int timeline_Soccer013 = 2131165329;
+			public const int timeline_Soccer010 = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int timeline_Soccer014 = 2131165330;
+			public const int timeline_Soccer011 = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int timeline_Soccer015 = 2131165331;
+			public const int timeline_Soccer012 = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int timeline_Soccer016 = 2131165332;
+			public const int timeline_Soccer013 = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int timeline_Soccer017 = 2131165333;
+			public const int timeline_Soccer014 = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int timeline_Soccer018 = 2131165334;
+			public const int timeline_Soccer015 = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int timeline_Soccer019 = 2131165335;
+			public const int timeline_Soccer016 = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int timeline_Soccer020 = 2131165336;
+			public const int timeline_Soccer017 = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int timeline_Soccer021 = 2131165337;
+			public const int timeline_Soccer018 = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int timeline_Soccer022 = 2131165338;
+			public const int timeline_Soccer019 = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int timeline_Soccer023 = 2131165339;
+			public const int timeline_Soccer020 = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int timeline_Soccer024 = 2131165340;
+			public const int timeline_Soccer021 = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int timeline_Soccer025 = 2131165341;
+			public const int timeline_Soccer022 = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int timeline_Soccer026 = 2131165342;
+			public const int timeline_Soccer023 = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int timeline_Soccer027 = 2131165343;
+			public const int timeline_Soccer024 = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int timeline_Soccer028 = 2131165344;
+			public const int timeline_Soccer025 = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int timeline_Soccer029 = 2131165345;
+			public const int timeline_Soccer026 = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int timeline_Soccer030 = 2131165346;
+			public const int timeline_Soccer027 = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int tooltip_frame_dark = 2131165347;
+			public const int timeline_Soccer028 = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int tooltip_frame_light = 2131165348;
-			
-			// aapt resource value: 0x7F0700A7
-			public const int username_outline = 2131165351;
+			public const int timeline_Soccer029 = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int user_image_negative = 2131165349;
+			public const int timeline_Soccer030 = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int user_image_positive = 2131165350;
+			public const int timeline_Soccer031 = 2131165350;
+			
+			// aapt resource value: 0x7F0700A7
+			public const int tooltip_frame_dark = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int watching_fill = 2131165352;
+			public const int tooltip_frame_light = 2131165352;
+			
+			// aapt resource value: 0x7F0700AB
+			public const int username_outline = 2131165355;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int wip_logo = 2131165353;
+			public const int user_image_negative = 2131165353;
+			
+			// aapt resource value: 0x7F0700AA
+			public const int user_image_positive = 2131165354;
+			
+			// aapt resource value: 0x7F0700AC
+			public const int watching_fill = 2131165356;
+			
+			// aapt resource value: 0x7F0700AD
+			public const int wip_logo = 2131165357;
 			
 			static Drawable()
 			{
