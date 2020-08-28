@@ -2,11 +2,9 @@
 using escout.Models;
 using escout.Models.Db;
 using escout.ViewModels;
-using Plugin.MaterialDesignControls;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -34,7 +32,6 @@ namespace escout.Views.Events
             Title = dbAthlete.Name;
 
             _ = BackgroundAsync();
-            btn_pause.IsVisible = false;
         }
 
         private void Pause_Clicked(object sender, EventArgs e)
@@ -42,6 +39,11 @@ namespace escout.Views.Events
             StopWatch.Stop();
             btn_resume.IsVisible = true;
             btn_pause.IsVisible = false;
+
+            Event1Button.IsEnabled = false;
+            Event2Button.IsEnabled = false;
+            Event3Button.IsEnabled = false;
+            Event4Button.IsEnabled = false;
         }
 
         private void Resume_Clicked(object sender, EventArgs e)
@@ -54,6 +56,11 @@ namespace escout.Views.Events
             StopWatch.Start();
             btn_resume.IsVisible = false;
             btn_pause.IsVisible = true;
+
+            Event1Button.IsEnabled = true;
+            Event2Button.IsEnabled = true;
+            Event3Button.IsEnabled = true;
+            Event4Button.IsEnabled = true;
         }
 
         private async void LeaveItem_OnClicked(object sender, EventArgs e)
@@ -70,10 +77,7 @@ namespace escout.Views.Events
             if (StopWatch.ShowTime() == "00:00")
             {
                 if (await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.GAME_START, Message.OPTION_YES, Message.OPTION_NO))
-                {
-                    StopWatch.Start();
-                    SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); //Board01
-                }
+                    Resume_Clicked(null, null);
             }
             else
             {

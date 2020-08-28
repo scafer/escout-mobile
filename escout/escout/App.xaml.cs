@@ -1,5 +1,4 @@
 using escout.Models.Db;
-using escout.Models.Rest;
 using escout.Views.Authentication;
 using System.Threading.Tasks;
 using Xamarin.Forms;
