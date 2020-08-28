@@ -33,7 +33,7 @@ namespace escout.Helpers
                 else
                     return false;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 return false;

@@ -27,7 +27,7 @@
                     <RowDefinition Height="9*"/>
                     <RowDefinition Height="4*"/>
                 </Grid.RowDefinitions>
-                <Label x:Name="PreviousEvent" Grid.Row="0" Text=" "/>
+                <Label x:Name="PreviousEvent" Grid.Row="0" Grid.ColumnSpan="2" Text=" "/>
                 <Button x:Name="Event4Button" Grid.Column="0" Grid.Row="1" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" Clicked="EventExecuted"/>
                 <Button x:Name="Event3Button" Grid.Column="1" Grid.Row="1" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" Clicked="EventExecuted"/>
                 <Button x:Name="Event2Button" Grid.Column="0" Grid.Row="2" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" Clicked="EventExecuted"/>
