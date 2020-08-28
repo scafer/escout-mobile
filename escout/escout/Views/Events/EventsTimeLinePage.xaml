@@ -4,8 +4,8 @@
              x:Class="escout.Views.Events.EventsTimeLinePage">
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Margin="10" Text="Events Timeline:" FontSize="Medium" FontAttributes="Bold"/>
+        <StackLayout Margin="5">
+            <Label Text="Events Timeline:" FontSize="Medium" FontAttributes="Bold"/>
             <ListView x:Name="timelineListView" ItemTapped="ItemTapped" ItemsSource="{Binding .}" RowHeight="75" SeparatorVisibility="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>

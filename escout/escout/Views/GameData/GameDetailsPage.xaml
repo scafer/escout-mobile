@@ -4,14 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="escout.Views.GameData.GameDetailsPage">
+             x:Class="escout.Views.GameData.GameDetailsPage" Title="Game Details">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="AddItem" Text="Add" Clicked="AddGameToWatchList"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="5">
             <TableView>
                 <TableRoot>
                     <TableSection>

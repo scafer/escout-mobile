@@ -1,5 +1,7 @@
 ﻿using escout.Models.Rest;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace escout.Helpers
@@ -17,6 +19,25 @@ namespace escout.Helpers
             }
 
             return img;
+        }
+
+        public static async Task<bool> AddGameUser(int gameId, int athleteId)
+        {
+            try
+            {
+                List<GameUser> gameUsers = new List<GameUser>();
+                gameUsers.Add(new GameUser(int.Parse(App.UserId), gameId, athleteId));
+                var response = await RestConnector.PostObjectAsync(RestConnector.GameUser, gameUsers);
+                if (!string.IsNullOrEmpty(response))
+                    return true;
+                else
+                    return false;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return false;
+            }
         }
     }
 }

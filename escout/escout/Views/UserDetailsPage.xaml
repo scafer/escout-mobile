@@ -8,11 +8,12 @@
              x:Class="escout.Views.UserDetailsPage" Title="User Details">
 
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="5">
             <controls:CircleImage x:Name="Img" Source="user_image_negative.png" WidthRequest="120" HeightRequest="120"  HorizontalOptions="Center"/>
             <TableView>
                 <TableRoot>
-                    <TableSection>
+                    <TableSection Title="Update Details">
+                        <SwitchCell x:Name="UserCell" Text="Update User:" OnChanged="UserCell_Tapped"/>
                         <EntryCell Label="Username:" Text="{Binding Username}"/>
                         <EntryCell Label="Email:" Text="{Binding Email}"/>
                         <SwitchCell Text="Notifications:"/>
@@ -20,12 +21,13 @@
                         <TextCell Text="Updated at:" Detail="{Binding Updated}"/>
                     </TableSection>
                     <TableSection Title="Change Password">
-                        <SwitchCell x:Name="IsPwdEnable" Text="Enable:"/>
-                        <EntryCell Placeholder="Password" IsEnabled="{Binding Source={x:Reference IsPwdEnable}}"/>
+                        <SwitchCell x:Name="PasswordCell" Text="Update Password:" OnChanged="PasswordCell_Tapped"/>
+                        <EntryCell x:Name="Password" Placeholder="Password"/>
                     </TableSection>
                 </TableRoot>
             </TableView>
-            <Button Text="Save Changes" Clicked="Button_OnClicked"/>
+            <Button x:Name="UserButton" Text="Save Changes" Clicked="SaveChanges_Clicked" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" IsVisible="False"/>
+            <Button x:Name="PasswordButton" Text="Update Password" Clicked="UpdatePassword_Clicked" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White" IsVisible="False"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

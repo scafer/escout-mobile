@@ -22,6 +22,46 @@ namespace escout.Views
             _ = GetData();
         }
 
+        private void SaveChanges_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdatePassword_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserCell_Tapped(object sender, EventArgs e)
+        {
+            var swt = sender as SwitchCell;
+            if(swt.On == true)
+            {
+                PasswordCell.On = false;
+                PasswordButton.IsVisible = false;
+                UserButton.IsVisible = true;
+            }
+            else
+            {
+                UserButton.IsVisible = false;
+            }
+        }
+
+        private void PasswordCell_Tapped(object sender, EventArgs e)
+        {
+            var swt = sender as SwitchCell;
+            if (swt.On == true)
+            {
+                UserCell.On = false;
+                UserButton.IsVisible = false;
+                PasswordButton.IsVisible = true;
+            }
+            else
+            {
+                PasswordButton.IsVisible = false;
+            }
+        }
+
         private async Task GetData()
         {
             var response = RestConnector.GetObjectAsync(RestConnector.User);
@@ -30,11 +70,6 @@ namespace escout.Views
 
             if (user.ImageId != null)
                 _ = LoadImage(user.ImageId);
-        }
-
-        private void Button_OnClicked(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private async Task LoadImage(int? imageId)

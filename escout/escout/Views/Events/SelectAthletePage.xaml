@@ -4,10 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="escout.Views.Events.SelectAthletePage">
+             x:Class="escout.Views.Events.SelectAthletePage" Title="Athlete Selection">
     
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Margin="5">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

@@ -8,7 +8,7 @@ namespace escout
 {
     public partial class App : Application
     {
-        public static User User;
+        public static string UserId;
         public static DbGame DbGame;
         public static DbAthlete DbAthlete;
 
@@ -58,7 +58,7 @@ namespace escout
 
         public string Version
         {
-            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 0.7";
+            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 1.0";
             set => Properties[VersionKey] = value;
         }
 
