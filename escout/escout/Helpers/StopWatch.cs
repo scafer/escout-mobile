@@ -41,6 +41,12 @@ namespace escout.Helpers
             Start();
         }
 
+        public static void SetTimer(int m, int s)
+        {
+            minutes = m;
+            seconds = s;
+        }
+
         public static string ShowTime()
         {
             return minutes.ToString("D2") + ":" + seconds.ToString("D2");
