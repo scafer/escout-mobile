@@ -35,8 +35,7 @@
             </Grid>
 
             <StackLayout VerticalOptions="EndAndExpand">
-                <Button x:Name="btn_pause" Text="Pause" Clicked="Pause_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
-                <Button x:Name="btn_resume" Text="Resume" Clicked="Resume_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
+                <Button x:Name="btn_isRunning" Clicked="isRunning_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
                 <Button Text="Events Timeline" Clicked="Button_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
             </StackLayout>
         </StackLayout>

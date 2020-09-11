@@ -16,6 +16,8 @@ namespace escout.Views.Events
         private DbGame dbGame;
         private DbAthlete dbAthlete;
 
+        private bool isGameRunning = false;
+
         public RegisterEventPage()
         {
             InitializeComponent();
@@ -32,13 +34,30 @@ namespace escout.Views.Events
             Title = dbAthlete.Name;
 
             _ = BackgroundAsync();
+
+            if (isGameRunning)
+                btn_isRunning.Text = "Pause";
+            else
+                btn_isRunning.Text = "Resume";
         }
 
-        private void Pause_Clicked(object sender, EventArgs e)
+        private void isRunning_Clicked(object sender, EventArgs e)
+        {
+            if (isGameRunning)
+            {
+                isGameRunning = !isGameRunning;
+                Pause_Clicked();
+            }
+            else
+            {
+                isGameRunning = !isGameRunning;
+                Resume_Clicked();
+            }
+        }
+        private void Pause_Clicked()
         {
             StopWatch.Stop();
-            btn_resume.IsVisible = true;
-            btn_pause.IsVisible = false;
+            btn_isRunning.Text = "Resume";
 
             Event1Button.IsEnabled = false;
             Event2Button.IsEnabled = false;
@@ -46,7 +65,7 @@ namespace escout.Views.Events
             Event4Button.IsEnabled = false;
         }
 
-        private void Resume_Clicked(object sender, EventArgs e)
+        private void Resume_Clicked()
         {
             if (string.IsNullOrEmpty(Event1Button.Text) && string.IsNullOrEmpty(Event2Button.Text) &&
                 string.IsNullOrEmpty(Event3Button.Text) && string.IsNullOrEmpty(Event4Button.Text))
@@ -54,8 +73,8 @@ namespace escout.Views.Events
                 SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); //Board01
             }
             StopWatch.Start();
-            btn_resume.IsVisible = false;
-            btn_pause.IsVisible = true;
+
+            btn_isRunning.Text = "Pause";
 
             Event1Button.IsEnabled = true;
             Event2Button.IsEnabled = true;
@@ -77,7 +96,7 @@ namespace escout.Views.Events
             if (StopWatch.ShowTime() == "00:00")
             {
                 if (await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.GAME_START, Message.OPTION_YES, Message.OPTION_NO))
-                    Resume_Clicked(null, null);
+                    Resume_Clicked();
             }
             else
             {
