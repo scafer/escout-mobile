@@ -24,6 +24,7 @@
         public const string SELECT_ATHLETE = "Select one athlete";
         public const string EVENT_PAGE = "Continue to event registration page?";
         public const string LEAVE = "Leave current game?";
+        public const string TIMER = "Time format incorrect";
 
         public const string TOAST_RESULTS = " results";
     }

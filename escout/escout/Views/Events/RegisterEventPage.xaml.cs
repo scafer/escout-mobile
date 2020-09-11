@@ -247,5 +247,18 @@ namespace escout.Views.Events
         {
             Navigation.PushModalAsync(new EventsTimeLinePage());
         }
+
+        private async void Timer_Tapped(object sender, EventArgs e)
+        {
+            string result = await DisplayPromptAsync("Change Timer", "MM:SS", keyboard: Keyboard.Numeric);
+            string[] values = result.Split(':');
+            if (values.Length == 2)
+            {
+                try { StopWatch.SetTimer(int.Parse(values[0]), int.Parse(values[1])); }
+                catch (Exception ex) { await DisplayAlert(Message.TITLE_STATUS_ERROR, ex.Message, Message.OPTION_OK); }
+            }
+            else
+                await DisplayAlert(Message.TITLE_STATUS_ERROR, Message.TIMER, Message.OPTION_OK);
+        }
     }
 }
