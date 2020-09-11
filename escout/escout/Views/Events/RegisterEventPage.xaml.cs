@@ -250,15 +250,19 @@ namespace escout.Views.Events
 
         private async void Timer_Tapped(object sender, EventArgs e)
         {
-            string result = await DisplayPromptAsync("Change Timer", "MM:SS", keyboard: Keyboard.Numeric);
-            string[] values = result.Split(':');
-            if (values.Length == 2)
+            try 
             {
-                try { StopWatch.SetTimer(int.Parse(values[0]), int.Parse(values[1])); }
-                catch (Exception ex) { await DisplayAlert(Message.TITLE_STATUS_ERROR, ex.Message, Message.OPTION_OK); }
+                var result = await DisplayPromptAsync("Change Timer", "MM.SS", keyboard: Keyboard.Numeric);
+                string[] values = result.Split('.');
+                if (values.Length == 2)
+                    StopWatch.SetTimer(int.Parse(values[0]), int.Parse(values[1]));
+                else
+                    await DisplayAlert(Message.TITLE_STATUS_ERROR, Message.TIMER, Message.OPTION_OK);
             }
-            else
-                await DisplayAlert(Message.TITLE_STATUS_ERROR, Message.TIMER, Message.OPTION_OK);
+            catch (Exception ex) 
+            { 
+                await DisplayAlert(Message.TITLE_STATUS_ERROR, ex.Message, Message.OPTION_OK); 
+            }
         }
     }
 }
