@@ -39,7 +39,7 @@ namespace escout.Views.Events
             {
                 foreach (DbEvent e in events)
                 {
-                    if (gameEvent.EventId == e.Id)
+                    if (gameEvent.EventId == e.Id && gameEvent.DataExt == e.DataExt)
                     {
                         var timeLineElement = new TimeLineElement
                         {

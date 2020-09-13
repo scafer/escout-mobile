@@ -31,7 +31,7 @@
                 <ListView ItemsSource="{Binding Games}" ItemSelected="ItemSelected" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="Name:" Detail="{Binding TimeStart}"/>
+                            <TextCell Text="Date Time:" Detail="{Binding TimeStart}"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

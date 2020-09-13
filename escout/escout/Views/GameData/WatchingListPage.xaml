@@ -31,7 +31,7 @@
                                     <StackLayout Orientation="Vertical" Padding="1">
                                         <Label Text="{Binding HomeId, StringFormat='Home Team: {0}'}"/>
                                         <Label Text="{Binding VisitorId, StringFormat='Visitor Team: {0}'}"/>
-                                        <Label Text="{Binding Status, StringFormat='Creation date: {0}'}"/>
+                                        <Label Text="{Binding TimeStart, StringFormat='Date Time: {0}'}"/>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
@@ -52,7 +52,7 @@
                                     <StackLayout Orientation="Vertical" Padding="1" >
                                         <Label Text="{Binding HomeId, StringFormat='Home Team: {0}'}"/>
                                         <Label Text="{Binding VisitorId, StringFormat='Visitor Team: {0}'}"/>
-                                        <Label Text="{Binding Status, StringFormat='Creation date: {0}'}"/>
+                                        <Label Text="{Binding TimeStart, StringFormat='Date Time: {0}'}"/>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
@@ -73,7 +73,7 @@
                                     <StackLayout Orientation="Vertical" Padding="1">
                                         <Label Text="{Binding HomeId, StringFormat='Home Team: {0}'}"/>
                                         <Label Text="{Binding VisitorId, StringFormat='Visitor Team: {0}'}"/>
-                                        <Label Text="{Binding Status, StringFormat='Creation date: {0}'}"/>
+                                        <Label Text="{Binding TimeStart, StringFormat='Date Time: {0}'}"/>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>

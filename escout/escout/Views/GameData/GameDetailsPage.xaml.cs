@@ -45,20 +45,27 @@ namespace escout.Views.GameData
 
         private async Task SaveGameData(int gameId)
         {
-            var response = await RestConnector.GetObjectAsync(RestConnector.GameData + "?gameId=" + gameId);
-            if (!string.IsNullOrEmpty(response))
+            var result = await new LocalDb().GetDbGameById(gameId);
+
+            if (result.Count == 0)
             {
-                try
+                var response = await RestConnector.GetObjectAsync(RestConnector.GameData + "?gameId=" + gameId);
+                if (!string.IsNullOrEmpty(response))
                 {
-                    var gameData = JsonConvert.DeserializeObject<Models.Rest.GameData>(response);
-                    var db = new LocalDb();
-                    _ = db.AddGameData(gameData);
-                }
-                catch (Exception e)
-                {
-                    await DisplayAlert(Message.TITLE_STATUS_ERROR, e.ToString(), Message.OPTION_OK);
+                    try
+                    {
+                        var gameData = JsonConvert.DeserializeObject<Models.Rest.GameData>(response);
+                        var db = new LocalDb();
+                        _ = db.AddGameData(gameData);
+                    }
+                    catch (Exception e)
+                    {
+                        await DisplayAlert(Message.TITLE_STATUS_ERROR, e.ToString(), Message.OPTION_OK);
+                    }
                 }
             }
+            else
+                await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.SAVE_GAME_ERROR, Message.OPTION_OK);
         }
 
         private async void Start_OnClicked(object sender, EventArgs e)
