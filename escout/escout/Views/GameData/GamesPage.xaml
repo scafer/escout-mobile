@@ -31,7 +31,11 @@
                 <ListView ItemsSource="{Binding Games}" ItemSelected="ItemSelected" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="Name:" Detail="{Binding TimeStart}"/>
+                            <StackLayout Orientation="Vertical" Padding="1">
+                                <Label Text="{Binding HomeId, StringFormat='Home Team: {0}'}"/>
+                                <Label Text="{Binding VisitorId, StringFormat='Visitor Team: {0}'}"/>
+                                <Label Text="{Binding TimeStart, StringFormat='Date Time: {0}'}"/>
+                            </StackLayout>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
