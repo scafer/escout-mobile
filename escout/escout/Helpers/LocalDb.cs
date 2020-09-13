@@ -78,13 +78,13 @@ namespace escout.Helpers
         public async Task<List<DbGame>> GetDbGame(int status)
         {
             await InitializeDb();
-            var games = new List<DbGame>();
+            return await connection.Table<DbGame>().Where(x => x.Status == status).ToListAsync();
+        }
 
-            foreach (var game in await connection.Table<DbGame>().ToListAsync())
-                if (game.Status == status)
-                    games.Add(game);
-
-            return games;
+        public async Task<List<DbGame>> GetDbGameById(int id)
+        {
+            await InitializeDb();
+            return await connection.Table<DbGame>().Where(x => x.Id == id).ToListAsync();
         }
 
         public async Task AddGameData(GameData gameData)
