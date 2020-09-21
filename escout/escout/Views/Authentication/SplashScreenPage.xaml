@@ -6,12 +6,6 @@
              mc:Ignorable="d"
              x:Class="escout.Views.Authentication.SplashScreenPage" NavigationPage.HasNavigationBar="False">
 
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness">
-            <On Platform="iOS" Value="0,20,0,0" />
-        </OnPlatform>
-    </ContentPage.Padding>
-
     <ContentPage.Content>
         <Grid BackgroundColor="#407DF4">
             <StackLayout VerticalOptions="Center" Margin="5">
