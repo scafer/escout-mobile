@@ -63,6 +63,12 @@ namespace escout.Helpers
             return await connection.Table<DbEvent>().ToListAsync();
         }
 
+        public async Task<DbClub> GetClub(int clubId)
+        {
+            await InitializeDb();
+            return await connection.Table<DbClub>().Where(x => x.Id == clubId).FirstOrDefaultAsync();
+        }
+
         public async Task<int> AddGameEvent(DbGameEvent gameEvent)
         {
             await InitializeDb();

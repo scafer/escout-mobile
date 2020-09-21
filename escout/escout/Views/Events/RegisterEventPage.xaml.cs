@@ -261,7 +261,7 @@ namespace escout.Views.Events
             }
             catch (Exception ex)
             {
-                await DisplayAlert(Message.TITLE_STATUS_ERROR, ex.Message, Message.OPTION_OK);
+                Console.WriteLine(ex.Message);
             }
         }
     }
