@@ -139,7 +139,7 @@ namespace escout.Views.Events
                         case Soccer012: SetButtonBoard("Soccer019", "Soccer020", "Soccer021", ""); break;  //Board07
                         case Soccer013: SetButtonBoard("Soccer022", "Soccer023", "", ""); break;  //Board08
                         case Soccer014: SetButtonBoard("Soccer004", "Soccer002", "Soccer003", "Soccer005"); break;  //Board02
-                        case Soccer015: SetButtonBoard("Soccer018", "Soccer017", "Soccer000bv", ""); break;  //Board06
+                        case Soccer015: SetButtonBoard("Soccer018", "Soccer017", "Soccer000", ""); break;  //Board06
                         case Soccer016: SetButtonBoard("Soccer004", "Soccer002", "Soccer003", "Soccer005"); break;  //Board02
                         case Soccer017: SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); break;  //Board01
                         case Soccer018: SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); break;  //Board01
