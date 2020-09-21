@@ -31,10 +31,10 @@ namespace escout.Views.GameData
         private async void OnRemoveClicked(object sender, EventArgs e)
         {
             var menuItem = sender as MenuItem;
-            var game = menuItem.CommandParameter as DbGame;
+            var game = menuItem.CommandParameter as DbGameWithClub;
 
             var db = new LocalDb();
-            await db.RemoveGameData(game.DataExt);
+            await db.RemoveGameData(game.dbGame.DataExt);
             await Navigation.PushAsync(new WatchingListPage());
         }
     }
