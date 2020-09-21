@@ -1,5 +1,6 @@
 ﻿using escout.Helpers;
 using escout.Helpers.Services;
+using escout.Models;
 using escout.Models.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace escout.ViewModels
         private bool isBusy;
         private string key;
         private string pairValue;
-        private ObservableCollection<Game> games;
+        private ObservableCollection<GameWithClub> games;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -35,7 +36,7 @@ namespace escout.ViewModels
             SearchCommand = new Command(SearchExecuted);
         }
 
-        public ObservableCollection<Game> Games
+        public ObservableCollection<GameWithClub> Games
         {
             get => games;
             set
@@ -99,19 +100,52 @@ namespace escout.ViewModels
         private async void SearchExecuted()
         {
             IsVisible = true;
+            var gameWithClub = new List<GameWithClub>();
 
             if (Key == null || string.IsNullOrEmpty(Value))
             {
                 if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
-                    Games = new ObservableCollection<Game>(await GetGames(null));
+                {
+                    foreach (var x in await GetGames(null))
+                    {
+                        var a = new GameWithClub(x);
+                        a.ClubHome = await GetClub(x.HomeId);
+                        a.ClubVisitor = await GetClub(x.VisitorId);
+                        gameWithClub.Add(a);
+                    }
+
+                    Games = new ObservableCollection<GameWithClub>(gameWithClub);
+                }
             }
             else
-                Games = new ObservableCollection<Game>(await GetGames(new SearchQuery(Key, "iLIKE", Value + "%")));
+            {
+                foreach (var x in await GetGames(new SearchQuery(Key, "iLIKE", Value + "%")))
+                {
+                    var a = new GameWithClub(x);
+                    a.ClubHome = await GetClub(x.HomeId);
+                    a.ClubVisitor = await GetClub(x.VisitorId);
+                    gameWithClub.Add(a);
+                }
+
+                Games = new ObservableCollection<GameWithClub>(gameWithClub);
+            }
 
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Games != null)
                 DependencyService.Get<IToast>().LongAlert(Games.Count + Message.TOAST_RESULTS);
+        }
+
+        private async Task<Club> GetClub(int clubId)
+        {
+            var _club = new Club();
+            var request = RestConnector.Club + "?id=" + clubId;
+
+            var response = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(response))
+                _club = JsonConvert.DeserializeObject<Club>(response);
+
+            return _club;
         }
 
         private async Task<List<Game>> GetGames(SearchQuery query)

@@ -31,7 +31,7 @@
                 <ListView ItemsSource="{Binding Athletes}" ItemSelected="ItemSelected" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding Name}" Detail="{Binding Fullname}"/>
+                            <TextCell Text="{Binding Name}" Detail="{Binding Position}"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

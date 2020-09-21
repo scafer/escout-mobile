@@ -5,7 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="escout.Views.Events.RegisterEventPage">
-    
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,0,0,20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="LeaveItem" Text="Leave" Clicked="LeaveItem_OnClicked"/>
     </ContentPage.ToolbarItems>

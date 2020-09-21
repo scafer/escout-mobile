@@ -1,4 +1,5 @@
 ﻿using escout.Helpers;
+using escout.Models;
 using escout.Models.Db;
 using escout.ViewModels;
 using System;
@@ -23,8 +24,8 @@ namespace escout.Views.GameData
 
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var game = e.SelectedItem as DbGame;
-            Navigation.PushAsync(new GameDetailsPage(game));
+            var game = e.SelectedItem as DbGameWithClub;
+            Navigation.PushAsync(new GameDetailsPage(game.dbGame));
         }
 
         private async void OnRemoveClicked(object sender, EventArgs e)
