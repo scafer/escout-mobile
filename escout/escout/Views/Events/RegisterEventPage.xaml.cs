@@ -105,22 +105,26 @@ namespace escout.Views.Events
 
                 if (!string.IsNullOrEmpty(button.Text))
                 {
-                    var evt = new DbGameEvent()
+                    if(button.Text != Soccer000)
                     {
-                        Key = DateTime.UtcNow.Ticks.ToString(),
-                        Time = DateTime.UtcNow.ToString(),
-                        GameTime = LbStopwatch.Text,
-                        GameId = dbGame.Id,
-                        EventId = await new LocalDb().GetEventId(button.Text),
-                        AthleteId = dbAthlete.Id,
-                        ClubId = dbAthlete.ClubId,
-                        DataExt = dbGame.DataExt
-                    };
+                        var evt = new DbGameEvent()
+                        {
+                            Key = DateTime.UtcNow.Ticks.ToString(),
+                            Time = DateTime.UtcNow.ToString(),
+                            GameTime = LbStopwatch.Text,
+                            GameId = dbGame.Id,
+                            EventId = await new LocalDb().GetEventId(button.Text),
+                            AthleteId = dbAthlete.Id,
+                            ClubId = dbAthlete.ClubId,
+                            DataExt = dbGame.DataExt
+                        };
 
-                    _ = GameEventViewModel.RegisterEvent(evt);
+                        _ = GameEventViewModel.RegisterEvent(evt);
+                    }
 
                     switch (button.Text)
                     {
+                        case Soccer000: SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); break; //Board01
                         case Soccer001: SetButtonBoard("Soccer004", "Soccer002", "Soccer003", "Soccer005"); break;  //Board02
                         case Soccer002: SetButtonBoard("Soccer015", "Soccer016", "Soccer014", dbAthlete.PositionKey.Equals(1) ? "Soccer026" : ""); break;  //Board05
                         case Soccer003: SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); break;  //Board01
@@ -135,7 +139,7 @@ namespace escout.Views.Events
                         case Soccer012: SetButtonBoard("Soccer019", "Soccer020", "Soccer021", ""); break;  //Board07
                         case Soccer013: SetButtonBoard("Soccer022", "Soccer023", "", ""); break;  //Board08
                         case Soccer014: SetButtonBoard("Soccer004", "Soccer002", "Soccer003", "Soccer005"); break;  //Board02
-                        case Soccer015: SetButtonBoard("Soccer018", "Soccer017", "", ""); break;  //Board06
+                        case Soccer015: SetButtonBoard("Soccer018", "Soccer017", "Soccer000", ""); break;  //Board06
                         case Soccer016: SetButtonBoard("Soccer004", "Soccer002", "Soccer003", "Soccer005"); break;  //Board02
                         case Soccer017: SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); break;  //Board01
                         case Soccer018: SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", ""); break;  //Board01
@@ -180,6 +184,7 @@ namespace escout.Views.Events
         public static readonly Dictionary<string, Option> SoccerEvent = new Dictionary<string, Option>
         {
             {string.Empty, new Option(string.Empty, string.Empty) },
+            {"Soccer000", new Option("Continue", "") },
             {"Soccer001", new Option("Ball Recovery", "") },
             {"Soccer002", new Option("Interruption", "") },
             {"Soccer003", new Option("Ball Loss", "") },
@@ -212,6 +217,7 @@ namespace escout.Views.Events
             {"Soccer030", new Option("Didn't Grab the Ball", "") },
         };
 
+        const string Soccer000 = "Continue";
         const string Soccer001 = "Ball Recovery";
         const string Soccer002 = "Interruption";
         const string Soccer003 = "Ball Loss";
