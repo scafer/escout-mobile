@@ -50,9 +50,9 @@
                                         <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}" Clicked="OnRemoveClicked"/>
                                     </ViewCell.ContextActions>
                                     <StackLayout Orientation="Vertical" Padding="1" >
-                                        <Label Text="{Binding dbGame.HomeId, StringFormat='Home Team: {0}'}"/>
-                                        <Label Text="{Binding dbClubHome.Name, StringFormat='Visitor Team: {0}'}"/>
-                                        <Label Text="{Binding dbClubVisitor.Name, StringFormat='Date Time: {0}'}"/>
+                                        <Label Text="{Binding dbClubHome.Name, StringFormat='Home Team: {0}'}"/>
+                                        <Label Text="{Binding dbClubVisitor.Name, StringFormat='Visitor Team: {0}'}"/>
+                                        <Label Text="{Binding dbGame.TimeStart, StringFormat='Time Start: {0}'}"/>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
@@ -71,9 +71,9 @@
                                         <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}" Clicked="OnRemoveClicked"/>
                                     </ViewCell.ContextActions>
                                     <StackLayout Orientation="Vertical" Padding="1">
-                                        <Label Text="{Binding dbGame.HomeId, StringFormat='Home Team: {0}'}"/>
-                                        <Label Text="{Binding dbClubHome.Name, StringFormat='Visitor Team: {0}'}"/>
-                                        <Label Text="{Binding dbClubVisitor.Name, StringFormat='Date Time: {0}'}"/>
+                                        <Label Text="{Binding dbClubHome.Name, StringFormat='Home Team: {0}'}"/>
+                                        <Label Text="{Binding dbClubVisitor.Name, StringFormat='Visitor Team: {0}'}"/>
+                                        <Label Text="{Binding dbGame.TimeStart, StringFormat='Time Start: {0}'}"/>
                                     </StackLayout>
                                 </ViewCell>
                             </DataTemplate>
