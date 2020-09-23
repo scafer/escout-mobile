@@ -105,7 +105,7 @@ namespace escout.Views.Events
 
                 if (!string.IsNullOrEmpty(button.Text))
                 {
-                    if(button.Text != Soccer000)
+                    if (button.Text != Soccer000)
                     {
                         var evt = new DbGameEvent()
                         {
