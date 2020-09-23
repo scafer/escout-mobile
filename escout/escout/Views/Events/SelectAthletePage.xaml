@@ -33,7 +33,7 @@
                 <ListView x:Name="listView">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="Name:" Detail="{Binding Name}"/>
+                            <TextCell Text="{Binding Name}" Detail="{Binding Position}"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
