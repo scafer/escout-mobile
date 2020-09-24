@@ -109,8 +109,8 @@ namespace escout.ViewModels
                     foreach (var x in await GetGames(null))
                     {
                         var a = new GameWithClub(x);
-                        a.ClubHome = await GetClub(x.HomeId);
-                        a.ClubVisitor = await GetClub(x.VisitorId);
+                        a.ClubHome = await RestUtils.GetClub(x.HomeId);
+                        a.ClubVisitor = await RestUtils.GetClub(x.VisitorId);
                         gameWithClub.Add(a);
                     }
 
@@ -122,8 +122,8 @@ namespace escout.ViewModels
                 foreach (var x in await GetGames(new SearchQuery(Key, "iLIKE", Value + "%")))
                 {
                     var a = new GameWithClub(x);
-                    a.ClubHome = await GetClub(x.HomeId);
-                    a.ClubVisitor = await GetClub(x.VisitorId);
+                    a.ClubHome = await RestUtils.GetClub(x.HomeId);
+                    a.ClubVisitor = await RestUtils.GetClub(x.VisitorId);
                     gameWithClub.Add(a);
                 }
 
@@ -134,18 +134,6 @@ namespace escout.ViewModels
 
             if (Device.RuntimePlatform == Device.Android && Games != null)
                 DependencyService.Get<IToast>().LongAlert(Games.Count + Message.TOAST_RESULTS);
-        }
-
-        private async Task<Club> GetClub(int clubId)
-        {
-            var _club = new Club();
-            var request = RestConnector.Club + "?id=" + clubId;
-
-            var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(response))
-                _club = JsonConvert.DeserializeObject<Club>(response);
-
-            return _club;
         }
 
         private async Task<List<Game>> GetGames(SearchQuery query)

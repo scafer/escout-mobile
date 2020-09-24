@@ -39,5 +39,17 @@ namespace escout.Helpers
                 return false;
             }
         }
+
+        public static async Task<Club> GetClub(int clubId)
+        {
+            var _club = new Club();
+            var request = RestConnector.Club + "?id=" + clubId;
+
+            var response = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(response))
+                _club = JsonConvert.DeserializeObject<Club>(response);
+
+            return _club;
+        }
     }
 }

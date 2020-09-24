@@ -9,25 +9,63 @@
 
     <ContentPage.Content>
         <StackLayout Margin="5">
-            <controls:CircleImage x:Name="Img" Source="user_image_negative.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="Center"/>
-            <TableView>
-                <TableRoot>
-                    <TableSection>
-                        <TextCell Text="Name:" Detail="{Binding Name}"/>
-                        <TextCell Text="Fullname:" Detail="{Binding Fullname}"/>
-                        <TextCell Text="Birth Date:" Detail="{Binding BirthDate}"/>
-                        <TextCell Text="Birth Place:" Detail="{Binding BirthPlace}"/>
-                        <TextCell Text="Citizenship:" Detail="{Binding Citizenship}"/>
-                        <TextCell Text="Height:" Detail="{Binding Height}"/>
-                        <TextCell Text="Weight:" Detail="{Binding Weight}"/>
-                        <TextCell Text="Position:" Detail="{Binding Position}"/>
-                        <TextCell Text="Agent:" Detail="{Binding Agent}"/>
-                        <TextCell Text="Current International:" Detail="{Binding CurrentInternational}"/>
-                        <TextCell Text="Status:" Detail="{Binding Status}"/>
-                        <TextCell Text="Current Club:" Detail="{Binding ClubId}"/>
-                    </TableSection>
-                </TableRoot>
-            </TableView>
+            <controls:CircleImage x:Name="Img" Source="athlete_fill_blue.png" WidthRequest="120" HeightRequest="120" HorizontalOptions="Center"/>
+
+            <StackLayout Padding="10, 10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Name:" FontAttributes="Bold" TextColor="#407DF4"/>
+                    <Label Text="{Binding Name}"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Current Club:" FontAttributes="Bold" TextColor="#407DF4"/>
+                    <Label x:Name="lblClubName"/>
+                </StackLayout>
+            </StackLayout>
+
+            <BoxView HeightRequest="1" Color="Black"/>
+
+            <StackLayout Padding="10, 10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Fullname:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding Fullname}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Birth Date:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding BirthDate}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Birth Place:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding BirthPlace}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Citizenship:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding Citizenship}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Height:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding Height}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Weight:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding Weight}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Citizenship:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding Citizenship}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Position:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding Position}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Agent:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding Agent}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Current International:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding CurrentInternational}" FontSize="Medium"/>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -21,6 +21,7 @@ namespace escout.Views.GameData
             InitializeComponent();
             BindingContext = game;
             this.game = game;
+            _ = StartGame();
         }
 
         public GameDetailsPage(DbGame dbGame)
@@ -31,6 +32,41 @@ namespace escout.Views.GameData
             AddItem.IsEnabled = false;
             startbt.IsVisible = true;
             this.dbGame = dbGame;
+            _ = StartDbGame();
+        }
+
+        private async Task StartGame()
+        {
+            var homeTeam = await RestUtils.GetClub(game.HomeId);
+            var visitorTeam = await RestUtils.GetClub(game.VisitorId);
+
+            lbl_home.Text = homeTeam.Name;
+            lbl_visitor.Text = visitorTeam.Name;
+            lbl_home_result.Text = game.HomeScore.ToString();
+            lbl_visitor_result.Text = game.VisitorScore.ToString();
+
+            if (homeTeam.ImageId != null)
+            {
+                var img1 = await RestUtils.GetImage(homeTeam.ImageId);
+                if (!string.IsNullOrEmpty(img1.ImageUrl))
+                    img_home.Source = img1.ImageUrl;
+            }
+
+            if (visitorTeam.ImageId != null)
+            {
+                var img2 = await RestUtils.GetImage(visitorTeam.ImageId);
+                if (!string.IsNullOrEmpty(img2.ImageUrl))
+                    img_visitor.Source = img2.ImageUrl;
+            }
+        }
+
+        private async Task StartDbGame()
+        {
+            var clubs = await new LocalDb().GetClubs(dbGame.DataExt);
+            lbl_home.Text = clubs[0].Name;
+            lbl_visitor.Text = clubs[1].Name;
+            lbl_home_result.Text = dbGame.HomeScore.ToString();
+            lbl_visitor_result.Text = dbGame.VisitorScore.ToString();
         }
 
         private async void AddGameToWatchList(object sender, EventArgs e)

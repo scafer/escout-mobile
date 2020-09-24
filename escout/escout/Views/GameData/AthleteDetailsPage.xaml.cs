@@ -16,6 +16,8 @@ namespace escout.Views.GameData
 
             if (athlete.ImageId != null)
                 _ = LoadImage(athlete.ImageId);
+            if (athlete.ClubId != null)
+                _ = LoadClub(athlete.ClubId);
         }
 
         private async Task LoadImage(int? imageId)
@@ -26,6 +28,12 @@ namespace escout.Views.GameData
                 Img.Source = img.ImageUrl;
                 Img.Aspect = Aspect.AspectFill;
             }
+        }
+
+        private async Task LoadClub(int? clubId)
+        {
+            var club = await RestUtils.GetClub((int)clubId);
+            lblClubName.Text = club.Name;
         }
     }
 }

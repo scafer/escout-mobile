@@ -18,26 +18,55 @@
 
     <ContentPage.Content>
         <StackLayout Margin="5">
-            <TableView>
-                <TableRoot>
-                    <TableSection>
-                        <TextCell Text="Time Start:" Detail="{Binding TimeStart}"/>
-                        <TextCell Text="Time End:" Detail="{Binding TimeEnd}"/>
-                        <TextCell Text="Home Color:" Detail="{Binding HomeColor}"/>
-                        <TextCell Text="Visitor Color:" Detail="{Binding VisitorColor}"/>
-                        <TextCell Text="Home Score:" Detail="{Binding HomeScore}"/>
-                        <TextCell Text="Visitor Score:" Detail="{Binding VisitorScore}"/>
-                        <TextCell Text="Home Penalty Score:" Detail="{Binding HomePenaltyScore}"/>
-                        <TextCell Text="Visitor Penalty Score:" Detail="{Binding VisitorPenaltyScore}"/>
-                        <TextCell Text="Status:" Detail="{Binding Status}"/>
-                        <TextCell Text="Type" Detail="{Binding Type}"/>
-                        <TextCell Text="Location:" Detail="{Binding Location}"/>
-                        <TextCell Text="Home Id:" Detail="{Binding HomeId}"/>
-                        <TextCell Text="Visitor Id:" Detail="{Binding VisitorId}"/>
-                        <TextCell Text="Competition Id:" Detail="{Binding CompetitionId}"/>
-                    </TableSection>
-                </TableRoot>
-            </TableView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image x:Name="img_home" Grid.Column="0" Grid.Row="0" Source="club_fill_blue.png"/>
+                <Image x:Name="img_visitor" Grid.Column="1" Grid.Row="0" Source="club_fill_blue.png"/>
+                
+                <StackLayout Grid.Column="0" Grid.Row="1">
+                    <Label x:Name="lbl_home"  HorizontalOptions="Center"/>
+                    <Label x:Name="lbl_home_result" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout  Grid.Column="1" Grid.Row="1">
+                    <Label x:Name="lbl_visitor" HorizontalOptions="Center"/>
+                    <Label x:Name="lbl_visitor_result" HorizontalOptions="Center"/>
+                </StackLayout>
+            </Grid>
+
+            <BoxView HeightRequest="1" Color="Black"/>
+
+            <StackLayout Padding="10, 10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Time Start:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding TimeStart}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Time End:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding TimeEnd}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Status:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding Status}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Type:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding Type}" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Location:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
+                    <Label Text="{Binding Location}" FontSize="Medium"/>
+                </StackLayout>
+            </StackLayout>
+
+            
             <Button x:Name="startbt" Text="Start Event Registration" Clicked="Start_OnClicked" IsVisible="false" BackgroundColor="#407DF4" CornerRadius="8" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
