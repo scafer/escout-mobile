@@ -34,7 +34,6 @@ namespace escout.Views.GameData
 
             var db = new LocalDb();
             await db.RemoveGameData(game.dbGame.DataExt);
-            await Navigation.PushAsync(new WatchingListPage());
         }
     }
 }

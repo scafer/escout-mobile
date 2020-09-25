@@ -26,6 +26,8 @@
         public const string LEAVE = "Leave current game?";
         public const string TIMER = "Time format incorrect.";
         public const string SAVE_GAME_ERROR = "Game already saved!";
+        public const string UPDATE_USER_QUESTION = "Update user?";
+        public const string USER_UPDATED = "User updated!";
 
         public const string TOAST_RESULTS = " results";
     }

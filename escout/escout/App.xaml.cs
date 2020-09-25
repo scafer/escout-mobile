@@ -57,7 +57,7 @@ namespace escout
 
         public string Version
         {
-            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 1.0.1";
+            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 1.0.2";
             set => Properties[VersionKey] = value;
         }
 

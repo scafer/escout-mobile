@@ -20,11 +20,11 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-                <Image x:Name="img_home" Grid.Column="0" Grid.Row="0"/>
-                <Image x:Name="img_visitor" Grid.Column="1" Grid.Row="0"/>
+                <Image x:Name="img_home" Grid.Column="0" Grid.Row="0" Source="club_fill_blue.png"/>
+                <Image x:Name="img_visitor" Grid.Column="1" Grid.Row="0" Source="club_fill_blue.png"/>
                 <Button x:Name="bt_home" Clicked="Bt_home_OnClicked" Grid.Column="0" Grid.Row="1" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
                 <Button x:Name="bt_visitor" Clicked="Bt_visitor_OnClicked" Grid.Column="1" Grid.Row="1" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
             </Grid>

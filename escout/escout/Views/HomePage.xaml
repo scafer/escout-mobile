@@ -7,8 +7,9 @@
              x:Class="escout.Views.HomePage" Title="Home">
 
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-            <Image Source="wip_logo.png" WidthRequest="200"/>
+        <StackLayout HorizontalOptions="Center" Margin="5">
+            <Label Text="eScout - Mobile" FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" Padding="0, 20" TextColor="#407DF4"/>
+            <Label x:Name="lbl_message" FontSize="Medium" TextColor="Black" Padding="0, 20"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

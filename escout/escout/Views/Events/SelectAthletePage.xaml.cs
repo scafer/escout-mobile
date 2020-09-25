@@ -29,18 +29,25 @@ namespace escout.Views.Events
 
         private async Task LoadImages(int? homeImageId, int? visitorImageId)
         {
-            if (homeImageId != null)
+            try
             {
-                var img1 = await RestUtils.GetImage(homeImageId);
-                if (!string.IsNullOrEmpty(img1.ImageUrl))
-                    img_home.Source = img1.ImageUrl;
-            }
+                if (homeImageId != null)
+                {
+                    var img1 = await RestUtils.GetImage(homeImageId);
+                    if (!string.IsNullOrEmpty(img1.ImageUrl))
+                        img_home.Source = img1.ImageUrl;
+                }
 
-            if (visitorImageId != null)
+                if (visitorImageId != null)
+                {
+                    var img2 = await RestUtils.GetImage(visitorImageId);
+                    if (!string.IsNullOrEmpty(img2.ImageUrl))
+                        img_visitor.Source = img2.ImageUrl;
+                }
+            }
+            catch (Exception ex)
             {
-                var img2 = await RestUtils.GetImage(visitorImageId);
-                if (!string.IsNullOrEmpty(img2.ImageUrl))
-                    img_visitor.Source = img2.ImageUrl;
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -62,6 +69,7 @@ namespace escout.Views.Events
                 {
                     App.DbAthlete = listView.SelectedItem as DbAthlete;
                     _ = RestUtils.AddGameUser(App.DbGame.Id, App.DbAthlete.Id);
+                    _ = RestUtils.UpdateGameStatus(App.DbGame.Id, 1);
                     Application.Current.MainPage = new NavigationPage(new RegisterEventPage());
                     await Navigation.PushAsync(new RegisterEventPage());
                 }

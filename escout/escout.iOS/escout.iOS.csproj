@@ -311,4 +311,16 @@
   <ItemGroup>
     <BundleResource Include="Resources\timeline_Soccer009.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\board_fill_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\athlete_fill_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\club_fill_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\competition_fill_blue.png" />
+  </ItemGroup>
 </Project>
