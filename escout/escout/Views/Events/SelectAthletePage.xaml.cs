@@ -45,7 +45,7 @@ namespace escout.Views.Events
                         img_visitor.Source = img2.ImageUrl;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -69,6 +69,7 @@ namespace escout.Views.Events
                 {
                     App.DbAthlete = listView.SelectedItem as DbAthlete;
                     _ = RestUtils.AddGameUser(App.DbGame.Id, App.DbAthlete.Id);
+                    _ = RestUtils.UpdateGameStatus(App.DbGame.Id, 1);
                     Application.Current.MainPage = new NavigationPage(new RegisterEventPage());
                     await Navigation.PushAsync(new RegisterEventPage());
                 }

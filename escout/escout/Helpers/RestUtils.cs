@@ -51,5 +51,37 @@ namespace escout.Helpers
 
             return _club;
         }
+
+        public static async Task<List<CompetitionBoard>> GetCompetitionBoardById(int id)
+        {
+            var board = new List<CompetitionBoard>();             
+            var request = RestConnector.CompetitionBoard + "?id=" + id;
+            
+            var response = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(response))
+                board = JsonConvert.DeserializeObject<List<CompetitionBoard>>(response);
+
+            return board;
+        }
+
+        public static async Task UpdateGameStatus(int gameId, int status)
+        {
+            try
+            {
+                var gameRequest = RestConnector.Game + "?id=" + gameId;
+
+                var gameResponse = await RestConnector.GetObjectAsync(gameRequest);
+                if (!string.IsNullOrEmpty(gameResponse))
+                {
+                    var game = JsonConvert.DeserializeObject<Game>(gameResponse);
+                    game.Status = status;
+                    await RestConnector.PutObjectAsync(RestConnector.Game, game);
+                }
+            }
+            catch (Exception ex)
+            {
+                await App.DisplayMessage(Message.TITLE_STATUS_ERROR, ex.Message, Message.OPTION_OK);
+            }
+        }
     }
 }

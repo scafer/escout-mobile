@@ -86,6 +86,7 @@ namespace escout.Views.Events
         {
             if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.LEAVE, Message.OPTION_NO, Message.OPTION_YES))
             {
+                _ = RestUtils.UpdateGameStatus(App.DbGame.Id, 2);
                 Application.Current.MainPage = new NavigationPage(new MainPage());
                 await Navigation.PushAsync(new MainPage());
             }

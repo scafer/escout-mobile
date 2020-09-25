@@ -1,5 +1,6 @@
 ﻿using escout.Helpers;
 using escout.Models.Rest;
+using escout.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ namespace escout.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UserDetailsPage : ContentPage
     {
+        private User user;
+
         public UserDetailsPage()
         {
             InitializeComponent();
@@ -22,14 +25,25 @@ namespace escout.Views
             _ = GetData();
         }
 
-        private void SaveChanges_Clicked(object sender, EventArgs e)
+        private async void SaveChanges_Clicked(object sender, EventArgs e)
         {
-
+            if(await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.UPDATE_USER_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
+            {
+                var response = await RestConnector.PutObjectAsync(RestConnector.User, user);
+                if (!string.IsNullOrEmpty(response))
+                    await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.USER_UPDATED, Message.OPTION_OK);
+            }
         }
 
-        private void UpdatePassword_Clicked(object sender, EventArgs e)
+        private async void UpdatePassword_Clicked(object sender, EventArgs e)
         {
-
+            if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.UPDATE_USER_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
+            {
+                var request = RestConnector.ChangePassword + "?newPassword=" + AuthenticationViewModel.GenerateSha256String(Password.Text);
+                var response = await RestConnector.PostObjectAsync(request, null);
+                if (!string.IsNullOrEmpty(response))
+                    await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.USER_UPDATED, Message.OPTION_OK);
+            }
         }
 
         private void UserCell_Tapped(object sender, EventArgs e)
@@ -67,6 +81,7 @@ namespace escout.Views
             var response = RestConnector.GetObjectAsync(RestConnector.User);
             var user = JsonConvert.DeserializeObject<User>(await response);
             BindingContext = user;
+            this.user = user;
 
             if (user.ImageId != null)
                 _ = LoadImage(user.ImageId);

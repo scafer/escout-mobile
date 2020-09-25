@@ -226,7 +226,7 @@ namespace escout.ViewModels
             await Navigation.PopModalAsync();
         }
 
-        private static string GenerateSha256String(string inputString)
+        public static string GenerateSha256String(string inputString)
         {
             var sb = new StringBuilder();
 

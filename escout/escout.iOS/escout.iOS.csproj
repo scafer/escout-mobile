@@ -320,4 +320,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\club_fill_blue.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\competition_fill_blue.png" />
+  </ItemGroup>
 </Project>
