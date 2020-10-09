@@ -54,9 +54,9 @@ namespace escout.Helpers
 
         public static async Task<List<CompetitionBoard>> GetCompetitionBoardById(int id)
         {
-            var board = new List<CompetitionBoard>();             
+            var board = new List<CompetitionBoard>();
             var request = RestConnector.CompetitionBoard + "?id=" + id;
-            
+
             var response = await RestConnector.GetObjectAsync(request);
             if (!string.IsNullOrEmpty(response))
                 board = JsonConvert.DeserializeObject<List<CompetitionBoard>>(response);

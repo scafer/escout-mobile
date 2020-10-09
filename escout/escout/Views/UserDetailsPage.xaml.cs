@@ -27,7 +27,7 @@ namespace escout.Views
 
         private async void SaveChanges_Clicked(object sender, EventArgs e)
         {
-            if(await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.UPDATE_USER_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
+            if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.UPDATE_USER_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
             {
                 var response = await RestConnector.PutObjectAsync(RestConnector.User, user);
                 if (!string.IsNullOrEmpty(response))

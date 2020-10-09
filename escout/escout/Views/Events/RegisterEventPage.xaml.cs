@@ -267,7 +267,7 @@ namespace escout.Views.Events
                     {
                         StopWatch.SetTimer(int.Parse(values[0]), int.Parse(values[1]));
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
                         await DisplayAlert(Message.TITLE_STATUS_ERROR, ex.Message, Message.OPTION_OK);
                     }
