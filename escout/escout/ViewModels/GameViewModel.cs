@@ -52,7 +52,7 @@ namespace escout.ViewModels
             {
                 return new List<string>
                 {
-                    {"name"}
+                    "name", "favorites"
                 };
             }
         }
@@ -102,15 +102,31 @@ namespace escout.ViewModels
             IsVisible = true;
             var gameWithClub = new List<GameWithClub>();
 
-            if (Key == null || string.IsNullOrEmpty(Value))
+            if (Key == "favorites")
+            {
+                foreach (var x in await GetFavoriteGames())
+                {
+                    var a = new GameWithClub(x)
+                    {
+                        ClubHome = await RestUtils.GetClub(x.HomeId),
+                        ClubVisitor = await RestUtils.GetClub(x.VisitorId)
+                    };
+                    gameWithClub.Add(a);
+                }
+
+                Games = new ObservableCollection<GameWithClub>(gameWithClub);
+            }
+            else if (Key == null || string.IsNullOrEmpty(Value))
             {
                 if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                 {
                     foreach (var x in await GetGames(null))
                     {
-                        var a = new GameWithClub(x);
-                        a.ClubHome = await RestUtils.GetClub(x.HomeId);
-                        a.ClubVisitor = await RestUtils.GetClub(x.VisitorId);
+                        var a = new GameWithClub(x)
+                        {
+                            ClubHome = await RestUtils.GetClub(x.HomeId),
+                            ClubVisitor = await RestUtils.GetClub(x.VisitorId)
+                        };
                         gameWithClub.Add(a);
                     }
 
@@ -121,9 +137,11 @@ namespace escout.ViewModels
             {
                 foreach (var x in await GetGames(new SearchQuery(Key, "iLIKE", Value + "%")))
                 {
-                    var a = new GameWithClub(x);
-                    a.ClubHome = await RestUtils.GetClub(x.HomeId);
-                    a.ClubVisitor = await RestUtils.GetClub(x.VisitorId);
+                    var a = new GameWithClub(x)
+                    {
+                        ClubHome = await RestUtils.GetClub(x.HomeId),
+                        ClubVisitor = await RestUtils.GetClub(x.VisitorId)
+                    };
                     gameWithClub.Add(a);
                 }
 
@@ -139,7 +157,7 @@ namespace escout.ViewModels
         private async Task<List<Game>> GetGames(SearchQuery query)
         {
             var _games = new List<Game>();
-            var request = RestConnector.Games;
+            var request = RestConnector.GAMES;
 
             if (query != null)
                 request += "?query=" + JsonConvert.SerializeObject(query);
@@ -149,6 +167,34 @@ namespace escout.ViewModels
                 _games = JsonConvert.DeserializeObject<List<Game>>(response);
 
             return _games;
+        }
+
+        public async Task<Game> GetGameById(int id)
+        {
+            var game = new Game();
+            var request = RestConnector.GAME + "?id=" + id;
+
+            var response = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(response))
+                game = JsonConvert.DeserializeObject<Game>(response);
+
+            return game;
+        }
+
+        private async Task<List<Game>> GetFavoriteGames()
+        {
+            var games = new List<Game>();
+            var request = RestConnector.FAVORITES + "?query=gameId";
+
+            var favoriteResponse = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(favoriteResponse))
+            {
+                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(favoriteResponse);
+                foreach (var f in _favorites)
+                    games.Add(await GetGameById(int.Parse(f.GameId.ToString())));
+            }
+
+            return games;
         }
     }
 }

@@ -85,7 +85,7 @@ namespace escout.Views.GameData
 
             if (result.Count == 0)
             {
-                var response = await RestConnector.GetObjectAsync(RestConnector.GameData + "?gameId=" + gameId);
+                var response = await RestConnector.GetObjectAsync(RestConnector.GAME_DATA + "?gameId=" + gameId);
                 if (!string.IsNullOrEmpty(response))
                 {
                     try
