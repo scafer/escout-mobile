@@ -51,7 +51,7 @@ namespace escout.ViewModels
             {
                 return new List<string>
                 {
-                    "name", "fullname"
+                    "name", "fullname", "favorites"
                 };
             }
         }
@@ -99,8 +99,11 @@ namespace escout.ViewModels
         private async void SearchExecuted()
         {
             IsVisible = true;
-
-            if (Key == null || string.IsNullOrEmpty(Value))
+            if (Key == "favorites")
+            {
+                Athletes = new ObservableCollection<Athlete>(await GetFavoriteAthletes());
+            }
+            else if (Key == null || string.IsNullOrEmpty(Value))
             {
                 if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Athletes = new ObservableCollection<Athlete>(await GetAthletes(null));
@@ -117,7 +120,7 @@ namespace escout.ViewModels
         private async Task<List<Athlete>> GetAthletes(SearchQuery query)
         {
             var _athletes = new List<Athlete>();
-            var request = RestConnector.Athletes;
+            var request = RestConnector.ATHLETES;
 
             if (query != null)
                 request += "?query=" + JsonConvert.SerializeObject(query);
@@ -127,6 +130,34 @@ namespace escout.ViewModels
                 _athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);
 
             return _athletes;
+        }
+
+        public async Task<Athlete> GetAthleteById(int id)
+        {
+            var athlete = new Athlete();
+            var request = RestConnector.ATHLETE + "?id=" + id;
+
+            var response = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(response))
+                athlete = JsonConvert.DeserializeObject<Athlete>(response);
+
+            return athlete;
+        }
+
+        private async Task<List<Athlete>> GetFavoriteAthletes()
+        {
+            var athletes = new List<Athlete>();
+            var request = RestConnector.FAVORITES + "?query=athleteId";
+
+            var favoriteResponse = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(favoriteResponse))
+            {
+                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(favoriteResponse);
+                foreach (var f in _favorites)
+                    athletes.Add(await GetAthleteById(int.Parse(f.AthleteId.ToString())));
+            }
+
+            return athletes;
         }
     }
 }
