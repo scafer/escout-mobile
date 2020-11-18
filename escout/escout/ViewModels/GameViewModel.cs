@@ -157,7 +157,7 @@ namespace escout.ViewModels
         private async Task<List<Game>> GetGames(SearchQuery query)
         {
             var _games = new List<Game>();
-            var request = RestConnector.Games;
+            var request = RestConnector.GAMES;
 
             if (query != null)
                 request += "?query=" + JsonConvert.SerializeObject(query);
@@ -172,7 +172,7 @@ namespace escout.ViewModels
         public async Task<Game> GetGameById(int id)
         {
             var game = new Game();
-            var request = RestConnector.Game + "?id=" + id;
+            var request = RestConnector.GAME + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
             if (!string.IsNullOrEmpty(response))

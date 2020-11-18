@@ -122,7 +122,7 @@ namespace escout.ViewModels
         private async Task<List<Club>> GetClubs(SearchQuery query)
         {
             var _clubs = new List<Club>();
-            var request = RestConnector.Clubs;
+            var request = RestConnector.CLUBS;
 
             if (query != null)
                 request += "?query=" + JsonConvert.SerializeObject(query);
@@ -137,7 +137,7 @@ namespace escout.ViewModels
         public async Task<Club> GetClubById(int? id)
         {
             var club = new Club();
-            var request = RestConnector.Club + "?id=" + id;
+            var request = RestConnector.CLUB + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
             if (!string.IsNullOrEmpty(response))

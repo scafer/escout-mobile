@@ -120,7 +120,7 @@ namespace escout.ViewModels
         private async Task<List<Athlete>> GetAthletes(SearchQuery query)
         {
             var _athletes = new List<Athlete>();
-            var request = RestConnector.Athletes;
+            var request = RestConnector.ATHLETES;
 
             if (query != null)
                 request += "?query=" + JsonConvert.SerializeObject(query);
@@ -135,7 +135,7 @@ namespace escout.ViewModels
         public async Task<Athlete> GetAthleteById(int id)
         {
             var athlete = new Athlete();
-            var request = RestConnector.Athlete + "?id=" + id;
+            var request = RestConnector.ATHLETE + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
             if (!string.IsNullOrEmpty(response))

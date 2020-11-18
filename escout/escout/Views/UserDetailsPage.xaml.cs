@@ -29,7 +29,7 @@ namespace escout.Views
         {
             if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.UPDATE_USER_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
             {
-                var response = await RestConnector.PutObjectAsync(RestConnector.User, user);
+                var response = await RestConnector.PutObjectAsync(RestConnector.USER, user);
                 if (!string.IsNullOrEmpty(response))
                     await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.USER_UPDATED, Message.OPTION_OK);
             }
@@ -39,7 +39,7 @@ namespace escout.Views
         {
             if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.UPDATE_USER_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
             {
-                var request = RestConnector.ChangePassword + "?newPassword=" + AuthenticationViewModel.GenerateSha256String(Password.Text);
+                var request = RestConnector.CHANGE_PASSWORD + "?newPassword=" + AuthenticationViewModel.GenerateSha256String(Password.Text);
                 var response = await RestConnector.PostObjectAsync(request, null);
                 if (!string.IsNullOrEmpty(response))
                     await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.USER_UPDATED, Message.OPTION_OK);
@@ -78,7 +78,7 @@ namespace escout.Views
 
         private async Task GetData()
         {
-            var response = RestConnector.GetObjectAsync(RestConnector.User);
+            var response = RestConnector.GetObjectAsync(RestConnector.USER);
             var user = JsonConvert.DeserializeObject<User>(await response);
             BindingContext = user;
             this.user = user;

@@ -120,7 +120,7 @@ namespace escout.ViewModels
         private async Task<List<Competition>> GetCompetitions(SearchQuery query)
         {
             var _competition = new List<Competition>();
-            var request = RestConnector.Competitions;
+            var request = RestConnector.COMPETITIONS;
 
             if (query != null)
                 request += "?query=" + JsonConvert.SerializeObject(query);
@@ -135,7 +135,7 @@ namespace escout.ViewModels
         public async Task<Competition> GetCompetitionById(int id)
         {
             var competition = new Competition();
-            var request = RestConnector.Competition + "?id=" + id;
+            var request = RestConnector.COMPETITION + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
             if (!string.IsNullOrEmpty(response))
