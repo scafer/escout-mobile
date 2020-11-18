@@ -51,7 +51,7 @@ namespace escout.ViewModels
             {
                 return new List<string>
                 {
-                    {"name"}
+                    "name", "favorites"
                 };
             }
         }
@@ -99,8 +99,11 @@ namespace escout.ViewModels
         private async void SearchExecuted()
         {
             IsVisible = true;
-
-            if (Key == null || string.IsNullOrEmpty(Value))
+            if (Key == "favorites")
+            {
+                Clubs = new ObservableCollection<Club>(await GetFavoriteClubs());
+            }
+            else if (Key == null || string.IsNullOrEmpty(Value))
             {
                 if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Clubs = new ObservableCollection<Club>(await GetClubs(null));
@@ -129,6 +132,34 @@ namespace escout.ViewModels
                 _clubs = JsonConvert.DeserializeObject<List<Club>>(response);
 
             return _clubs;
+        }
+
+        public async Task<Club> GetClubById(int? id)
+        {
+            var club = new Club();
+            var request = RestConnector.Club + "?id=" + id;
+
+            var response = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(response))
+                club = JsonConvert.DeserializeObject<Club>(response);
+
+            return club;
+        }
+
+        private async Task<List<Club>> GetFavoriteClubs()
+        {
+            var clubs = new List<Club>();
+            var request = RestConnector.FAVORITES + "?query=clubId";
+
+            var favoriteResponse = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(favoriteResponse))
+            {
+                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(favoriteResponse);
+                foreach (var f in _favorites)
+                    clubs.Add(await GetClubById(int.Parse(f.ClubId.ToString())));
+            }
+
+            return clubs;
         }
     }
 }

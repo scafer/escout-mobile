@@ -34,6 +34,8 @@ namespace escout.Helpers
         public const string Image = "/api/v1/image";
         public const string Sport = "/api/v1/sport";
         public const string Sports = "/api/v1/sports";
+        public const string FAVORITE = "/api/v1/favorite";
+        public const string FAVORITES = "/api/v1/favorites";
 
         public static string Token;
         private const string ApiAuthenticationMode = "Authorization";

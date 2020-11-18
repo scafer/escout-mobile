@@ -51,7 +51,7 @@ namespace escout.ViewModels
             {
                 return new List<string>
                 {
-                    {"name"}
+                    "name", "favorites"
                 };
             }
         }
@@ -99,8 +99,11 @@ namespace escout.ViewModels
         private async void SearchExecuted()
         {
             IsVisible = true;
-
-            if (Key == null || string.IsNullOrEmpty(Value))
+            if (Key == "favorites")
+            {
+                Competitions = new ObservableCollection<Competition>(await GetFavoriteCompetitions());
+            }
+            else if (Key == null || string.IsNullOrEmpty(Value))
             {
                 if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Competitions = new ObservableCollection<Competition>(await GetCompetitions(null));
@@ -127,6 +130,34 @@ namespace escout.ViewModels
                 _competition = JsonConvert.DeserializeObject<List<Competition>>(response);
 
             return _competition;
+        }
+
+        public async Task<Competition> GetCompetitionById(int id)
+        {
+            var competition = new Competition();
+            var request = RestConnector.Competition + "?id=" + id;
+
+            var response = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(response))
+                competition = JsonConvert.DeserializeObject<Competition>(response);
+
+            return competition;
+        }
+
+        private async Task<List<Competition>> GetFavoriteCompetitions()
+        {
+            var competitions = new List<Competition>();
+            var request = RestConnector.FAVORITES + "?query=competitionId";
+
+            var favoriteResponse = await RestConnector.GetObjectAsync(request);
+            if (!string.IsNullOrEmpty(favoriteResponse))
+            {
+                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(favoriteResponse);
+                foreach (var f in _favorites)
+                    competitions.Add(await GetCompetitionById(int.Parse(f.CompetitionId.ToString())));
+            }
+
+            return competitions;
         }
     }
 }
