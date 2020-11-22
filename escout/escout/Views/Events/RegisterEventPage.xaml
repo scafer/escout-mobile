@@ -17,7 +17,7 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <StackLayout Margin="5" VerticalOptions="EndAndExpand">
+        <StackLayout Margin="5">
             <StackLayout VerticalOptions="Center">
                 <Label Text="TIMER" HorizontalOptions="Center" TextColor="Black"/>
                 <Label x:Name="LbStopwatch" FontSize="Title" FontAttributes="Bold" TextColor="Black"  HorizontalOptions="Center">
@@ -26,7 +26,7 @@
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>
-            <Grid WidthRequest="500" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid HeightRequest="500" WidthRequest="500" HorizontalOptions="Center" VerticalOptions="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
