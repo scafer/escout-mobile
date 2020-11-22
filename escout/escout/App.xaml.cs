@@ -14,7 +14,8 @@ namespace escout
         private const string UsernameKey = "Username";
         private const string PasswordKey = "Password";
         private const string AuthSaveKey = "false";
-        private const string VersionKey = "";
+        private const string VersionKey = "version";
+        private const string DefaultServerKey = "";
 
         public App()
         {
@@ -57,8 +58,14 @@ namespace escout
 
         public string Version
         {
-            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 1.0.3";
+            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 1.0.4";
             set => Properties[VersionKey] = value;
+        }
+
+        public string DefaultServer
+        {
+            get => Properties.ContainsKey(DefaultServerKey) && !string.IsNullOrEmpty(Properties[DefaultServerKey].ToString()) ? Properties[DefaultServerKey].ToString() : "https://escout-server.herokuapp.com";
+            set => Properties[DefaultServerKey] = value;
         }
 
         public static async Task DisplayMessage(string title, string message, string cancel)
