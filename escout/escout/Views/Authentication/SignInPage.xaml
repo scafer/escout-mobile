@@ -52,6 +52,11 @@
                                         <TapGestureRecognizer Command="{Binding ForgotPasswordViewCommand}"/>
                                     </Label.GestureRecognizers>
                                 </Label>
+                                <Label Text="Settings" HorizontalOptions="Center">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
                                 <Label Text="About" HorizontalOptions="Center">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding AboutViewCommand}"/>
