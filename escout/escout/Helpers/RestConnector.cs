@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace escout.Helpers
 {
@@ -41,7 +42,11 @@ namespace escout.Helpers
         public static string Token;
         private const string ApiAuthenticationMode = "Authorization";
 
-        private static string GetApiUrl() => "https://escout-server.herokuapp.com";
+        private static string GetApiUrl() 
+        {
+            var app = Application.Current as App;
+            return app.DefaultServer;
+        }
 
         private static string GetAuthenticationHeader() => "bearer" + " " + Token;
 

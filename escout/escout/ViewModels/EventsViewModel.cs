@@ -74,7 +74,7 @@ namespace escout.ViewModels
         private async void SynchronizeEventsExecuted()
         {
             var db = new LocalDb();
-            var unsynchronizedEvents = GameEvents.Where(e => e.Synchronized == false).ToList();
+            var unsynchronizedEvents = GameEvents.Where(e => e.Synchronized).ToList();
 
             if (unsynchronizedEvents.Count != 0)
             {
