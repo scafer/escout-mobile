@@ -1,4 +1,4 @@
-# eScout - Client
+# eScout - Mobile
 
 <a href="#">
     <img src="escout/escout.Android/Resources/drawable/escout_logo.png" align="right" width="10%" height="10%"/>
