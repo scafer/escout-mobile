@@ -128,8 +128,8 @@ namespace escout.ViewModels
                 request += "?query=" + JsonConvert.SerializeObject(query);
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(response))
-                _clubs = JsonConvert.DeserializeObject<List<Club>>(response);
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+                _clubs = JsonConvert.DeserializeObject<List<Club>>(await RestConnector.GetContent(response));
 
             return _clubs;
         }
@@ -140,8 +140,8 @@ namespace escout.ViewModels
             var request = RestConnector.CLUB + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(response))
-                club = JsonConvert.DeserializeObject<Club>(response);
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+                club = JsonConvert.DeserializeObject<Club>(await RestConnector.GetContent(response));
 
             return club;
         }
@@ -152,9 +152,9 @@ namespace escout.ViewModels
             var request = RestConnector.FAVORITES + "?query=clubId";
 
             var favoriteResponse = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(favoriteResponse))
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(favoriteResponse)))
             {
-                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(favoriteResponse);
+                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await RestConnector.GetContent(favoriteResponse));
                 foreach (var f in _favorites)
                     clubs.Add(await GetClubById(int.Parse(f.ClubId.ToString())));
             }

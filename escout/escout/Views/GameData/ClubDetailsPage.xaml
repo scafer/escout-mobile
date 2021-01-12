@@ -42,7 +42,7 @@
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Home Page:" FontAttributes="Bold" TextColor="#407DF4" FontSize="Medium"/>
-                    <Label Text="{Binding Home Page}" FontSize="Medium"/>
+                    <Label Text="{Binding HomePage}" FontSize="Medium"/>
                 </StackLayout>
             </StackLayout>
         </StackLayout>
