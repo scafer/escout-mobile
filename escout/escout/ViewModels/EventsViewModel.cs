@@ -82,7 +82,7 @@ namespace escout.ViewModels
                 {
                     IsVisible = true;
                     var response = await RestConnector.PostObjectAsync(RestConnector.GAME_EVENT, unsynchronizedEvents);
-                    var result = JsonConvert.DeserializeObject<SvcResult>(response);
+                    var result = JsonConvert.DeserializeObject<SvcResult>(await RestConnector.GetContent(response));
 
                     if (result.ErrorCode == 0)
                     {

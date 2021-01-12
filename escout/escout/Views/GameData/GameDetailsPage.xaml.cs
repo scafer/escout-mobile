@@ -86,11 +86,11 @@ namespace escout.Views.GameData
             if (result.Count == 0)
             {
                 var response = await RestConnector.GetObjectAsync(RestConnector.GAME_DATA + "?gameId=" + gameId);
-                if (!string.IsNullOrEmpty(response))
+                if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
                 {
                     try
                     {
-                        var gameData = JsonConvert.DeserializeObject<Models.Rest.GameData>(response);
+                        var gameData = JsonConvert.DeserializeObject<Models.Rest.GameData>(await RestConnector.GetContent(response));
                         var db = new LocalDb();
                         _ = db.AddGameData(gameData);
                     }

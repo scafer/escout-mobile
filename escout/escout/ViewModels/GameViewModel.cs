@@ -163,8 +163,8 @@ namespace escout.ViewModels
                 request += "?query=" + JsonConvert.SerializeObject(query);
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(response))
-                _games = JsonConvert.DeserializeObject<List<Game>>(response);
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+                _games = JsonConvert.DeserializeObject<List<Game>>(await RestConnector.GetContent(response));
 
             return _games;
         }
@@ -175,8 +175,8 @@ namespace escout.ViewModels
             var request = RestConnector.GAME + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(response))
-                game = JsonConvert.DeserializeObject<Game>(response);
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+                game = JsonConvert.DeserializeObject<Game>(await RestConnector.GetContent(response));
 
             return game;
         }
@@ -187,9 +187,9 @@ namespace escout.ViewModels
             var request = RestConnector.FAVORITES + "?query=gameId";
 
             var favoriteResponse = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(favoriteResponse))
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(favoriteResponse)))
             {
-                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(favoriteResponse);
+                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await RestConnector.GetContent(favoriteResponse));
                 foreach (var f in _favorites)
                     games.Add(await GetGameById(int.Parse(f.GameId.ToString())));
             }
