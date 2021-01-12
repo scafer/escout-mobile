@@ -119,45 +119,45 @@ namespace escout.ViewModels
 
         private async Task<List<Athlete>> GetAthletes(SearchQuery query)
         {
-            var _athletes = new List<Athlete>();
+            var ath = new List<Athlete>();
             var request = RestConnector.ATHLETES;
 
             if (query != null)
                 request += "?query=" + JsonConvert.SerializeObject(query);
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(response))
-                _athletes = JsonConvert.DeserializeObject<List<Athlete>>(response);
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+                ath = JsonConvert.DeserializeObject<List<Athlete>>(await RestConnector.GetContent(response));
 
-            return _athletes;
+            return ath;
         }
 
         public async Task<Athlete> GetAthleteById(int id)
         {
-            var athlete = new Athlete();
+            var ath = new Athlete();
             var request = RestConnector.ATHLETE + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(response))
-                athlete = JsonConvert.DeserializeObject<Athlete>(response);
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+                ath = JsonConvert.DeserializeObject<Athlete>(await RestConnector.GetContent(response));
 
-            return athlete;
+            return ath;
         }
 
         private async Task<List<Athlete>> GetFavoriteAthletes()
         {
-            var athletes = new List<Athlete>();
+            var ath = new List<Athlete>();
             var request = RestConnector.FAVORITES + "?query=athleteId";
 
             var favoriteResponse = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(favoriteResponse))
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(favoriteResponse)))
             {
-                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(favoriteResponse);
-                foreach (var f in _favorites)
-                    athletes.Add(await GetAthleteById(int.Parse(f.AthleteId.ToString())));
+                var favorites = JsonConvert.DeserializeObject<List<Favorite>>(await RestConnector.GetContent(favoriteResponse));
+                foreach (var f in favorites)
+                    ath.Add(await GetAthleteById(int.Parse(f.AthleteId.ToString())));
             }
 
-            return athletes;
+            return ath;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace escout.Helpers
 {
-    class Message
+    public class Message
     {
         public const string TITLE_STATUS_INFO = "Info";
         public const string TITLE_STATUS_WARNING = "Warning";

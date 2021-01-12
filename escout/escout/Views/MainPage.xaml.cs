@@ -72,7 +72,7 @@ namespace escout.Views
         {
             var option = new List<Option>
             {
-                new Option(HOME, "home_fill.png"),
+                new(HOME, "home_fill.png"),
                 new Option(WATCHING, "watching_fill.png"),
                 new Option(GAMES, "games_fill.png"),
                 new Option(CLUBS, "clubs_fill.png"),
@@ -92,8 +92,8 @@ namespace escout.Views
 
         private async Task GetData()
         {
-            var response = RestConnector.GetObjectAsync(RestConnector.USER);
-            var user = JsonConvert.DeserializeObject<User>(await response);
+            var response = await RestConnector.GetObjectAsync(RestConnector.USER);
+            var user = JsonConvert.DeserializeObject<User>(await RestConnector.GetContent(response));
 
             if (user.ImageId != null)
             {

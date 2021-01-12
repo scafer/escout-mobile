@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -6,7 +7,7 @@ using Xamarin.Forms;
 
 namespace escout.Helpers
 {
-    public static class RestConnector
+    public class RestConnector
     {
         //API endpoints
         public const string SIGN_IN = "/api/v1/signIn";
@@ -42,87 +43,93 @@ namespace escout.Helpers
         public static string Token;
         private const string ApiAuthenticationMode = "Authorization";
 
-        private static string GetApiUrl() 
+        public static async Task<HttpResponseMessage> GetObjectAsync(string conn)
+        {
+            var response = new HttpResponseMessage();
+            try
+            {
+                using var client = new HttpClient();
+                client.DefaultRequestHeaders.Add(ApiAuthenticationMode, GetAuthenticationHeader());
+                response = await client.GetAsync(GetApiUrl() + conn);
+            }
+            catch (HttpRequestException ex)
+            {
+                ExceptionHandler.HttpRequestException(ex);
+            }
+            return response;
+        }
+
+        public static async Task<HttpResponseMessage> PostObjectAsync(string conn, object data)
+        {
+            var response = new HttpResponseMessage();
+            try
+            {
+                using var client = new HttpClient();
+                client.DefaultRequestHeaders.Add(ApiAuthenticationMode, GetAuthenticationHeader());
+
+                response = await client.PostAsync(GetApiUrl() + conn,
+                    new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json"));
+            }
+            catch (HttpRequestException ex)
+            {
+                ExceptionHandler.HttpRequestException(ex);
+            }
+            return response;
+        }
+
+        public static async Task<HttpResponseMessage> PutObjectAsync(string conn, object data)
+        {
+            var response = new HttpResponseMessage();
+            try
+            {
+                using var client = new HttpClient();
+                client.DefaultRequestHeaders.Add(ApiAuthenticationMode, GetAuthenticationHeader());
+                response = await client.PutAsync(GetApiUrl() + conn,
+                    new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json"));
+            }
+            catch (HttpRequestException ex)
+            {
+                ExceptionHandler.HttpRequestException(ex);
+            }
+            return response;
+        }
+
+        public static async Task<HttpResponseMessage> DeleteObjectAsync(string conn)
+        {
+            var response = new HttpResponseMessage();
+            try
+            {
+                using var client = new HttpClient();
+                client.DefaultRequestHeaders.Add(ApiAuthenticationMode, GetAuthenticationHeader());
+
+                response = await client.DeleteAsync(conn);
+            }
+            catch (HttpRequestException ex)
+            {
+                ExceptionHandler.HttpRequestException(ex);
+            }
+            return response;
+        }
+
+        public static async Task<string> GetContent(HttpResponseMessage response)
+        {
+            return await response.Content.ReadAsStringAsync();
+        }
+
+        public static HttpStatusCode GetStatusCode(HttpResponseMessage response)
+        {
+            return response.StatusCode;
+        }
+
+        private static string GetApiUrl()
         {
             var app = Application.Current as App;
             return app.DefaultServer;
         }
 
-        private static string GetAuthenticationHeader() => "bearer" + " " + Token;
-
-        public static async Task<string> GetObjectAsync(string conn)
+        private static string GetAuthenticationHeader()
         {
-            var response = string.Empty;
-            try
-            {
-                using var client = new HttpClient();
-                client.DefaultRequestHeaders.Add(ApiAuthenticationMode, GetAuthenticationHeader());
-                var httpResponse = await client.GetAsync(GetApiUrl() + conn);
-                response = await httpResponse.Content.ReadAsStringAsync();
-            }
-            catch (HttpRequestException ex)
-            {
-                ExceptionHandler.HttpRequestException(ex);
-            }
-            return response;
-        }
-
-        public static async Task<string> PostObjectAsync(string conn, object data)
-        {
-            var response = string.Empty;
-            try
-            {
-                using var client = new HttpClient();
-                client.DefaultRequestHeaders.Add(ApiAuthenticationMode, GetAuthenticationHeader());
-
-                var httpResponse = await client.PostAsync(GetApiUrl() + conn,
-                    new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json"));
-
-                response = await httpResponse.Content.ReadAsStringAsync();
-            }
-            catch (HttpRequestException ex)
-            {
-                ExceptionHandler.HttpRequestException(ex);
-            }
-            return response;
-        }
-
-        public static async Task<string> PutObjectAsync(string conn, object data)
-        {
-            var response = string.Empty;
-            try
-            {
-                using var client = new HttpClient();
-                client.DefaultRequestHeaders.Add(ApiAuthenticationMode, GetAuthenticationHeader());
-
-                var httpResponse = await client.PutAsync(GetApiUrl() + conn,
-                    new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json"));
-
-                response = await httpResponse.Content.ReadAsStringAsync();
-            }
-            catch (HttpRequestException ex)
-            {
-                ExceptionHandler.HttpRequestException(ex);
-            }
-            return response;
-        }
-
-        public static async Task<string> DeleteObjectAsync(string conn)
-        {
-            var response = string.Empty;
-            try
-            {
-                using var client = new HttpClient();
-                client.DefaultRequestHeaders.Add(ApiAuthenticationMode, GetAuthenticationHeader());
-
-                var httpResponse = await client.DeleteAsync(conn);
-                response = await httpResponse.Content.ReadAsStringAsync();
-            }
-            catch (HttpRequestException ex)
-            {
-                ExceptionHandler.HttpRequestException(ex);
-            }
-            return response;
+            return "bearer" + " " + Token;
         }
     }
 }

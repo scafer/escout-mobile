@@ -4,19 +4,19 @@ namespace escout.Helpers
 {
     public static class StopWatch
     {
-        private static int minutes { get; set; }
-        private static int seconds { get; set; }
+        private static int Minutes { get; set; }
+        private static int Seconds { get; set; }
         private static Timer timer = new Timer(new TimerCallback(Tick));
 
         private static void Tick(object state)
         {
-            if (seconds == 59)
+            if (Seconds == 59)
             {
-                seconds = 0;
-                minutes++;
+                Seconds = 0;
+                Minutes++;
             }
             else
-                seconds++;
+                Seconds++;
         }
 
         public static void Start()
@@ -29,12 +29,6 @@ namespace escout.Helpers
             timer.Change(Timeout.Infinite, 1000);
         }
 
-        public static void Reset()
-        {
-            minutes = 0;
-            seconds = 0;
-        }
-
         public static void Restart()
         {
             Reset();
@@ -43,13 +37,19 @@ namespace escout.Helpers
 
         public static void SetTimer(int m, int s)
         {
-            minutes = m;
-            seconds = s;
+            Minutes = m;
+            Seconds = s;
         }
 
         public static string ShowTime()
         {
-            return minutes.ToString("D2") + ":" + seconds.ToString("D2");
+            return Minutes.ToString("D2") + ":" + Seconds.ToString("D2");
+        }
+
+        private static void Reset()
+        {
+            Minutes = 0;
+            Seconds = 0;
         }
     }
 }

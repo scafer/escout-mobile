@@ -101,9 +101,9 @@ namespace escout.ViewModels
                     IsVisible = true;
                     var response = await RestConnector.PostObjectAsync(RestConnector.SIGN_IN,
                         new User(Username, GenerateSha256String(Password), Email));
-                    if (!string.IsNullOrEmpty(response))
+                    if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
                     {
-                        var result = JsonConvert.DeserializeObject<AuthData>(response);
+                        var result = JsonConvert.DeserializeObject<AuthData>(await RestConnector.GetContent(response));
 
                         if (!string.IsNullOrEmpty(result.Token))
                         {
@@ -147,9 +147,9 @@ namespace escout.ViewModels
 
                     var response = await RestConnector.PostObjectAsync(RestConnector.SIGN_UP,
                         new User(Username, GenerateSha256String(Password), Email));
-                    if (!string.IsNullOrEmpty(response))
+                    if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
                     {
-                        var result = JsonConvert.DeserializeObject<SvcResult>(response);
+                        var result = JsonConvert.DeserializeObject<SvcResult>(await RestConnector.GetContent(response));
                         _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, result.ErrorMessage, Message.OPTION_OK);
 
                         if (result.ErrorCode == 0)
@@ -182,9 +182,9 @@ namespace escout.ViewModels
                     IsVisible = true;
 
                     var response = await RestConnector.PostObjectAsync(RestConnector.RESET_PASSWORD, new User(Username, null, Email));
-                    if (!string.IsNullOrEmpty(response))
+                    if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
                     {
-                        var result = JsonConvert.DeserializeObject<SvcResult>(response);
+                        var result = JsonConvert.DeserializeObject<SvcResult>(await RestConnector.GetContent(response));
                         _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, result.ErrorMessage, Message.OPTION_OK);
                         await Navigation.PopModalAsync();
                     }

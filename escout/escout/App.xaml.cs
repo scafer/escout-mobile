@@ -11,11 +11,11 @@ namespace escout
         public static DbGame DbGame;
         public static DbAthlete DbAthlete;
 
-        private const string UsernameKey = "Username";
-        private const string PasswordKey = "Password";
-        private const string AuthSaveKey = "false";
-        private const string VersionKey = "version";
-        private const string DefaultServerKey = "";
+        private const string USERNAME_KEY = "Username";
+        private const string PASSWORD_KEY = "Password";
+        private const string AUTH_SAVE_KEY = "false";
+        private const string VERSION_KEY = "version";
+        private const string DEFAULT_SERVER_KEY = "";
 
         public App()
         {
@@ -40,32 +40,32 @@ namespace escout
 
         public string Username
         {
-            get => Properties.ContainsKey(UsernameKey) ? Properties[UsernameKey].ToString() : "";
-            set => Properties[UsernameKey] = value;
+            get => Properties.ContainsKey(USERNAME_KEY) ? Properties[USERNAME_KEY].ToString() : "";
+            set => Properties[USERNAME_KEY] = value;
         }
 
         public string Password
         {
-            get => Properties.ContainsKey(PasswordKey) ? Properties[PasswordKey].ToString() : "";
-            set => Properties[PasswordKey] = value;
+            get => Properties.ContainsKey(PASSWORD_KEY) ? Properties[PASSWORD_KEY].ToString() : "";
+            set => Properties[PASSWORD_KEY] = value;
         }
 
         public string BasicAuth
         {
-            get => Properties.ContainsKey(AuthSaveKey) ? Properties[AuthSaveKey].ToString() : "false";
-            set => Properties[AuthSaveKey] = value;
+            get => Properties.ContainsKey(AUTH_SAVE_KEY) ? Properties[AUTH_SAVE_KEY].ToString() : "false";
+            set => Properties[AUTH_SAVE_KEY] = value;
         }
 
         public string Version
         {
-            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 1.0.4";
-            set => Properties[VersionKey] = value;
+            get => Properties.ContainsKey(VERSION_KEY) ? Properties[VERSION_KEY].ToString() : "Version 1.0.4";
+            set => Properties[VERSION_KEY] = value;
         }
 
         public string DefaultServer
         {
-            get => Properties.ContainsKey(DefaultServerKey) && !string.IsNullOrEmpty(Properties[DefaultServerKey].ToString()) ? Properties[DefaultServerKey].ToString() : "https://escout-server.herokuapp.com";
-            set => Properties[DefaultServerKey] = value;
+            get => Properties.ContainsKey(DEFAULT_SERVER_KEY) && !string.IsNullOrEmpty(Properties[DEFAULT_SERVER_KEY].ToString()) ? Properties[DEFAULT_SERVER_KEY].ToString() : "https://escout-server.herokuapp.com";
+            set => Properties[DEFAULT_SERVER_KEY] = value;
         }
 
         public static async Task DisplayMessage(string title, string message, string cancel)

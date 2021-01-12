@@ -51,7 +51,7 @@ namespace escout.ViewModels
 
                 var gameEvents = new List<GameEvent> { gameEvent };
                 var response = await RestConnector.PostObjectAsync(RestConnector.GAME_EVENT, gameEvents);
-                var result = JsonConvert.DeserializeObject<SvcResult>(response);
+                var result = JsonConvert.DeserializeObject<SvcResult>(await RestConnector.GetContent(response));
 
                 if (result.ErrorCode == 0)
                 {

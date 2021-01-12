@@ -57,7 +57,7 @@ namespace escout.Views.Authentication
             }
         }
 
-        private async void TapGestureRecognizer_Tapped(object sender, System.EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             var app = Application.Current as App;
 

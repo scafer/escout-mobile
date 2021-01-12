@@ -2,20 +2,20 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace escout.Helpers
 {
     public static class RestUtils
     {
-
         public static async Task<Image> GetImage(int? imageId)
         {
             var img = new Image();
             var response = await RestConnector.GetObjectAsync(RestConnector.IMAGE + "?id=" + imageId);
-            if (!string.IsNullOrEmpty(response))
+            if (HttpStatusCode.OK.Equals(RestConnector.GetStatusCode(response)))
             {
-                img = JsonConvert.DeserializeObject<Image>(response);
+                img = JsonConvert.DeserializeObject<Image>(await RestConnector.GetContent(response));
             }
 
             return img;
@@ -25,13 +25,9 @@ namespace escout.Helpers
         {
             try
             {
-                List<GameUser> gameUsers = new List<GameUser>();
-                gameUsers.Add(new GameUser(int.Parse(App.UserId), gameId, athleteId));
+                var gameUsers = new List<GameUser> { new(int.Parse(App.UserId), gameId, athleteId) };
                 var response = await RestConnector.PostObjectAsync(RestConnector.GAME_USER, gameUsers);
-                if (!string.IsNullOrEmpty(response))
-                    return true;
-                else
-                    return false;
+                return !string.IsNullOrEmpty(await RestConnector.GetContent(response));
             }
             catch (Exception ex)
             {
@@ -42,14 +38,14 @@ namespace escout.Helpers
 
         public static async Task<Club> GetClub(int clubId)
         {
-            var _club = new Club();
+            var club = new Club();
             var request = RestConnector.CLUB + "?id=" + clubId;
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(response))
-                _club = JsonConvert.DeserializeObject<Club>(response);
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+                club = JsonConvert.DeserializeObject<Club>(await RestConnector.GetContent(response));
 
-            return _club;
+            return club;
         }
 
         public static async Task<List<CompetitionBoard>> GetCompetitionBoardById(int id)
@@ -58,8 +54,8 @@ namespace escout.Helpers
             var request = RestConnector.COMPETITION_BOARD + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(response))
-                board = JsonConvert.DeserializeObject<List<CompetitionBoard>>(response);
+            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+                board = JsonConvert.DeserializeObject<List<CompetitionBoard>>(await RestConnector.GetContent(response));
 
             return board;
         }
@@ -71,9 +67,9 @@ namespace escout.Helpers
                 var gameRequest = RestConnector.GAME + "?id=" + gameId;
 
                 var gameResponse = await RestConnector.GetObjectAsync(gameRequest);
-                if (!string.IsNullOrEmpty(gameResponse))
+                if (!string.IsNullOrEmpty(await RestConnector.GetContent(gameResponse)))
                 {
-                    var game = JsonConvert.DeserializeObject<Game>(gameResponse);
+                    var game = JsonConvert.DeserializeObject<Game>(await RestConnector.GetContent(gameResponse));
                     game.Status = status;
                     await RestConnector.PutObjectAsync(RestConnector.GAME, game);
                 }

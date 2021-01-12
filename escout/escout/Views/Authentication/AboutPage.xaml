@@ -15,7 +15,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout VerticalOptions="Center" Margin="5">
-                <Image x:Name="logoImage" Source="escout_logo.png" WidthRequest="200"  HorizontalOptions="Center"/>
+                <Image Source="escout_logo.png" WidthRequest="200"  HorizontalOptions="Center"/>
             </StackLayout>
             <StackLayout Margin="20">
                 <Label Text="Projeto submetido como requisito parcial para a obtenção do grau de Mestre em Engenharia Informática:"/>
