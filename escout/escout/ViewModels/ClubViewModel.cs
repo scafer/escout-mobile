@@ -105,7 +105,7 @@ namespace escout.ViewModels
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
+                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Clubs = new ObservableCollection<Club>(await GetClubs(null));
             }
             else
@@ -128,8 +128,8 @@ namespace escout.ViewModels
                 request += "?query=" + JsonConvert.SerializeObject(query);
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
-                _clubs = JsonConvert.DeserializeObject<List<Club>>(await RestConnector.GetContent(response));
+            if (200.Equals((int)response.StatusCode))
+                _clubs = JsonConvert.DeserializeObject<List<Club>>(await response.Content.ReadAsStringAsync());
 
             return _clubs;
         }
@@ -140,8 +140,8 @@ namespace escout.ViewModels
             var request = RestConnector.CLUB + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
-                club = JsonConvert.DeserializeObject<Club>(await RestConnector.GetContent(response));
+            if (200.Equals((int)response.StatusCode))
+                club = JsonConvert.DeserializeObject<Club>(await response.Content.ReadAsStringAsync());
 
             return club;
         }
@@ -151,10 +151,10 @@ namespace escout.ViewModels
             var clubs = new List<Club>();
             var request = RestConnector.FAVORITES + "?query=clubId";
 
-            var favoriteResponse = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(await RestConnector.GetContent(favoriteResponse)))
+            var response = await RestConnector.GetObjectAsync(request);
+            if (200.Equals((int)response.StatusCode))
             {
-                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await RestConnector.GetContent(favoriteResponse));
+                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
                 foreach (var f in _favorites)
                     clubs.Add(await GetClubById(int.Parse(f.ClubId.ToString())));
             }

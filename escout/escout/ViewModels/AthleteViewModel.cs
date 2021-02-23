@@ -105,7 +105,7 @@ namespace escout.ViewModels
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
+                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Athletes = new ObservableCollection<Athlete>(await GetAthletes(null));
             }
             else
@@ -126,8 +126,9 @@ namespace escout.ViewModels
                 request += "?query=" + JsonConvert.SerializeObject(query);
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
-                _athletes = JsonConvert.DeserializeObject<List<Athlete>>(await RestConnector.GetContent(response));
+
+            if (200.Equals((int)response.StatusCode))
+                _athletes = JsonConvert.DeserializeObject<List<Athlete>>(await response.Content.ReadAsStringAsync());
 
             return _athletes;
         }
@@ -135,11 +136,10 @@ namespace escout.ViewModels
         public async Task<Athlete> GetAthleteById(int id)
         {
             var athlete = new Athlete();
-            var request = RestConnector.ATHLETE + "?id=" + id;
+            var response = await RestConnector.GetObjectAsync(RestConnector.ATHLETE + "?id=" + id);
 
-            var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
-                athlete = JsonConvert.DeserializeObject<Athlete>(await RestConnector.GetContent(response));
+            if (200.Equals((int)response.StatusCode))
+                athlete = JsonConvert.DeserializeObject<Athlete>(await response.Content.ReadAsStringAsync());
 
             return athlete;
         }
@@ -147,12 +147,12 @@ namespace escout.ViewModels
         private async Task<List<Athlete>> GetFavoriteAthletes()
         {
             var athletes = new List<Athlete>();
-            var request = RestConnector.FAVORITES + "?query=athleteId";
+            var response = await RestConnector.GetObjectAsync(RestConnector.FAVORITES + "?query=athleteId");
 
-            var favoriteResponse = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(await RestConnector.GetContent(favoriteResponse)))
+            if (200.Equals((int)response.StatusCode))
             {
-                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await RestConnector.GetContent(favoriteResponse));
+                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
+
                 foreach (var f in _favorites)
                     athletes.Add(await GetAthleteById(int.Parse(f.AthleteId.ToString())));
             }

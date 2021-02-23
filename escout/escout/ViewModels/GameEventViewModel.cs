@@ -1,5 +1,5 @@
 ﻿using escout.Helpers;
-using escout.Models.Db;
+using escout.Models.Database;
 using escout.Models.Rest;
 using Newtonsoft.Json;
 using System;
@@ -51,9 +51,8 @@ namespace escout.ViewModels
 
                 var gameEvents = new List<GameEvent> { gameEvent };
                 var response = await RestConnector.PostObjectAsync(RestConnector.GAME_EVENT, gameEvents);
-                var result = JsonConvert.DeserializeObject<SvcResult>(await RestConnector.GetContent(response));
 
-                if (result.ErrorCode == 0)
+                if (200.Equals((int)response.StatusCode))
                 {
                     dbGameEvent.Synchronized = true;
                     _ = db.UpdateGameEventStatus(dbGameEvent);

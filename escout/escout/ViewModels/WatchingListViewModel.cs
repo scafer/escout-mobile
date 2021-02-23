@@ -1,6 +1,6 @@
 ﻿using escout.Helpers;
 using escout.Models;
-using escout.Models.Db;
+using escout.Models.Database;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -89,25 +89,31 @@ namespace escout.ViewModels
 
             foreach (var game in pending)
             {
-                var g = new DbGameWithClub(game);
-                g.dbClubHome = await new LocalDb().GetClub(game.HomeId);
-                g.dbClubVisitor = await new LocalDb().GetClub(game.VisitorId);
+                var g = new DbGameWithClub(game)
+                {
+                    DbClubHome = await new LocalDb().GetClub(game.HomeId),
+                    DbClubVisitor = await new LocalDb().GetClub(game.VisitorId)
+                };
                 pendingList.Add(g);
             }
 
             foreach (var game in active)
             {
-                var g = new DbGameWithClub(game);
-                g.dbClubHome = await new LocalDb().GetClub(game.HomeId);
-                g.dbClubVisitor = await new LocalDb().GetClub(game.VisitorId);
+                var g = new DbGameWithClub(game)
+                {
+                    DbClubHome = await new LocalDb().GetClub(game.HomeId),
+                    DbClubVisitor = await new LocalDb().GetClub(game.VisitorId)
+                };
                 activeList.Add(g);
             }
 
             foreach (var game in finished)
             {
-                var g = new DbGameWithClub(game);
-                g.dbClubHome = await new LocalDb().GetClub(game.HomeId);
-                g.dbClubVisitor = await new LocalDb().GetClub(game.VisitorId);
+                var g = new DbGameWithClub(game)
+                {
+                    DbClubHome = await new LocalDb().GetClub(game.HomeId),
+                    DbClubVisitor = await new LocalDb().GetClub(game.VisitorId)
+                };
                 finishedList.Add(g);
             }
 

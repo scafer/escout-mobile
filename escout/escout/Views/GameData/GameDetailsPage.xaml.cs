@@ -1,5 +1,5 @@
 ﻿using escout.Helpers;
-using escout.Models.Db;
+using escout.Models.Database;
 using escout.Models.Rest;
 using escout.Views.Events;
 using Newtonsoft.Json;
@@ -71,7 +71,7 @@ namespace escout.Views.GameData
 
         private async void AddGameToWatchList(object sender, EventArgs e)
         {
-            var response = await DisplayAlert(Message.TITLE_STATUS_INFO, Message.ADD_TO_WATCHING, Message.OPTION_YES, Message.OPTION_NO);
+            var response = await DisplayAlert(Message.TITLE_STATUS_INFO, Message.MSG_ADD_TO_WATCHING, Message.OPTION_YES, Message.OPTION_NO);
 
             if (response)
             {
@@ -86,11 +86,11 @@ namespace escout.Views.GameData
             if (result.Count == 0)
             {
                 var response = await RestConnector.GetObjectAsync(RestConnector.GAME_DATA + "?gameId=" + gameId);
-                if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+                if (!string.IsNullOrEmpty(await response.Content.ReadAsStringAsync()))
                 {
                     try
                     {
-                        var gameData = JsonConvert.DeserializeObject<Models.Rest.GameData>(await RestConnector.GetContent(response));
+                        var gameData = JsonConvert.DeserializeObject<Models.Rest.GameData>(await response.Content.ReadAsStringAsync());
                         var db = new LocalDb();
                         _ = db.AddGameData(gameData);
                     }
@@ -101,7 +101,7 @@ namespace escout.Views.GameData
                 }
             }
             else
-                await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.SAVE_GAME_ERROR, Message.OPTION_OK);
+                await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.MSG_SAVE_GAME_ERROR, Message.OPTION_OK);
         }
 
         private async void Start_OnClicked(object sender, EventArgs e)
