@@ -1,4 +1,4 @@
-﻿using escout.Models.Db;
+﻿using escout.Models.Database;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

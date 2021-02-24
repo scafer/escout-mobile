@@ -1,5 +1,5 @@
 ﻿using escout.Helpers.Services;
-using escout.Models.Db;
+using escout.Models.Database;
 using escout.Models.Rest;
 using SQLite;
 using System;
@@ -13,7 +13,10 @@ namespace escout.Helpers
     {
         private readonly SQLiteAsyncConnection connection;
 
-        public LocalDb() => connection = DependencyService.Get<ISqLiteDb>().GetConnection();
+        public LocalDb()
+        {
+            connection = DependencyService.Get<ISqLiteDb>().GetConnection();
+        }
 
         private async Task InitializeDb()
         {
@@ -98,15 +101,15 @@ namespace escout.Helpers
             await InitializeDb();
             try
             {
-                await AddGameToDb(gameData.game);
-                await AddSportToDb(gameData.sport, gameData.game.Id);
-                await AddClubToDb(gameData.clubs, gameData.game.Id);
-                await AddAthleteToDb(gameData.athletes, gameData.game.Id);
-                await AddCompetitionToDb(gameData.competition, gameData.game.Id);
-                await AddEventToDb(gameData.events, gameData.game.Id);
-                await AddGameEventToDb(gameData.gameEvents);
+                await AddGameToDb(gameData.Game);
+                await AddSportToDb(gameData.Sport, gameData.Game.Id);
+                await AddClubToDb(gameData.Clubs, gameData.Game.Id);
+                await AddAthleteToDb(gameData.Athletes, gameData.Game.Id);
+                await AddCompetitionToDb(gameData.Competition, gameData.Game.Id);
+                await AddEventToDb(gameData.Events, gameData.Game.Id);
+                await AddGameEventToDb(gameData.GameEvents);
 
-                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_INFO, Message.GAME_SAVE, Message.OPTION_OK);
+                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_INFO, Message.MSG_GAME_SAVE, Message.OPTION_OK);
             }
 
             catch (Exception ex) { ExceptionHandler.GenericException(ex); }
@@ -146,7 +149,7 @@ namespace escout.Helpers
                     if (e.DataExt == dataExt)
                         await connection.DeleteAsync(e);
 
-                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_INFO, Message.GAME_REMOVE, Message.OPTION_OK);
+                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_INFO, Message.MSG_GAME_REMOVE, Message.OPTION_OK);
             }
 
             catch (Exception ex) { ExceptionHandler.GenericException(ex); }

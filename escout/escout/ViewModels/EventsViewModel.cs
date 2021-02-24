@@ -1,7 +1,5 @@
 ﻿using escout.Helpers;
-using escout.Models.Db;
-using escout.Models.Rest;
-using Newtonsoft.Json;
+using escout.Models.Database;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -82,17 +80,16 @@ namespace escout.ViewModels
                 {
                     IsVisible = true;
                     var response = await RestConnector.PostObjectAsync(RestConnector.GAME_EVENT, unsynchronizedEvents);
-                    var result = JsonConvert.DeserializeObject<SvcResult>(await RestConnector.GetContent(response));
 
-                    if (result.ErrorCode == 0)
+                    if (200 == (int)response.StatusCode)
                     {
                         foreach (var e in unsynchronizedEvents)
                         {
                             e.Synchronized = true;
-                            _ = db.UpdateGameEventStatus(e);
+                            db.UpdateGameEventStatus(e);
                         }
                         _ = LoadEvents();
-                        await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.EVENTS_SYNCRONIZED, Message.OPTION_OK);
+                        await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_EVENTS_SYNCRONIZED, Message.OPTION_OK);
                     }
                 }
                 catch (Exception ex) { await App.DisplayMessage(Message.TITLE_STATUS_INFO, ex.Message, Message.OPTION_OK); }

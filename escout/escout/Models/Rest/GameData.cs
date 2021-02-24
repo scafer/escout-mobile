@@ -1,15 +1,29 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace escout.Models.Rest
 {
     public class GameData
     {
-        public Game game { get; set; }
-        public Sport sport { get; set; }
-        public List<Club> clubs { get; set; }
-        public List<Athlete> athletes { get; set; }
-        public Competition competition { get; set; }
-        public List<Event> events { get; set; }
-        public List<GameEvent> gameEvents { get; set; }
+        [JsonProperty("game")]
+        public Game Game { get; set; }
+
+        [JsonProperty("sport")]
+        public Sport Sport { get; set; }
+
+        [JsonProperty("clubs")]
+        public List<Club> Clubs { get; set; }
+
+        [JsonProperty("athletes")]
+        public List<Athlete> Athletes { get; set; }
+
+        [JsonProperty("competition")]
+        public Competition Competition { get; set; }
+
+        [JsonProperty("events")]
+        public List<Event> Events { get; set; }
+
+        [JsonProperty("gameEvents")]
+        public List<GameEvent> GameEvents { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-using escout.Models.Db;
+using escout.Models.Database;
 using escout.Views.Authentication;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -58,7 +58,7 @@ namespace escout
 
         public string Version
         {
-            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 1.0.4";
+            get => Properties.ContainsKey(VersionKey) ? Properties[VersionKey].ToString() : "Version 1.1";
             set => Properties[VersionKey] = value;
         }
 
@@ -76,6 +76,11 @@ namespace escout
         public static async Task<bool> DisplayMessage(string title, string message, string cancel, string accept)
         {
             return await App.Current.MainPage.DisplayAlert(title, message, accept, cancel);
+        }
+
+        public static async Task<string> DisplayPrompt(string title, string message)
+        {
+            return await App.Current.MainPage.DisplayPromptAsync(title, message, keyboard: Keyboard.Default);
         }
     }
 }

@@ -27,22 +27,22 @@ namespace escout.Views
 
         private async void SaveChanges_Clicked(object sender, EventArgs e)
         {
-            if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.UPDATE_USER_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
+            if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.MSG_UPDATE_USER_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
             {
                 var response = await RestConnector.PutObjectAsync(RestConnector.USER, user);
-                if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
-                    await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.USER_UPDATED, Message.OPTION_OK);
+                if (!string.IsNullOrEmpty(await response.Content.ReadAsStringAsync()))
+                    await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_USER_UPDATED, Message.OPTION_OK);
             }
         }
 
         private async void UpdatePassword_Clicked(object sender, EventArgs e)
         {
-            if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.UPDATE_USER_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
+            if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.MSG_UPDATE_USER_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
             {
                 var request = RestConnector.CHANGE_PASSWORD + "?newPassword=" + AuthenticationViewModel.GenerateSha256String(Password.Text);
                 var response = await RestConnector.PostObjectAsync(request, null);
-                if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
-                    await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.USER_UPDATED, Message.OPTION_OK);
+                if (!string.IsNullOrEmpty(await response.Content.ReadAsStringAsync()))
+                    await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_USER_UPDATED, Message.OPTION_OK);
             }
         }
 
@@ -78,8 +78,8 @@ namespace escout.Views
 
         private async Task GetData()
         {
-            var response = RestConnector.GetObjectAsync(RestConnector.USER);
-            var user = JsonConvert.DeserializeObject<User>(await RestConnector.GetContent(await response));
+            var response = await RestConnector.GetObjectAsync(RestConnector.USER);
+            var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
             BindingContext = user;
             this.user = user;
 

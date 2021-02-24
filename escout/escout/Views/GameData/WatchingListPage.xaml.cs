@@ -2,6 +2,7 @@
 using escout.Models;
 using escout.ViewModels;
 using System;
+using escout.Models.Database;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -24,7 +25,7 @@ namespace escout.Views.GameData
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var game = e.SelectedItem as DbGameWithClub;
-            Navigation.PushAsync(new GameDetailsPage(game.dbGame));
+            Navigation.PushAsync(new GameDetailsPage(game.DbGame));
         }
 
         private async void OnRemoveClicked(object sender, EventArgs e)
@@ -33,7 +34,7 @@ namespace escout.Views.GameData
             var game = menuItem.CommandParameter as DbGameWithClub;
 
             var db = new LocalDb();
-            await db.RemoveGameData(game.dbGame.DataExt);
+            await db.RemoveGameData(game.DbGame.DataExt);
         }
     }
 }

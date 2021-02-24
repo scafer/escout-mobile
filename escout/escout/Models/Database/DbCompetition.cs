@@ -1,7 +1,7 @@
 ﻿using escout.Models.Rest;
 using SQLite;
 
-namespace escout.Models.Db
+namespace escout.Models.Database
 {
     class DbCompetition
     {
