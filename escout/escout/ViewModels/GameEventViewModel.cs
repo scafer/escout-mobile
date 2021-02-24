@@ -1,7 +1,6 @@
 ﻿using escout.Helpers;
 using escout.Models.Database;
 using escout.Models.Rest;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,10 +51,10 @@ namespace escout.ViewModels
                 var gameEvents = new List<GameEvent> { gameEvent };
                 var response = await RestConnector.PostObjectAsync(RestConnector.GAME_EVENT, gameEvents);
 
-                if (200.Equals((int)response.StatusCode))
+                if (200 == (int)response.StatusCode)
                 {
                     dbGameEvent.Synchronized = true;
-                    _ = db.UpdateGameEventStatus(dbGameEvent);
+                    db.UpdateGameEventStatus(dbGameEvent);
                 }
             }
             catch (Exception ex)

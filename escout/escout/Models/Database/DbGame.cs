@@ -10,8 +10,6 @@ namespace escout.Models.Database
         public int Id { get; set; }
         public string TimeStart { get; set; }
         public string TimeEnd { get; set; }
-        public string HomeColor { get; set; }
-        public string VisitorColor { get; set; }
         public int HomeScore { get; set; }
         public int VisitorScore { get; set; }
         public int HomePenaltyScore { get; set; }
@@ -36,8 +34,6 @@ namespace escout.Models.Database
             Id = game.Id;
             TimeStart = game.TimeStart;
             TimeEnd = game.TimeEnd;
-            HomeColor = game.HomeColor;
-            VisitorColor = game.VisitorColor;
             HomeScore = game.HomeScore;
             VisitorScore = game.VisitorScore;
             HomePenaltyScore = game.HomePenaltyScore;

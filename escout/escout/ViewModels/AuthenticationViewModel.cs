@@ -119,7 +119,7 @@ namespace escout.ViewModels
                     var response = await RestConnector.PostObjectAsync(RestConnector.SIGN_IN,
                         new User(Username, GenerateSha256String(Password), Email));
 
-                    if (!200.Equals((int)response.StatusCode))
+                    if (200 != (int)response.StatusCode)
                     {
                         _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), Message.OPTION_OK);
                     }
@@ -157,10 +157,9 @@ namespace escout.ViewModels
                 try
                 {
                     IsVisible = true;
-                    var response = await RestConnector.PostObjectAsync(RestConnector.SIGN_UP,
-                        new User(Username, GenerateSha256String(Password), Email));
+                    var response = await RestConnector.PostObjectAsync(RestConnector.SIGN_UP, new User(Username, GenerateSha256String(Password), Email));
 
-                    if (200.Equals((int)response.StatusCode))
+                    if (200 == (int)response.StatusCode)
                     {
                         _ = App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_SUCCESS, Message.OPTION_OK);
                         await Navigation.PopModalAsync();
@@ -194,7 +193,7 @@ namespace escout.ViewModels
                     IsVisible = true;
                     var response = await RestConnector.PostObjectAsync(RestConnector.RESET_PASSWORD, new User(Username, null, Email));
 
-                    if (200.Equals((int)response.StatusCode))
+                    if (200 == (int)response.StatusCode)
                     {
                         _ = App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_SUCCESS, Message.OPTION_OK);
                         await Navigation.PopModalAsync();

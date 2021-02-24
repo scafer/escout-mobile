@@ -7,11 +7,14 @@ namespace escout.Models.Rest
         [JsonProperty("id")]
         public int Id { get; set; }
 
-        [JsonProperty("image")]
-        public string Img { get; set; }
-
         [JsonProperty("ImageUrl")]
         public string ImageUrl { get; set; }
+
+        [JsonProperty("tags")]
+        public string Tags { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
 
         [JsonProperty("created")]
         public string Created { get; set; }

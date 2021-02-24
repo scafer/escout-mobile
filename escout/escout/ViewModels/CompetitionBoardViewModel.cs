@@ -126,7 +126,7 @@ namespace escout.ViewModels
                 request += "?query=" + JsonConvert.SerializeObject(query);
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (200.Equals((int)response.StatusCode))
+            if (200 == (int)response.StatusCode)
                 _competition = JsonConvert.DeserializeObject<List<Competition>>(await response.Content.ReadAsStringAsync());
 
             return _competition;
@@ -138,7 +138,7 @@ namespace escout.ViewModels
             var request = RestConnector.COMPETITION + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (200.Equals((int)response.StatusCode))
+            if (200 == (int)response.StatusCode)
                 competition = JsonConvert.DeserializeObject<Competition>(await response.Content.ReadAsStringAsync());
 
             return competition;
@@ -150,7 +150,7 @@ namespace escout.ViewModels
             var request = RestConnector.FAVORITES + "?query=competitionId";
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (200.Equals((int)response.StatusCode))
+            if (200 == (int)response.StatusCode)
             {
                 var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
                 foreach (var f in _favorites)

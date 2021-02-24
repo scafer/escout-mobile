@@ -121,17 +121,17 @@ namespace escout.ViewModels
 
         private async Task<List<Club>> GetClubs(SearchQuery query)
         {
-            var _clubs = new List<Club>();
+            var clubs = new List<Club>();
             var request = RestConnector.CLUBS;
 
             if (query != null)
                 request += "?query=" + JsonConvert.SerializeObject(query);
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (200.Equals((int)response.StatusCode))
-                _clubs = JsonConvert.DeserializeObject<List<Club>>(await response.Content.ReadAsStringAsync());
+            if (200 == (int)response.StatusCode)
+                clubs = JsonConvert.DeserializeObject<List<Club>>(await response.Content.ReadAsStringAsync());
 
-            return _clubs;
+            return clubs;
         }
 
         public async Task<Club> GetClubById(int? id)
@@ -140,7 +140,7 @@ namespace escout.ViewModels
             var request = RestConnector.CLUB + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (200.Equals((int)response.StatusCode))
+            if (200 == (int)response.StatusCode)
                 club = JsonConvert.DeserializeObject<Club>(await response.Content.ReadAsStringAsync());
 
             return club;
@@ -152,7 +152,7 @@ namespace escout.ViewModels
             var request = RestConnector.FAVORITES + "?query=clubId";
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (200.Equals((int)response.StatusCode))
+            if (200 == (int)response.StatusCode)
             {
                 var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
                 foreach (var f in _favorites)

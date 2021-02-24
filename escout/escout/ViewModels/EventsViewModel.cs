@@ -1,7 +1,5 @@
 ﻿using escout.Helpers;
 using escout.Models.Database;
-using escout.Models.Rest;
-using Newtonsoft.Json;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -83,12 +81,12 @@ namespace escout.ViewModels
                     IsVisible = true;
                     var response = await RestConnector.PostObjectAsync(RestConnector.GAME_EVENT, unsynchronizedEvents);
 
-                    if (200.Equals((int)response.StatusCode))
+                    if (200 == (int)response.StatusCode)
                     {
                         foreach (var e in unsynchronizedEvents)
                         {
                             e.Synchronized = true;
-                            _ = db.UpdateGameEventStatus(e);
+                            db.UpdateGameEventStatus(e);
                         }
                         _ = LoadEvents();
                         await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_EVENTS_SYNCRONIZED, Message.OPTION_OK);

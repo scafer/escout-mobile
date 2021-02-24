@@ -119,7 +119,7 @@ namespace escout.ViewModels
 
         private async Task<List<Athlete>> GetAthletes(SearchQuery query)
         {
-            var _athletes = new List<Athlete>();
+            var athletes = new List<Athlete>();
             var request = RestConnector.ATHLETES;
 
             if (query != null)
@@ -127,10 +127,10 @@ namespace escout.ViewModels
 
             var response = await RestConnector.GetObjectAsync(request);
 
-            if (200.Equals((int)response.StatusCode))
-                _athletes = JsonConvert.DeserializeObject<List<Athlete>>(await response.Content.ReadAsStringAsync());
+            if (200 == (int)response.StatusCode)
+                athletes = JsonConvert.DeserializeObject<List<Athlete>>(await response.Content.ReadAsStringAsync());
 
-            return _athletes;
+            return athletes;
         }
 
         public async Task<Athlete> GetAthleteById(int id)
@@ -138,7 +138,7 @@ namespace escout.ViewModels
             var athlete = new Athlete();
             var response = await RestConnector.GetObjectAsync(RestConnector.ATHLETE + "?id=" + id);
 
-            if (200.Equals((int)response.StatusCode))
+            if (200 == (int)response.StatusCode)
                 athlete = JsonConvert.DeserializeObject<Athlete>(await response.Content.ReadAsStringAsync());
 
             return athlete;
@@ -149,12 +149,12 @@ namespace escout.ViewModels
             var athletes = new List<Athlete>();
             var response = await RestConnector.GetObjectAsync(RestConnector.FAVORITES + "?query=athleteId");
 
-            if (200.Equals((int)response.StatusCode))
+            if (200 == (int)response.StatusCode)
             {
-                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
+                var favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
 
-                foreach (var f in _favorites)
-                    athletes.Add(await GetAthleteById(int.Parse(f.AthleteId.ToString())));
+                foreach (var favorite in favorites)
+                    athletes.Add(await GetAthleteById((int)favorite.AthleteId));
             }
 
             return athletes;

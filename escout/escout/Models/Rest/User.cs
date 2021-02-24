@@ -41,8 +41,6 @@ namespace escout.Models.Rest
             Username = username;
             Password = password;
             Email = email;
-            Created = "";
-            Updated = "";
         }
     }
 }

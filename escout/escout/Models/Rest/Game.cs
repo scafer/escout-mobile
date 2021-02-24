@@ -13,12 +13,6 @@ namespace escout.Models.Rest
         [JsonProperty("timeEnd")]
         public string TimeEnd { get; set; }
 
-        [JsonProperty("homeColor")]
-        public string HomeColor { get; set; }
-
-        [JsonProperty("visitorColor")]
-        public string VisitorColor { get; set; }
-
         [JsonProperty("homeScore")]
         public int HomeScore { get; set; }
 
