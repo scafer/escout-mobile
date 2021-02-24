@@ -64,7 +64,7 @@ namespace escout
 
         public string DefaultServer
         {
-            get => Properties.ContainsKey(DefaultServerKey) && !string.IsNullOrEmpty(Properties[DefaultServerKey].ToString()) ? Properties[DefaultServerKey].ToString() : "https://escout-server-dev.herokuapp.com";
+            get => Properties.ContainsKey(DefaultServerKey) && !string.IsNullOrEmpty(Properties[DefaultServerKey].ToString()) ? Properties[DefaultServerKey].ToString() : "https://escout-server.herokuapp.com";
             set => Properties[DefaultServerKey] = value;
         }
 
