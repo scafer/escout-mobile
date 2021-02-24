@@ -2,6 +2,7 @@
 using escout.Models;
 using escout.ViewModels;
 using System;
+using escout.Models.Database;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

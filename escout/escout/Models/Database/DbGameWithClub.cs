@@ -1,6 +1,4 @@
-﻿using escout.Models.Database;
-
-namespace escout.Models
+﻿namespace escout.Models.Database
 {
     public class DbGameWithClub
     {
