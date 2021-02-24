@@ -1,6 +1,5 @@
 ﻿using escout.Models.Rest;
 using escout.ViewModels;
-using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -54,23 +53,6 @@ namespace escout.Views.Authentication
                 app.Username = string.Empty;
                 app.Password = string.Empty;
                 app.BasicAuth = (SwSave.IsToggled).ToString();
-            }
-        }
-
-        private async void TapGestureRecognizer_Tapped(object sender, System.EventArgs e)
-        {
-            var app = Application.Current as App;
-
-            try
-            {
-                var result = await DisplayPromptAsync("Settings", "Change server address. Leave empty to use the default server.", keyboard: Keyboard.Default);
-                if (result != null)
-                    app.DefaultServer = result;
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
             }
         }
     }

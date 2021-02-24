@@ -122,7 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Plugin.MaterialDesignControls">
-      <Version>1.7.0</Version>
+      <Version>1.8.1</Version>
     </PackageReference>
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.7.335</Version>
@@ -133,13 +133,13 @@
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
       <Version>3.0.0.5</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\escout\escout.csproj">
-      <Project>{418F2376-C022-46D0-948D-02C9D98A3657}</Project>
+      <Project>{CDB219F7-5D74-4BCD-85FC-77D1DFD6B89A}</Project>
       <Name>escout</Name>
     </ProjectReference>
   </ItemGroup>

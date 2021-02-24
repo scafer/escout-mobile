@@ -1,6 +1,6 @@
 ﻿using escout.Helpers;
 using escout.Models;
-using escout.Models.Db;
+using escout.Models.Database;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Xamarin.Forms;

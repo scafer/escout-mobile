@@ -22,6 +22,7 @@ namespace escout.ViewModels
         public ICommand SignUpViewCommand { get; set; }
         public ICommand ForgotPasswordViewCommand { get; set; }
         public ICommand AboutViewCommand { get; set; }
+        public ICommand SettingsViewCommand { get; set; }
         public ICommand CancelCommand { get; set; }
 
         private User user;
@@ -45,6 +46,7 @@ namespace escout.ViewModels
             SignUpViewCommand = new Command(SignUpViewExecuted);
             ForgotPasswordViewCommand = new Command(ForgetPasswordViewExecuted);
             AboutViewCommand = new Command(AboutViewExecuted);
+            SettingsViewCommand = new Command(SettingsViewExecuted);
             CancelCommand = new Command(CancelExecuted);
         }
 
@@ -92,6 +94,21 @@ namespace escout.ViewModels
             }
         }
 
+        public static string GenerateSha256String(string inputString)
+        {
+            var sb = new StringBuilder();
+
+            using var hash = SHA256.Create();
+
+            var enc = Encoding.UTF8;
+            var result = hash.ComputeHash(enc.GetBytes(inputString));
+
+            foreach (var b in result)
+                sb.Append(b.ToString("x2"));
+
+            return sb.ToString();
+        }
+
         private async void SignInExecuted()
         {
             if (!(string.IsNullOrEmpty(Username)) && !(string.IsNullOrEmpty(Password)))
@@ -101,28 +118,22 @@ namespace escout.ViewModels
                     IsVisible = true;
                     var response = await RestConnector.PostObjectAsync(RestConnector.SIGN_IN,
                         new User(Username, GenerateSha256String(Password), Email));
-                    if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
-                    {
-                        var result = JsonConvert.DeserializeObject<AuthData>(await RestConnector.GetContent(response));
 
-                        if (!string.IsNullOrEmpty(result.Token))
-                        {
-                            RestConnector.Token = result.Token;
-                            App.UserId = result.Id;
-                            await Navigation.PushAsync(new SplashScreenPage());
-                        }
-                        else
-                            _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.AUTHENTICATION_INVALID, Message.OPTION_OK);
+                    if (200 != (int)response.StatusCode)
+                    {
+                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), Message.OPTION_OK);
                     }
                     else
                     {
-                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.GENERIC_ERROR, Message.OPTION_OK);
+                        var auth = JsonConvert.DeserializeObject<AuthData>(await response.Content.ReadAsStringAsync());
+                        RestConnector.Token = auth.Token;
+                        App.UserId = auth.Id;
+                        await Navigation.PushAsync(new SplashScreenPage());
                     }
                 }
                 catch
                 {
-                    var option = await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.OFFLINE, Message.OPTION_NO, Message.OPTION_YES);
-                    if (option)
+                    if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_OFFLINE, Message.OPTION_NO, Message.OPTION_YES))
                     {
                         Application.Current.MainPage = new NavigationPage(new WatchingListPage());
                         await Navigation.PushAsync(new WatchingListPage());
@@ -134,7 +145,9 @@ namespace escout.ViewModels
                 }
             }
             else
-                _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.AUTHENTICATION_INVALID, Message.OPTION_OK);
+            {
+                _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.MSG_AUTHENTICATION_INVALID, Message.OPTION_OK);
+            }
         }
 
         private async void SignUpExecuted()
@@ -144,20 +157,16 @@ namespace escout.ViewModels
                 try
                 {
                     IsVisible = true;
+                    var response = await RestConnector.PostObjectAsync(RestConnector.SIGN_UP, new User(Username, GenerateSha256String(Password), Email));
 
-                    var response = await RestConnector.PostObjectAsync(RestConnector.SIGN_UP,
-                        new User(Username, GenerateSha256String(Password), Email));
-                    if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+                    if (200 == (int)response.StatusCode)
                     {
-                        var result = JsonConvert.DeserializeObject<SvcResult>(await RestConnector.GetContent(response));
-                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, result.ErrorMessage, Message.OPTION_OK);
-
-                        if (result.ErrorCode == 0)
-                            await Navigation.PopModalAsync();
+                        _ = App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_SUCCESS, Message.OPTION_OK);
+                        await Navigation.PopModalAsync();
                     }
                     else
                     {
-                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.GENERIC_ERROR, Message.OPTION_OK);
+                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), Message.OPTION_OK);
                     }
                 }
                 catch (Exception ex)
@@ -170,7 +179,9 @@ namespace escout.ViewModels
                 }
             }
             else
-                _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.GENERIC_ERROR, Message.OPTION_OK);
+            {
+                _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.MSG_GENERIC_ERROR, Message.OPTION_OK);
+            }
         }
 
         private async void ForgotPasswordExecuted()
@@ -180,17 +191,16 @@ namespace escout.ViewModels
                 try
                 {
                     IsVisible = true;
-
                     var response = await RestConnector.PostObjectAsync(RestConnector.RESET_PASSWORD, new User(Username, null, Email));
-                    if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
+
+                    if (200 == (int)response.StatusCode)
                     {
-                        var result = JsonConvert.DeserializeObject<SvcResult>(await RestConnector.GetContent(response));
-                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, result.ErrorMessage, Message.OPTION_OK);
+                        _ = App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_SUCCESS, Message.OPTION_OK);
                         await Navigation.PopModalAsync();
                     }
                     else
                     {
-                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.GENERIC_ERROR, Message.OPTION_OK);
+                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), Message.OPTION_OK);
                     }
                 }
                 catch (Exception ex)
@@ -203,7 +213,22 @@ namespace escout.ViewModels
                 }
             }
             else
-                _ = App.DisplayMessage(Message.GENERIC_ERROR, Message.AUTHENTICATION_INVALID_2, Message.OPTION_OK);
+            {
+                _ = App.DisplayMessage(Message.MSG_GENERIC_ERROR, Message.MSG_AUTHENTICATION_INVALID_2, Message.OPTION_OK);
+            }
+        }
+
+        private async void SettingsViewExecuted()
+        {
+            var app = Application.Current as App;
+
+            try
+            {
+                var result = await App.DisplayPrompt(Message.TITLE_STATUS_SETTINGS, Message.MSG_CHANGE_SERVER);
+                if (result != null)
+                    app.DefaultServer = result;
+            }
+            catch (Exception) { }
         }
 
         private async void SignUpViewExecuted()
@@ -224,21 +249,6 @@ namespace escout.ViewModels
         private async void CancelExecuted()
         {
             await Navigation.PopModalAsync();
-        }
-
-        public static string GenerateSha256String(string inputString)
-        {
-            var sb = new StringBuilder();
-
-            using var hash = SHA256.Create();
-
-            var enc = Encoding.UTF8;
-            var result = hash.ComputeHash(enc.GetBytes(inputString));
-
-            foreach (var b in result)
-                sb.Append(b.ToString("x2"));
-
-            return sb.ToString();
         }
     }
 }

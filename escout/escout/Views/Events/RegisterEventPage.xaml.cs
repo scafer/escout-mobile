@@ -1,6 +1,6 @@
 ﻿using escout.Helpers;
 using escout.Models;
-using escout.Models.Db;
+using escout.Models.Database;
 using escout.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -84,7 +84,7 @@ namespace escout.Views.Events
 
         private async void LeaveItem_OnClicked(object sender, EventArgs e)
         {
-            if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.LEAVE, Message.OPTION_NO, Message.OPTION_YES))
+            if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.MSG_LEAVE, Message.OPTION_NO, Message.OPTION_YES))
             {
                 _ = RestUtils.UpdateGameStatus(App.DbGame.Id, 2);
                 Application.Current.MainPage = new NavigationPage(new MainPage());
@@ -96,7 +96,7 @@ namespace escout.Views.Events
         {
             if (StopWatch.ShowTime() == "00:00")
             {
-                if (await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.GAME_START, Message.OPTION_YES, Message.OPTION_NO))
+                if (await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.MSG_GAME_START, Message.OPTION_YES, Message.OPTION_NO))
                     Resume_Clicked();
             }
             else
@@ -273,7 +273,7 @@ namespace escout.Views.Events
                     }
                 }
                 else
-                    await DisplayAlert(Message.TITLE_STATUS_ERROR, Message.TIMER, Message.OPTION_OK);
+                    await DisplayAlert(Message.TITLE_STATUS_ERROR, Message.MSG_TIMER, Message.OPTION_OK);
             }
             catch (Exception ex)
             {

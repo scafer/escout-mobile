@@ -1,4 +1,4 @@
-﻿using escout.Models.Db;
+﻿using escout.Models.Database;
 using Newtonsoft.Json;
 
 namespace escout.Models.Rest
@@ -7,26 +7,37 @@ namespace escout.Models.Rest
     {
         [JsonProperty("id")]
         public int Id { get; set; }
+
         [JsonProperty("key")]
         public string Key { get; set; }
+
         [JsonProperty("time")]
         public string Time { get; set; }
+
         [JsonProperty("gameTime")]
         public string GameTime { get; set; }
+
         [JsonProperty("eventDescription")]
         public string EventDescription { get; set; }
+
         [JsonProperty("gameId")]
         public int GameId { get; set; }
+
         [JsonProperty("eventId")]
         public int EventId { get; set; }
+
         [JsonProperty("athleteId")]
         public int? AthleteId { get; set; }
+
         [JsonProperty("clubId")]
         public int? ClubId { get; set; }
+
         [JsonProperty("userId")]
         public int UserId { get; set; }
+
         [JsonProperty("created")]
         public string Created { get; set; }
+
         [JsonProperty("updated")]
         public string Updated { get; set; }
 

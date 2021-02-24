@@ -6,8 +6,10 @@ namespace escout.Models.Rest
     {
         [JsonProperty("fieldName")]
         public string FieldName { get; set; }
+
         [JsonProperty("condition")]
         public string Condition { get; set; }
+
         [JsonProperty("value")]
         public string Value { get; set; }
 

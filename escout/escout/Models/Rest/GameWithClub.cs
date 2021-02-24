@@ -1,6 +1,4 @@
-﻿using escout.Models.Rest;
-
-namespace escout.Models
+﻿namespace escout.Models.Rest
 {
     class GameWithClub
     {

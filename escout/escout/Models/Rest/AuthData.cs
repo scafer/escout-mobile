@@ -6,8 +6,10 @@ namespace escout.Models.Rest
     {
         [JsonProperty("token")]
         public string Token { get; set; }
+
         [JsonProperty("tokenExpirationTime")]
         public long TokenExpirationTime { get; set; }
+
         [JsonProperty("id")]
         public string Id { get; set; }
     }

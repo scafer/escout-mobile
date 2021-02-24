@@ -105,7 +105,7 @@ namespace escout.ViewModels
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
+                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
                     Competitions = new ObservableCollection<Competition>(await GetCompetitions(null));
             }
             else
@@ -126,8 +126,8 @@ namespace escout.ViewModels
                 request += "?query=" + JsonConvert.SerializeObject(query);
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
-                _competition = JsonConvert.DeserializeObject<List<Competition>>(await RestConnector.GetContent(response));
+            if (200 == (int)response.StatusCode)
+                _competition = JsonConvert.DeserializeObject<List<Competition>>(await response.Content.ReadAsStringAsync());
 
             return _competition;
         }
@@ -138,8 +138,8 @@ namespace escout.ViewModels
             var request = RestConnector.COMPETITION + "?id=" + id;
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(await RestConnector.GetContent(response)))
-                competition = JsonConvert.DeserializeObject<Competition>(await RestConnector.GetContent(response));
+            if (200 == (int)response.StatusCode)
+                competition = JsonConvert.DeserializeObject<Competition>(await response.Content.ReadAsStringAsync());
 
             return competition;
         }
@@ -149,10 +149,10 @@ namespace escout.ViewModels
             var competitions = new List<Competition>();
             var request = RestConnector.FAVORITES + "?query=competitionId";
 
-            var favoriteResponse = await RestConnector.GetObjectAsync(request);
-            if (!string.IsNullOrEmpty(await RestConnector.GetContent(favoriteResponse)))
+            var response = await RestConnector.GetObjectAsync(request);
+            if (200 == (int)response.StatusCode)
             {
-                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await RestConnector.GetContent(favoriteResponse));
+                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
                 foreach (var f in _favorites)
                     competitions.Add(await GetCompetitionById(int.Parse(f.CompetitionId.ToString())));
             }

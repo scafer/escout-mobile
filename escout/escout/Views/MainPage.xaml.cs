@@ -92,8 +92,8 @@ namespace escout.Views
 
         private async Task GetData()
         {
-            var response = RestConnector.GetObjectAsync(RestConnector.USER);
-            var user = JsonConvert.DeserializeObject<User>(await RestConnector.GetContent(await response));
+            var response = await RestConnector.GetObjectAsync(RestConnector.USER);
+            var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
 
             if (user.ImageId != null)
             {
