@@ -1,6 +1,8 @@
-﻿using escout.Helpers;
-using escout.Models.Database;
+﻿using escout.Models.Database;
 using escout.Models.Rest;
+using escout.Services;
+using escout.Services.Database;
+using escout.Services.Rest;
 using escout.Views.Events;
 using Newtonsoft.Json;
 using System;
@@ -62,7 +64,7 @@ namespace escout.Views.GameData
 
         private async Task StartDbGame()
         {
-            var clubs = await new LocalDb().GetClubs(dbGame.DataExt);
+            var clubs = await new Query().GetClubs(dbGame.DataExt);
             lbl_home.Text = clubs[0].Name;
             lbl_visitor.Text = clubs[1].Name;
             lbl_home_result.Text = dbGame.HomeScore.ToString();
@@ -81,7 +83,7 @@ namespace escout.Views.GameData
 
         private async Task SaveGameData(int gameId)
         {
-            var result = await new LocalDb().GetDbGameById(gameId);
+            var result = await new Query().GetDbGameById(gameId);
 
             if (result.Count == 0)
             {
@@ -91,7 +93,7 @@ namespace escout.Views.GameData
                     try
                     {
                         var gameData = JsonConvert.DeserializeObject<Models.Rest.GameData>(await response.Content.ReadAsStringAsync());
-                        var db = new LocalDb();
+                        var db = new Query();
                         _ = db.AddGameData(gameData);
                     }
                     catch (Exception e)

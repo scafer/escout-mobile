@@ -1,4 +1,4 @@
-﻿namespace escout.Helpers
+﻿namespace escout.Services
 {
     class Message
     {

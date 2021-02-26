@@ -1,7 +1,7 @@
-﻿using escout.Helpers;
-using escout.Helpers.Services;
-using escout.Models;
-using escout.Models.Rest;
+﻿using escout.Models.Rest;
+using escout.Services;
+using escout.Services.Dependency;
+using escout.Services.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

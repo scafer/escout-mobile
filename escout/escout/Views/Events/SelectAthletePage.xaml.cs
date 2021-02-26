@@ -1,5 +1,7 @@
-﻿using escout.Helpers;
-using escout.Models.Database;
+﻿using escout.Models.Database;
+using escout.Services;
+using escout.Services.Database;
+using escout.Services.Rest;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -21,7 +23,7 @@ namespace escout.Views.Events
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            dbClubs = await new LocalDb().GetClubs(App.DbGame.DataExt);
+            dbClubs = await new Query().GetClubs(App.DbGame.DataExt);
             bt_home.Text = dbClubs[0].Name;
             bt_visitor.Text = dbClubs[1].Name;
             _ = LoadImages(dbClubs[0].ImageId, dbClubs[1].ImageId);
@@ -53,12 +55,12 @@ namespace escout.Views.Events
 
         private async void Bt_home_OnClicked(object sender, EventArgs e)
         {
-            listView.ItemsSource = await new LocalDb().GetAthletes(App.DbGame.DataExt, dbClubs[0].Id);
+            listView.ItemsSource = await new Query().GetAthletes(App.DbGame.DataExt, dbClubs[0].Id);
         }
 
         private async void Bt_visitor_OnClicked(object sender, EventArgs e)
         {
-            listView.ItemsSource = await new LocalDb().GetAthletes(App.DbGame.DataExt, dbClubs[1].Id);
+            listView.ItemsSource = await new Query().GetAthletes(App.DbGame.DataExt, dbClubs[1].Id);
         }
 
         private async void Button_OnClicked(object sender, EventArgs e)

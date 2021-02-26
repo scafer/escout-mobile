@@ -1,10 +1,9 @@
-﻿using escout.Helpers;
-using escout.Models;
-using escout.ViewModels;
+﻿using escout.ViewModels;
 using System;
 using escout.Models.Database;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using escout.Services.Database;
 
 namespace escout.Views.GameData
 {
@@ -33,8 +32,7 @@ namespace escout.Views.GameData
             var menuItem = sender as MenuItem;
             var game = menuItem.CommandParameter as DbGameWithClub;
 
-            var db = new LocalDb();
-            await db.RemoveGameData(game.DbGame.DataExt);
+            await new Query().RemoveGameData(game.DbGame.DataExt);
         }
     }
 }

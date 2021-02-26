@@ -1,5 +1,7 @@
-﻿using escout.Helpers;
-using escout.Models.Database;
+﻿using escout.Models.Database;
+using escout.Services;
+using escout.Services.Database;
+using escout.Services.Rest;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -65,13 +67,13 @@ namespace escout.ViewModels
 
         private async Task LoadEvents()
         {
-            var db = new LocalDb();
+            var db = new Query();
             GameEvents = new ObservableCollection<DbGameEvent>(await db.GetGameEvents());
         }
 
         private async void SynchronizeEventsExecuted()
         {
-            var db = new LocalDb();
+            var db = new Query();
             var unsynchronizedEvents = GameEvents.Where(e => e.Synchronized).ToList();
 
             if (unsynchronizedEvents.Count != 0)

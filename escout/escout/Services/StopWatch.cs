@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace escout.Helpers
+namespace escout.Services
 {
     public static class StopWatch
     {

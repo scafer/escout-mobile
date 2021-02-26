@@ -1,5 +1,6 @@
-﻿using escout.Helpers;
-using escout.Models.Rest;
+﻿using escout.Models.Rest;
+using escout.Services;
+using escout.Services.Rest;
 using escout.ViewModels;
 using Newtonsoft.Json;
 using System;

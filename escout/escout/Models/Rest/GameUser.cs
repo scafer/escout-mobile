@@ -2,7 +2,7 @@
 
 namespace escout.Models.Rest
 {
-    class GameUser
+    public class GameUser
     {
         [JsonProperty("id")]
         public int Id { get; set; }

@@ -1,5 +1,5 @@
-﻿using escout.Helpers;
-using escout.Models.Rest;
+﻿using escout.Models.Rest;
+using escout.Services.Rest;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

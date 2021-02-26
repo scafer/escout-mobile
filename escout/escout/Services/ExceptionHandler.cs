@@ -2,7 +2,7 @@
 using System.Net.Http;
 using Xamarin.Forms;
 
-namespace escout.Helpers
+namespace escout.Services
 {
     public static class ExceptionHandler
     {

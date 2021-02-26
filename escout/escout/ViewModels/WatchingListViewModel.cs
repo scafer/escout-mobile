@@ -1,6 +1,5 @@
-﻿using escout.Helpers;
-using escout.Models;
-using escout.Models.Database;
+﻿using escout.Models.Database;
+using escout.Services.Database;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -77,11 +76,11 @@ namespace escout.ViewModels
 
         private async void GetGames()
         {
-            var db = new LocalDb();
+            var query = new Query();
 
-            var pending = await db.GetDbGame(0);
-            var active = await db.GetDbGame(1);
-            var finished = await db.GetDbGame(2);
+            var pending = await query.GetDbGame(0);
+            var active = await query.GetDbGame(1);
+            var finished = await query.GetDbGame(2);
 
             var pendingList = new List<DbGameWithClub>();
             var activeList = new List<DbGameWithClub>();
@@ -91,8 +90,8 @@ namespace escout.ViewModels
             {
                 var g = new DbGameWithClub(game)
                 {
-                    DbClubHome = await new LocalDb().GetClub(game.HomeId),
-                    DbClubVisitor = await new LocalDb().GetClub(game.VisitorId)
+                    DbClubHome = await query.GetClub(game.HomeId),
+                    DbClubVisitor = await query.GetClub(game.VisitorId)
                 };
                 pendingList.Add(g);
             }
@@ -101,8 +100,8 @@ namespace escout.ViewModels
             {
                 var g = new DbGameWithClub(game)
                 {
-                    DbClubHome = await new LocalDb().GetClub(game.HomeId),
-                    DbClubVisitor = await new LocalDb().GetClub(game.VisitorId)
+                    DbClubHome = await query.GetClub(game.HomeId),
+                    DbClubVisitor = await query.GetClub(game.VisitorId)
                 };
                 activeList.Add(g);
             }
@@ -111,8 +110,8 @@ namespace escout.ViewModels
             {
                 var g = new DbGameWithClub(game)
                 {
-                    DbClubHome = await new LocalDb().GetClub(game.HomeId),
-                    DbClubVisitor = await new LocalDb().GetClub(game.VisitorId)
+                    DbClubHome = await query.GetClub(game.HomeId),
+                    DbClubVisitor = await query.GetClub(game.VisitorId)
                 };
                 finishedList.Add(g);
             }

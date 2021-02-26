@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace escout.Helpers
+namespace escout.Services.Rest
 {
     public class RestConnector
     {
