@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace escout.Helpers
+namespace escout.Services.Rest
 {
     public static class RestUtils
     {

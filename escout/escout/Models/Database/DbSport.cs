@@ -1,12 +1,10 @@
 ﻿using escout.Models.Rest;
-using SQLite;
+using escout.Services.Database;
 
 namespace escout.Models.Database
 {
-    class DbSport
+    public class DbSport : BaseModel
     {
-        [PrimaryKey, AutoIncrement]
-        public int LocalId { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }
         public string ImageId { get; set; }

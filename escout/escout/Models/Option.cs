@@ -1,4 +1,6 @@
-﻿namespace escout.Models
+﻿using escout.Models.Database;
+
+namespace escout.Models
 {
     public class Option
     {
@@ -9,6 +11,11 @@
         {
             Name = name;
             ImageUrl = imageUrl;
+        }
+
+        public Option(DbEvent dbEvent)
+        {
+            Name = dbEvent.Name;
         }
     }
 }

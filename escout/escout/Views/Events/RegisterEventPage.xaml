@@ -45,8 +45,8 @@
             </Grid>
 
             <StackLayout VerticalOptions="EndAndExpand">
-                <Button x:Name="btn_isRunning" Clicked="isRunning_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
-                <Button Text="Events Timeline" Clicked="Button_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
+                <Button x:Name="btn_isRunning" Clicked="IsRunning_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
+                <Button Text="Events Timeline" Clicked="EventsTimeline_Clicked" BorderWidth="3" BorderColor="#407DF4" BackgroundColor="White" CornerRadius="8" TextColor="#407DF4"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

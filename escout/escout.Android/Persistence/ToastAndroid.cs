@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using escout.Droid.Persistence;
-using escout.Helpers.Services;
+using escout.Services.Dependency;
 
 [assembly: Xamarin.Forms.Dependency(typeof(ToastAndroid))]
 

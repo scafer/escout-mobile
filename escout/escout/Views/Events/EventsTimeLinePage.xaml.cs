@@ -1,6 +1,6 @@
-﻿using escout.Helpers;
-using escout.Models;
+﻿using escout.Models;
 using escout.Models.Database;
+using escout.Services.Database;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Xamarin.Forms;
@@ -29,7 +29,7 @@ namespace escout.Views.Events
 
         private async void LoadTimeLineEvents()
         {
-            var db = new LocalDb();
+            var db = new Query();
             var timeLine = new ObservableCollection<TimeLineElement>();
             var events = new ObservableCollection<DbEvent>(await db.GetEvents());
             var gameEvents = new ObservableCollection<DbGameEvent>(await db.GetGameEvents()).

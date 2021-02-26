@@ -1,12 +1,10 @@
 ﻿using escout.Models.Rest;
-using SQLite;
+using escout.Services.Database;
 
 namespace escout.Models.Database
 {
-    public class DbGame
+    public class DbGame : BaseModel
     {
-        [PrimaryKey, AutoIncrement]
-        public int LocalId { get; set; }
         public int Id { get; set; }
         public string TimeStart { get; set; }
         public string TimeEnd { get; set; }

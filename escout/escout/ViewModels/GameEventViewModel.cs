@@ -1,6 +1,7 @@
-﻿using escout.Helpers;
-using escout.Models.Database;
+﻿using escout.Models.Database;
 using escout.Models.Rest;
+using escout.Services.Database;
+using escout.Services.Rest;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,7 +32,7 @@ namespace escout.ViewModels
         {
             try
             {
-                var db = new LocalDb();
+                var db = new Query();
                 dbGameEvent.Synchronized = false;
                 dbGameEvent.Id = await db.AddGameEvent(dbGameEvent);
 
