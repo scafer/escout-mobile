@@ -21,7 +21,7 @@ namespace escout.ViewModels
         private bool isBusy;
         private string key;
         private string pairValue;
-        private ObservableCollection<GameWithClub> games;
+        private ObservableCollection<Game> games;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -34,9 +34,10 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
+            SearchExecuted();
         }
 
-        public ObservableCollection<GameWithClub> Games
+        public ObservableCollection<Game> Games
         {
             get => games;
             set
@@ -100,52 +101,18 @@ namespace escout.ViewModels
         private async void SearchExecuted()
         {
             IsVisible = true;
-            var gameWithClub = new List<GameWithClub>();
 
             if (Key == "favorites")
             {
-                foreach (var x in await GetFavoriteGames())
-                {
-                    var a = new GameWithClub(x)
-                    {
-                        ClubHome = await RestUtils.GetClub(x.HomeId),
-                        ClubVisitor = await RestUtils.GetClub(x.VisitorId)
-                    };
-                    gameWithClub.Add(a);
-                }
-
-                Games = new ObservableCollection<GameWithClub>(gameWithClub);
+                Games = new ObservableCollection<Game>(await GetFavoriteGames());
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
-                {
-                    foreach (var x in await GetGames(null))
-                    {
-                        var a = new GameWithClub(x)
-                        {
-                            ClubHome = await RestUtils.GetClub(x.HomeId),
-                            ClubVisitor = await RestUtils.GetClub(x.VisitorId)
-                        };
-                        gameWithClub.Add(a);
-                    }
-
-                    Games = new ObservableCollection<GameWithClub>(gameWithClub);
-                }
+                Games = new ObservableCollection<Game>(await GetGames(null));
             }
             else
             {
-                foreach (var x in await GetGames(new SearchQuery(Key, "iLIKE", Value + "%")))
-                {
-                    var a = new GameWithClub(x)
-                    {
-                        ClubHome = await RestUtils.GetClub(x.HomeId),
-                        ClubVisitor = await RestUtils.GetClub(x.VisitorId)
-                    };
-                    gameWithClub.Add(a);
-                }
-
-                Games = new ObservableCollection<GameWithClub>(gameWithClub);
+                Games = new ObservableCollection<Game>(await GetGames(new SearchQuery(Key, "iLIKE", Value + "%")));
             }
 
             IsVisible = false;

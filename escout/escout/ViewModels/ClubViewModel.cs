@@ -34,6 +34,7 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
+            SearchExecuted();
         }
 
         public ObservableCollection<Club> Clubs
@@ -106,8 +107,7 @@ namespace escout.ViewModels
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
-                    Clubs = new ObservableCollection<Club>(await GetClubs(null));
+                Clubs = new ObservableCollection<Club>(await GetClubs(null));
             }
             else
             {

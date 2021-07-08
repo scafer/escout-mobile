@@ -34,6 +34,7 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
+            SearchExecuted();
         }
 
         public ObservableCollection<Athlete> Athletes
@@ -106,8 +107,7 @@ namespace escout.ViewModels
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
-                    Athletes = new ObservableCollection<Athlete>(await GetAthletes(null));
+                Athletes = new ObservableCollection<Athlete>(await GetAthletes(null));
             }
             else
                 Athletes = new ObservableCollection<Athlete>(await GetAthletes(new SearchQuery(Key, "iLIKE", Value + "%")));

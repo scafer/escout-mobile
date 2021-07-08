@@ -33,9 +33,9 @@
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout Orientation="Vertical" Padding="1">
-                                    <Label Text="{Binding ClubHome.Name, StringFormat='Home Team: {0}'}"/>
-                                    <Label Text="{Binding ClubVisitor.Name, StringFormat='Visitor Team: {0}'}"/>
-                                    <Label Text="{Binding Game.TimeStart, StringFormat='Time Start: {0}'}"/>
+                                    <Label Text="{Binding DisplayOptions[homeName], StringFormat='Home Team: {0}'}"/>
+                                    <Label Text="{Binding DisplayOptions[visitorName], StringFormat='Visitor Team: {0}'}"/>
+                                    <Label Text="{Binding TimeStart, StringFormat='Time Start: {0}'}"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
