@@ -14,16 +14,9 @@ namespace escout.Views.GameData
             InitializeComponent();
             BindingContext = club;
 
-            if (club.ImageId != null)
-                _ = LoadImage(club.ImageId);
-        }
-
-        private async Task LoadImage(int? imageId)
-        {
-            var img = await RestUtils.GetImage(imageId);
-            if (!string.IsNullOrEmpty(img.ImageUrl))
+            if (club.DisplayOptions.ContainsKey("imageUrl"))
             {
-                Img.Source = img.ImageUrl;
+                Img.Source = club.DisplayOptions["imageUrl"];
                 Img.Aspect = Aspect.AspectFill;
             }
         }

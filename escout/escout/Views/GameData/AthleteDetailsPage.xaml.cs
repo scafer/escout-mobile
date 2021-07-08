@@ -14,26 +14,16 @@ namespace escout.Views.GameData
             InitializeComponent();
             BindingContext = athlete;
 
-            if (athlete.ImageId != null)
-                _ = LoadImage(athlete.ImageId);
-            if (athlete.ClubId != null)
-                _ = LoadClub(athlete.ClubId);
-        }
-
-        private async Task LoadImage(int? imageId)
-        {
-            var img = await RestUtils.GetImage(imageId);
-            if (!string.IsNullOrEmpty(img.ImageUrl))
+            if (athlete.DisplayOptions.ContainsKey("imageUrl"))
             {
-                Img.Source = img.ImageUrl;
+                Img.Source = athlete.DisplayOptions["imageUrl"];
                 Img.Aspect = Aspect.AspectFill;
             }
-        }
 
-        private async Task LoadClub(int? clubId)
-        {
-            var club = await RestUtils.GetClub((int)clubId);
-            lblClubName.Text = club.Name;
+            if (athlete.DisplayOptions.ContainsKey("clubName"))
+            {
+                lblClubName.Text = athlete.DisplayOptions["clubName"];
+            }
         }
     }
 }

@@ -34,6 +34,7 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
+            SearchExecuted();
         }
 
         public ObservableCollection<Competition> Competitions
@@ -106,8 +107,7 @@ namespace escout.ViewModels
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
-                    Competitions = new ObservableCollection<Competition>(await GetCompetitions(null));
+                Competitions = new ObservableCollection<Competition>(await GetCompetitions(null));
             }
             else
                 Competitions = new ObservableCollection<Competition>(await GetCompetitions(new SearchQuery(Key, "iLIKE", Value + "%")));

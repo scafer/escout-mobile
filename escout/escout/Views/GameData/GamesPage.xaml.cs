@@ -1,5 +1,4 @@
-﻿using escout.Models;
-using escout.Models.Rest;
+﻿using escout.Models.Rest;
 using escout.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -22,8 +21,8 @@ namespace escout.Views.GameData
 
         private void ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var game = e.SelectedItem as GameWithClub;
-            Navigation.PushAsync(new GameDetailsPage(game.Game));
+            var game = e.SelectedItem as Game;
+            Navigation.PushAsync(new GameDetailsPage(game));
         }
     }
 }
