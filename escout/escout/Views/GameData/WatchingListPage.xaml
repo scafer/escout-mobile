@@ -29,7 +29,7 @@
                                         <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}" Clicked="OnRemoveClicked"/>
                                     </ViewCell.ContextActions>
                                     <StackLayout Orientation="Vertical" Padding="1">
-                                        <Label Text="{Binding DbClubVisitor.Name, StringFormat='Home Team: {0}'}"/>
+                                        <Label Text="{Binding DbClubHome.Name, StringFormat='Home Team: {0}'}"/>
                                         <Label Text="{Binding DbClubVisitor.Name, StringFormat='Visitor Team: {0}'}"/>
                                         <Label Text="{Binding DbGame.TimeStart, StringFormat='Time Start: {0}'}"/>
                                     </StackLayout>
@@ -50,7 +50,7 @@
                                         <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}" Clicked="OnRemoveClicked"/>
                                     </ViewCell.ContextActions>
                                     <StackLayout Orientation="Vertical" Padding="1" >
-                                        <Label Text="{Binding DbClubVisitor.Name, StringFormat='Home Team: {0}'}"/>
+                                        <Label Text="{Binding DbClubHome.Name, StringFormat='Home Team: {0}'}"/>
                                         <Label Text="{Binding DbClubVisitor.Name, StringFormat='Visitor Team: {0}'}"/>
                                         <Label Text="{Binding DbGame.TimeStart, StringFormat='Time Start: {0}'}"/>
                                     </StackLayout>
@@ -71,7 +71,7 @@
                                         <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}" Clicked="OnRemoveClicked"/>
                                     </ViewCell.ContextActions>
                                     <StackLayout Orientation="Vertical" Padding="1">
-                                        <Label Text="{Binding DbClubVisitor.Name, StringFormat='Home Team: {0}'}"/>
+                                        <Label Text="{Binding DbClubHome.Name, StringFormat='Home Team: {0}'}"/>
                                         <Label Text="{Binding DbClubVisitor.Name, StringFormat='Visitor Team: {0}'}"/>
                                         <Label Text="{Binding DbGame.TimeStart, StringFormat='Time Start: {0}'}"/>
                                     </StackLayout>

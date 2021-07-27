@@ -1,4 +1,5 @@
-﻿using escout.Models.Rest;
+﻿using escout.Helpers;
+using escout.Models.Rest;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -80,7 +81,7 @@ namespace escout.Services.Rest
             }
             catch (Exception ex)
             {
-                await App.DisplayMessage(Message.TITLE_STATUS_ERROR, ex.Message, Message.OPTION_OK);
+                await App.DisplayMessage(ConstValues.TITLE_STATUS_ERROR, ex.Message, ConstValues.OPTION_OK);
             }
         }
     }

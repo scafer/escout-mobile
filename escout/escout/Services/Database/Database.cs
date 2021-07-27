@@ -51,7 +51,9 @@ namespace escout.Services.Database
                 var tableInfo = connection.GetConnection().GetTableInfo(tableName);
 
                 if (tableInfo.Count > 0)
+                {
                     return true;
+                }
                 return false;
             }
         }
@@ -59,25 +61,33 @@ namespace escout.Services.Database
         public override Task<List<T>> Select()
         {
             lock (locker)
+            {
                  return connection.Table<T>().ToListAsync();
+            }
         }
 
         public override Task<T> Select(int id)
         {
             lock (locker)
+            {
                 return connection.Table<T>().Where(i => i.LocalId == id).FirstOrDefaultAsync();
+            }
         }
 
         public override Task<List<T>> Query(string query)
         {
             lock (locker)
+            {
                 return connection.QueryAsync<T>(query);
+            }
         }
 
         public override Task<int> Count()
         {
             lock (locker)
+            {
                 return connection.Table<T>().CountAsync();
+            }
         }
 
         public override Task<int> Insert(T data)
@@ -85,46 +95,62 @@ namespace escout.Services.Database
             lock (locker)
             {
                 if (data.LocalId != 0)
+                {
                     return connection.UpdateAsync(data);
+                }
                 else
+                {
                     return connection.InsertAsync(data);
+                }
             }
         }
 
         public override Task<int> Insert(IEnumerable<T> data)
         {
             lock (locker)
+            {
                 return connection.InsertAllAsync(data);
+            }
         }
 
         public override Task<int> Update(T data)
         {
             lock (locker)
+            {
                 return connection.UpdateAsync(data);
+            }
         }
 
         public override Task<int> Update(IEnumerable<T> data)
         {
             lock (locker)
+            {
                 return connection.UpdateAllAsync(data);
+            }
         }
 
         public override Task<int> Delete(T data)
         {
             lock (locker)
+            {
                 return connection.DeleteAsync(data);
+            }
         }
 
         public override Task<int> Delete(int id)
         {
             lock (locker)
+            {
                 return connection.DeleteAsync(id);
+            }
         }
 
         public override Task<int> Delete()
         {
             lock (locker)
+            {
                 return connection.DeleteAllAsync<T>();
+            }
         }
 
         public override void Dispose()
@@ -138,10 +164,14 @@ namespace escout.Services.Database
             lock (locker)
             {
                 if (disposed)
+                {
                     return;
+                }
 
                 if (disposing)
+                {
                     safeHandle.Dispose();
+                }
 
                 connection = null;
                 disposed = true;

@@ -1,5 +1,5 @@
-﻿using escout.Models.Rest;
-using escout.Services;
+﻿using escout.Helpers;
+using escout.Models.Rest;
 using escout.Services.Dependency;
 using escout.Services.Rest;
 using Newtonsoft.Json;
@@ -101,6 +101,7 @@ namespace escout.ViewModels
         private async void SearchExecuted()
         {
             IsVisible = true;
+
             if (Key == "favorites")
             {
                 Clubs = new ObservableCollection<Club>(await GetFavoriteClubs());
@@ -117,7 +118,9 @@ namespace escout.ViewModels
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Clubs != null)
-                DependencyService.Get<IToast>().LongAlert(Clubs.Count + Message.TOAST_RESULTS);
+            {
+                DependencyService.Get<IToast>().LongAlert(string.Format(ConstValues.TOAST_RESULTS, Clubs.Count));
+            }
         }
 
         private async Task<List<Club>> GetClubs(SearchQuery query)
@@ -126,11 +129,16 @@ namespace escout.ViewModels
             var request = RestConnector.CLUBS;
 
             if (query != null)
+            {
                 request += "?query=" + JsonConvert.SerializeObject(query);
+            }
 
             var response = await RestConnector.GetObjectAsync(request);
+
             if (200 == (int)response.StatusCode)
+            {
                 clubs = JsonConvert.DeserializeObject<List<Club>>(await response.Content.ReadAsStringAsync());
+            }
 
             return clubs;
         }
@@ -139,10 +147,12 @@ namespace escout.ViewModels
         {
             var club = new Club();
             var request = RestConnector.CLUB + "?id=" + id;
-
             var response = await RestConnector.GetObjectAsync(request);
+
             if (200 == (int)response.StatusCode)
+            {
                 club = JsonConvert.DeserializeObject<Club>(await response.Content.ReadAsStringAsync());
+            }
 
             return club;
         }
@@ -156,8 +166,11 @@ namespace escout.ViewModels
             if (200 == (int)response.StatusCode)
             {
                 var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
+
                 foreach (var f in _favorites)
+                {
                     clubs.Add(await GetClubById(int.Parse(f.ClubId.ToString())));
+                }
             }
 
             return clubs;

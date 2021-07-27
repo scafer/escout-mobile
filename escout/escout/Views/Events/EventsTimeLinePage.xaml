@@ -11,6 +11,7 @@
     
     <ContentPage.Content>
         <StackLayout Margin="5">
+            <Button x:Name="BtnBack" Text="Back" Clicked="BtnBack_Clicked" HorizontalOptions="Start"/>
             <Label Text="Events Timeline:" FontSize="Medium" FontAttributes="Bold"/>
             <ListView x:Name="timelineListView" ItemTapped="ItemTapped" ItemsSource="{Binding .}" RowHeight="75" SeparatorVisibility="None">
                 <ListView.ItemTemplate>

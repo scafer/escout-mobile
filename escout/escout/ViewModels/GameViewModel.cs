@@ -1,5 +1,5 @@
-﻿using escout.Models.Rest;
-using escout.Services;
+﻿using escout.Helpers;
+using escout.Models.Rest;
 using escout.Services.Dependency;
 using escout.Services.Rest;
 using Newtonsoft.Json;
@@ -118,7 +118,9 @@ namespace escout.ViewModels
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Games != null)
-                DependencyService.Get<IToast>().LongAlert(Games.Count + Message.TOAST_RESULTS);
+            {
+                DependencyService.Get<IToast>().LongAlert(string.Format(ConstValues.TOAST_RESULTS, Games.Count));
+            }
         }
 
         private async Task<List<Game>> GetGames(SearchQuery query)
@@ -127,11 +129,16 @@ namespace escout.ViewModels
             var request = RestConnector.GAMES;
 
             if (query != null)
+            {
                 request += "?query=" + JsonConvert.SerializeObject(query);
+            }
 
             var response = await RestConnector.GetObjectAsync(request);
+
             if (200.Equals((int)response.StatusCode))
+            {
                 _games = JsonConvert.DeserializeObject<List<Game>>(await response.Content.ReadAsStringAsync());
+            }
 
             return _games;
         }
@@ -140,10 +147,12 @@ namespace escout.ViewModels
         {
             var game = new Game();
             var request = RestConnector.GAME + "?id=" + id;
-
             var response = await RestConnector.GetObjectAsync(request);
+
             if (200.Equals((int)response.StatusCode))
+            {
                 game = JsonConvert.DeserializeObject<Game>(await response.Content.ReadAsStringAsync());
+            }
 
             return game;
         }
@@ -157,8 +166,11 @@ namespace escout.ViewModels
             if (200.Equals((int)response.StatusCode))
             {
                 var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
+
                 foreach (var f in _favorites)
+                {
                     games.Add(await GetGameById(int.Parse(f.GameId.ToString())));
+                }
             }
 
             return games;

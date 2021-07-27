@@ -1,6 +1,6 @@
-﻿using escout.Models.Database;
+﻿using escout.Helpers;
+using escout.Models.Database;
 using escout.Models.Rest;
-using escout.Services;
 using escout.Services.Database;
 using escout.Services.Rest;
 using escout.Views.Events;
@@ -74,7 +74,7 @@ namespace escout.Views.GameData
 
         private async void AddGameToWatchList(object sender, EventArgs e)
         {
-            var response = await DisplayAlert(Message.TITLE_STATUS_INFO, Message.MSG_ADD_TO_WATCHING, Message.OPTION_YES, Message.OPTION_NO);
+            var response = await DisplayAlert(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_ADD_TO_WATCHING, ConstValues.OPTION_YES, ConstValues.OPTION_NO);
 
             if (response)
             {
@@ -99,12 +99,12 @@ namespace escout.Views.GameData
                     }
                     catch (Exception e)
                     {
-                        await DisplayAlert(Message.TITLE_STATUS_ERROR, e.ToString(), Message.OPTION_OK);
+                        await DisplayAlert(ConstValues.TITLE_STATUS_ERROR, e.ToString(), ConstValues.OPTION_OK);
                     }
                 }
             }
             else
-                await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.MSG_SAVE_GAME_ERROR, Message.OPTION_OK);
+                await DisplayAlert(ConstValues.TITLE_STATUS_WARNING, ConstValues.MSG_SAVE_GAME_ERROR, ConstValues.OPTION_OK);
         }
 
         private async void Start_OnClicked(object sender, EventArgs e)

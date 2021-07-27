@@ -1,4 +1,4 @@
-﻿using escout.Models;
+﻿using escout.Helpers;
 using escout.Models.Database;
 using escout.Services;
 using escout.Services.Database;
@@ -85,7 +85,7 @@ namespace escout.Views.Events
         {
             if (StopWatch.ShowTime() == "00:00")
             {
-                if (await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.MSG_GAME_START, Message.OPTION_YES, Message.OPTION_NO))
+                if (await DisplayAlert(ConstValues.TITLE_STATUS_WARNING, ConstValues.MSG_GAME_START, ConstValues.OPTION_YES, ConstValues.OPTION_NO))
                     Resume_Clicked();
             }
             else
@@ -94,10 +94,9 @@ namespace escout.Views.Events
                 if (!string.IsNullOrEmpty(button.Text))
                 {
                     var text = button.Text;
+                    PreviousEvent.Text = string.Format(ConstValues.MSG_PREVIOUS_EVENT, text);
 
-                    PreviousEvent.Text = "Previous Event: " + text;
-
-                    if (button.Text != await GetEventName("Soccer000"))
+                    if (button.Text != await GetEventName(ConstValues.EVENT_SOCCER_000))
                     {
                         var evt = new DbGameEvent()
                         {
@@ -114,68 +113,7 @@ namespace escout.Views.Events
                         _ = GameEventViewModel.RegisterEvent(evt);
                     }
 
-                    if(text.Equals(await GetEventName("Soccer000"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer001"))) //Board02
-                        SetButtonBoard("Soccer004", "Soccer002", "Soccer003", "Soccer005");
-                    else if (text.Equals(await GetEventName("Soccer002"))) //Board05
-                        SetButtonBoard("Soccer015", "Soccer016", "Soccer014", dbAthlete.PositionKey.Equals(1) ? "Soccer026" : "");
-                    else if (text.Equals(await GetEventName("Soccer003"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer004"))) //Board04
-                        SetButtonBoard("Soccer011", "Soccer013", "Soccer010", "Soccer012");
-                    else if (text.Equals(await GetEventName("Soccer005"))) //Board03
-                        SetButtonBoard("Soccer006", "Soccer007", "", "");
-                    else if (text.Equals(await GetEventName("Soccer006"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer007"))) //Board11
-                        SetButtonBoard("Soccer009", "Soccer008", "", "");
-                    else if (text.Equals(await GetEventName("Soccer008"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer009"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer010"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer011"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer012"))) //Board07
-                        SetButtonBoard("Soccer019", "Soccer020", "Soccer021", "");
-                    else if (text.Equals(await GetEventName("Soccer013"))) //Board08
-                        SetButtonBoard("Soccer022", "Soccer023", "", "");
-                    else if (text.Equals(await GetEventName("Soccer014"))) //Board02
-                        SetButtonBoard("Soccer004", "Soccer002", "Soccer003", "Soccer005");
-                    else if (text.Equals(await GetEventName("Soccer015"))) //Board06
-                        SetButtonBoard("Soccer018", "Soccer017", "Soccer000", "");
-                    else if (text.Equals(await GetEventName("Soccer016"))) //Board02
-                        SetButtonBoard("Soccer004", "Soccer002", "Soccer003", "Soccer005");
-                    else if (text.Equals(await GetEventName("Soccer017"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer018"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer019"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer020"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer021"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer022"))) //Board10
-                        SetButtonBoard("Soccer024", "Soccer021", "", "");
-                    else if (text.Equals(await GetEventName("Soccer023"))) //Board07
-                        SetButtonBoard("Soccer010", "Soccer012", "Soccer011", "");
-                    else if (text.Equals(await GetEventName("Soccer024"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer025"))) //Board13
-                        SetButtonBoard("Soccer030", "Soccer029", "", "");
-                    else if (text.Equals(await GetEventName("Soccer026"))) //Board02
-                        SetButtonBoard("Soccer004", "Soccer002", "Soccer003", "Soccer005");
-                    else if (text.Equals(await GetEventName("Soccer027"))) //Board12
-                        SetButtonBoard("Soccer027", "Soccer002", "Soccer028", "");
-                    else if (text.Equals(await GetEventName("Soccer028"))) //Board01
-                        SetButtonBoard("Soccer001", "Soccer002", dbAthlete.PositionKey.Equals(1) ? "Soccer025" : "", "");
-                    else if (text.Equals(await GetEventName("Soccer029"))) //Board02
-                        SetButtonBoard("Soccer004", "Soccer002", "Soccer003", "Soccer005");
-                    else if (text.Equals(await GetEventName("Soccer030"))) //Board12
-                        SetButtonBoard("Soccer027", "Soccer002", "Soccer028", "");
+                    ButtonBoardLogic(text);
                 }
             }
         }
@@ -194,11 +132,11 @@ namespace escout.Views.Events
                     }
                     catch (Exception ex)
                     {
-                        await DisplayAlert(Message.TITLE_STATUS_ERROR, ex.Message, Message.OPTION_OK);
+                        await DisplayAlert(ConstValues.TITLE_STATUS_ERROR, ex.Message, ConstValues.OPTION_OK);
                     }
                 }
                 else
-                    await DisplayAlert(Message.TITLE_STATUS_ERROR, Message.MSG_TIMER, Message.OPTION_OK);
+                    await DisplayAlert(ConstValues.TITLE_STATUS_ERROR, ConstValues.MSG_TIMER, ConstValues.OPTION_OK);
             }
             catch (Exception ex)
             {
@@ -208,7 +146,7 @@ namespace escout.Views.Events
 
         private async void LeaveItem_OnClicked(object sender, EventArgs e)
         {
-            if (await App.DisplayMessage(Message.TITLE_STATUS_WARNING, Message.MSG_LEAVE, Message.OPTION_NO, Message.OPTION_YES))
+            if (await App.DisplayMessage(ConstValues.TITLE_STATUS_WARNING, ConstValues.MSG_LEAVE, ConstValues.OPTION_NO, ConstValues.OPTION_YES))
             {
                 _ = RestUtils.UpdateGameStatus(App.DbGame.Id, 2);
                 Application.Current.MainPage = new NavigationPage(new MainPage());
@@ -221,13 +159,13 @@ namespace escout.Views.Events
             Navigation.PushModalAsync(new EventsTimeLinePage());
         }
 
-        private async Task<string> GetEventName(string key)
+        private async Task BackgroundAsync()
         {
-            if (string.IsNullOrEmpty(key))
-                return string.Empty;
-
-            var dbEvents = await new Query().GetEvents(dbGame.DataExt);
-            return dbEvents.Find(x => x.Key.Equals(key)).Name;
+            while (true)
+            {
+                LbStopwatch.Text = StopWatch.ShowTime();
+                await Task.Delay(1000);
+            }
         }
 
         private async void SetButtonBoard(string event1, string event2, string event3, string event4)
@@ -238,13 +176,86 @@ namespace escout.Views.Events
             Event4Button.Text = await GetEventName(event4);
         }
 
-        private async Task BackgroundAsync()
+        private async void ButtonBoardLogic(string text)
         {
-            while (true)
+            if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_000) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_003) ||
+                        await IsSameEvent(text, ConstValues.EVENT_SOCCER_006) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_008) ||
+                        await IsSameEvent(text, ConstValues.EVENT_SOCCER_009) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_010) ||
+                        await IsSameEvent(text, ConstValues.EVENT_SOCCER_011) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_017) ||
+                        await IsSameEvent(text, ConstValues.EVENT_SOCCER_018) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_019) ||
+                        await IsSameEvent(text, ConstValues.EVENT_SOCCER_020) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_021) ||
+                        await IsSameEvent(text, ConstValues.EVENT_SOCCER_024) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_028))
             {
-                LbStopwatch.Text = StopWatch.ShowTime();
-                await Task.Delay(1000);
+                SetButtonBoard(ConstValues.EVENT_SOCCER_001, ConstValues.EVENT_SOCCER_002, GetEventByPositionKey(dbAthlete.PositionKey), "");
             }
+            else if (
+                await IsSameEvent(text, ConstValues.EVENT_SOCCER_001) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_014) ||
+                await IsSameEvent(text, ConstValues.EVENT_SOCCER_016) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_026) ||
+                await IsSameEvent(text, ConstValues.EVENT_SOCCER_029))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_004, ConstValues.EVENT_SOCCER_002, ConstValues.EVENT_SOCCER_003, ConstValues.EVENT_SOCCER_005);
+            }
+            else if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_005))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_006, ConstValues.EVENT_SOCCER_007, "", "");
+            }
+            else if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_004))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_011, ConstValues.EVENT_SOCCER_013, ConstValues.EVENT_SOCCER_010, ConstValues.EVENT_SOCCER_012);
+            }
+            else if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_002))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_015, ConstValues.EVENT_SOCCER_016, ConstValues.EVENT_SOCCER_014, dbAthlete.PositionKey.Equals(1) ? ConstValues.EVENT_SOCCER_026 : "");
+            }
+            else if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_015))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_018, ConstValues.EVENT_SOCCER_017, ConstValues.EVENT_SOCCER_000, "");
+            }
+            else if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_012) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_023))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_019, ConstValues.EVENT_SOCCER_020, ConstValues.EVENT_SOCCER_021, "");
+            }
+            else if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_013))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_022, ConstValues.EVENT_SOCCER_023, "", "");
+            }
+            else if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_022))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_024, ConstValues.EVENT_SOCCER_021, "", "");
+            }
+            else if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_007))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_009, ConstValues.EVENT_SOCCER_008, "", "");
+            }
+            else if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_025))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_030, ConstValues.EVENT_SOCCER_029, "", "");
+            }
+            else if (await IsSameEvent(text, ConstValues.EVENT_SOCCER_027) || await IsSameEvent(text, ConstValues.EVENT_SOCCER_030))
+            {
+                SetButtonBoard(ConstValues.EVENT_SOCCER_027, ConstValues.EVENT_SOCCER_002, ConstValues.EVENT_SOCCER_028, "");
+            }
+        }
+
+        private async Task<string> GetEventName(string key)
+        {
+            if (string.IsNullOrEmpty(key))
+            {
+                return string.Empty;
+            }
+
+            var dbEvents = await new Query().GetEvents(dbGame.DataExt);
+            return dbEvents.Find(x => x.Key.Equals(key)).Name;
+        }
+
+        private string GetEventByPositionKey(int positionKey)
+        {
+            return positionKey == 1 ? ConstValues.EVENT_SOCCER_025 : "";
+        }
+
+        private async Task<bool> IsSameEvent(string text, string eventName)
+        {
+            return text.Equals(await GetEventName(eventName));
         }
     }
 }

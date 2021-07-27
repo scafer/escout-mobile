@@ -1,5 +1,5 @@
-﻿using escout.Models.Rest;
-using escout.Services;
+﻿using escout.Helpers;
+using escout.Models.Rest;
 using escout.Services.Rest;
 using escout.Views.Authentication;
 using escout.Views.GameData;
@@ -122,7 +122,7 @@ namespace escout.ViewModels
 
                     if (200 != (int)response.StatusCode)
                     {
-                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), Message.OPTION_OK);
+                        _ = App.DisplayMessage(ConstValues.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), ConstValues.OPTION_OK);
                     }
                     else
                     {
@@ -134,7 +134,7 @@ namespace escout.ViewModels
                 }
                 catch
                 {
-                    if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_OFFLINE, Message.OPTION_NO, Message.OPTION_YES))
+                    if (await App.DisplayMessage(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_OFFLINE, ConstValues.OPTION_NO, ConstValues.OPTION_YES))
                     {
                         Application.Current.MainPage = new NavigationPage(new WatchingListPage());
                         await Navigation.PushAsync(new WatchingListPage());
@@ -147,7 +147,7 @@ namespace escout.ViewModels
             }
             else
             {
-                _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.MSG_AUTHENTICATION_INVALID, Message.OPTION_OK);
+                _ = App.DisplayMessage(ConstValues.TITLE_STATUS_ERROR, ConstValues.MSG_AUTHENTICATION_INVALID, ConstValues.OPTION_OK);
             }
         }
 
@@ -162,12 +162,12 @@ namespace escout.ViewModels
 
                     if (200 == (int)response.StatusCode)
                     {
-                        _ = App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_SUCCESS, Message.OPTION_OK);
+                        _ = App.DisplayMessage(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_SUCCESS, ConstValues.OPTION_OK);
                         await Navigation.PopModalAsync();
                     }
                     else
                     {
-                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), Message.OPTION_OK);
+                        _ = App.DisplayMessage(ConstValues.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), ConstValues.OPTION_OK);
                     }
                 }
                 catch (Exception ex)
@@ -181,7 +181,7 @@ namespace escout.ViewModels
             }
             else
             {
-                _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, Message.MSG_GENERIC_ERROR, Message.OPTION_OK);
+                _ = App.DisplayMessage(ConstValues.TITLE_STATUS_ERROR, ConstValues.MSG_GENERIC_ERROR, ConstValues.OPTION_OK);
             }
         }
 
@@ -196,12 +196,12 @@ namespace escout.ViewModels
 
                     if (200 == (int)response.StatusCode)
                     {
-                        _ = App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_SUCCESS, Message.OPTION_OK);
+                        _ = App.DisplayMessage(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_SUCCESS, ConstValues.OPTION_OK);
                         await Navigation.PopModalAsync();
                     }
                     else
                     {
-                        _ = App.DisplayMessage(Message.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), Message.OPTION_OK);
+                        _ = App.DisplayMessage(ConstValues.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), ConstValues.OPTION_OK);
                     }
                 }
                 catch (Exception ex)
@@ -215,7 +215,7 @@ namespace escout.ViewModels
             }
             else
             {
-                _ = App.DisplayMessage(Message.MSG_GENERIC_ERROR, Message.MSG_AUTHENTICATION_INVALID_2, Message.OPTION_OK);
+                _ = App.DisplayMessage(ConstValues.MSG_GENERIC_ERROR, ConstValues.MSG_AUTHENTICATION_INVALID_2, ConstValues.OPTION_OK);
             }
         }
 
@@ -225,9 +225,12 @@ namespace escout.ViewModels
 
             try
             {
-                var result = await App.DisplayPrompt(Message.TITLE_STATUS_SETTINGS, Message.MSG_CHANGE_SERVER);
+                var result = await App.DisplayPrompt(ConstValues.TITLE_STATUS_SETTINGS, ConstValues.MSG_CHANGE_SERVER);
+
                 if (result != null)
+                {
                     app.DefaultServer = result;
+                }
             }
             catch (Exception) { }
         }

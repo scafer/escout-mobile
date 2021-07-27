@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using escout.Helpers;
 using escout.Models.Database;
 using escout.Models.Rest;
 using Xamarin.Forms;
@@ -94,10 +95,13 @@ namespace escout.Services.Database
                 await AddEventToDb(gameData.Events, gameData.Game.Id);
                 await AddGameEventToDb(gameData.GameEvents);
 
-                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_INFO, Message.MSG_GAME_SAVE, Message.OPTION_OK);
+                await Application.Current.MainPage.DisplayAlert(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_GAME_SAVE, ConstValues.OPTION_OK);
             }
 
-            catch (Exception ex) { ExceptionHandler.GenericException(ex); }
+            catch (Exception ex)
+            {
+                ExceptionHandler.GenericException(ex);
+            }
         }
 
         private async Task AddGameToDb(Game game)
@@ -152,37 +156,68 @@ namespace escout.Services.Database
             try
             {
                 foreach (var e in await new Database<DbGame>().Select())
+                {
                     if (e.DataExt == dataExt)
+                    {
                         await new Database<DbGame>().Delete(e);
+                    }
+                }
 
                 foreach (var e in await new Database<DbAthlete>().Select())
+                {
                     if (e.DataExt == dataExt)
+                    {
                         await new Database<DbAthlete>().Delete(e);
+                    }
+                }
 
                 foreach (var e in await new Database<DbClub>().Select())
+                {
                     if (e.DataExt == dataExt)
+                    {
                         await new Database<DbClub>().Delete(e);
+                    }
+                }
 
                 foreach (var e in await new Database<DbCompetition>().Select())
+                {
                     if (e.DataExt == dataExt)
+                    {
                         await new Database<DbCompetition>().Delete(e);
+                    }
+                }
 
                 foreach (var e in await new Database<DbEvent>().Select())
+                {
                     if (e.DataExt == dataExt)
+                    {
                         await new Database<DbEvent>().Delete(e);
+                    }
+                }
 
                 foreach (var e in await new Database<DbGameEvent>().Select())
+                {
                     if (e.DataExt == dataExt)
+                    {
                         await new Database<DbGameEvent>().Delete(e);
+                    }
+                }
 
                 foreach (var e in await new Database<DbSport>().Select())
+                {
                     if (e.DataExt == dataExt)
+                    {
                         await new Database<DbSport>().Delete(e);
+                    }
+                }
 
-                await Application.Current.MainPage.DisplayAlert(Message.TITLE_STATUS_INFO, Message.MSG_GAME_REMOVE, Message.OPTION_OK);
+                await Application.Current.MainPage.DisplayAlert(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_GAME_REMOVE, ConstValues.OPTION_OK);
             }
 
-            catch (Exception ex) { ExceptionHandler.GenericException(ex); }
+            catch (Exception ex)
+            {
+                ExceptionHandler.GenericException(ex);
+            }
         }
     }
 }

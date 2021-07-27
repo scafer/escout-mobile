@@ -98,5 +98,9 @@
   <ItemGroup>
     <Folder Include="Services\Rest\" />
     <Folder Include="Services\Dependency\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Helpers\" />
   </ItemGroup>
 </Project>

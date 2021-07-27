@@ -68,6 +68,12 @@ namespace escout.Views
             IsPresented = false;
         }
 
+        private void UserSettings_OnTapped(object sender, EventArgs e)
+        {
+            Detail = new NavigationPage(new UserDetailsPage());
+            IsPresented = false;
+        }
+
         private List<Option> GetOptions()
         {
             var option = new List<Option>
@@ -84,25 +90,15 @@ namespace escout.Views
             return option;
         }
 
-        private void UserSettings_OnTapped(object sender, EventArgs e)
-        {
-            Detail = new NavigationPage(new UserDetailsPage());
-            IsPresented = false;
-        }
-
         private async Task GetData()
         {
             var response = await RestConnector.GetObjectAsync(RestConnector.USER);
             var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
 
-            if (user.ImageId != null)
+            if (user.DisplayOptions.ContainsKey("imageUrl"))
             {
-                var img = await RestUtils.GetImage(user.ImageId);
-                if (!string.IsNullOrEmpty(img.ImageUrl))
-                {
-                    Img.Source = img.ImageUrl;
-                    Img.Aspect = Aspect.AspectFill;
-                }
+                Img.Source = user.DisplayOptions["imageUrl"];
+                Img.Aspect = Aspect.AspectFill;
             }
         }
     }
