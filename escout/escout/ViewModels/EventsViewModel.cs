@@ -6,6 +6,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -83,7 +84,7 @@ namespace escout.ViewModels
                     IsVisible = true;
                     var response = await RestConnector.PostObjectAsync(RestConnector.GAME_EVENT, unsynchronizedEvents);
 
-                    if (200 == (int)response.StatusCode)
+                    if (response.StatusCode == HttpStatusCode.OK)
                     {
                         foreach (var e in unsynchronizedEvents)
                         {

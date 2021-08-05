@@ -37,9 +37,13 @@ namespace escout.Views.Events
             _ = BackgroundAsync();
 
             if (isGameRunning)
+            {
                 btn_isRunning.Text = "Pause";
+            }
             else
+            {
                 btn_isRunning.Text = "Resume";
+            }
         }
 
         private void IsRunning_Clicked(object sender, EventArgs e)
@@ -63,7 +67,6 @@ namespace escout.Views.Events
             Event2Button.IsEnabled = false;
             Event3Button.IsEnabled = false;
             Event4Button.IsEnabled = false;
-
             StopWatch.Stop();
         }
 

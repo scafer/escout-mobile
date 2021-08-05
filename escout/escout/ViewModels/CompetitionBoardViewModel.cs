@@ -1,12 +1,12 @@
 ﻿using escout.Helpers;
 using escout.Models.Rest;
-using escout.Services;
 using escout.Services.Dependency;
 using escout.Services.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -136,7 +136,7 @@ namespace escout.ViewModels
 
             var response = await RestConnector.GetObjectAsync(request);
 
-            if (200 == (int)response.StatusCode)
+            if (response.StatusCode == HttpStatusCode.OK)
             {
                 _competition = JsonConvert.DeserializeObject<List<Competition>>(await response.Content.ReadAsStringAsync());
             }
@@ -150,7 +150,7 @@ namespace escout.ViewModels
             var request = RestConnector.COMPETITION + "?id=" + id;
             var response = await RestConnector.GetObjectAsync(request);
 
-            if (200 == (int)response.StatusCode)
+            if (response.StatusCode == HttpStatusCode.OK)
             {
                 competition = JsonConvert.DeserializeObject<Competition>(await response.Content.ReadAsStringAsync());
             }
@@ -164,7 +164,7 @@ namespace escout.ViewModels
             var request = RestConnector.FAVORITES + "?query=competitionId";
             var response = await RestConnector.GetObjectAsync(request);
 
-            if (200 == (int)response.StatusCode)
+            if (response.StatusCode == HttpStatusCode.OK)
             {
                 var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
 

@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -135,7 +136,7 @@ namespace escout.ViewModels
 
             var response = await RestConnector.GetObjectAsync(request);
 
-            if (200 == (int)response.StatusCode)
+            if (response.StatusCode == HttpStatusCode.OK)
             {
                 clubs = JsonConvert.DeserializeObject<List<Club>>(await response.Content.ReadAsStringAsync());
             }
@@ -149,7 +150,7 @@ namespace escout.ViewModels
             var request = RestConnector.CLUB + "?id=" + id;
             var response = await RestConnector.GetObjectAsync(request);
 
-            if (200 == (int)response.StatusCode)
+            if (response.StatusCode == HttpStatusCode.OK)
             {
                 club = JsonConvert.DeserializeObject<Club>(await response.Content.ReadAsStringAsync());
             }
@@ -161,13 +162,13 @@ namespace escout.ViewModels
         {
             var clubs = new List<Club>();
             var request = RestConnector.FAVORITES + "?query=clubId";
-
             var response = await RestConnector.GetObjectAsync(request);
-            if (200 == (int)response.StatusCode)
-            {
-                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
 
-                foreach (var f in _favorites)
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                var favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
+
+                foreach (var f in favorites)
                 {
                     clubs.Add(await GetClubById(int.Parse(f.ClubId.ToString())));
                 }

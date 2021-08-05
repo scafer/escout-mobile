@@ -1,6 +1,5 @@
 ﻿using escout.Helpers;
 using escout.Models.Database;
-using escout.Services;
 using escout.Services.Database;
 using escout.Services.Rest;
 using System;

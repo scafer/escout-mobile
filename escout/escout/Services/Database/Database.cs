@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Microsoft.Win32.SafeHandles;
+using SQLite;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using Microsoft.Win32.SafeHandles;
-using SQLite;
 
 namespace escout.Services.Database
 {
@@ -40,7 +40,7 @@ namespace escout.Services.Database
             {
                 connection = new SQLiteAsyncConnection(path);
                 var createTable = connection.CreateTableAsync<T>();
-                while (!createTable.IsCompleted);
+                while (!createTable.IsCompleted) ;
             }
         }
 
@@ -62,7 +62,7 @@ namespace escout.Services.Database
         {
             lock (locker)
             {
-                 return connection.Table<T>().ToListAsync();
+                return connection.Table<T>().ToListAsync();
             }
         }
 

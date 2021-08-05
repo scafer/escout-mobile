@@ -104,7 +104,9 @@ namespace escout.Views.GameData
                 }
             }
             else
+            {
                 await DisplayAlert(ConstValues.TITLE_STATUS_WARNING, ConstValues.MSG_SAVE_GAME_ERROR, ConstValues.OPTION_OK);
+            }
         }
 
         private async void Start_OnClicked(object sender, EventArgs e)

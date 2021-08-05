@@ -6,6 +6,7 @@ using escout.Views.GameData;
 using Newtonsoft.Json;
 using System;
 using System.ComponentModel;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
@@ -120,7 +121,7 @@ namespace escout.ViewModels
                     var response = await RestConnector.PostObjectAsync(RestConnector.SIGN_IN,
                         new User(Username, GenerateSha256String(Password), Email));
 
-                    if (200 != (int)response.StatusCode)
+                    if (response.StatusCode != HttpStatusCode.OK)
                     {
                         _ = App.DisplayMessage(ConstValues.TITLE_STATUS_ERROR, await response.Content.ReadAsStringAsync(), ConstValues.OPTION_OK);
                     }
@@ -160,7 +161,7 @@ namespace escout.ViewModels
                     IsVisible = true;
                     var response = await RestConnector.PostObjectAsync(RestConnector.SIGN_UP, new User(Username, GenerateSha256String(Password), Email));
 
-                    if (200 == (int)response.StatusCode)
+                    if (response.StatusCode == HttpStatusCode.OK)
                     {
                         _ = App.DisplayMessage(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_SUCCESS, ConstValues.OPTION_OK);
                         await Navigation.PopModalAsync();
@@ -194,7 +195,7 @@ namespace escout.ViewModels
                     IsVisible = true;
                     var response = await RestConnector.PostObjectAsync(RestConnector.RESET_PASSWORD, new User(Username, null, Email));
 
-                    if (200 == (int)response.StatusCode)
+                    if (response.StatusCode == HttpStatusCode.OK)
                     {
                         _ = App.DisplayMessage(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_SUCCESS, ConstValues.OPTION_OK);
                         await Navigation.PopModalAsync();

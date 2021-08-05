@@ -4,6 +4,7 @@ using escout.Services.Rest;
 using escout.ViewModels;
 using Newtonsoft.Json;
 using System;
+using System.Net;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -32,7 +33,7 @@ namespace escout.Views
             {
                 var response = await RestConnector.PutObjectAsync(RestConnector.USER, user);
 
-                if (!string.IsNullOrEmpty(await response.Content.ReadAsStringAsync()))
+                if (response.StatusCode == HttpStatusCode.OK)
                 {
                     await App.DisplayMessage(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_USER_UPDATED, ConstValues.OPTION_OK);
                 }
@@ -46,7 +47,7 @@ namespace escout.Views
                 var request = RestConnector.CHANGE_PASSWORD + "?newPassword=" + AuthenticationViewModel.GenerateSha256String(Password.Text);
                 var response = await RestConnector.PostObjectAsync(request, null);
 
-                if (!string.IsNullOrEmpty(await response.Content.ReadAsStringAsync()))
+                if (response.StatusCode == HttpStatusCode.OK)
                 {
                     await App.DisplayMessage(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_USER_UPDATED, ConstValues.OPTION_OK);
                 }
@@ -85,6 +86,7 @@ namespace escout.Views
         {
             var response = await RestConnector.GetObjectAsync(RestConnector.USER);
             var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+
             BindingContext = user;
             this.user = user;
 
