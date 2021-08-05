@@ -1,6 +1,6 @@
-﻿using escout.Models.Database;
+﻿using escout.Helpers;
+using escout.Models.Database;
 using escout.Models.Rest;
-using escout.Services;
 using escout.Services.Database;
 using escout.Services.Rest;
 using escout.Views.Events;
@@ -23,7 +23,7 @@ namespace escout.Views.GameData
             InitializeComponent();
             BindingContext = game;
             this.game = game;
-            _ = StartGame();
+            StartGame();
         }
 
         public GameDetailsPage(DbGame dbGame)
@@ -37,28 +37,29 @@ namespace escout.Views.GameData
             _ = StartDbGame();
         }
 
-        private async Task StartGame()
+        private void StartGame()
         {
-            var homeTeam = await RestUtils.GetClub(game.HomeId);
-            var visitorTeam = await RestUtils.GetClub(game.VisitorId);
-
-            lbl_home.Text = homeTeam.Name;
-            lbl_visitor.Text = visitorTeam.Name;
             lbl_home_result.Text = game.HomeScore.ToString();
             lbl_visitor_result.Text = game.VisitorScore.ToString();
 
-            if (homeTeam.ImageId != null)
+            if (game.DisplayOptions.ContainsKey("homeName"))
             {
-                var img1 = await RestUtils.GetImage(homeTeam.ImageId);
-                if (!string.IsNullOrEmpty(img1.ImageUrl))
-                    img_home.Source = img1.ImageUrl;
+                lbl_home.Text = game.DisplayOptions["homeName"];
             }
 
-            if (visitorTeam.ImageId != null)
+            if (game.DisplayOptions.ContainsKey("visitorName"))
             {
-                var img2 = await RestUtils.GetImage(visitorTeam.ImageId);
-                if (!string.IsNullOrEmpty(img2.ImageUrl))
-                    img_visitor.Source = img2.ImageUrl;
+                lbl_visitor.Text = game.DisplayOptions["visitorName"];
+            }
+
+            if (game.DisplayOptions.ContainsKey("homeImageUrl"))
+            {
+                img_home.Source = game.DisplayOptions["homeImageUrl"];
+            }
+
+            if (game.DisplayOptions.ContainsKey("visitorImageUrl"))
+            {
+                img_visitor.Source = game.DisplayOptions["visitorImageUrl"];
             }
         }
 
@@ -73,7 +74,7 @@ namespace escout.Views.GameData
 
         private async void AddGameToWatchList(object sender, EventArgs e)
         {
-            var response = await DisplayAlert(Message.TITLE_STATUS_INFO, Message.MSG_ADD_TO_WATCHING, Message.OPTION_YES, Message.OPTION_NO);
+            var response = await DisplayAlert(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_ADD_TO_WATCHING, ConstValues.OPTION_YES, ConstValues.OPTION_NO);
 
             if (response)
             {
@@ -98,12 +99,14 @@ namespace escout.Views.GameData
                     }
                     catch (Exception e)
                     {
-                        await DisplayAlert(Message.TITLE_STATUS_ERROR, e.ToString(), Message.OPTION_OK);
+                        await DisplayAlert(ConstValues.TITLE_STATUS_ERROR, e.ToString(), ConstValues.OPTION_OK);
                     }
                 }
             }
             else
-                await DisplayAlert(Message.TITLE_STATUS_WARNING, Message.MSG_SAVE_GAME_ERROR, Message.OPTION_OK);
+            {
+                await DisplayAlert(ConstValues.TITLE_STATUS_WARNING, ConstValues.MSG_SAVE_GAME_ERROR, ConstValues.OPTION_OK);
+            }
         }
 
         private async void Start_OnClicked(object sender, EventArgs e)

@@ -1,11 +1,12 @@
-﻿using escout.Models.Rest;
-using escout.Services;
+﻿using escout.Helpers;
+using escout.Models.Rest;
 using escout.Services.Dependency;
 using escout.Services.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -34,6 +35,7 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
+            SearchExecuted();
         }
 
         public ObservableCollection<Club> Clubs
@@ -100,14 +102,14 @@ namespace escout.ViewModels
         private async void SearchExecuted()
         {
             IsVisible = true;
+
             if (Key == "favorites")
             {
                 Clubs = new ObservableCollection<Club>(await GetFavoriteClubs());
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
-                    Clubs = new ObservableCollection<Club>(await GetClubs(null));
+                Clubs = new ObservableCollection<Club>(await GetClubs(null));
             }
             else
             {
@@ -117,7 +119,9 @@ namespace escout.ViewModels
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Clubs != null)
-                DependencyService.Get<IToast>().LongAlert(Clubs.Count + Message.TOAST_RESULTS);
+            {
+                DependencyService.Get<IToast>().LongAlert(string.Format(ConstValues.TOAST_RESULTS, Clubs.Count));
+            }
         }
 
         private async Task<List<Club>> GetClubs(SearchQuery query)
@@ -126,11 +130,16 @@ namespace escout.ViewModels
             var request = RestConnector.CLUBS;
 
             if (query != null)
+            {
                 request += "?query=" + JsonConvert.SerializeObject(query);
+            }
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (200 == (int)response.StatusCode)
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
                 clubs = JsonConvert.DeserializeObject<List<Club>>(await response.Content.ReadAsStringAsync());
+            }
 
             return clubs;
         }
@@ -139,10 +148,12 @@ namespace escout.ViewModels
         {
             var club = new Club();
             var request = RestConnector.CLUB + "?id=" + id;
-
             var response = await RestConnector.GetObjectAsync(request);
-            if (200 == (int)response.StatusCode)
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
                 club = JsonConvert.DeserializeObject<Club>(await response.Content.ReadAsStringAsync());
+            }
 
             return club;
         }
@@ -151,13 +162,16 @@ namespace escout.ViewModels
         {
             var clubs = new List<Club>();
             var request = RestConnector.FAVORITES + "?query=clubId";
-
             var response = await RestConnector.GetObjectAsync(request);
-            if (200 == (int)response.StatusCode)
+
+            if (response.StatusCode == HttpStatusCode.OK)
             {
-                var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
-                foreach (var f in _favorites)
+                var favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
+
+                foreach (var f in favorites)
+                {
                     clubs.Add(await GetClubById(int.Parse(f.ClubId.ToString())));
+                }
             }
 
             return clubs;

@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Xamarin.Forms;
@@ -52,7 +53,7 @@ namespace escout.ViewModels
                 var gameEvents = new List<GameEvent> { gameEvent };
                 var response = await RestConnector.PostObjectAsync(RestConnector.GAME_EVENT, gameEvents);
 
-                if (200 == (int)response.StatusCode)
+                if (response.StatusCode == HttpStatusCode.OK)
                 {
                     dbGameEvent.Synchronized = true;
                     db.UpdateGameEventStatus(dbGameEvent);

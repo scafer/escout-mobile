@@ -1,5 +1,6 @@
 ﻿using escout.Models.Database;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace escout.Models.Rest
 {
@@ -40,6 +41,9 @@ namespace escout.Models.Rest
 
         [JsonProperty("updated")]
         public string Updated { get; set; }
+
+        [JsonProperty("displayOptions")]
+        public Dictionary<string, string> DisplayOptions { get; set; }
 
         public GameEvent() { }
 

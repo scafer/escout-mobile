@@ -1,11 +1,12 @@
-﻿using escout.Models.Rest;
-using escout.Services;
+﻿using escout.Helpers;
+using escout.Models.Rest;
 using escout.Services.Dependency;
 using escout.Services.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -21,7 +22,7 @@ namespace escout.ViewModels
         private bool isBusy;
         private string key;
         private string pairValue;
-        private ObservableCollection<GameWithClub> games;
+        private ObservableCollection<Game> games;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -34,9 +35,10 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
+            SearchExecuted();
         }
 
-        public ObservableCollection<GameWithClub> Games
+        public ObservableCollection<Game> Games
         {
             get => games;
             set
@@ -100,58 +102,26 @@ namespace escout.ViewModels
         private async void SearchExecuted()
         {
             IsVisible = true;
-            var gameWithClub = new List<GameWithClub>();
 
             if (Key == "favorites")
             {
-                foreach (var x in await GetFavoriteGames())
-                {
-                    var a = new GameWithClub(x)
-                    {
-                        ClubHome = await RestUtils.GetClub(x.HomeId),
-                        ClubVisitor = await RestUtils.GetClub(x.VisitorId)
-                    };
-                    gameWithClub.Add(a);
-                }
-
-                Games = new ObservableCollection<GameWithClub>(gameWithClub);
+                Games = new ObservableCollection<Game>(await GetFavoriteGames());
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
-                {
-                    foreach (var x in await GetGames(null))
-                    {
-                        var a = new GameWithClub(x)
-                        {
-                            ClubHome = await RestUtils.GetClub(x.HomeId),
-                            ClubVisitor = await RestUtils.GetClub(x.VisitorId)
-                        };
-                        gameWithClub.Add(a);
-                    }
-
-                    Games = new ObservableCollection<GameWithClub>(gameWithClub);
-                }
+                Games = new ObservableCollection<Game>(await GetGames(null));
             }
             else
             {
-                foreach (var x in await GetGames(new SearchQuery(Key, "iLIKE", Value + "%")))
-                {
-                    var a = new GameWithClub(x)
-                    {
-                        ClubHome = await RestUtils.GetClub(x.HomeId),
-                        ClubVisitor = await RestUtils.GetClub(x.VisitorId)
-                    };
-                    gameWithClub.Add(a);
-                }
-
-                Games = new ObservableCollection<GameWithClub>(gameWithClub);
+                Games = new ObservableCollection<Game>(await GetGames(new SearchQuery(Key, "iLIKE", Value + "%")));
             }
 
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Games != null)
-                DependencyService.Get<IToast>().LongAlert(Games.Count + Message.TOAST_RESULTS);
+            {
+                DependencyService.Get<IToast>().LongAlert(string.Format(ConstValues.TOAST_RESULTS, Games.Count));
+            }
         }
 
         private async Task<List<Game>> GetGames(SearchQuery query)
@@ -160,11 +130,16 @@ namespace escout.ViewModels
             var request = RestConnector.GAMES;
 
             if (query != null)
+            {
                 request += "?query=" + JsonConvert.SerializeObject(query);
+            }
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (200.Equals((int)response.StatusCode))
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
                 _games = JsonConvert.DeserializeObject<List<Game>>(await response.Content.ReadAsStringAsync());
+            }
 
             return _games;
         }
@@ -173,10 +148,12 @@ namespace escout.ViewModels
         {
             var game = new Game();
             var request = RestConnector.GAME + "?id=" + id;
-
             var response = await RestConnector.GetObjectAsync(request);
+
             if (200.Equals((int)response.StatusCode))
+            {
                 game = JsonConvert.DeserializeObject<Game>(await response.Content.ReadAsStringAsync());
+            }
 
             return game;
         }
@@ -185,13 +162,16 @@ namespace escout.ViewModels
         {
             var games = new List<Game>();
             var request = RestConnector.FAVORITES + "?query=gameId";
-
             var response = await RestConnector.GetObjectAsync(request);
-            if (200.Equals((int)response.StatusCode))
+
+            if (response.StatusCode == HttpStatusCode.OK)
             {
                 var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
+
                 foreach (var f in _favorites)
+                {
                     games.Add(await GetGameById(int.Parse(f.GameId.ToString())));
+                }
             }
 
             return games;

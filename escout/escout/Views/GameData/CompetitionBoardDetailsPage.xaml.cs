@@ -34,8 +34,7 @@ namespace escout.Views.GameData
 
             foreach (var c in competitionBoard)
             {
-                var club = await RestUtils.GetClub(c.ClubId);
-                board.Add(new BoardDetails { Position = "Position: " + c.Position + " Points: " + c.Points, ClubName = club.Name });
+                board.Add(new BoardDetails { Position = "Position: " + c.Position + " Points: " + c.Points, ClubName = c.DisplayOptions["clubName"] });
             }
 
             list_competitionBoard.ItemsSource = board;

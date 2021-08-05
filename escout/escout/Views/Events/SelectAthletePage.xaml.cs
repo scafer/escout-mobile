@@ -1,5 +1,5 @@
-﻿using escout.Models.Database;
-using escout.Services;
+﻿using escout.Helpers;
+using escout.Models.Database;
 using escout.Services.Database;
 using escout.Services.Rest;
 using System;
@@ -67,7 +67,7 @@ namespace escout.Views.Events
         {
             if (listView.SelectedItem != null)
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_EVENT_PAGE, Message.OPTION_NO, Message.OPTION_YES))
+                if (await App.DisplayMessage(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_EVENT_PAGE, ConstValues.OPTION_NO, ConstValues.OPTION_YES))
                 {
                     App.DbAthlete = listView.SelectedItem as DbAthlete;
                     _ = RestUtils.AddGameUser(App.DbGame.Id, App.DbAthlete.Id);
@@ -77,7 +77,7 @@ namespace escout.Views.Events
                 }
             }
             else
-                await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_SELECT_ATHLETE, Message.OPTION_OK);
+                await App.DisplayMessage(ConstValues.TITLE_STATUS_INFO, ConstValues.MSG_SELECT_ATHLETE, ConstValues.OPTION_OK);
         }
     }
 }

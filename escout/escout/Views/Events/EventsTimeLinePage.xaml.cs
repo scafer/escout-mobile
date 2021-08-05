@@ -19,7 +19,18 @@ namespace escout.Views.Events
         protected override void OnAppearing()
         {
             base.OnAppearing();
+
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                BtnBack.IsVisible = false;
+            }
+
             LoadTimeLineEvents();
+        }
+
+        void BtnBack_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PopModalAsync();
         }
 
         private void ItemTapped(object sender, ItemTappedEventArgs e)

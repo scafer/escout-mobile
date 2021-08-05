@@ -1,11 +1,12 @@
-﻿using escout.Models.Rest;
-using escout.Services;
+﻿using escout.Helpers;
+using escout.Models.Rest;
 using escout.Services.Dependency;
 using escout.Services.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -34,6 +35,7 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
+            SearchExecuted();
         }
 
         public ObservableCollection<Athlete> Athletes
@@ -100,22 +102,26 @@ namespace escout.ViewModels
         private async void SearchExecuted()
         {
             IsVisible = true;
+
             if (Key == "favorites")
             {
                 Athletes = new ObservableCollection<Athlete>(await GetFavoriteAthletes());
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
-                    Athletes = new ObservableCollection<Athlete>(await GetAthletes(null));
+                Athletes = new ObservableCollection<Athlete>(await GetAthletes(null));
             }
             else
+            {
                 Athletes = new ObservableCollection<Athlete>(await GetAthletes(new SearchQuery(Key, "iLIKE", Value + "%")));
+            }
 
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Athletes != null)
-                DependencyService.Get<IToast>().LongAlert(Athletes.Count + Message.TOAST_RESULTS);
+            {
+                DependencyService.Get<IToast>().LongAlert(string.Format(ConstValues.TOAST_RESULTS, Athletes.Count));
+            }
         }
 
         private async Task<List<Athlete>> GetAthletes(SearchQuery query)
@@ -124,12 +130,16 @@ namespace escout.ViewModels
             var request = RestConnector.ATHLETES;
 
             if (query != null)
+            {
                 request += "?query=" + JsonConvert.SerializeObject(query);
+            }
 
             var response = await RestConnector.GetObjectAsync(request);
 
-            if (200 == (int)response.StatusCode)
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
                 athletes = JsonConvert.DeserializeObject<List<Athlete>>(await response.Content.ReadAsStringAsync());
+            }
 
             return athletes;
         }
@@ -139,8 +149,10 @@ namespace escout.ViewModels
             var athlete = new Athlete();
             var response = await RestConnector.GetObjectAsync(RestConnector.ATHLETE + "?id=" + id);
 
-            if (200 == (int)response.StatusCode)
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
                 athlete = JsonConvert.DeserializeObject<Athlete>(await response.Content.ReadAsStringAsync());
+            }
 
             return athlete;
         }
@@ -150,12 +162,14 @@ namespace escout.ViewModels
             var athletes = new List<Athlete>();
             var response = await RestConnector.GetObjectAsync(RestConnector.FAVORITES + "?query=athleteId");
 
-            if (200 == (int)response.StatusCode)
+            if (response.StatusCode == HttpStatusCode.OK)
             {
                 var favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
 
                 foreach (var favorite in favorites)
+                {
                     athletes.Add(await GetAthleteById((int)favorite.AthleteId));
+                }
             }
 
             return athletes;

@@ -1,11 +1,12 @@
-﻿using escout.Models.Rest;
-using escout.Services;
+﻿using escout.Helpers;
+using escout.Models.Rest;
 using escout.Services.Dependency;
 using escout.Services.Rest;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -34,6 +35,7 @@ namespace escout.ViewModels
         {
             Navigation = navigation;
             SearchCommand = new Command(SearchExecuted);
+            SearchExecuted();
         }
 
         public ObservableCollection<Competition> Competitions
@@ -100,22 +102,26 @@ namespace escout.ViewModels
         private async void SearchExecuted()
         {
             IsVisible = true;
+
             if (Key == "favorites")
             {
                 Competitions = new ObservableCollection<Competition>(await GetFavoriteCompetitions());
             }
             else if (Key == null || string.IsNullOrEmpty(Value))
             {
-                if (await App.DisplayMessage(Message.TITLE_STATUS_INFO, Message.MSG_LOAD_ALL_DATA_QUESTION, Message.OPTION_NO, Message.OPTION_YES))
-                    Competitions = new ObservableCollection<Competition>(await GetCompetitions(null));
+                Competitions = new ObservableCollection<Competition>(await GetCompetitions(null));
             }
             else
+            {
                 Competitions = new ObservableCollection<Competition>(await GetCompetitions(new SearchQuery(Key, "iLIKE", Value + "%")));
+            }
 
             IsVisible = false;
 
             if (Device.RuntimePlatform == Device.Android && Competitions != null)
-                DependencyService.Get<IToast>().LongAlert(Competitions.Count + Message.TOAST_RESULTS);
+            {
+                DependencyService.Get<IToast>().LongAlert(string.Format(ConstValues.TOAST_RESULTS, Competitions.Count));
+            }
         }
 
         private async Task<List<Competition>> GetCompetitions(SearchQuery query)
@@ -124,11 +130,16 @@ namespace escout.ViewModels
             var request = RestConnector.COMPETITIONS;
 
             if (query != null)
+            {
                 request += "?query=" + JsonConvert.SerializeObject(query);
+            }
 
             var response = await RestConnector.GetObjectAsync(request);
-            if (200 == (int)response.StatusCode)
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
                 _competition = JsonConvert.DeserializeObject<List<Competition>>(await response.Content.ReadAsStringAsync());
+            }
 
             return _competition;
         }
@@ -137,10 +148,12 @@ namespace escout.ViewModels
         {
             var competition = new Competition();
             var request = RestConnector.COMPETITION + "?id=" + id;
-
             var response = await RestConnector.GetObjectAsync(request);
-            if (200 == (int)response.StatusCode)
+
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
                 competition = JsonConvert.DeserializeObject<Competition>(await response.Content.ReadAsStringAsync());
+            }
 
             return competition;
         }
@@ -149,13 +162,16 @@ namespace escout.ViewModels
         {
             var competitions = new List<Competition>();
             var request = RestConnector.FAVORITES + "?query=competitionId";
-
             var response = await RestConnector.GetObjectAsync(request);
-            if (200 == (int)response.StatusCode)
+
+            if (response.StatusCode == HttpStatusCode.OK)
             {
                 var _favorites = JsonConvert.DeserializeObject<List<Favorite>>(await response.Content.ReadAsStringAsync());
+
                 foreach (var f in _favorites)
+                {
                     competitions.Add(await GetCompetitionById(int.Parse(f.CompetitionId.ToString())));
+                }
             }
 
             return competitions;
