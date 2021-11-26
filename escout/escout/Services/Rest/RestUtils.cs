@@ -1,5 +1,4 @@
-﻿using escout.Helpers;
-using escout.Models.Rest;
+﻿using escout.Models.Rest;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -74,26 +73,6 @@ namespace escout.Services.Rest
             }
 
             return board;
-        }
-
-        public static async Task UpdateGameStatus(int gameId, int status)
-        {
-            try
-            {
-                var gameRequest = RestConnector.GAME + "?id=" + gameId;
-                var response = await RestConnector.GetObjectAsync(gameRequest);
-
-                if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    var game = JsonConvert.DeserializeObject<Game>(await response.Content.ReadAsStringAsync());
-                    game.Status = status;
-                    await RestConnector.PutObjectAsync(RestConnector.GAME, game);
-                }
-            }
-            catch (Exception ex)
-            {
-                await App.DisplayMessage(ConstValues.TITLE_STATUS_ERROR, ex.Message, ConstValues.OPTION_OK);
-            }
         }
     }
 }

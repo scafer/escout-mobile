@@ -151,7 +151,6 @@ namespace escout.Views.Events
         {
             if (await App.DisplayMessage(ConstValues.TITLE_STATUS_WARNING, ConstValues.MSG_LEAVE, ConstValues.OPTION_NO, ConstValues.OPTION_YES))
             {
-                _ = RestUtils.UpdateGameStatus(App.DbGame.Id, 2);
                 Application.Current.MainPage = new NavigationPage(new MainPage());
                 await Navigation.PushAsync(new MainPage());
             }
