@@ -1,8 +1,8 @@
-﻿using escout.Models;
+﻿using System.Collections.ObjectModel;
+using System.Linq;
+using escout.Models;
 using escout.Models.Database;
 using escout.Services.Database;
-using System.Collections.ObjectModel;
-using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

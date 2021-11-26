@@ -1,10 +1,10 @@
-﻿using escout.Models.Database;
-using escout.Services.Database;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using escout.Models.Database;
+using escout.Services.Database;
 using Xamarin.Forms;
 
 namespace escout.ViewModels

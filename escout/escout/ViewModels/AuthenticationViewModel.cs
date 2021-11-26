@@ -1,16 +1,16 @@
-﻿using escout.Helpers;
-using escout.Models.Rest;
-using escout.Services.Rest;
-using escout.Views.Authentication;
-using escout.Views.GameData;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Net;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Input;
+using escout.Helpers;
+using escout.Models.Rest;
+using escout.Services.Rest;
+using escout.Views.Authentication;
+using escout.Views.GameData;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace escout.ViewModels

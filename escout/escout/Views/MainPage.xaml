@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -8,7 +8,7 @@
              x:Class="escout.Views.MainPage" 
              IsPresented="True" NavigationPage.HasNavigationBar="False">
 
-    <MasterDetailPage.Master>
+    <FlyoutPage.Flyout>
         <ContentPage Title="Menu" BackgroundColor="#407DF4">
             <StackLayout Padding="0,50,0,0">
                 <StackLayout>
@@ -37,9 +37,9 @@
                 <Image Source="iscte_logo_w.png" WidthRequest="150"/>
             </StackLayout>
         </ContentPage>
-    </MasterDetailPage.Master>
+    </FlyoutPage.Flyout>
 
-    <MasterDetailPage.Detail>
+    <FlyoutPage.Detail>
         <ContentPage></ContentPage>
-    </MasterDetailPage.Detail>
-</MasterDetailPage>
+    </FlyoutPage.Detail>
+</FlyoutPage>

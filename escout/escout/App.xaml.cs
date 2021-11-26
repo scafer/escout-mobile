@@ -1,6 +1,6 @@
+using System.Threading.Tasks;
 using escout.Models.Database;
 using escout.Views.Authentication;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace escout

@@ -1,6 +1,6 @@
-﻿using escout.Models.Database;
+﻿using System.Collections.Generic;
+using escout.Models.Database;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 
 namespace escout.Models.Rest
 {

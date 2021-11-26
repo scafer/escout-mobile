@@ -1,9 +1,9 @@
-﻿using escout.Models.Rest;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using escout.Models.Rest;
+using Newtonsoft.Json;
 
 namespace escout.Services.Rest
 {
