@@ -1,5 +1,10 @@
 name: Xamarin.Forms
-on: [push]
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:   
   Android:
