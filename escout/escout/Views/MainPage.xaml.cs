@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using escout.Models;
+﻿using escout.Models;
 using escout.Models.Rest;
 using escout.Services.Rest;
 using escout.Views.Events;
 using escout.Views.GameData;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

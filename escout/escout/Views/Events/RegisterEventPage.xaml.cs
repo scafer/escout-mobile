@@ -1,10 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
-using escout.Helpers;
+﻿using escout.Helpers;
 using escout.Models.Database;
 using escout.Services;
 using escout.Services.Database;
 using escout.ViewModels;
+using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

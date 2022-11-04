@@ -1,12 +1,12 @@
-﻿using System;
-using System.Threading.Tasks;
-using escout.Helpers;
+﻿using escout.Helpers;
 using escout.Models.Database;
 using escout.Models.Rest;
 using escout.Services.Database;
 using escout.Services.Rest;
 using escout.Views.Events;
 using Newtonsoft.Json;
+using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

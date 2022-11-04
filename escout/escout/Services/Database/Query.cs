@@ -1,10 +1,10 @@
-﻿using System;
+﻿using escout.Helpers;
+using escout.Models.Database;
+using escout.Models.Rest;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using escout.Helpers;
-using escout.Models.Database;
-using escout.Models.Rest;
 using Xamarin.Forms;
 
 namespace escout.Services.Database

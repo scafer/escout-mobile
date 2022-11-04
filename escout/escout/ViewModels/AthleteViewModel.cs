@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using escout.Helpers;
+using escout.Models.Rest;
+using escout.Services.Dependency;
+using escout.Services.Rest;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using escout.Helpers;
-using escout.Models.Rest;
-using escout.Services.Dependency;
-using escout.Services.Rest;
-using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace escout.ViewModels

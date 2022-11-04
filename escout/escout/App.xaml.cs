@@ -1,6 +1,6 @@
-using System.Threading.Tasks;
 using escout.Models.Database;
 using escout.Views.Authentication;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace escout
@@ -16,6 +16,7 @@ namespace escout
         private const string AuthSaveKey = "false";
         private const string VersionKey = "version";
         private const string DefaultServerKey = "";
+        private const string DefaultServerUrl = "https://escout-server.onrender.com";
 
         public App()
         {
@@ -64,7 +65,7 @@ namespace escout
 
         public string DefaultServer
         {
-            get => Properties.ContainsKey(DefaultServerKey) && !string.IsNullOrEmpty(Properties[DefaultServerKey].ToString()) ? Properties[DefaultServerKey].ToString() : "https://escout-server.herokuapp.com";
+            get => Properties.ContainsKey(DefaultServerKey) && !string.IsNullOrEmpty(Properties[DefaultServerKey].ToString()) ? Properties[DefaultServerKey].ToString() : DefaultServerUrl;
             set => Properties[DefaultServerKey] = value;
         }
 

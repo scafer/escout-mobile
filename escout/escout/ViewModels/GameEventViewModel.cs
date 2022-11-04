@@ -1,14 +1,14 @@
-﻿using System;
+﻿using escout.Models.Database;
+using escout.Models.Rest;
+using escout.Services.Database;
+using escout.Services.Rest;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
-using escout.Models.Database;
-using escout.Models.Rest;
-using escout.Services.Database;
-using escout.Services.Rest;
 using Xamarin.Forms;
 
 namespace escout.ViewModels

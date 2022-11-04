@@ -1,4 +1,8 @@
-﻿using System;
+﻿using escout.Helpers;
+using escout.Models.Database;
+using escout.Services.Database;
+using escout.Services.Rest;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -6,10 +10,6 @@ using System.Net;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using escout.Helpers;
-using escout.Models.Database;
-using escout.Services.Database;
-using escout.Services.Rest;
 using Xamarin.Forms;
 
 namespace escout.ViewModels

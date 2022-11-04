@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using escout.Models.Rest;
+using escout.Services.Rest;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using escout.Models.Rest;
-using escout.Services.Rest;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
